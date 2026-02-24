@@ -3,7 +3,7 @@ slug: "lemma-oracle-specs"
 date: "2026.02.24"
 category: "Foundations"
 title: "Lemma Oracle 仕様"
-abstract: "各ステップで情報の非対称性が重なる、長期にわたる意思決定システムをモデル化するためのフレームワーク。"
+abstract: "暗号学的に検証された真実レイヤー。ゼロ知識証明・選択的開示・オンチェーン出所により、AI が機密データ上で推論しながら、生コンテンツは暗号化されたまま保持されます。"
 ---
 
 ## Lemma 概要
