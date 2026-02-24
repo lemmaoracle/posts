@@ -103,8 +103,6 @@ AI agents access Lemma via MCP as a reliable data source for use cases like safe
 - **Solution:** Attributes (role, department, clearance) live in Khaos; access rights verified via ZK — no PII hits the app.
 - **Impact:** True zero-trust: "Service A sees department only; Service B sees role only".
 
-66
-
 ---
 
 ## Minimal developer workflow (simplified)
