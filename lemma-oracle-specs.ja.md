@@ -2,114 +2,114 @@
 slug: "lemma-oracle-specs"
 date: "2026.02.24"
 category: "Foundations"
-title: "Lemma Oracle Specs"
-abstract: "A framework for modeling decision systems that operate across extended timeframes where information asymmetry compounds with each step."
+title: "Lemma Oracle 仕様"
+abstract: "各ステップで情報の非対称性が重なる、長期にわたる意思決定システムをモデル化するためのフレームワーク。"
 ---
 
-## Lemma Overview
+## Lemma 概要
 
-Lemma is a mathematically guaranteed truth layer that lets AI reason over verified data without exposing the underlying sensitive content. It acts as a high‑trust storage and reference layer for mission‑critical data rather than a universal wrapper for all AI interactions.
+Lemma は、機密コンテンツを露出させずに検証済みデータ上で AI が推論できる、数学的に保証された真実レイヤーです。あらゆる AI インタラクションを包む汎用ラッパーではなく、ミッションクリティカルなデータの高信頼ストレージおよび参照レイヤーとして機能します。
 
-AI agents access Lemma via MCP as a reliable data source for use cases like safety‑critical workflows, fair rights management, and accurate responses based on cryptographically verified facts.
+AI エージェントは MCP 経由で Lemma にアクセスし、安全クリティカルなワークフロー、公正な権利管理、暗号学的に検証された事実に基づく正確な応答といったユースケースで信頼できるデータソースとして利用します。
 
-### Key Features and Benefits
+### 主な機能とメリット
 
-- Full transparency across the entire data lifecycle, ensuring auditability and trust.
-- Tamper resistance so AI systems always read from integrity‑protected data.
-- Strong privacy guarantees that keep confidential information encrypted while preserving security and correctness.
+- データライフサイクル全体での完全な透明性により、監査可能性と信頼を確保。
+- 改ざん耐性により、AI システムは常に完全性が保護されたデータを参照。
+- 機密情報を暗号化したまま保持し、セキュリティと正確性を維持する強力なプライバシー保証。
 
-### Technical Foundations
+### 技術的基盤
 
-- **Zero‑knowledge proofs**: Arbitrary JSON documents (e.g., contracts, logs, applications) remain encrypted while Lemma only proves whether they satisfy specific conditions. Combined with blockchains, this provides confidentiality, condition satisfaction claims, and public, tamper‑evident provenance.
-- **Selective disclosure (BBS+)**: Documents are signed so that holders can reveal only selected fields while proving the entire document is authentic. This enables role‑based and party‑specific partial disclosure without leaking unrelated data.
-- **Commitments**: Each attribute is stored as a cryptographic commitment, enabling zero‑knowledge queries such as membership in a category or range without decryption. Combined with selective disclosure, content can be revealed and used for training or inference only when appropriate agreements are in place.
+- **ゼロ知識証明**: 任意の JSON ドキュメント（契約、ログ、申請など）は暗号化されたまま、Lemma は特定の条件を満たすかどうかのみを証明します。ブロックチェーンと組み合わせることで、機密性、条件充足の主張、公開かつ改ざん検知可能な出所を提供します。
+- **選択的開示（BBS+）**: ドキュメントに署名し、ホルダーは文書全体が真正であることを証明しつつ、選択したフィールドのみを開示できます。これにより、ロールベースおよび当事者別の部分開示が、無関係なデータを漏らさず実現します。
+- **コミットメント**: 各属性は暗号学的コミットメントとして保存され、復号なしにカテゴリや範囲への所属といったゼロ知識クエリを可能にします。選択的開示と組み合わせることで、適切な合意が整った場合にのみコンテンツを開示し、学習や推論に利用できます。
 
-## Spec summary
+## 仕様サマリー
 
-- **Document model**
-  - Handles arbitrary JSON documents, including but not limited to W3C VCs (e.g. weather data, KYC results, medical metrics).
-  - Documents are encrypted (AES-GCM over a hybrid ECDH+HKDF key) and stored off-chain on IPFS/Ceramic; Lemma only sees `docHash` and `cid`.
-- **Schemas and normalization**
-  - Per `schemaId`, you define `Raw`, `Norm`, and `normalize: Raw -> Norm` so that comparisons and proofs operate on a normalized attribute space (e.g. bucketing age, temperature).
-  - Normalization runs client-side; Lemma only trusts commitments, ZK proofs, and registry metadata, not your normalize code itself.
-- **Commitments and ZK**
-  - Normalized attributes are committed via Pedersen + Merkle to produce `attrCommitmentRoot` and per-attribute commitments used as ZK witnesses/public inputs.
-  - Arbitrary ZK circuits (Circom, Halo2, etc.) are supported via metadata that links a `circuitId` to schema, public inputs, verifier (on/off-chain), and artifacts (`wasm`, `zkey` on IPFS/HTTPS).
-- **Selective disclosure (BBS+)**
-  - Issuer BBS+ signs the raw document; Holder creates proofs that reveal only selected attributes, abstracted in the API so it can later support SD-JWT, etc.
-  - Lemma verifies that disclosed attributes are indeed part of the signed document by combining stored signature metadata and selective-disclosure proof.
-- **On-chain provenance and hooks**
-  - `LemmaRegistry` contracts store `docHash`, `attrCommitmentRoot`, schema, issuer/subject IDs, revocation data, and link to verifier contracts.
-  - Optional smart-contract hooks can be executed at document registration, receiving the same provenance (public inputs) as the registry call.
-- **Architecture and trust**
-  - 5 layers: on-chain provenance, off-chain encrypted storage, encrypted index/ZK, oracle core/registries/query gateway, and client/AI/dApps.
-  - Lemma’s trust boundary excludes client code; it relies on ZK proofs, commitments, issuer signatures, and on-chain registry/verifier correctness.
+- **ドキュメントモデル**
+  - W3C VC に限らず、任意の JSON ドキュメント（気象データ、KYC 結果、医療メトリクスなど）を扱う。
+  - ドキュメントは暗号化（ハイブリッド ECDH+HKDF 鍵による AES-GCM）され、オフチェーンで IPFS/Ceramic に保存。Lemma が参照するのは `docHash` と `cid` のみ。
+- **スキーマと正規化**
+  - 各 `schemaId` ごとに `Raw`、`Norm`、および `normalize: Raw -> Norm` を定義し、比較と証明が正規化された属性空間（年齢や温度のバケット化など）で行われるようにする。
+  - 正規化はクライアント側で実行。Lemma が信頼するのはコミットメント、ZK 証明、レジストリメタデータであり、正規化コードそのものではない。
+- **コミットメントと ZK**
+  - 正規化された属性は Pedersen + Merkle でコミットされ、`attrCommitmentRoot` および ZK のウィットネス/公開入力として使う属性ごとのコミットメントを生成する。
+  - Circom、Halo2 などの任意の ZK 回路を、`circuitId` をスキーマ・公開入力・検証器（オン/オフチェーン）・成果物（IPFS/HTTPS 上の `wasm`、`zkey`）に紐づけるメタデータでサポート。
+- **選択的開示（BBS+）**
+  - 発行者が BBS+ で生ドキュメントに署名。ホルダーは選択した属性のみを開示する証明を作成。API で抽象化されているため、のちに SD-JWT などにも対応可能。
+  - Lemma は、保存された署名メタデータと選択的開示証明を組み合わせて、開示された属性が署名済みドキュメントに含まれることを検証する。
+- **オンチェーン出所とフック**
+  - `LemmaRegistry` コントラクトは `docHash`、`attrCommitmentRoot`、スキーマ、発行者/主体 ID、失効データ、および検証器コントラクトへのリンクを保存する。
+  - ドキュメント登録時に、レジストリ呼び出しと同じ出所（公開入力）を受け取るオプションのスマートコントラクトフックを実行可能。
+- **アーキテクチャと信頼**
+  - 5 層: オンチェーン出所、オフチェーン暗号化ストレージ、暗号化インデックス/ZK、オラクルコア/レジストリ/クエリゲートウェイ、クライアント/AI/dApps。
+  - Lemma の信頼境界はクライアントコードを除外。ZK 証明、コミットメント、発行者署名、オンチェーンレジストリ/検証器の正当性に依存する。
 
 ---
 
-## Use-Cases
+## ユースケース
 
-### DeFi Private Lending & Under-Collateralized Loans
+### DeFi プライベートレンディングと低担保ローン
 
-- **Problem:** DeFi is trapped in over-collateralization — no way to assess off-chain credit on-chain.
-- **Solution:** Borrowers store encrypted income/credit data in Khaos; protocols verify "score ≥ 700" via ZK — zero raw financials exposed.
-- **Impact:** Under-collateralized DeFi loans become real, bridging TradFi credit into on-chain markets.
+- **課題:** DeFi は過担保に縛られ、オフチェーンの信用をオンチェーンで評価する手段がない。
+- **解決策:** 借り手は Khaos に暗号化した収入/信用データを保存。プロトコルは ZK で「スコア ≥ 700」を検証し、生の財務情報は一切露出しない。
+- **効果:** 低担保の DeFi ローンが現実のものとなり、TradFi の信用をオンチェーン市場に橋渡しする。
 
-### DeFi Compliance — Privacy-Preserving KYC/AML
+### DeFi コンプライアンス — プライバシーを守る KYC/AML
 
-- **Problem:** Regulators demand KYC/AML; storing user PII on-chain destroys privacy.
-- **Solution:** One-time off-chain KYC → Khaos issues a ZK credential: "verified, not sanctioned" — no name or passport revealed.
-- **Impact:** AML/CFT + GDPR satisfied simultaneously; permissionless DeFi access preserved.
+- **課題:** 規制当局は KYC/AML を要求するが、ユーザーの PII をオンチェーンに保存するとプライバシーが破壊される。
+- **解決策:** 一度だけオフチェーンで KYC を実施し、Khaos が ZK クレデンシャル「本人確認済み・制裁対象外」を発行。氏名やパスポートは開示しない。
+- **効果:** AML/CFT と GDPR を同時に満たしつつ、パーミッションレスな DeFi アクセスを維持。
 
-### RWA — Tokenization of Real-World Assets
+### RWA — 実物資産のトークン化
 
-- **Problem:** On-chaining real estate, securities, or commodities demands strict KYC and ownership proof — but full disclosure on a public ledger is a non-starter.
-- **Solution:** Issuers and custodians store encrypted ownership/compliance data in Khaos; RWA protocols verify "wallet is KYC'd and owns asset X" via ZK — no identity or balance sheet exposed.
-- **Impact:** Compliant, privacy-preserving RWA issuance, transfer, and collateralized lending — institutional-grade without the data risk.
+- **課題:** 不動産・証券・コモディティをオンチェーン化するには厳格な KYC と所有権証明が必要だが、公開台帳への完全開示は現実的でない。
+- **解決策:** 発行者とカストディアンは Khaos に暗号化した所有権/コンプライアンスデータを保存。RWA プロトコルは ZK で「ウォレットは KYC 済みかつ資産 X を保有」を検証し、本人情報や貸借対照表は露出しない。
+- **効果:** コンプライアンスを満たし、プライバシーを守る RWA の発行・移転・担保付きレンディング。データリスクなしの機関向けグレード。
 
-### Autonomous AI Agent Settlement & Personal Data
+### 自律 AI エージェント決済と個人データ
 
-- **Problem:** AI agents trading on users' behalf must settle payments and respect personal constraints (risk limits, budgets, KYC) — without leaking private data to counterparties.
-- **Solution:** User constraints and KYC credentials live in Khaos; agents attach ZK proofs ("within risk limits," "counterparty is compliant") to every trade or settlement instruction.
-- **Impact:** Fully autonomous, policy-compliant agent-to-agent commerce — every decision verifiable, every identity shielded.
+- **課題:** ユーザーに代わって取引する AI エージェントは、決済を実行し、リスク限度・予算・KYC などの個人制約を守る必要があるが、取引先に個人データを漏らしてはならない。
+- **解決策:** ユーザー制約と KYC クレデンシャルは Khaos に格納。エージェントは取引や決済指示ごとに ZK 証明（「リスク限度内」「取引先はコンプライアント」）を付与する。
+- **効果:** 完全自律かつポリシー準拠のエージェント間取引。すべての判断が検証可能で、すべてのアイデンティティが保護される。
 
-### KYC, Identity & Credential Attestation
+### KYC、アイデンティティ、クレデンシャル証明
 
-- **Problem:** Users re-submit the same PII to every service, multiplying breach risk.
-- **Solution:** Register once in Khaos; prove "age ≥ 20" or "holds license X" via ZK — no raw data shared.
-- **Impact:** One registration, unlimited privacy-preserving verifications across all services.
+- **課題:** ユーザーは同じ PII をサービスごとに再提出し、漏洩リスクが増幅する。
+- **解決策:** Khaos に一度だけ登録し、ZK で「年齢 ≥ 20」や「免許 X を保有」を証明。生データは共有しない。
+- **効果:** 1 回の登録で、全サービスにわたる無制限のプライバシー保護検証が可能。
 
-### Sensitive Data Screening — Payroll, Health & Loans
+### 機密データスクリーニング — 給与・健康・ローン
 
-- **Problem:** Loan and insurance reviews force disclosure of exact salaries and diagnoses.
-- **Solution:** Signed records stored in Khaos; reviewers check only "income ≥ ¥5M" or "no re-exam" via ZK.
-- **Impact:** Eligibility proven; actual figures never leave the vault.
+- **課題:** ローンや保険の審査では正確な給与や診断の開示を強いられる。
+- **解決策:** 署名付きレコードを Khaos に保存。審査側は ZK で「年収 ≥ 500 万円」や「再検査不要」のみを確認する。
+- **効果:** 資格は証明されつつ、実際の数値は金庫の外に出ない。
 
-### Protecting Originality & Compensating Data Creators
+### オリジナリティの保護とデータクリエイターへの報酬
 
-- **Problem:** AI training lacks verifiable provenance and fair creator compensation.
-- **Solution:** Creators register signed metadata in Khaos; AI operators verify rights via ZK before access.
-- **Impact:** Originality proof + usage audit trail + payment distribution — one platform, clean-data marketplace ready.
+- **課題:** AI 学習には検証可能な出所と公正なクリエイター報酬が欠けている。
+- **解決策:** クリエイターは Khaos に署名付きメタデータを登録。AI オペレーターはアクセス前に ZK で権利を検証する。
+- **効果:** オリジナリティ証明 + 利用監査証跡 + 支払い配分。1 プラットフォームでクリーンデータマーケットプレイスに対応。
 
-### Verified Information for AI / RAG
+### AI / RAG 向けの検証済み情報
 
-- **Problem:** AI chatbots cite outdated, unreviewed, or restricted documents.
-- **Solution:** Per-document metadata (version, review status, classification) served as ZK-proven attributes.
-- **Impact:** RAG uses only verified sources; restricted content invisible to unauthorized queries.
+- **課題:** AI チャットボットは古い・未レビュー・制限付きのドキュメントを引用する。
+- **解決策:** ドキュメントごとのメタデータ（バージョン、レビュー状態、分類）を ZK 証明付き属性として提供する。
+- **効果:** RAG は検証済みソースのみを使用。制限コンテンツは未承認クエリには見えない。
 
-### Attribute-Based Access Control
+### 属性ベースアクセス制御
 
-- **Problem:** Every app gets a copy of HR/org data just to authorize users.
-- **Solution:** Attributes (role, department, clearance) live in Khaos; access rights verified via ZK — no PII hits the app.
-- **Impact:** True zero-trust: "Service A sees department only; Service B sees role only".
+- **課題:** ユーザー認可のためだけに、各アプリが HR/組織データのコピーを保有している。
+- **解決策:** 属性（ロール、部門、クリアランス）は Khaos に格納。アクセス権は ZK で検証し、PII はアプリに渡らない。
+- **効果:** 真のゼロトラスト。「サービス A は部門のみ、サービス B はロールのみを見る」。
 
 66
 
 ---
 
-## Minimal developer workflow (simplified)
+## 最小限の開発者ワークフロー（簡略版）
 
-### 1. Install and initialize
+### 1. インストールと初期化
 
 ```shellscript
 npm install @lemmaoracle/sdk
@@ -124,7 +124,7 @@ const client = create({
 });
 ```
 
-### 2. Define schema and normalization
+### 2. スキーマと正規化の定義
 
 ```typescript
 import { define } from "@lemmaoracle/sdk";
@@ -141,7 +141,7 @@ const userKycSchema = define<UserKycRaw, UserKycNorm>({
 });
 ```
 
-### 3. Encrypt and prepare
+### 3. 暗号化と準備
 
 ```typescript
 import { encrypt, prepare } from "@lemmaoracle/sdk";
@@ -162,9 +162,9 @@ const prep = await prepare<UserKycRaw, UserKycNorm>(client, {
 // prep.normalized, prep.commitments
 ```
 
-One line explanation: `encrypt` returns `docHash`/`cid`, and `prepare` returns normalized attributes plus commitments.
+一行説明: `encrypt` は `docHash`/`cid` を、`prepare` は正規化された属性とコミットメントを返します。
 
-### 4. Sign and create selective disclosure
+### 4. 署名と選択的開示の作成
 
 ```typescript
 import { disclose } from "@lemmaoracle/sdk";
@@ -184,7 +184,7 @@ const sd = await disclose.reveal(client, {
 // sd.disclosed, sd.proof
 ```
 
-### 5. Register document (options trimmed)
+### 5. ドキュメントの登録（オプションは省略）
 
 ```typescript
 import { documents } from "@lemmaoracle/sdk";
@@ -204,9 +204,9 @@ await documents.register(client, {
 });
 ```
 
-Non-essential options such as detailed revocation settings and onchainHooks are omitted here.
+失効の詳細設定や onchainHooks などの本質的でないオプションはここでは省略しています。
 
-### 6. Generate and submit proof (options trimmed)
+### 6. 証明の生成と送信（オプションは省略）
 
 ```typescript
 import { prover, proofs } from "@lemmaoracle/sdk";
@@ -236,9 +236,9 @@ await proofs.submit(client, {
 });
 ```
 
-Here we keep only the core fields needed to attach the proof and link it to the document.
+ここでは証明を紐づけドキュメントにリンクするために必要なコアフィールドのみを扱います。
 
-### 7. Query verified attributes
+### 7. 検証済み属性のクエリ
 
 ```typescript
 import { attributes } from "@lemmaoracle/sdk";
@@ -251,4 +251,4 @@ const results = await attributes.query(client, {
 });
 ```
 
-This returns verified attributes plus proof status that your app or AI agent can consume.
+検証済み属性と証明状態が返され、アプリや AI エージェントが利用できます。
