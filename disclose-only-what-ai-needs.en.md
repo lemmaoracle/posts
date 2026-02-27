@@ -62,7 +62,7 @@ Different consumers need different views of the same document:
 - An age-gated service sees `{ age_bucket: "adult" }`.
 - An internal auditor sees `{ country: "JP", verification_date: "2026-01-15" }`.
 
-Each view is generated from the same signed document with a different `attributes` array passed to `disclose.reveal`. No separate copies of the data are created. No separate signing ceremonies are needed.
+Each view is generated from the same signed document with a different `attributes` array passed to `disclose.reveal`. No separate copies of the data are created. No additional signing steps are needed.
 
 ## Future-Proof Design
 
