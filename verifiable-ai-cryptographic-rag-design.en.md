@@ -40,7 +40,7 @@ In a typical RAG configuration, the flow is generally as follows:
 2. In response to the user's question, retrieve relevant documents via vector search
 3. Embed the retrieved text into the prompt and generate an answer using the LLM
 
-Even in this configuration, showing citation URLs or document titles allows for a certain degree of "visualization of evidence." [[daxa](https://www.daxa.ai/blogs/secure-retrieval-augmented-generation-rag-in-enterprise-environments)]​  
+Even in this configuration, showing citation URLs or document titles allows for a certain degree of "visualization of evidence."
 However, there are limitations:
 
 - We cannot know who approved the document and under what rules
