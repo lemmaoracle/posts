@@ -18,7 +18,7 @@ Lemma bridges the gap. You define business logic as ZK circuits, and every time 
 The process has three steps:
 
 1. **Normalize** the raw document into typed attributes using a schema.
-2. **Commit** the normalized attributes via Pedersen + Merkle to produce an `attrCommitmentRoot`.
+2. **Commit** the normalized attributes via a Poseidon-based Merkle Tree to produce an `attrCommitmentRoot`.
 3. **Prove** a predicate against the commitments using a ZK circuit.
 
 ```typescript
@@ -39,7 +39,7 @@ const zkResult = await prover.prove(client, {
 });
 ```
 
-The circuit `age-over-18` checks whether `age_bucket` equals `adult`. It never sees the actual age — only the committed, normalized value and the randomness that opens the commitment.
+The circuit `age-over-18` checks whether `age_bucket` equals `adult`. It never sees the actual age — only the committed, normalized value and the randomness that opens the commitment. The `commitments` object returned by `prepare` includes a `scheme` field (default: `"poseidon"`) that specifies the hash algorithm used for the Merkle tree.
 
 ## Bring Your Own Circuits
 

@@ -15,28 +15,46 @@ abstract: "選択的開示により、ホルダーはモデルが必要とする
 
 ## BBS+ 選択的開示の仕組み
 
-Lemma はデフォルトの選択的開示メカニズムとして BBS+ 署名を使用します。フローは2つのフェーズです：
+Lemma は BBS+ 署名をデフォルトの選択的開示メカニズムとして使用します。SDK の `disclose` モジュールは完全な BBS+ 実装を提供します：
 
-**発行者がドキュメント全体に署名：**
-
+**鍵生成とメッセージ準備：**
 ```typescript
 import { disclose } from "@lemmaoracle/sdk";
 
+// BBS+ 鍵ペアを生成
+const kp = await disclose.generateKeyPair();
+
+// ペイロードをソートされた「キー:値」メッセージに変換
+const messages = disclose.payloadToMessages({ age: 25, name: "Alice", country: "JP" });
+// → ["age:25", "country:JP", "name:Alice"]
+```
+
+**発行者がドキュメント全体に署名：**
+```typescript
 const signed = await disclose.sign(client, {
-  payload: rawDoc,
-  issuerKey: issuerPrivateKey,
+  messages,
+  secretKey: kp.secretKey,
+  header: new TextEncoder().encode("my-app-header"),
+  issuerId: "issuer-1",
 });
+// signed.signature → BBS+ 署名
 ```
 
 **ホルダーが選択した属性のみを公開：**
-
 ```typescript
-const sd = await disclose.reveal(client, {
-  signedPayload: signed.signature,
-  attributes: ["age"],
+const revealed = await disclose.reveal(client, {
+  signature: signed.signature,
+  messages,
+  publicKey: signed.publicKey,
+  disclosedIndexes: [0], // messages 配列内の "age:25" のインデックス
+  header: signed.header,
 });
-// sd.disclosed → { age: 25 }
-// sd.proof     → BBS+ 選択的開示証明
+// revealed.disclosed → { age: "25" }
+// revealed.proof → BBS+ 選択的開示証明
+
+// 仕様準拠のためのラップ
+const sd = disclose.toSelectiveDisclosure(revealed);
+// sd.format → "bbs+", sd.disclosedAttributes → { age: "25" }, sd.proof → 16進エンコード
 ```
 
 この証明は `{ age: 25 }` が発行者の署名したドキュメントの一部であることを数学的に保証し、他のフィールドは一切公開しません。検証者がドキュメント全体を見ることはありません。
@@ -67,3 +85,13 @@ Lemma では、開示された属性は完全な来歴を伴います：
 ## 将来を見据えた設計
 
 SDK の `disclose` 名前空間は暗号スキームではなく、実行する機能にちなんで命名されています。初期実装は BBS+ ですが、API は SD-JWT やその他のメカニズムを開発者向けインターフェースの変更なしにサポートできるよう設計されています。`disclose.reveal` を呼ぶとき、あなたが表現しているのは「これらのフィールドだけ見せて」という意図であり、特定のアルゴリズムの選択ではありません。
+
+### 完全な BBS+ API
+`disclose` モジュールには必要なすべての BBS+ 操作が含まれます：
+- `generateKeyPair()`: BBS+ 鍵ペア作成（32バイト秘密鍵、96バイト公開鍵）
+- `payloadToMessages()`: 属性オブジェクトをソートされた「キー:値」配列に変換
+- `sign()`: 発行者秘密鍵とヘッダーによる BBS+ 署名
+- `verify()`: 発行者公開鍵に対する BBS+ 署名検証
+- `reveal()`: 特定のメッセージインデックスに対する選択的開示証明生成
+- `verifyProof()`: 選択的開示証明の検証
+- `toSelectiveDisclosure()`: `RevealOutput` を仕様準拠の `SelectiveDisclosure` 型にラップ

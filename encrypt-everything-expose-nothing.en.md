@@ -23,7 +23,7 @@ Lemma encrypts every document **before** it enters the system, and never decrypt
 4. The encrypted blob is stored off-chain on IPFS or Ceramic, yielding a `cid`.
 5. A `docHash = SHA3-256(encryptedDoc)` is computed and used as the on-chain primary key.
 
-From this point forward, Lemma handles only two identifiers: `docHash` and `cid`. The plaintext is never reconstructed on the server side.
+From this point forward, Lemma handles only two identifiers: `docHash` and `cid`. The plaintext is never reconstructed on the server side. The `encrypt` function returns the `algorithm` used (default: `"aes-256-gcm"`) alongside `docHash`, `cid`, and `encryptedDocBase64`, so the Holder can record it for later decryption.
 
 ```typescript
 import { encrypt } from "@lemmaoracle/sdk";
@@ -34,6 +34,8 @@ const enc = await encrypt(client, {
 });
 // enc.docHash → on-chain primary key
 // enc.cid    → IPFS/Ceramic storage reference
+// enc.encryptedDocBase64 → Base64-encoded encrypted document
+// enc.algorithm → Encryption algorithm used (e.g., "aes-256-gcm")
 ```
 
 ## What AI Actually Sees

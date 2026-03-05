@@ -15,28 +15,46 @@ Without selective disclosure, you face a binary choice: share everything or shar
 
 ## How BBS+ Selective Disclosure Works
 
-Lemma uses BBS+ signatures as the default selective disclosure mechanism. The flow has two phases:
+Lemma uses BBS+ signatures as the default selective disclosure mechanism. The SDK's `disclose` module provides a complete BBS+ implementation:
 
-**Issuer signs the full document:**
-
+**Key generation and message preparation:**
 ```typescript
 import { disclose } from "@lemmaoracle/sdk";
 
+// Generate BBS+ key pair
+const kp = await disclose.generateKeyPair();
+
+// Convert payload to sorted "key:value" messages
+const messages = disclose.payloadToMessages({ age: 25, name: "Alice", country: "JP" });
+// → ["age:25", "country:JP", "name:Alice"]
+```
+
+**Issuer signs the full document:**
+```typescript
 const signed = await disclose.sign(client, {
-  payload: rawDoc,
-  issuerKey: issuerPrivateKey,
+  messages,
+  secretKey: kp.secretKey,
+  header: new TextEncoder().encode("my-app-header"),
+  issuerId: "issuer-1",
 });
+// signed.signature → BBS+ signature
 ```
 
 **Holder reveals only selected attributes:**
-
 ```typescript
-const sd = await disclose.reveal(client, {
-  signedPayload: signed.signature,
-  attributes: ["age"],
+const revealed = await disclose.reveal(client, {
+  signature: signed.signature,
+  messages,
+  publicKey: signed.publicKey,
+  disclosedIndexes: [0], // index of "age:25" in messages array
+  header: signed.header,
 });
-// sd.disclosed → { age: 25 }
-// sd.proof     → BBS+ selective disclosure proof
+// revealed.disclosed → { age: "25" }
+// revealed.proof → BBS+ selective disclosure proof
+
+// Wrap for spec compliance
+const sd = disclose.toSelectiveDisclosure(revealed);
+// sd.format → "bbs+", sd.disclosedAttributes → { age: "25" }, sd.proof → hex-encoded
 ```
 
 The proof mathematically guarantees that `{ age: 25 }` is part of the document the issuer signed, without revealing any other field. The verifier never sees the full document.
@@ -67,3 +85,13 @@ Each view is generated from the same signed document with a different `attribute
 ## Future-Proof Design
 
 The SDK's `disclose` namespace is named for the function it performs, not the cryptographic scheme it uses. The initial implementation uses BBS+, but the API is designed to support SD-JWT and other mechanisms without changing the developer-facing interface. When you call `disclose.reveal`, you are expressing intent ("show only these fields") rather than choosing a specific algorithm.
+
+### Complete BBS+ API
+The `disclose` module includes all necessary BBS+ operations:
+- `generateKeyPair()`: Create BBS+ key pair (32-byte secret, 96-byte public)
+- `payloadToMessages()`: Convert attribute object to sorted "key:value" array
+- `sign()`: BBS+ signing with issuer secret key and header
+- `verify()`: Verify BBS+ signature against issuer public key
+- `reveal()`: Generate selective disclosure proof for specific message indexes
+- `verifyProof()`: Verify selective disclosure proof
+- `toSelectiveDisclosure()`: Wrap `RevealOutput` into spec-compliant `SelectiveDisclosure` type
