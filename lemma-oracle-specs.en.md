@@ -43,7 +43,7 @@ AI agents access Lemma via MCP as a reliable data source for use cases like safe
   - `LemmaRegistry` contracts store `docHash`, `attrCommitmentRoot`, schema, issuer/subject IDs, revocation data, and link to verifier contracts.
   - Optional smart-contract hooks can be executed at document registration, receiving the same provenance (public inputs) as the registry call.
 - **Architecture and trust**
-  - **5-layer model**: 
+  - **5-layer model**:
     1. **On-Chain Provenance**: `LemmaRegistry` stores `docHash`, `attrCommitmentRoot`, schema, issuer/subject IDs, revocation data. ZK verifier contracts emit `ProofVerified` events.
     2. **Off-Chain Storage**: Encrypted documents stored on IPFS/Ceramic; mapping between CID and `docHash` managed client-side.
     3. **Encrypted Index / ZK**: Structured encryption indexes and ZK prover/verifier components (Circom/Halo2).
@@ -258,4 +258,3 @@ const results = await attributes.query(client, {
 ```
 
 This returns verified attributes plus proof status that your app or AI agent can consume.
-

@@ -258,4 +258,3 @@ const results = await attributes.query(client, {
 ```
 
 検証済み属性と証明状態が返され、アプリや AI エージェントが利用できます。
-

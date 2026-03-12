@@ -18,6 +18,7 @@ Without selective disclosure, you face a binary choice: share everything or shar
 Lemma uses BBS+ signatures as the default selective disclosure mechanism. The SDK's `disclose` module provides a complete BBS+ implementation:
 
 **Key generation and message preparation:**
+
 ```typescript
 import { disclose } from "@lemmaoracle/sdk";
 
@@ -25,11 +26,16 @@ import { disclose } from "@lemmaoracle/sdk";
 const kp = await disclose.generateKeyPair();
 
 // Convert payload to sorted "key:value" messages
-const messages = disclose.payloadToMessages({ age: 25, name: "Alice", country: "JP" });
+const messages = disclose.payloadToMessages({
+  age: 25,
+  name: "Alice",
+  country: "JP",
+});
 // → ["age:25", "country:JP", "name:Alice"]
 ```
 
 **Issuer signs the full document:**
+
 ```typescript
 const signed = await disclose.sign(client, {
   messages,
@@ -41,6 +47,7 @@ const signed = await disclose.sign(client, {
 ```
 
 **Holder reveals only selected attributes:**
+
 ```typescript
 const revealed = await disclose.reveal(client, {
   signature: signed.signature,
@@ -87,7 +94,9 @@ Each view is generated from the same signed document with a different `attribute
 The SDK's `disclose` namespace is named for the function it performs, not the cryptographic scheme it uses. The initial implementation uses BBS+, but the API is designed to support SD-JWT and other mechanisms without changing the developer-facing interface. When you call `disclose.reveal`, you are expressing intent ("show only these fields") rather than choosing a specific algorithm.
 
 ### Complete BBS+ API
+
 The `disclose` module includes all necessary BBS+ operations:
+
 - `generateKeyPair()`: Create BBS+ key pair (32-byte secret, 96-byte public)
 - `payloadToMessages()`: Convert attribute object to sorted "key:value" array
 - `sign()`: BBS+ signing with issuer secret key and header

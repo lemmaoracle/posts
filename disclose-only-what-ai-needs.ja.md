@@ -18,6 +18,7 @@ abstract: "選択的開示により、ホルダーはモデルが必要とする
 Lemma は BBS+ 署名をデフォルトの選択的開示メカニズムとして使用します。SDK の `disclose` モジュールは完全な BBS+ 実装を提供します：
 
 **鍵生成とメッセージ準備：**
+
 ```typescript
 import { disclose } from "@lemmaoracle/sdk";
 
@@ -25,11 +26,16 @@ import { disclose } from "@lemmaoracle/sdk";
 const kp = await disclose.generateKeyPair();
 
 // ペイロードをソートされた「キー:値」メッセージに変換
-const messages = disclose.payloadToMessages({ age: 25, name: "Alice", country: "JP" });
+const messages = disclose.payloadToMessages({
+  age: 25,
+  name: "Alice",
+  country: "JP",
+});
 // → ["age:25", "country:JP", "name:Alice"]
 ```
 
 **発行者がドキュメント全体に署名：**
+
 ```typescript
 const signed = await disclose.sign(client, {
   messages,
@@ -41,6 +47,7 @@ const signed = await disclose.sign(client, {
 ```
 
 **ホルダーが選択した属性のみを公開：**
+
 ```typescript
 const revealed = await disclose.reveal(client, {
   signature: signed.signature,
@@ -87,7 +94,9 @@ Lemma では、開示された属性は完全な来歴を伴います：
 SDK の `disclose` 名前空間は暗号スキームではなく、実行する機能にちなんで命名されています。初期実装は BBS+ ですが、API は SD-JWT やその他のメカニズムを開発者向けインターフェースの変更なしにサポートできるよう設計されています。`disclose.reveal` を呼ぶとき、あなたが表現しているのは「これらのフィールドだけ見せて」という意図であり、特定のアルゴリズムの選択ではありません。
 
 ### 完全な BBS+ API
+
 `disclose` モジュールには必要なすべての BBS+ 操作が含まれます：
+
 - `generateKeyPair()`: BBS+ 鍵ペア作成（32バイト秘密鍵、96バイト公開鍵）
 - `payloadToMessages()`: 属性オブジェクトをソートされた「キー:値」配列に変換
 - `sign()`: 発行者秘密鍵とヘッダーによる BBS+ 署名
