@@ -12,7 +12,7 @@ About this page: A comprehensive Q&A covering how Lemma enables trustworthy AI �
 
 ***
 
-## 🔷 Section 1: What is Lemma?
+## Section 1: What is Lemma?
 
 **What is Lemma, in one sentence?**
 
@@ -88,7 +88,7 @@ Lemma does not compete with existing security tools. It functions as a complemen
 
 ***
 
-## 🔷 Section 2: Security & Privacy
+## Section 2: Security & Privacy
 
 **How is personally identifiable information (PII) protected?**
 
@@ -123,7 +123,7 @@ Critically, even after partial disclosure, the linkage to the issuer's signature
 
 ***
 
-## 🔷 Section 3: On-Chain Provenance
+## Section 3: On-Chain Provenance
 
 **What does "recording on-chain" mean, and why does it matter?**
 
@@ -141,7 +141,7 @@ This is foundational for meeting Explainability requirements in regulated indust
 
 ***
 
-## 🔷 Section 4: Developer Implementation
+## Section 4: Developer Implementation
 
 **What is a schema and how is it used?**
 
@@ -159,7 +159,7 @@ The response is in a format ready to be used directly in a RAG policy layer.
 
 ***
 
-## 🔷 Section 5: Trust & Adoption
+## Section 5: Trust & Adoption
 
 **What exactly becomes "provable" with Lemma?**
 
