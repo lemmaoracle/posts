@@ -8,8 +8,6 @@ abstract: "LemmaとVerifiable AIに関するよくある質問"
 categoryColor: "#3B82F6"
 ---
 
-# Lemma FAQ — AI トラストと信頼性検証
-
 このページについて：Lemmaが「なぜ信頼できるAIを実現できるのか」を、技術的な背景から実務的な疑問まで網羅した質問集です。
 
 ***

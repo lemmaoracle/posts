@@ -8,8 +8,6 @@ abstract: "Frequently asked questions about Lemma and Verifiable AI"
 categoryColor: "#3B82F6"
 ---
 
-# Lemma FAQ — AI Trust & Verifiability
-
 About this page: A comprehensive Q&A covering how Lemma enables trustworthy AI — from technical foundations to practical implementation questions.
 
 ***
