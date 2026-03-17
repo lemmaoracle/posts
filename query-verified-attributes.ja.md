@@ -20,9 +20,12 @@ import { attributes } from "@lemmaoracle/sdk";
 
 const results = await attributes.query(client, {
   query: "users over 18 in Japan",
-  mode: "natural",
-  proof: { required: true, type: "zk-snark" },
-  targets: { schemas: ["user-kyc-v1"] },
+  mode: "natural", // "natural" | "structured"
+  proof: { required: true, type: "zk-snark" }, // type: "zk-snark" | "opaque"
+  targets: {
+    schemas: ["user-kyc-v1"],
+    chainIds: [1, 137], // ← オプション: チェーン ID でフィルター
+  },
 });
 ```
 

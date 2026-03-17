@@ -9,7 +9,7 @@ abstract: "Turn business rules like 'over 18' or 'revenue above threshold' into 
 
 ## From Business Rules to Provable Facts
 
-"Is this user over 18?" is a business rule. "The committed attribute `age_bucket` equals `adult` under circuit `age-over-18`, verified against `attrCommitmentRoot` on chain 1" is a provable fact.
+"Is this user over 18?" is a business rule. "The committed attribute `age_bucket` equals `adult` under circuit `age-over-18`, verified against `commitmentRoot` on chain 1" is a provable fact.
 
 Lemma bridges the gap. You define business logic as ZK circuits, and every time a condition is checked, the result is a cryptographic proof that anyone can verify — without seeing the underlying data.
 
@@ -18,7 +18,7 @@ Lemma bridges the gap. You define business logic as ZK circuits, and every time 
 The process has three steps:
 
 1. **Normalize** the raw document into typed attributes using a schema.
-2. **Commit** the normalized attributes via a Poseidon-based Merkle Tree to produce an `attrCommitmentRoot`.
+2. **Commit** the normalized attributes via a Poseidon-based Merkle Tree to produce an `commitmentRoot`.
 3. **Prove** a predicate against the commitments using a ZK circuit.
 
 ```typescript
@@ -34,7 +34,7 @@ const zkResult = await prover.prove(client, {
   witness: {
     age_bucket: prep.normalized.age_bucket,
     randomness: prep.commitments.randomness,
-    attr_commitment_root: prep.commitments.attrCommitmentRoot,
+    attr_commitment_root: prep.commitments.commitmentRoot,
   },
 });
 ```

@@ -33,18 +33,18 @@ AI agents access Lemma via MCP as a reliable data source for use cases like safe
   - Per `schemaId`, you define `Raw`, `Norm`, and `normalize: Raw -> Norm` so that comparisons and proofs operate on a normalized attribute space (e.g. bucketing age, temperature).
   - Normalization runs client-side; Lemma only trusts commitments, ZK proofs, and registry metadata, not your normalize code itself.
 - **Commitments and ZK**
-  - Normalized attributes are committed via a **Poseidon-based Merkle Tree** to produce `attrCommitmentRoot` and per-attribute commitments used as ZK witnesses/public inputs.
+  - Normalized attributes are committed via a **Poseidon-based Merkle Tree** to produce `commitmentRoot` and per-attribute commitments used as ZK witnesses/public inputs.
   - The `commitments` object includes a `scheme` field (default: `"poseidon"`) that specifies the hash algorithm used for commitments, allowing future migration to other ZK-friendly hashes like Poseidon2.
   - Arbitrary ZK circuits (Circom, Halo2, etc.) are supported via metadata that links a `circuitId` to schema, public inputs, verifier (on/off-chain), and artifacts (`wasm`, `zkey` on IPFS/HTTPS).
 - **Selective disclosure (BBS+)**
   - Issuer BBS+ signs the raw document; Holder creates proofs that reveal only selected attributes, abstracted in the API so it can later support SD-JWT, etc.
   - Lemma verifies that disclosed attributes are indeed part of the signed document by combining stored signature metadata and selective-disclosure proof.
 - **On-chain provenance and hooks**
-  - `LemmaRegistry` contracts store `docHash`, `attrCommitmentRoot`, schema, issuer/subject IDs, revocation data, and link to verifier contracts.
+  - `LemmaRegistry` contracts store `docHash`, `commitmentRoot`, schema, issuer/subject IDs, revocation data, and link to verifier contracts.
   - Optional smart-contract hooks can be executed at document registration, receiving the same provenance (public inputs) as the registry call.
 - **Architecture and trust**
   - **5-layer model**:
-    1. **On-Chain Provenance**: `LemmaRegistry` stores `docHash`, `attrCommitmentRoot`, schema, issuer/subject IDs, revocation data. ZK verifier contracts emit `ProofVerified` events.
+    1. **On-Chain Provenance**: `LemmaRegistry` stores `docHash`, `commitmentRoot`, schema, issuer/subject IDs, revocation data. ZK verifier contracts emit `ProofVerified` events.
     2. **Off-Chain Storage**: Encrypted documents stored on IPFS/Ceramic; mapping between CID and `docHash` managed client-side.
     3. **Encrypted Index / ZK**: Structured encryption indexes and ZK prover/verifier components (Circom/Halo2).
     4. **Oracle Core / Registries / Query Gateway**: API endpoints for document registration, proof submission, verified attributes query, and schema/circuit/generator registries.
@@ -163,7 +163,7 @@ const prep = await prepare<UserKycRaw, UserKycNorm>(client, {
   schema: userKycSchema.id,
   payload: rawDoc,
 });
-// prep.normalized, prep.commitments (includes scheme, attrCommitmentRoot, perAttributeCommitments, randomness)
+// prep.normalized, prep.commitments (includes scheme, commitmentRoot, perAttributeCommitments, randomness)
 ```
 
 One line explanation: `encrypt` returns `docHash`/`cid`, and `prepare` returns normalized attributes plus commitments.
@@ -199,7 +199,7 @@ await documents.register(client, {
   cid: enc.cid,
   commitments: {
     scheme: "poseidon",
-    attrCommitmentRoot: prep.commitments.attrCommitmentRoot,
+    commitmentRoot: prep.commitments.commitmentRoot,
     perAttributeCommitments: prep.commitments.perAttributeCommitments,
   },
   signature: {
@@ -222,7 +222,7 @@ const zkResult = await prover.prove(client, {
   witness: {
     age_bucket: prep.normalized.age_bucket,
     randomness: prep.commitments.randomness,
-    attr_commitment_root: prep.commitments.attrCommitmentRoot,
+    attr_commitment_root: prep.commitments.commitmentRoot,
   },
 });
 // zkResult.proofBytes, zkResult.publicInputs
@@ -233,7 +233,7 @@ await proofs.submit(client, {
   docHash: enc.docHash,
   circuitId: "age-over-18",
   proofBytes: zkResult.proofBytes,
-  publicInputs: zkResult.publicInputs,
+  inputs: zkResult.inputs,
   selectiveDisclosure: {
     format: "bbs+",
     disclosedAttributes: sd.disclosed,

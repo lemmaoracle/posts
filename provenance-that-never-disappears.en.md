@@ -18,7 +18,7 @@ Lemma anchors provenance on-chain because blockchain state is append-only, publi
 The `LemmaRegistry` contract stores the following for each registered document:
 
 - `docHash` — the SHA3-256 hash of the encrypted document.
-- `attrCommitmentRoot` — the Merkle root of all attribute commitments.
+- `commitmentRoot` — the Merkle root of all attribute commitments.
 - `schemaIdHash` — identifies which schema was used.
 - Issuer and subject identifiers.
 - Revocation data (revocation root and scheme).
@@ -27,7 +27,7 @@ The `LemmaRegistry` contract stores the following for each registered document:
 ```solidity
 struct DocumentProvenance {
   bytes32 docHash;
-  bytes32 attrCommitmentRoot;
+  bytes32 commitmentRoot;
   bytes32 schemaIdHash;
   address issuer;
   address subject;
