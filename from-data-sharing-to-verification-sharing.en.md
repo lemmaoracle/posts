@@ -16,7 +16,7 @@ Lemma proposes a third option—a new paradigm: "Share verified facts, not raw d
 
 ---
 
-## ① The Challenge of Multi-Tier Supply Chains
+## The Challenge of Multi-Tier Supply Chains
 
 Modern global supply chains involve complex networks of dozens, even hundreds, of interconnected companies. While Tier 1 suppliers may be visible, Tier 2 and Tier 3 remain hidden. Yet recent regulations (the EU's CSRD, U.S. supply chain laws, etc.) increasingly require downstream companies to verify upstream environmental and labor standards.
 
@@ -28,7 +28,7 @@ Typical challenges faced on the front lines:
 
 ---
 
-## ② The Limitations of Traditional Approaches
+## The Limitations of Traditional Approaches
 
 Existing solutions fall into two broad categories.
 
@@ -40,7 +40,7 @@ Both approaches share the same structural constraint: **privacy or speed must be
 
 ---
 
-## ③ Verification Sharing: A Third Option
+## Verification Sharing: A Third Option
 
 Lemma's approach is fundamentally different. Instead of sharing data itself, we流通 (circulate) **mathematical proofs—zero-knowledge proofs—that the data meets specific criteria**.
 
@@ -54,7 +54,7 @@ This allows suppliers to **prove compliance while preserving production secrets*
 
 ---
 
-## ④ Autonomous Verification by Procurement Agents
+## Autonomous Verification by Procurement Agents
 
 In Lemma's near future, AI agents autonomously perform this verification.
 
@@ -74,7 +74,7 @@ Human intervention occurs only in exceptional cases. Normal procurement workflow
 
 ---
 
-## ⑤ The Triad: Transparency, Speed, Privacy
+## The Triad: Transparency, Speed, Privacy
 
 Traditionally, the assumption dominated: "Greater transparency means lower privacy." Lemma's verification sharing model dismantles this trade-off.
 
@@ -90,7 +90,7 @@ This shift extends beyond supply chains. It applies wherever trust is needed whi
 
 ---
 
-## ⑥ An Ecosystem Where Verification Is the Default
+## An Ecosystem Where Verification Is the Default
 
 Lemma envisions not individual enterprise tools, but **a world where 'verified status' is an accepted social infrastructure**.
 
