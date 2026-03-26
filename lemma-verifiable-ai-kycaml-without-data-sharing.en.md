@@ -29,7 +29,7 @@ This context highlights the differences between conventional models and Lemma's 
 
 This shift enhances verification efficiency and improves customer experience.
 
-## Trust Challenges Financial Institutions Face (500 words)
+## Trust Challenges Financial Institutions Face
 
 Financial institutions confront five main challenges: impersonation risk, policy opacity (unclear reasons for high risk), audit trail deficiencies, ambiguous responsibility, and compliance gaps. For example, accepting another bank's AI judgment without scrutiny risks secondary damage.
 
@@ -41,7 +41,7 @@ Lemma addresses these challenges through a three-layer approach:
 
 This enables zero-data-leakage trust sharing.
 
-## Lemma Implementation Technology (600 words)
+## Lemma Implementation Technology
 
 Here's an example using Lemma SDK for automated AML verification:
 
@@ -60,7 +60,7 @@ if (result.status === "verified") {
 
 AES-GCM encryption protects inputs, and Retrieval-Augmented Generation (RAG) integrates financial domain knowledge. Outputs become tamper-proof via ZK-snarks (Succinct Non-interactive). BBS+ signatures chain logs for auditability. WebCrypto compliance enables browser implementation.
 
-## Expected Impact and Industry Trends 
+## Expected Impact and Industry Trends
 
 Implementing Lemma's approach significantly reduces verification time and false-positive rates. Enhanced trust in inter-institutional sharing prevents customer attrition and improves overall operational efficiency. Transaction monitoring automation reduces operator burden.
 
@@ -71,7 +71,7 @@ Industry trends include:
 
 Lemma advances this trend with AI verification capabilities.
 
-## Business KPIs and Implementation Guide 
+## Business KPIs and Implementation Guide
 
 Recommended KPIs:
 
@@ -91,7 +91,7 @@ Implementation guide:
 
 High compatibility with existing systems ensures smooth transition.
 
-## Conclusion 
+## Conclusion
 
 Lemma's practical approach transforms KYC/AML into trustworthy infrastructure. Whitepapers and demos will be released shortly. We are currently offering priority access to select partner companies.
 
