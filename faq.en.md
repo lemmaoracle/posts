@@ -211,4 +211,3 @@ We recommend starting with these three areas:
 If you are interested in partnering with Lemma Oracle or exploring PoC and co-development opportunities, please register as a partner candidate via the form below.
 
 [Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
-

@@ -183,4 +183,3 @@ Lemma Oracle による「検証可能なAI」および暗号的 RAG 設計の詳
 本記事のアプローチに関心をお持ちの事業会社・SIer・プロダクト開発チームの方で、パートナー候補としての優先案内をご希望の場合は、以下よりお申込みください。
 
 [パートナー候補として登録する（1分）](https://429bpd.share-na2.hsforms.com/2RxuIcA8OSYyAcsEKpxTM9Q)
-

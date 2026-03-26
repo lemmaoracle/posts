@@ -185,4 +185,3 @@ Technical details and demo environments for Lemma Oracle’s “verifiable AI”
 If you are interested in this approach and would like to receive priority access as a potential partner organization, please apply below.
 
 [Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
-
