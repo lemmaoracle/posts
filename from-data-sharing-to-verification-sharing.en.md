@@ -102,8 +102,8 @@ From the era where "whoever possesses data holds power" to an era where "whoever
 
 **Partner with Lemma Oracle**
 
-Technical details and demo environments for Lemma Oracle’s “verification sharing” in supply chains are currently available in a closed, partner-only phase.[web:60][web:53]  
-If you are interested in exploring pilots or early integrations as a potential partner organization, please register below for priority access.[web:60][web:53]
+Technical details and demo environments for Lemma Oracle’s “verification sharing” in supply chains are currently available in a closed, partner-only phase.
+If you are interested in exploring pilots or early integrations as a potential partner organization, please register below for priority access.
 
 [Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
 
