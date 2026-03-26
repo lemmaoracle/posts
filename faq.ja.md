@@ -204,3 +204,13 @@ ZKサーキットと再現可能なジェネレーターを登録することで
 - [消えることのない来歴](/ja/blog/provenance-that-never-disappears)
 - [検証可能なAI：信頼の出所を暗号で示す新しいRAG設計](/ja/blog/verifiable-ai)
 - [Lemma Oracle 仕様](/ja/blog/lemma-oracle-specs)
+
+---
+
+## パートナー・PoCに関するお問い合わせ
+
+Lemma Oracle とのパートナーシップや、PoC・共同検証の優先案内をご希望の方は、以下のフォームよりパートナー候補としてご登録ください。
+
+[パートナー候補として登録する（1分）](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+
+
