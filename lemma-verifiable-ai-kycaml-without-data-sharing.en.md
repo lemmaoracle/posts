@@ -60,7 +60,7 @@ if (result.status === "verified") {
 
 AES-GCM encryption protects inputs, and Retrieval-Augmented Generation (RAG) integrates financial domain knowledge. Outputs become tamper-proof via ZK-snarks (Succinct Non-interactive). BBS+ signatures chain logs for auditability. WebCrypto compliance enables browser implementation.
 
-## Expected Impact and Industry Trends (500 words)
+## Expected Impact and Industry Trends 
 
 Implementing Lemma's approach significantly reduces verification time and false-positive rates. Enhanced trust in inter-institutional sharing prevents customer attrition and improves overall operational efficiency. Transaction monitoring automation reduces operator burden.
 
@@ -71,7 +71,7 @@ Industry trends include:
 
 Lemma advances this trend with AI verification capabilities.
 
-## Business KPIs and Implementation Guide (400 words)
+## Business KPIs and Implementation Guide 
 
 Recommended KPIs:
 
@@ -91,7 +91,7 @@ Implementation guide:
 
 High compatibility with existing systems ensures smooth transition.
 
-## Conclusion (150 words)
+## Conclusion 
 
 Lemma's practical approach transforms KYC/AML into trustworthy infrastructure. Whitepapers and demos will be released shortly. We are currently offering priority access to select partner companies.
 
