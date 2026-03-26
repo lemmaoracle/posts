@@ -176,3 +176,13 @@ Lemma:
 
 The design philosophy demonstrated in this article is the technical premise common to all business, governance, and social implementation use cases covered in the 10-part series.
 In the next article, we will delve into how, building on this verification layer, cryptographic trust chains between agents impact the API economy and B2B collaborations.
+
+---
+
+**Partner with Lemma Oracle**
+
+Technical details and demo environments for Lemma Oracle’s “verifiable AI” and cryptographic RAG design are currently available in a closed, partner-only phase.[page:47][web:53]  
+If you are interested in this approach and would like to receive priority access as a potential partner organization, please apply below.[page:47][web:53]
+
+[Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+
