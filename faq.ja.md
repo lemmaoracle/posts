@@ -211,6 +211,6 @@ ZKサーキットと再現可能なジェネレーターを登録することで
 
 Lemma Oracle とのパートナーシップや、PoC・共同検証の優先案内をご希望の方は、以下のフォームよりパートナー候補としてご登録ください。
 
-[パートナー候補として登録する（1分）](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+[パートナー候補として登録する（1分）](https://429bpd.share-na2.hsforms.com/2RxuIcA8OSYyAcsEKpxTM9Q)
 
 
