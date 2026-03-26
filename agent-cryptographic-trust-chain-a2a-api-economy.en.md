@@ -131,7 +131,7 @@ The next article will describe how this trust infrastructure deploys across enti
 
 **Partner with Lemma Oracle**
 
-Lemma Oracle’s cryptographic trust chain and A2A integration are currently available in a closed, partner-only phase.[page:14][web:53]  
-If you are interested in implementing this trust layer for AI-to-AI collaboration or API-based ecosystems as a potential partner, please apply for priority access below.[page:14][web:53]
+Lemma Oracle’s cryptographic trust chain and A2A integration are currently available in a closed, partner-only phase.
+If you are interested in implementing this trust layer for AI-to-AI collaboration or API-based ecosystems as a potential partner, please apply for priority access below.
 
 [Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
