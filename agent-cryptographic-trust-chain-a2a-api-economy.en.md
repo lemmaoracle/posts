@@ -126,3 +126,12 @@ When selecting human suppliers, we perform credit checks, reviews, contracts, an
 The cryptographic trust chain is **infrastructure** for "treating agents as business partners." With attribute proofs, ZK verification, and audit logs built into the protocol, executives can constantly grasp "whose agents, under what conditions, are sharing what."
 
 The next article will describe how this trust infrastructure deploys across entire supply chains, through concrete scenes in manufacturing, logistics, and public procurement.
+
+---
+
+**Partner with Lemma Oracle**
+
+Lemma Oracle’s cryptographic trust chain and A2A integration are currently available in a closed, partner-only phase.[page:14][web:53]  
+If you are interested in implementing this trust layer for AI-to-AI collaboration or API-based ecosystems as a potential partner, please apply for priority access below.[page:14][web:53]
+
+[Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
