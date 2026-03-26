@@ -65,7 +65,7 @@ Policy attributes such as "AML reviewed," "GDPR compliance applied," or "operate
 **Layer 3 — Verifiable Authority Scopes**  
 Scopes such as "inventory data read-only access" or "authority to place orders up to 1 million yen" are held as signed attributes. The receiving agent can cryptographically verify the scope before proceeding with processing.
 
-```text
+```javascript
 // Conceptual flow (actual SDK API syntax may differ)
 const result = await attributes.query(client, {
   query: "KYC verified AND AML cleared AND inventory read scope",
