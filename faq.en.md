@@ -203,3 +203,12 @@ We recommend starting with these three areas:
 - [Define Your Domain as a Schema](/define-your-domain-as-a-schema)
 - [Provenance That Never Disappears](/blog/provenance-that-never-disappears)
 - [Lemma Oracle Specs (Specification)](/blog/lemma-oracle-specs/)
+
+---
+
+## Partnering and PoC opportunities
+
+If you are interested in partnering with Lemma Oracle or exploring PoC and co-development opportunities, please register as a partner candidate via the form below.
+
+[Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+
