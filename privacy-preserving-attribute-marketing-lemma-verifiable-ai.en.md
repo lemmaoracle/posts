@@ -16,13 +16,13 @@ In response to these challenges, Lemma's Verifiable AI, based on Zero-Knowledge 
 
 ## Evolution and Background of Marketing Collaboration
 
-In today's API-driven ecosystem, Application-to-Application (A2A) collaboration among corporate groups has become standardized. Marketing professionals want to dynamically utilize purchase history and behavioral data to launch real-time campaigns. However, siloed attribute data creates bottlenecks, particularly with delayed verification of "high-engagement attributes" for loyal customers.
+In today's increasingly API-driven ecosystem, Application-to-Application (A2A) collaboration among corporate groups is gaining importance. Marketing professionals want to dynamically utilize purchase history and behavioral data to launch real-time campaigns. However, siloed attribute data creates bottlenecks, particularly with delayed verification of "high-engagement attributes" for loyal customers.
 
 This transformation aligns with DX trends, and the evolution of W3C Verifiable Credentials (VC) standards is driving the fusion of ZK and ML technologies.
 
 | Item                | Traditional Approach                 | Lemma Verifiable AI                                                                   |
 | ------------------- | ------------------------------------ | ------------------------------------------------------------------------------------- |
-| Data Sharing        | Full disclosure (high leakage risk)  | Attribute proof only (ZK mathematical non-disclosure)                                 |
+| Data Sharing        | Sharing the entire dataset is required (concerns about leakage risk)  | Attribute proof only (ZK mathematical non-disclosure)                                 |
 | Analysis Flow       | Manual aggregation/static dashboards | AI dynamic + ZK proof chain                                                           |
 | Collaboration Speed | Several days (manual work dependent) | Real-time (within hours)                                                              |
 | Protection Level    | Basic encryption (AES only)          | ZK proof + BBS+ selective disclosure + DID identity (post-quantum migration designed) |
@@ -89,12 +89,12 @@ Key technologies:
 
 Quantitative expectations from Lemma implementation:
 
-- Customer retention rate: 15-20% improvement (attribute accuracy enhancement).
-- Campaign ROI: 2-3x improvement (real-time optimization).
-- Analysis misjudgment rate: <1% (ZK guarantee).
-- Attribute utilization rate: 100% (under non-disclosure).
+- Customer retention rate: A 15-20% improvement is anticipated as attribute accuracy increases.
+- Campaign ROI: A 2-3x improvement is expected through real-time optimization.
+- Analysis misjudgment rate: Reduction to below 1% is theoretically achievable through ZK proof verification.
+- Attribute utilization rate: Full attribute utilization becomes possible even in a non-disclosure environment.
 
-This accelerates marketing in FinTech/Retail/E-commerce with ESG compliance. Reduced analysis errors directly impact conversion rates.
+If these effects are realized, marketing in FinTech, Retail, and E-commerce could see further progress in ESG compliance. Additionally, reducing analysis errors may contribute to improved conversion rates.
 
 ## KPI Design and PoC Validation Flow
 
@@ -116,14 +116,14 @@ This accelerates marketing in FinTech/Retail/E-commerce with ESG compliance. Red
 | Metric            | Before (Traditional)  | After (Lemma)             |
 | ----------------- | --------------------- | ------------------------- |
 | Analysis time     | 3 days                | 1 hour                    |
-| Trust score       | Subjective evaluation | Mathematical proof (100%) |
+| Trust score       | Subjective evaluation | ZK proof-based verifiable evaluation |
 | Sharing scope     | Internal only         | Secure groups             |
 | Compliance burden | High (manual audit)   | Low (automatic proof)     |
 | ROI impact        | Baseline              | +200% expected            |
 
 ## Conclusion
 
-Lemma Verifiable AI revolutionizes attribute marketing in data non-disclosure environments. As a Trusted Web infrastructure for Society 5.0, it embodies the essence of digital transformation. For more details, please refer to our whitepaper.
+Lemma Verifiable AI presents a new approach to attribute marketing in data non-disclosure environments. As part of the Trusted Web infrastructure envisioned for Society 5.0, it offers one potential path forward. For more details, please refer to our whitepaper.
 
 Partner registration (1 minute required) is currently open for PoC demos and priority support. Please apply below.
 
