@@ -1,7 +1,7 @@
 ---
 slug: "whitepaper-v1-prove-ai-decisions"
 date: "2026.04.23"
-category: "Business Strategy"
+category: "Announcement"
 section: "Essays"
 title: "ホワイトペーパー公開：AIの判断根拠を証明する設計書"
 abstract: "AIエージェントが実務の判断を担いはじめた今、「そのAIは何を根拠に判断したのか」を証明する仕組みが、現行スタックには存在しません。Lemma Oracleはホワイトペーパー（v1.0）を公開し、データを開示せずに事実を証明するZK証明ベースの信頼インフラを提示します。真正性・プライバシー・監査可能性の3つの保証と、5つのCOREユースケース・2つのADVANCEDシナリオを通じて、EU AI法時代の設計指針を示します。"
