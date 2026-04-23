@@ -1,4 +1,27 @@
-# posts
+# Lemma Oracle — Posts
+
+Blog posts, essays, guides, and media assets for
+[Lemma Oracle](https://lemma.frame00.com).
+
+Markdown 管理専用リポジトリ。lemma のブログ（`lemma/packages/web`）が
+ビルド時に GitHub API でこのリポジトリの `.md` を取得して表示する。
+
+## Read the posts
+
+- 🌐 **Website**: https://lemma.frame00.com
+- ✍️ **Blog**: https://lemma.frame00.com/blog
+- ❓ **FAQ**: https://lemma.frame00.com/blog/faq
+
+## About Lemma
+
+Lemma is a cryptographically verified truth layer for agent AI —
+delivering proven facts via zero-knowledge proofs, selective disclosure,
+and on-chain provenance.
+
+Learn more at [lemma.frame00.com](https://lemma.frame00.com) or see the
+main repository at [lemmaoracle/lemma](https://github.com/lemmaoracle/lemma).
+
+# フォーマット
 
 Markdown 管理専用リポジトリ。lemma のブログ（[lemma/packages/web](https://github.com/lemmaoracle/lemma/tree/main/packages/web)）がビルド時に GitHub
 API でこのリポジトリの `.md` を取得して表示する。
