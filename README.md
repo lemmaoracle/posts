@@ -55,3 +55,12 @@ abstract: "Short summary for listings."
 ```
 
 本文は frontmatter の直後から Markdown で記述する。
+
+## Contact
+
+For partnership and implementation inquiries:
+https://lemma.frame00.com/services
+
+---
+
+© 2026 FRAME00 Inc.
