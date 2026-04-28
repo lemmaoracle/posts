@@ -67,10 +67,19 @@ Lemma further binds this disclosure to the x402 settlement via the condition `co
 
 The `packages/agent/src/index.ts` reference agent walks through four phases:
 
-1. **Free fetch.** `GET /resource` returns the data and an `X-Lemma-Attestation` header (or a `<link rel="lemma-attestation">` in HTML) pointing at the verification endpoint. Distribution is cheap; the proof is what costs `$0.001`.
-2. **Hold as `UNVERIFIED`.** The agent's reasoning loop receives the bytes labeled untrusted and does not yet act on them.
-3. **Pay-and-verify in one round trip.** `GET /verify/:hash` via `@x402/fetch` returns `402 Payment Required`, the agent auto-pays `0.001 USDC` on Base Sepolia, and the `200` response carries the verified attributes in the body and the ZK settlement proof in the `PAYMENT-RESPONSE` header.
-4. **Integrity check.** The agent computes `SHA-256(body)`, compares it to `attributes.integrity`, and only on match transitions internal state to `VERIFIED`.
+1. **Free fetch**
+   - `GET /resource` returns the data and an `X-Lemma-Attestation` header (or a `<link rel="lemma-attestation">` in HTML) pointing at the verification endpoint.
+   - Distribution is cheap; the proof is what costs `$0.001`.
+2. **Hold as `UNVERIFIED`**
+   - The agent's reasoning loop receives the bytes labeled untrusted.
+   - It does not yet act on them.
+3. **Pay-and-verify in one round trip**
+   - `GET /verify/:hash` via `@x402/fetch` returns `402 Payment Required`.
+   - The agent auto-pays `0.001 USDC` on Base Sepolia.
+   - The `200` response carries the verified attributes in the body and the ZK settlement proof in the `PAYMENT-RESPONSE` header.
+4. **Integrity check**
+   - The agent computes `SHA-256(body)` and compares it to `attributes.integrity`.
+   - Only on match does it transition internal state to `VERIFIED`.
 
 Phase 3 is the moment payment and proof become a single artifact. The `PAYMENT-RESPONSE` extension produced by `@lemmaoracle/x402` is:
 

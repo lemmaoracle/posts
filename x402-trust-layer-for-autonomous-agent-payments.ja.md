@@ -67,10 +67,19 @@ Lemma ではさらに、この開示を `condition.circuitId = "x402-payment-v1"
 
 リファレンスエージェント（`packages/agent/src/index.ts`）は次の4つのフェーズを順に実行します。
 
-1. **無料で取得。** `GET /resource` はデータと、検証エンドポイントを指す `X-Lemma-Attestation` ヘッダ（または HTML 内の `<link rel="lemma-attestation">`）を返します。データの配布は安く、`$0.001` の対価が支払われるのは「証明」に対してです。
-2. **`UNVERIFIED` として保持。** エージェントの判断ロジックには「未検証」のラベル付きでデータが渡り、この時点では業務行動は起こしません。
-3. **支払いと検証を1往復で。** `GET /verify/:hash` を `@x402/fetch` で叩くと `402 Payment Required` が返り、エージェントは Base Sepolia で `0.001 USDC` を自動的に支払います。`200` レスポンスのボディには検証済み属性が、`PAYMENT-RESPONSE` ヘッダには ZK settlement proof が同時に乗ります。
-4. **整合性確認。** エージェントは `SHA-256(body)` を計算し、`attributes.integrity` と一致したときに初めて内部状態を `VERIFIED` に遷移させます。
+1. **無料で取得**
+   - `GET /resource` はデータと、検証エンドポイントを指す `X-Lemma-Attestation` ヘッダ（または HTML 内の `<link rel="lemma-attestation">`）を返します。
+   - データの配布は安く、`$0.001` の対価が支払われるのは「証明」に対してです。
+2. **`UNVERIFIED` として保持**
+   - エージェントの判断ロジックには「未検証」のラベル付きでデータが渡ります。
+   - この時点では業務行動は起こしません。
+3. **支払いと検証を1往復で**
+   - `GET /verify/:hash` を `@x402/fetch` で叩くと `402 Payment Required` が返ります。
+   - エージェントは Base Sepolia で `0.001 USDC` を自動的に支払います。
+   - `200` レスポンスのボディには検証済み属性が、`PAYMENT-RESPONSE` ヘッダには ZK settlement proof が同時に乗ります。
+4. **整合性確認**
+   - エージェントは `SHA-256(body)` を計算し、`attributes.integrity` と照合します。
+   - 一致したときに初めて内部状態を `VERIFIED` に遷移させます。
 
 Phase 3 が、決済と証明が単一のアーティファクトに統合される瞬間です。`@lemmaoracle/x402` が生成する `PAYMENT-RESPONSE` の拡張は次の形をしています。
 
