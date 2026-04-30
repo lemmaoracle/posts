@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "AI に必要なものだけを開示する"
 abstract: "選択的開示により、ホルダーはモデルが必要とする属性だけを公開でき、元の発行者署名との紐づけは維持されます。"
+tags:
+  - selective-disclosure
+  - privacy
+  - provenance
+  - agent-security
 ---
 
 ## 選択的開示の課題

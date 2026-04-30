@@ -6,6 +6,14 @@ section: "Essays"
 title: "x402 に信頼レイヤーを足す"
 cover: "assets/Q50vhoUkafc.jpg"
 abstract: "AIエージェントは x402 によって HTTP 経由で自律的に支払えるようになりました。しかし、ウォレットアドレスとトランザクションハッシュだけでは、受け手のサーバーは「誰が・どの権限で支払ったのか」「返したデータが改ざんなく届いたか」を知ることができません。本日、Lemma × x402 のリファレンス実装を Base Sepolia 上で公開します。すべての決済は PAYMENT-RESPONSE に ZK 証明バンドル — 発行者の身元・支払い完了・データ整合性 — を同梱し、独立に検証可能になります。"
+tags:
+  - agent-security
+  - provenance
+  - zero-knowledge-proof
+  - payments
+relatedLinks:
+  - label: "example-x402（リファレンス実装）"
+    href: "https://github.com/lemmaoracle/example-x402"
 ---
 
 ## 予告した設計が動きます

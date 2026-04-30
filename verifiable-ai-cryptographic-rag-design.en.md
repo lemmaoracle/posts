@@ -6,6 +6,11 @@ section: "Essays"
 title: "Verifiable AI: A New RAG Design that Demonstrates Trust Origins with Cryptography"
 abstract: "Addressing the trust challenges of AI agents and RAG systems, we propose a novel design that leverages cryptographic technologies (zero-knowledge proofs, selective disclosure, and provenance tracking). This approach builds a verification layer for data origins and condition compliance before AI reads the data, ensuring the overall reliability of the system."
 cover: "assets/fjcJFETT2r8.jpg"
+tags:
+  - rag
+  - zero-knowledge-proof
+  - selective-disclosure
+  - provenance
 ---
 
 AI agents and RAG (Retrieval-Augmented Generation) systems are already beginning to play the role of "research, summarize, and answer" in many practical scenarios.  

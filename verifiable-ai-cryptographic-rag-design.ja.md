@@ -6,6 +6,11 @@ section: "Essays"
 title: "検証可能なAI：信頼の出所を暗号で示す新しいRAG設計"
 abstract: "AIエージェントやRAGの信頼性課題に対し、暗号技術（ゼロ知識証明・選択的開示・プロヴナンス追跡）を活用した新しい設計を提案。AIが読む前の段階でデータの出所と条件適合を検証するレイヤを構築し、システム全体の信頼性を担保するアプローチを解説する。"
 cover: "assets/fjcJFETT2r8.jpg"
+tags:
+  - rag
+  - zero-knowledge-proof
+  - selective-disclosure
+  - provenance
 ---
 
 AIエージェントやRAG（Retrieval-Augmented Generation）は、すでに多くの現場で「調べて、まとめて、答える」役割を担い始めています。  

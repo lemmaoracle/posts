@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "ゼロ知識で事実を証明する"
 abstract: "「18歳以上」「収益が閾値超」などのビジネスルールを機械検証可能な事実に変換。各証明は回路とジェネレーターとともに永続記録されます。"
+tags:
+  - zero-knowledge-proof
+  - attribute-verification
+  - provenance
+  - compliance
 ---
 
 ## ビジネスルールから証明可能な事実へ

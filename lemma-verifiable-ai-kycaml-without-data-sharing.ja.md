@@ -6,6 +6,11 @@ section: "Essays"
 title: "データを出さずに証明するKYC/AML：Lemma検証可能AIの実践アプローチ"
 abstract: "金融機関の KYC/AML 業務におけるプライバシー保護と迅速な審査の両立課題に対し、ZK 証明を基盤とした Lemma 検証可能 AI が解決策を提供する。データを出さずに属性を証明し、AI の透明性を確保する実践的なアプローチを、技術設計から経営インパクトまで解説する。"
 cover: "assets/PheXNJawcEc.jpg"
+tags:
+  - kyc-aml
+  - compliance
+  - zero-knowledge-proof
+  - privacy
 ---
 
 ## 導入

@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "すべてを暗号化し、何も露出しない"
 abstract: "Lemma がすべてのドキュメントを AES-GCM で暗号化し、AI が生の PII に触れないようにする仕組み。docHash と CID だけが来歴の安定したアンカーとして公開されます。"
+tags:
+  - privacy
+  - provenance
+  - encryption
+  - rag
 ---
 
 ## AI パイプラインにおける生データの問題

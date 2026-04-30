@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "消えることのない来歴"
 abstract: "ドキュメントコミットメント、スキーマ、発行者、ZK 検証結果はオンチェーンにアンカーされます。RAG インデックスは再構築でき、埋め込みは再計算できますが、来歴レイヤーは永続します。"
+tags:
+  - provenance
+  - rag
+  - audit-trail
+  - verifiable-origin
 ---
 
 ## なぜオンチェーンの来歴か

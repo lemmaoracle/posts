@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "Prove Facts with Zero Knowledge"
 abstract: "Turn business rules like 'over 18' or 'revenue above threshold' into machine-checkable facts. Each proof is permanently recorded with its circuit and generator."
+tags:
+  - zero-knowledge-proof
+  - attribute-verification
+  - provenance
+  - compliance
 ---
 
 ## From Business Rules to Provable Facts
