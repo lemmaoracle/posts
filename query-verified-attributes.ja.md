@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "検証済み属性をクエリする"
 abstract: "「日本在住の18歳以上のユーザー」を問い合わせると、証明状態・スキーマ・発行者・ジェネレーター・検証方法を含む完全な来歴付きの属性が返されます。"
+tags:
+  - attribute-verification
+  - rag
+  - provenance
+  - verifiable-origin
 ---
 
 ## ラストマイル：証明から回答へ

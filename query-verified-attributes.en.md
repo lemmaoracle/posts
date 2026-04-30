@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "Query Verified Attributes"
 abstract: "Ask 'users over 18 in Japan' and get back attributes with full provenance — proof status, schema, issuer, generator, and verification method — ready for your RAG policy layer."
+tags:
+  - attribute-verification
+  - rag
+  - provenance
+  - verifiable-origin
 ---
 
 ## The Last Mile: From Proofs to Answers

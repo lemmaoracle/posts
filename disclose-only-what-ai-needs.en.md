@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "Disclose Only What AI Needs"
 abstract: "Selective disclosure lets holders reveal just the attributes your model requires, while the link to the original issuer signature stays intact."
+tags:
+  - selective-disclosure
+  - privacy
+  - provenance
+  - agent-security
 ---
 
 ## The Selective Disclosure Problem

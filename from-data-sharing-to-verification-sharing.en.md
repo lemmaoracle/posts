@@ -6,6 +6,11 @@ section: "Essays"
 title: "From Data Sharing to Verification Sharing: The Evolution of Supply Chain Trust Infrastructure"
 abstract: "Traditionally, supply chains have faced a trade-off between data sharing and third-party audits for building trust. Lemma proposes a third option—'verification sharing'—using zero-knowledge proofs to verify facts without sharing the underlying data. This enables real-time automated verification while preserving privacy, allowing AI agents to make autonomous procurement decisions."
 cover: "assets/tomPqFRSvng.jpg"
+tags:
+  - supply-chain
+  - zero-knowledge-proof
+  - provenance
+  - agent-security
 ---
 
 **Introduction**

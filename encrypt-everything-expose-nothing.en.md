@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "Encrypt Everything, Expose Nothing"
 abstract: "How Lemma keeps every document AES-GCM encrypted so your AI never touches raw PII — only docHash and CID are exposed as stable anchors for provenance."
+tags:
+  - privacy
+  - provenance
+  - encryption
+  - rag
 ---
 
 ## The Problem with Raw Data in AI Pipelines

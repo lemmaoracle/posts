@@ -6,6 +6,11 @@ section: "Essays"
 title: "Verified Attributes in Travel and Public Services"
 abstract: "Travel and public services suffer from an inefficient structure where the same personal information is repeatedly submitted and stored across multiple organizations. Passport copies, income certificates, and medical records spread across systems, increasing breach exposure. Lemma proposes a third option: 'Do not share raw data — circulate only verified facts.' This article explores a practical approach to streamlining hotel KYC, visa processing, and public benefit eligibility checks using ZK proofs, all while protecting privacy."
 cover: "assets/qDu2w2RUZXs.jpg"
+tags:
+  - attribute-verification
+  - zero-knowledge-proof
+  - privacy
+  - compliance
 ---
 
 ## Introduction

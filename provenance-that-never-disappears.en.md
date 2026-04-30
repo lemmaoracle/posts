@@ -5,6 +5,11 @@ category: "Guides"
 section: "Essays"
 title: "Provenance That Never Disappears"
 abstract: "Document commitments, schemas, issuers, and ZK verification results are anchored on-chain. Your RAG index can be rebuilt, your embeddings re-computed — the provenance layer stays permanent."
+tags:
+  - provenance
+  - rag
+  - audit-trail
+  - verifiable-origin
 ---
 
 ## Why On-Chain Provenance
