@@ -1,6 +1,7 @@
 ---
 title: "Delegated Treasury"
 abstract: "企業がAIエージェントに予算と業務範囲を渡す。この制約はソフトプロンプトに置けない。Lemmaは、発行組織の署名付きで、これらの制約をオンチェーンの支出制御アテステーションとして発行する。"
+thesis: "承認されている ≠ 証明されている"
 pillar: agent-trust-chain
 targetVerticals:
   - 企業の財務管理

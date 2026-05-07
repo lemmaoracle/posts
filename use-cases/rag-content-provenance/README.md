@@ -1,6 +1,7 @@
 ---
 title: "RAG Content Provenance"
 abstract: "Enterprise RAG systems index internal documents daily, but document identity and issuer signatures are lost the moment content is ingested. Lemma encrypts originals with AES-GCM and stamps only docHash and CID into the index. AI only accesses facts with verifiable provenance."
+thesis: "Indexed ≠ trustworthy"
 pillar: verifiable-origin
 targetVerticals:
   - Enterprise RAG platforms

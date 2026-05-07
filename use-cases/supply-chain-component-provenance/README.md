@@ -1,6 +1,7 @@
 ---
 title: "Supply Chain Component Provenance"
 abstract: "Multi-tier supplier provenance is carried through spreadsheets and PDFs, and tampering goes undetected. Self-ordering agents read attributes without a basis of trust. Lemma encrypts each node's attributes with issuer signatures, leaving a tamper-proof provenance chain."
+thesis: "Recorded ≠ untampered"
 pillar: verifiable-origin
 targetVerticals:
   - Manufacturing

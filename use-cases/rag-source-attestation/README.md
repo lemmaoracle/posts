@@ -1,6 +1,7 @@
 ---
 title: "RAG Source Attestation"
 abstract: "When an enterprise AI responds 'Based on Internal Policy Section X,' there is no guarantee the cited source matches the unaltered original. RAG indexes are rebuilt regularly, documents are versioned, and embeddings drift. Lemma proves that each citation in an AI response is cryptographically bound to the exact document version it claims to reference."
+thesis: "Cited ≠ verified"
 pillar: verifiable-ai
 targetVerticals:
   - Legal tech

@@ -1,6 +1,7 @@
 ---
 title: "DeFi Bridge Verification"
 abstract: "Cross-chain bridge messages are cryptographically valid yet not necessarily semantically correct. Lemma adds a cryptographic layer that enables the receiving system to independently verify message origin before committing state."
+thesis: "Cryptographically valid ≠ semantically right"
 pillar: verifiable-origin
 targetVerticals:
   - Liquid staking / restaking protocols

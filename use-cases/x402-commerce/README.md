@@ -1,6 +1,7 @@
 ---
 title: "X402 Commerce"
 abstract: "On the x402 rail, buyer and seller agents meet for the first time and complete a micropayment in milliseconds. Lemma wraps each seller-stated attribute in a ZK proof — the buyer agent never trusts plain text claims; it verifies cryptographically before it pays."
+thesis: "Paid ≠ verified"
 pillar: agent-trust-chain
 targetVerticals:
   - x402 protocol participants

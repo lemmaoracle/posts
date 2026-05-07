@@ -1,6 +1,7 @@
 ---
 title: "Multi-Agent Workflows"
 abstract: "An orchestrator agent assigns tasks to specialist agents. Those agents call MCP servers, invoke tools, return results. Without a provenance layer, the chain goes opaque. Lemma attaches a proof at each delegation node — the final output carries a verifiable trace back to the original principal."
+thesis: "Delegated ≠ traceable"
 pillar: agent-trust-chain
 targetVerticals:
   - AI orchestration platforms

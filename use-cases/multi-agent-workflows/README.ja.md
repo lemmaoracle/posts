@@ -1,6 +1,7 @@
 ---
 title: "Multi-Agent Workflows"
 abstract: "オーケストレータがサブエージェントに業務を割り振る。来歴レイヤがなければ、鎖は不透明になる。Lemmaは委任の各ノードに証明を付ける。最終成果物には、最初の発行者まで遡れる検証可能な経路が残る。"
+thesis: "委任した ≠ 追跡できる"
 pillar: agent-trust-chain
 targetVerticals:
   - AIオーケストレーションプラットフォーム

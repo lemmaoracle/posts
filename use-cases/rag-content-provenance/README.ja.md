@@ -1,6 +1,7 @@
 ---
 title: "RAG Content Provenance"
 abstract: "エンタープライズRAGは社内文書を日々索引化しますが、原本との同一性も発行者署名も取り込みの瞬間に失われます。LemmaはAES-GCMで原本を暗号化し、docHashとCIDだけをインデックスに刻みます。AIが触れるのは、検証可能な来歴を持つ事実のみ。"
+thesis: "インデックス化される ≠ 信頼できる"
 pillar: verifiable-origin
 targetVerticals:
   - エンタープライズRAGプラットフォーム
