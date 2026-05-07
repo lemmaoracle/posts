@@ -2,78 +2,42 @@
 title: "Scenario"
 ---
 
-# Scenario: Seconded Employee Data Exfiltration
+# Scenario
 
-## Before Lemma — How the Incident Unfolds
+The MetLife Japan 2026 incident exposed this structural gap. A life insurance company seconded employees to agency partner locations (regional banks, securities firms) to sell insurance products through both channels. A seconded employee exfiltrated 2,476 customer records across 36 agency partners.
 
-### Context
+### Before Lemma — How the Incident Unfolded
 
-A life insurance company (Insurer A) seconds an employee to a bank agency (Agency B) to sell insurance products through the bank's channel. The employee:
-
-1. Has credentials for Insurer A's customer database
-2. Gains credentials for Agency B's customer management system
-3. Works at Agency B's office with access to both systems simultaneously
-
-### Incident Timeline
-
-| Phase | What Happens | Why It's Undetectable |
+| Phase | What Happened | Why It Wasn't Detected |
 |---|---|---|
-| Access | Employee queries 2,476 customer records across both systems | Access appears legitimate — employee still has valid credentials |
-| Collection | Employee copies data to personal device / USB / cloud storage | No tamper-evident logging — access logs are mutable, stored in siloed systems |
-| Exfiltration | Employee carries data to a new employer or sells it | No cross-organization audit trail exists |
-| Discovery | Months later, customer complaints or regulatory audit reveals the breach | Logs may have been altered; no cryptographic proof of original access patterns |
-| Response | Insurer A and Agency B cannot prove exactly what was accessed or when | Mutual blame; regulatory penalty for both organizations |
+| Access | Seconded employee queried 2,476 customer records across both organizations' systems | Access appears legitimate. Employee holds valid credentials. |
+| Collection | Data copied to personal devices, USB drives, cloud storage | Logs are mutable and fragmented across organizations |
+| Exfiltration | Data transferred to new employer or buyer | No unified cross-organizational audit trail exists |
+| Discovery | Months later, through customer complaints and regulatory audit | Access logs may have been tampered with. No cryptographic proof of original access patterns. |
+| Response | Cannot precisely prove what was accessed and when | Mutual recrimination, regulatory penalties for both organizations |
 
-### Root Cause Analysis
+The root cause is simple: **ambiguous trust boundaries operated with mutable logs.**
 
-1. **Trust boundary ambiguity** — No explicit, enforceable data access policy at the inter-organization boundary
-2. **Mutable audit logs** — Both organizations store access logs in modifiable databases; no cryptographic guarantee of integrity
-3. **No shared proof layer** — Insurer A cannot verify Agency B's logs and vice versa
-4. **Deterrence gap** — Employee knows logs can be disputed; no "undeniable proof" deterrent exists
+### After Lemma — The Same Scenario with a Difference
 
----
+A Lemma Authentication Gateway is deployed between each organization's CRM/database and its users. Every data access request generates a ZK attestation:
 
-## After Lemma — How the Same Scenario Plays Out
+`proof(user_id_hash, record_id_hash, timestamp, access_type)`
 
-### What Changes at Deployment
+Without revealing record contents, only who accessed what and when is cryptographically fixed. Attestations are anchored on-chain (or via commitment root), making them **tamper-detectable by construction.**
 
-1. **Lemma attestation gateway** sits between each organization's CRM/database and the user
-2. Every data access request generates a **ZK attestation**: "User X accessed record Y at timestamp T" — without revealing the record contents
-3. Attestations are anchored on-chain (or to a commitment root), making them **tamper-evident by construction**
-4. Both organizations share a **verifiable proof layer** — neither can unilaterally alter the access history
-
-### Incident Timeline (With Lemma)
-
-| Phase | What Happens | How Lemma Changes It |
-|---|---|---|
-| Access | Employee queries customer records | Each query generates a ZK attestation, timestamped and committed |
-| Collection attempt | Employee tries to bulk-export data | Anomalous access pattern (volume, timing) flagged by DLP; Lemma attestation proves exactly which records were accessed |
-| Deterrence | Employee is aware that all access is cryptographically proven | Psychological deterrence — "I cannot deny or alter this trail" reduces insider threat incentive |
-| If exfiltration occurs | Employee leaves with data | Both organizations have **immutable, shared proof** of what was accessed — no dispute possible |
-| Regulatory response | FSA requests audit evidence | Insurer provides verifiable attestations — no manual log reconciliation needed |
-
-### Quantified Impact
+| Phase | Behavior with Lemma |
+|---|---|
+| Access | Each query generates a ZK attestation, committed with a timestamp |
+| Collection attempt | Anomalous patterns (volume, timing) are flagged by DLP. Lemma attestations precisely prove which records were accessed |
+| Deterrence | Employees know that "all access is cryptographically proven." Psychological deterrence functions |
+| Discovery | Both organizations immediately present tamper-proof shared proofs. No room for dispute |
+| Regulatory response | FSA requests evidence. Verifiable attestation set exported within hours |
 
 | Metric | Without Lemma | With Lemma |
 |---|---|---|
-| Time to detect anomalous access | Weeks–months | Real-time (DLP) + cryptographic proof (Lemma) |
-| Ability to dispute access logs | High — logs are mutable, siloed | Near-zero — ZK attestations are tamper-evident |
-| Regulatory audit preparation | Weeks of manual log aggregation | Hours — export verifiable attestation set |
-| Cross-org blame | Mutual denial | Shared, undeniable proof |
-| Deterrence of insider threat | Low — "I can plausibly deny" | High — "Every access is cryptographically proven" |
-
----
-
-## Key Scenarios for Sales Narrative
-
-### Scenario A: "The Regulator Asks"
-
-> FSA issues a reporting order. Without Lemma: 2 weeks of log forensics across 36 agencies. With Lemma: export the attestation set in 1 hour, cryptographically verifiable.
-
-### Scenario B: "The Seconded Employee"
-
-> Employee is seconded from Insurer A to Agency B. Lemma issues attribute-based access credentials with time-bound scope. When the secondment ends, access is revoked AND all access during the secondment is provably logged.
-
-### Scenario C: "The Cross-Org Audit"
-
-> Two organizations need to reconcile who accessed what. Without Lemma: each exports their own logs, no way to verify the other's. With Lemma: shared commitment root, mutual verifiability.
+| Anomalous access detection time | Weeks to months | Real-time (DLP) + cryptographic proof (Lemma) |
+| Access log disputability | High | Near zero |
+| Regulatory audit preparation time | Weeks (manual log aggregation) | Hours (attestation set export) |
+| Cross-organizational blame | Mutual denial | Shared non-repudiable proof |
+| Insider threat deterrence | Low ("I can probably deny it") | High ("everything is cryptographically proven") |

@@ -4,18 +4,23 @@ title: "関連ユースケース"
 
 # 関連ユースケース
 
-## DeFi Bridge Verification
+### KYC/AML 選択的開示 — 共有せずに証明
+**申告される ≠ 検証されている**
 
-**Pillar:** P1 Verifiable Origin
+同P4内の補完。本ユースケースが「アクセス証跡の真正性」を扱うのに対し、KYC/AML選択的開示は「顧客属性の真正性」を扱う。同じ思想を異なる対象に適用したかたち。
 
-クロスチェーンブリッジエクスプロイトは同じ構造的ギャップを共有している：受信システムは出所を検証せずにコミットしている。Lemmaは事前実行アテステーションでコミットを防ぐ。
+[ユースケースを見る →](/ja/use-cases/kyc-aml-selective-disclosure/)
 
-→ [DeFi Bridge Verification](/ja/use-cases/defi-bridge-verification/)
+### AI 監査ログ証明 — 判断の永続記録
+**監査される ≠ 説明できる**
 
-## Delegated Treasury
+金融機関のAIが下した判断と、それを支えるデータアクセスの証跡を、対で運用する関係。本ユースケースが「人がデータをどう触ったか」を、AI監査ログ証明が「AIが何をどう判断したか」を担う。
 
-**Pillar:** P3 Agent Trust Chain
+[ユースケースを見る →](/ja/use-cases/ai-audit-log-proof/)
 
-企業がエージェントに支出権限を委譲するとき、制約はソフトプロンプトではなくオンチェーンのアテステーションとして存在しなければならない。相手側は支払いを受け入れる前に検証する。
+### DeFi ブリッジ検証 — 実行前認証
+**暗号論理的に有効 ≠ 意味的に正しい**
 
-→ [Delegated Treasury](/ja/use-cases/delegated-treasury/)
+DeFi 側の構造的鏡像。DeFiの「メッセージは有効だが起点が証明されていない」と、TradFi の「ログはあるが改ざん不能ではない」は、同じ思想の二つの実装。
+
+[ユースケースを見る →](/ja/use-cases/defi-bridge-verification/)

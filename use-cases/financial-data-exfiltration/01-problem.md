@@ -2,10 +2,19 @@
 title: "Problem"
 ---
 
-# Problem: Trust Boundaries Without Proof
+# Problem
 
-When employees are seconded between organizations, the trust boundary for customer data becomes ambiguous. Both the origin and destination organizations grant valid credentials, but neither can cryptographically prove what the employee accessed — or that their access logs haven't been tampered with.
+In financial institutions, personnel movement across organizations is routine. Secondments, outsourced operations, agency partnerships, joint ventures — in every case, the moving employee holds valid credentials from both the origin and host organizations, with legitimate access to customer data in both.
 
-The MetLife Japan incident (2026) exposed this gap: a seconded employee exfiltrated 2,476 customer records across 36 agency partners. DLP flagged the anomaly. SIEM captured the events. But when the FSA demanded evidence, both organizations could only provide mutable, siloed logs — logs that could be disputed, altered, or incomplete.
+At that point, the trust boundary becomes structurally ambiguous:
 
-**Detection exists. Proof does not.** That is the structural gap Lemma closes.
+- **Access itself appears legitimate:** The employee accesses official systems with valid credentials.
+- **Access logs are mutable:** Both organizations store logs in standard databases with no cryptographic integrity guarantee.
+- **No shared proof layer exists:** The origin and host organizations have no means to independently verify each other's logs.
+- **Deterrence is weak:** Employees know that "logs can be disputed," so psychological deterrence does not function.
+
+When the problem surfaces — customer complaints, regulatory audits, internal whistleblowing — neither organization can precisely prove what was accessed and when. Mutual recrimination, regulatory penalties, and reputational damage occur simultaneously.
+
+Regulatory pressure is intensifying. Japan's revised Act on the Protection of Personal Information, the FSA's cybersecurity guidelines, AI governance frameworks, GDPR extraterritorial application, and national data protection laws worldwide are all shifting requirements from "logs exist" to "tamper-proof grounds can be proven."
+
+Detection already exists (DLP, SIEM). What is missing is a layer that ensures detected events survive as tamper-proof facts.

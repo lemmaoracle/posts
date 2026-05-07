@@ -4,18 +4,23 @@ title: "Related Use Cases"
 
 # Related Use Cases
 
-## DeFi Bridge Verification
+### KYC/AML Selective Disclosure — Prove Without Sharing
+**Declared ≠ verified**
 
-**Pillar:** P1 Verifiable Origin
+A P4 complement. While this use case addresses "access trail authenticity," KYC/AML selective disclosure addresses "customer attribute authenticity." The same principle applied to different targets.
 
-Cross-chain bridge exploits share the same structural gap: the receiving system commits without verifying origin. Lemma provides pre-execution attestation to prevent the commit.
+[View use case →](/use-cases/kyc-aml-selective-disclosure/)
 
-→ [DeFi Bridge Verification](/use-cases/defi-bridge-verification/)
+### AI Audit Log Proof — Permanent Decision Record
+**Audited ≠ explainable**
 
-## Delegated Treasury
+A paired relationship: the AI decisions made in financial institutions and the data access trails supporting them. This use case covers "how humans handled data"; AI Audit Log Proof covers "what AI decided and how."
 
-**Pillar:** P3 Agent Trust Chain
+[View use case →](/use-cases/ai-audit-log-proof/)
 
-When an enterprise delegates spend authority to an agent, constraints must live as on-chain attestations — not soft prompts. Counterparties verify before accepting payment.
+### DeFi Bridge Verification — Pre-Execution Attestation
+**Cryptographically valid ≠ semantically right**
 
-→ [Delegated Treasury](/use-cases/delegated-treasury/)
+The TradFi structural mirror. DeFi's "messages are valid but origin is unproven" and TradFi's "logs exist but are not tamper-proof" are two implementations of the same principle.
+
+[View use case →](/use-cases/defi-bridge-verification/)
