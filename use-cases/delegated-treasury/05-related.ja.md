@@ -3,18 +3,23 @@ title: "関連ユースケース"
 ---
 
 
-## X402 Commerce
+### X402 Commerce — 初対面の取引
+**決済される ≠ 検証されている**
 
-**Pillar:** P3 Agent Trust Chain
+委譲されたエージェントが x402 レール上で取引する際、売り手は買い手の本人性に加えて買い手の権限を検証する必要があります。Delegated Treasury のアテステーションが、その証明を支払いレイヤで提供します。
 
-委譲されたエージェントがx402レール上で取引するとき、売り手は買い手の本人性だけでなく、買い手の権限を検証する必要がある。Delegated Treasuryのアテステーションが支払いレイヤーでその証明を提供する。
+[ユースケースを見る →](/ja/use-cases/x402-commerce/)
 
-→ [X402 Commerce](/ja/use-cases/x402-commerce/)
+### Multi-Agent Workflows — 委任の鎖
+**委任した ≠ 追跡できる**
 
-## Multi-Agent Workflows
+オーケストレータが購買権限をサブエージェントに委譲する際、委任の連鎖は追跡可能でなければなりません。Delegated Treasury のアテステーションが、誰が支出を認可し、どのスコープが委任されたかを証明します。
 
-**Pillar:** P3 Agent Trust Chain
+[ユースケースを見る →](/ja/use-cases/multi-agent-workflows/)
 
-オーケストレータが購買権限をサブエージェントに委譲するとき、委任の連鎖は追跡可能でなければならない。Delegated Treasuryのアテステーションは誰が支出を認可し、どのスコープが委任されたかを証明する。
+### KYC/AML 選択的開示 — 共有せずに証明
+**申告される ≠ 検証されている**
 
-→ [Multi-Agent Workflows](/ja/use-cases/multi-agent-workflows/)
+法人がエージェントに権限を委譲する前提として、その法人自体の本人確認が必要です。KYC/AML 選択的開示と組み合わせれば、「本人確認済み法人が、検証可能な権限を持つエージェントを通じて取引する」という三段の信頼鎖が成立します。
+
+[ユースケースを見る →](/ja/use-cases/kyc-aml-selective-disclosure/)
