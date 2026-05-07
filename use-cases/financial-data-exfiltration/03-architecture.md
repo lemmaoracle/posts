@@ -1,10 +1,14 @@
-# アーキテクチャ: Lemma + DLP/SIEM統合
+---
+title: "Architecture"
+---
 
-## 設計原則
+# Architecture: Lemma + DLP/SIEM Integration
 
-**Lemmaは証明レイヤーであり、検知レイヤーではありません。**
+## Design Principle
 
-既存のエンタープライズセキュリティツール（DLP, SIEM, CASB）は検知とアラートを担当します。Lemmaは何が起きたかの暗号学的証明を提供し、監査結果を否認不可能で改ざん検知可能にします。
+**Lemma is the proof layer, not the detection layer.**
+
+Existing enterprise security tools (DLP, SIEM, CASB) handle detection and alerting. Lemma provides cryptographic proof of what happened, making audit results undeniable and tamper-evident.
 
 ```
 ┌─────────────────────────────────────────────────────────┐
@@ -34,40 +38,40 @@
    └────────────┘ └────────────┘ └────────────┘
 ```
 
-## コンポーネント詳細
+## Component Breakdown
 
-### 1. Lemma認証ゲートウェイ
+### 1. Lemma Attestation Gateway
 
-データストアとユーザーの間に配置されます。すべての読み取り/クエリを傍受し:
+Sits between the data store and the user. Intercepts every read/query and:
 
-- ZK認証を生成: `proof(user_id, record_id, timestamp, access_type)`
-- 認証をローカルMerkleツリーにコミット
-- 定期的にMerkleルートをオンチェーンに固定
-- データ内容を検査または保存**しません**（プライバシー保護）
+- Generates a ZK attestation: `proof(user_id, record_id, timestamp, access_type)`
+- Commits the attestation to a local Merkle tree
+- Periodically anchors the Merkle root on-chain
+- Does **not** inspect or store the data contents (privacy-preserving)
 
-### 2. DLP/SIEM（既存）
+### 2. DLP/SIEM (Existing)
 
-通常の機能を継続:
+Continues its normal function:
 
-- 異常なアクセスパターン（一括エクスポート、異常な時間帯、時間外アクセス）を監視
-- アラートとインシデントを生成
-- **新統合:** DLPが異常をフラグすると、Lemmaから**検証済みアクセスレポート**を要求可能 — 誰がいつどのレコードにアクセスしたかの暗号学的証明
+- Monitors access patterns for anomalies (bulk export, unusual hours, off-hours access)
+- Generates alerts and incidents
+- **New integration:** When DLP flags an anomaly, it can request a **verified access report** from Lemma — a cryptographic proof of exactly which records were accessed, when, and by whom
 
-### 3. コミットメントルート / オンチェーン固定
+### 3. Commitment Root / On-chain Anchor
 
-- すべての認証のMerkleルート、定期的に固定
-- 任意の当事者（保険会社A、代理店B、規制当局）が、特定の時間に認証が生成され、変更されていないことを検証可能
-- 機密データはオンチェーン上にありません — コミットメントのみ
+- Merkle root of all attestations, anchored at regular intervals
+- Enables any party (Insurer A, Agency B, regulator) to verify that an attestation was generated at a specific time and has not been altered
+- No sensitive data on-chain — only commitments
 
-### 4. 検証レイヤー
+### 4. Verification Layer
 
-各ステークホルダーは独立して以下を検証可能:
+Each stakeholder can independently verify:
 
-- **保険会社A**: 「従業員Xが日付[D1..D2]の間にレコード[1..N]にアクセスした」
-- **代理店B**: 「同じ従業員が出向中に当方のレコード[M..P]にアクセスした」
-- **規制当局**: 「両組織の認証は一貫性があり、改ざん検知可能である」
+- **Insurer A**: "Employee X accessed records [1..N] between dates [D1..D2]"
+- **Agency B**: "The same employee accessed our records [M..P] during secondment"
+- **Regulator**: "Both organizations' attestations are consistent and tamper-evident"
 
-## データフロー: アクセスイベント
+## Data Flow: Access Event
 
 ```
 User → CRM Query
@@ -93,7 +97,7 @@ User → CRM Query
    }
 ```
 
-## データフロー: 異常検知 → 証明
+## Data Flow: Anomaly Detection → Proof
 
 ```
 DLP detects anomaly ──▶ Requests verified access report from Lemma
@@ -114,7 +118,7 @@ DLP detects anomaly ──▶ Requests verified access report from Lemma
                     UNDENIABLE EVIDENCE
 ```
 
-## データフロー: 規制監査
+## Data Flow: Regulatory Audit
 
 ```
 FSA requests audit ──▶ Insurer exports attestation set
@@ -128,16 +132,16 @@ FSA requests audit ──▶ Insurer exports attestation set
                         Proof is self-evident.
 ```
 
-## 導入モデル
+## Deployment Model
 
-| モデル | 説明 | 最適な用途 |
+| Model | Description | Best For |
 |---|---|---|
-| **ゲートウェイプロキシ** | LemmaがCRM/DBの前段にリバースプロキシとして配置 | グリーンフィールド導入、クラウドネイティブシステム |
-| **SDK統合** | アプリケーションがデータアクセスの前後にLemma SDKを直接呼び出し | APIレイヤー制御を持つ既存システム |
-| **ログ後処理** | Lemmaが既存のアクセスログを処理し、事後的に認証を生成 | プロキシ挿入が困難なレガシーシステム（最も弱い保証 — ログを信頼する必要がある） |
+| **Gateway proxy** | Lemma sits as a reverse proxy in front of the CRM/DB | Greenfield deployments, cloud-native systems |
+| **SDK integration** | Application calls Lemma SDK directly before/after data access | Existing systems with API-layer control |
+| **Log post-processor** | Lemma processes existing access logs and generates attestations after the fact | Legacy systems where proxy insertion is difficult (weakest guarantee — log must be trusted) |
 
-## セキュリティ考慮事項
+## Security Considerations
 
-- **ゲートウェイバイパス**: ユーザーがCRMに直接アクセスできる場合（ゲートウェイを迂回）、認証は不完全になります。対策: ネットワークレベルでの強制（ゲートウェイがデータストアへの唯一の経路）
-- **オンチェーン固定頻度**: コストと証明の細かさのトレードオフ。推奨: 高感度環境では時間単位の固定
-- **プライバシー**: ZK認証はアクセスが発生したことを証明し、何がアクセスされたかは明かしません（レコード内容は非公開のまま）
+- **Gateway bypass**: If a user can access the CRM directly (bypassing the gateway), attestations are incomplete. Defense: network-level enforcement (gateway is the only path to the data store)
+- **On-chain anchor frequency**: Trade-off between cost and proof granularity. Recommended: hourly anchors for high-sensitivity environments
+- **Privacy**: ZK attestations prove *that* an access occurred without revealing *what* was accessed (record contents remain private)

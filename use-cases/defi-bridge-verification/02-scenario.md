@@ -1,3 +1,7 @@
+---
+title: "Scenario"
+---
+
 # Scenario: Kelp DAO / rsETH Bridge Exploit
 
 ## Before Lemma — How the Attack Unfolded

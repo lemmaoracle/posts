@@ -1,3 +1,7 @@
+---
+title: "関連ユースケース"
+---
+
 # クロスケース: TradFi（MetLife）× DeFi（Kelp DAO）— 統一証明レイヤー
 
 ## 統一メッセージ

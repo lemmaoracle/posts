@@ -1,3 +1,7 @@
+---
+title: "Scenario"
+---
+
 # Scenario: Seconded Employee Data Exfiltration
 
 ## Before Lemma — How the Incident Unfolds

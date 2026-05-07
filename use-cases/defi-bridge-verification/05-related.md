@@ -1,3 +1,7 @@
+---
+title: "Related Use Cases"
+---
+
 # Cross-Case: TradFi (MetLife) × DeFi (Kelp DAO) — Unified Proof Layer
 
 ## The Unified Message

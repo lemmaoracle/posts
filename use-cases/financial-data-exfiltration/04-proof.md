@@ -1,3 +1,7 @@
+---
+title: "Proven Facts"
+---
+
 # Proof Points: Regulatory & Industry Evidence
 
 ## The MetLife Japan Incident (2026)

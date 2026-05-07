@@ -1,3 +1,7 @@
+---
+title: "Proven Facts"
+---
+
 # Proof Points: Bridge Exploits & DeFi Verification
 
 ## The Kelp DAO Incident (April 2026)

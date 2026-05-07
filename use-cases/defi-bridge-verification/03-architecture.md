@@ -1,3 +1,7 @@
+---
+title: "Architecture"
+---
+
 # Architecture: Pre-Execution Attestation for Cross-Chain Bridges
 
 ## Design Principle
