@@ -100,7 +100,8 @@ State where originals remain and what is exposed externally.>
 **2. PROVE — <one-line subtitle for this Use Case's role>**
 
 <Description of ZK proof generation. State the proposition being proved concretely.
-Circuit primitives (Poseidon over BN254, BBS+ over BLS12-381, Groth16, etc.) only when technical depth is needed.>
+Stay at the layer level (commitment / selective disclosure / ZK circuit). Do not name specific
+crypto primitives (Poseidon, BBS+, Groth16, BN254, BLS12-381, etc.) on externally-published pages.>
 
 ```
 proof(<param_1>, <param_2>, <param_3>, ...)
@@ -206,7 +207,7 @@ No additional sections. "Overview," "Sales talking points," "Product roadmap imp
 ### Required
 - **Assertion**: "We believe that..." / "It could be argued that..." / "might" are forbidden
 - **Binary opposition**: thesis must use "X ≠ Y" format. Derived from Pillar tagline
-- **Technical precision**: AES-GCM / docHash / CID / ZK proof / ZK circuit / Poseidon / BBS+ / Groth16 as context requires
+- **Technical precision**: AES-GCM / docHash / CID / ZK proof / ZK circuit / commitment / selective disclosure as context requires. Specific crypto primitive names (Poseidon, BBS+, Groth16, etc.) are not used in externally-published pages
 - **Declarative thesis line**: thesis line uses plain declarative ("Indexed ≠ trustworthy")
 - **Active voice**: Prefer active constructions. Avoid passive overuse
 

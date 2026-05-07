@@ -15,7 +15,7 @@ Both use cases address **verifiability of AI system outputs**. While *rag‑sour
 - Together, they enable **end‑to‑end verifiability**: from the user query, through the AI's reasoning, down to the exact document fragments cited.
 
 ### Overlap in Technology
-- Both use ZK proofs (Groth16/Poseidon) and on‑chain anchoring (LemmaRegistry).
+- Both use ZK proofs and on‑chain anchoring (LemmaRegistry).
 - Both require issuer signatures and timestamp immutability.
 - Both are designed to be independent of the underlying AI infrastructure's mutable state.
 

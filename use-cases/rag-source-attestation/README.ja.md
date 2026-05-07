@@ -41,7 +41,7 @@ relatedUseCases:
 ## 実装リファレンス
 
 - [example-rag-attestation](https://github.com/lemmaoracle/example-rag-attestation) — エンドツーエンドシナリオ: 引用証明生成と検証
-- [example-x402](https://github.com/lemmaoracle/example-x402) — 証明バンドルの基本要素（Poseidon/BN254, BBS+/BLS12-381, Groth16）
+- [example-x402](https://github.com/lemmaoracle/example-x402) — 証明バンドルのリファレンス実装（コミットメント・選択的開示・ZK証明）
 
 ## 関連ユースケース
 

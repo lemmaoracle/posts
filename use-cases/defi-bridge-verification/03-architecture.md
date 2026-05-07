@@ -33,4 +33,4 @@ Policies are configurable per protocol. Conservative protocols may require all f
 
 **4. PROVENANCE — On-Chain Attestation Anchoring**
 
-All origin proofs are committed to a Merkle tree whose root is periodically anchored on-chain. This provides post-hoc forensic evidence surviving log deletion, audit trails for regulatory compliance, and independent verification for dispute resolution — permanently.
+All origin proofs are aggregated into a commitment tree whose root is periodically anchored on-chain. This provides post-hoc forensic evidence surviving log deletion, audit trails for regulatory compliance, and independent verification for dispute resolution — permanently.

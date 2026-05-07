@@ -36,8 +36,8 @@ Existing reputation systems and payment rails handle transaction execution. Lemm
 Sits between the seller agent and the x402 payment rail. At listing time, it:
 
 - Wraps seller claims (inventory, price, SLA, issuer signature) into a **ZK attestation**
-- Commits the attestation to a local Merkle tree
-- Periodically anchors the Merkle root on-chain
+- Aggregates the attestation into a local commitment tree
+- Periodically anchors the commitment root on-chain
 - Does **not** require disclosure of sensitive business data (privacy-preserving)
 
 ### 2. Seller Agent (with Lemma)
@@ -61,7 +61,7 @@ Sits between the seller agent and the x402 payment rail. At listing time, it:
 
 ### 5. Commitment Root / On-chain Anchor
 
-- Merkle root of all attestations, anchored at regular intervals
+- Commitment root of all attestations, anchored at regular intervals
 - Enables any buyer (or marketplace) to verify that a seller's claims were attested at a specific time and have not been altered
 - No sensitive inventory data on-chain — only commitments
 
