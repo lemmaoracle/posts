@@ -1,3 +1,21 @@
+---
+title: "DeFi Bridge Verification — Pre-Execution Attestation"
+abstract: "Cross-chain bridge exploits share one structural pattern: transactions are cryptographically valid, but origin is not verified before execution. Lemma provides pre-execution attestation to prevent the commit."
+pillar: verifiable-origin
+targetVerticals:
+  - Liquid staking / restaking protocols
+  - Cross-chain bridges
+  - Lending protocols
+  - DEXs
+tags:
+  - bridge-exploit
+  - pre-execution-attestation
+  - LayerZero
+  - DeFi
+relatedUseCases:
+  - financial-data-exfiltration
+---
+
 # Use Case: DeFi Bridge Verification — Pre-Execution Attestation
 
 ## Problem

@@ -1,3 +1,20 @@
+---
+title: "Financial Data Exfiltration Prevention"
+abstract: "When employees are seconded between organizations, the trust boundary for customer data becomes ambiguous. Lemma provides ZK-proof access provenance to close the gap."
+pillar: verifiable-ai
+targetVerticals:
+  - Life insurance
+  - Regional banks
+  - Securities firms
+tags:
+  - AML
+  - KYC
+  - data-exfiltration
+  - FSA
+relatedUseCases:
+  - defi-bridge-verification
+---
+
 # Use Case: Financial Data Exfiltration Prevention
 
 ## Problem
