@@ -2,7 +2,6 @@
 title: "関連ユースケース"
 ---
 
-# 関連ユースケース
 
 ## Delegated Treasury
 

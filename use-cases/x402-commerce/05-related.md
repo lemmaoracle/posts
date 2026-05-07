@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ## Delegated Treasury
 

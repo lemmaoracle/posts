@@ -2,7 +2,6 @@
 title: "Proven Facts"
 ---
 
-# Proven Facts
 
 When a multi-agent workflow runs with Lemma, the following facts are cryptographically proven at each delegation node — not logged after the fact:
 

@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 A pharmaceutical company's clinical team continuously indexes ongoing trial protocols, SOPs, and regulatory submission documents into an internal RAG. An AI agent responds to healthcare professional inquiries by citing the applicable protocol.
 

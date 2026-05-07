@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 Kelp DAO is a liquid restaking protocol built on EigenLayer. Its flagship token rsETH represents deposited, staked, and restaked ETH, deployed across 20+ chains via LayerZero OFT. At the time of the attack, TVL was approximately $1.57B.
 

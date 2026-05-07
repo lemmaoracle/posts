@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem: Settlements Without Verification
 
 The x402 rail enables micropayments between autonomous agents, but settlement does not guarantee the seller's claims about inventory, price, or service-level agreements (SLAs). Reputation systems are retrospective and cannot prevent a malicious seller from committing to a transaction they cannot fulfill.
 

@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 Major aerospace component manufacturer Company M supplies precision bearings and hydraulic components to Western airframers. In the aerospace industry, all safety-critical components require FAA Form 8130-3 or EASA Form 1 certification, with complete traceability from manufacture to disposal.
 

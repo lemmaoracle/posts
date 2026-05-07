@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ### Supply Chain Component Provenance — Multi-Tier Tamper Resistance
 **Recorded ≠ untampered**

@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 As of 2026, three major ESG regulations are simultaneously bearing down on manufacturing supply chains:
 

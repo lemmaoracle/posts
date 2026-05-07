@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 The MetLife Japan 2026 incident exposed this structural gap. A life insurance company seconded employees to agency partner locations (regional banks, securities firms) to sell insurance products through both channels. A seconded employee exfiltrated 2,476 customer records across 36 agency partners.
 

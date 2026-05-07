@@ -2,7 +2,6 @@
 title: "Proven Facts"
 ---
 
-# Proven Facts
 
 Lemma cryptographically guarantees the following facts in supply chain ESG:
 

@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ### RAG Source Attestation — Citation Verification
 **Cited ≠ verified**

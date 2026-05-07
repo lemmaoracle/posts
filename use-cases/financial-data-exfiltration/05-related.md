@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ### KYC/AML Selective Disclosure — Prove Without Sharing
 **Declared ≠ verified**

@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 Cross-chain bridge exploits in 2026 share one structural pattern.
 

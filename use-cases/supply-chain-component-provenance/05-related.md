@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ### Supply Chain ESG — CBAM, EUDR, DPP Compliance
 **Declared ≠ proven**

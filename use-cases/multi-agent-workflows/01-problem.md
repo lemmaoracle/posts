@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem: Delegated ≠ Traceable
 
 When an orchestrator agent delegates tasks to sub-agents, the delegation chain goes opaque. Who authorized whom? Who saw what? Who decided what? Without a provenance layer, these questions cannot be answered — not by the orchestrator, not by the auditor, not by the sub-agent itself.
 

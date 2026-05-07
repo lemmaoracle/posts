@@ -2,7 +2,6 @@
 title: "関連ユースケース"
 ---
 
-# 関連ユースケース
 
 ## 1. **[RAG Content Provenance (P1)](/use-cases/rag-content-provenance)**
 **論題:** 「インデックス化される ≠ 信頼できる。」

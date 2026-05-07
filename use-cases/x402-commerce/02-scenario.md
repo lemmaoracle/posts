@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario: x402 Commerce with False Inventory Claims
 
 ## Before Lemma — How the Incident Unfolds
 

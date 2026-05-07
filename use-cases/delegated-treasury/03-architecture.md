@@ -2,7 +2,6 @@
 title: "Architecture"
 ---
 
-# Architecture: On-Chain Spend-Control Attestations
 
 ## Design Principle
 

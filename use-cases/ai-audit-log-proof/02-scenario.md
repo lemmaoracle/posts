@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 September 2026. A regional bank's corporate lending AI denies a small business loan application.
 

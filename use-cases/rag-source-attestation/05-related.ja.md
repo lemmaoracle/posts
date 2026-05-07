@@ -2,7 +2,6 @@
 title: "関連ユースケース"
 ---
 
-# 関連ユースケース
 
 ## 1. **[AI Audit Log Proof (P2)](/use-cases/ai-audit-log-proof)**
 **論題:** 「ログされる ≠ 不変である。」

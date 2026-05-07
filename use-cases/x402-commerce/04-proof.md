@@ -2,7 +2,6 @@
 title: "Proven Facts"
 ---
 
-# Proven Facts
 
 When a buyer agent transacts on the x402 rail with Lemma, the following facts are cryptographically proven — not claimed:
 

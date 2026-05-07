@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 AI is embedded in consequential decision-making: corporate credit approvals, insurance premium calculations, clinical triage, public benefit eligibility — all domains where retrospective accountability is legally required.
 

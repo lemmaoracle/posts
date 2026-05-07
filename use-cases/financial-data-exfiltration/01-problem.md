@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 In financial institutions, personnel movement across organizations is routine. Secondments, outsourced operations, agency partnerships, joint ventures — in every case, the moving employee holds valid credentials from both the origin and host organizations, with legitimate access to customer data in both.
 

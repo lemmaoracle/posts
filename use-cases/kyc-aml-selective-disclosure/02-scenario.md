@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 The representative of mid-size manufacturer Company A opened a personal account at regional Bank B two years ago, submitting identity documents, residence certificates, tax records, employment history, and shareholder structure through rigorous procedures.
 

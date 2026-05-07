@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 A major tax advisory firm's AI agent provides tax guidance to corporate clients, referencing tax law, notices, and past cases. The AI responds with explicit citations: "According to National Tax Agency Notice X, Article 3, the expenditure is deductible as a business expense."
 

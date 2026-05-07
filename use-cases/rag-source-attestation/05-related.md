@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ## 1. **[AI Audit Log Proof (P2)](/use-cases/ai-audit-log-proof)**
 **Thesis:** "Logged ≠ immutable."

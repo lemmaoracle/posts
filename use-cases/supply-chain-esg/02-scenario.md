@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario
 
 Automotive parts manufacturer Company S exports steel body panels to Europe. With CBAM's full application starting in 2026, payment of carbon prices corresponding to embedded emissions and submission of calculation grounds are now mandatory.
 

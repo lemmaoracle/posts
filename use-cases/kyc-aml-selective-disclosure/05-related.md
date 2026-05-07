@@ -2,7 +2,6 @@
 title: "Related Use Cases"
 ---
 
-# Related Use Cases
 
 ### AI Audit Log Proof — Permanent Decision Record
 **Audited ≠ explainable**

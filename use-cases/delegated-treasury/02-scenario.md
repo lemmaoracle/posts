@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario: Enterprise Agent Exceeds Delegated Spend Authority
 
 ## Before Lemma — How the Incident Unfolds
 

@@ -2,7 +2,6 @@
 title: "Architecture"
 ---
 
-# Architecture: Provable Delegation Chain
 
 ## Design Principle
 

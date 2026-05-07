@@ -2,7 +2,6 @@
 title: "Proven Facts"
 ---
 
-# Proven Facts
 
 When a seller accepts a payment from a delegated agent with Lemma, the following facts are cryptographically proven — not claimed:
 

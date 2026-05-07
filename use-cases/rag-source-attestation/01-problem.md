@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 AI agents have developed a habit of citing sources in their responses. "Pursuant to Internal Policy Article 3, Section 2," "According to National Tax Agency Notice X," "Article 7 of the contract states" — such citations underpin the persuasiveness of responses and are prerequisites for operational use.
 

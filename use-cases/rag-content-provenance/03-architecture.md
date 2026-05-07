@@ -2,7 +2,6 @@
 title: "Architecture"
 ---
 
-# Architecture
 
 Lemma's four cryptographic layers cover the entire RAG document lifecycle.
 

@@ -2,7 +2,6 @@
 title: "Architecture"
 ---
 
-# Architecture
 
 Lemma's four cryptographic layers correspond to the component provenance lifecycle in multi-tier supply chains.
 

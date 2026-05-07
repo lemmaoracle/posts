@@ -2,7 +2,6 @@
 title: "Architecture"
 ---
 
-# Architecture: Lemma Attestation for x402 Commerce
 
 ## Design Principle
 

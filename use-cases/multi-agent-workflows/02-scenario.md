@@ -2,7 +2,6 @@
 title: "Scenario"
 ---
 
-# Scenario: Sub-Agent Makes Unauthorized Data Access
 
 ## Before Lemma — How the Incident Unfolds
 

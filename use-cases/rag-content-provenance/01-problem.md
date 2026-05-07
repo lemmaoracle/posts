@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 Enterprise RAG systems index internal policies, contracts, clinical trial protocols, SOPs, and regulatory documents daily. These are often the **ultimate grounds** that AI agents cite in business decisions and customer responses.
 

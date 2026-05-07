@@ -2,7 +2,6 @@
 title: "証明される事実"
 ---
 
-# 証明される事実: ZK Proofが立証するもの
 
 LemmaのCitation Proverによって生成される引用proofは、以下の事実を暗号学的に確立します：
 

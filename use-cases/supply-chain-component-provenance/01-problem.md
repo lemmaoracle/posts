@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem
 
 In manufacturing supply chains, "recorded" and "untampered" are **entirely different problems.** Records are carried on paper certificates and Excel traceability tables; tampering is discovered only after the fact.
 

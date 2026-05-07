@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem: Declared ≠ Verified
 
 Financial institutions must verify customer identity, jurisdiction, age, and sanctions‑list status—the core of Know‑Your‑Customer (KYC) and Anti‑Money‑Laundering (AML) compliance. Today, this verification relies on **full document sharing**: a bank sends a customer’s passport, residence certificate, and tax ID to another bank or regulator, exposing the entire identity document.
 

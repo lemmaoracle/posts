@@ -2,7 +2,6 @@
 title: "Architecture"
 ---
 
-# Architecture
 
 Lemma's four cryptographic layers correspond to the ESG attribute lifecycle in multi-tier supply chains.
 

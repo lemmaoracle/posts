@@ -2,7 +2,6 @@
 title: "Problem"
 ---
 
-# Problem: Authorized ≠ Attested
 
 When an enterprise delegates spending authority to an AI agent, the constraints are typically enforced as soft prompts: "don't spend more than $500." This is a suggestion, not a guarantee. Prompt injection, context overflow, or adversarial negotiation can override it.
 
