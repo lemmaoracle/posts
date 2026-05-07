@@ -17,7 +17,7 @@ A Lemma Origin Authentication Gateway is deployed at the issuance boundary on th
 proof(issuer_id, source_chain_id, action_hash, conditions_hash, timestamp)
 ```
 
-is generated as a ZK proof. The proof binds the action to its source without revealing confidential states. Circuit primitives use Poseidon over BN254 (commitment), BBS+ over BLS12-381 (selective disclosure), and Groth16 (ZK proof).
+is generated as a ZK proof. The proof binds the action to its source without revealing confidential states. The ZK circuit combines commitment and selective disclosure so only the integrity of issuer, source, and conditions is exposed — never the confidential states themselves.
 
 The proof is attached to the message payload as an attestation and does not depend on the sender's continued honesty during transit.
 
