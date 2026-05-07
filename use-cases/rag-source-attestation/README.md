@@ -41,7 +41,7 @@ Enterprise RAG systems provide answers with citations, but there's no cryptograp
 ## Implementation Reference
 
 - [example-rag-attestation](https://github.com/lemmaoracle/example-rag-attestation) — End-to-end scenario: citation proof generation and verification
-- [example-x402](https://github.com/lemmaoracle/example-x402) — Proof-bundle primitive set (Poseidon/BN254, BBS+/BLS12-381, Groth16)
+- [example-x402](https://github.com/lemmaoracle/example-x402) — Reference implementation of the proof-bundle primitives (commitment, selective disclosure, ZK proof)
 
 ## Related Use Cases
 

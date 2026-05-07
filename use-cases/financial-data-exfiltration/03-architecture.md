@@ -15,7 +15,7 @@ The gateway intercepts all reads and queries, generating the following ZK attest
 
 `proof(user_id_hash, record_id_hash, timestamp, access_type)`
 
-Both user identifiers and record identifiers are hashed; no personal information is exposed from the attestation itself. Attestations are committed to a local Merkle tree.
+Both user identifiers and record identifiers are hashed; no personal information is exposed from the attestation itself. Attestations are aggregated into a local commitment tree.
 
 **3. DISCLOSE — Stakeholder-Specific Verifiability**
 
@@ -27,6 +27,6 @@ Each party can independently verify:
 
 When DLP/SIEM flags an anomaly, a verified access report can be requested from Lemma. For the first time, the incident has non-repudiable evidence.
 
-**4. PROVENANCE — Merkle Root On-Chain Anchoring**
+**4. PROVENANCE — Commitment Root On-Chain Anchoring**
 
-The Merkle root of all attestations is periodically anchored on-chain. Any party can verify that an attestation was generated at a specific time and has not been modified. **No confidential data exists on-chain — only commitments.** This enables regulatory compliance, dispute resolution, and post-incident forensics without data disclosure.
+The commitment root of all attestations is periodically anchored on-chain. Any party can verify that an attestation was generated at a specific time and has not been modified. **No confidential data exists on-chain — only commitments.** This enables regulatory compliance, dispute resolution, and post-incident forensics without data disclosure.

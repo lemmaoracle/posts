@@ -62,7 +62,7 @@ title: "Architecture"
 
 ## Component Flow
 
-1. **Delegation:** Each delegation step generates a ZK proof binding delegator → delegate → scope → timestamp. The proof is anchored on-chain via Poseidon hash.
+1. **Delegation:** Each delegation step generates a ZK proof binding delegator → delegate → scope → timestamp. The proof is anchored on-chain as a commitment.
 2. **Sub-delegation:** When a delegate further delegates, the new proof references the parent proof. The scope can only narrow — it cannot exceed what was originally delegated.
 3. **Execution:** The sub-delegate carries the full proof chain when calling MCP servers or tools. The server verifies the chain independently.
 4. **Aggregation:** The orchestrator assembles the final output with a complete proof chain from original principal to final result. Every node in the chain is cryptographically bound.
