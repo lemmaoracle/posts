@@ -1,6 +1,6 @@
 ---
 title: "Multi-Agent Workflows"
-abstract: "An orchestrator agent assigns tasks to specialist agents. Those agents call MCP servers, invoke tools, return results. Without a provenance layer, the chain goes opaque. Lemma attaches a proof at each delegation node — the final output carries a verifiable trace back to the original principal."
+abstract: "Bind every multi-agent delegation step as a ZK proof. The final output carries a verifiable trace back to the original principal. Book a 30-minute discovery call to see how it fits your orchestration setup."
 thesis: "Delegated ≠ traceable"
 pillar: agent-trust-chain
 targetVerticals:

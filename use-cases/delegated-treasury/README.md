@@ -1,6 +1,6 @@
 ---
 title: "Delegated Treasury"
-abstract: "An enterprise hands its agent a budget and a scope: $10K monthly, SaaS subscriptions only, nothing over $500 without approval. These constraints cannot live as soft prompts. Lemma encodes them as on-chain spend-control attestations that counterparties verify before accepting payment."
+abstract: "Issue agent spend authority as an on-chain spend-control attestation — not as a soft prompt. Book a 30-minute discovery call to see how it fits your operations."
 thesis: "Authorized ≠ attested"
 pillar: agent-trust-chain
 targetVerticals:
