@@ -7,4 +7,4 @@ Lemma generates a ZK proof for every cross-organization data access and anchors 
 
 DLP detects anomalies. SIEM aggregates logs. Lemma provides the layer underneath: **tamper-evidence on the logs themselves**, and **a shared truth layer across organizational boundaries**. Lemma fills the structural gap that has existed between detection and audit.
 
-Whether this matters in your context is something we can confirm first through a conversation.
+Where this layer can be slotted into your secondment, contractor, or agency partner model is something we can map out in a first conversation.

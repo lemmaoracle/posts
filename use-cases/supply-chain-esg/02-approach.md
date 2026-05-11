@@ -7,4 +7,4 @@ Lemma lets each tier of the supply chain issue ESG attributes (emissions, origin
 
 Double counting is structurally detected by the per-material cryptographic links. An autonomous procurement agent can verify the proof before placing an order — this is the path that lets the agent economy and supply chain regulation coexist.
 
-Whether this fits your procurement structure and regulatory shape is something we can confirm first through a conversation.
+Which of CBAM, EUDR, or DPP is creating the most immediate load — and how this attestation chain rides on top — is what we map out in a first conversation.
