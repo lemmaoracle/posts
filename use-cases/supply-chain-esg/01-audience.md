@@ -5,7 +5,7 @@ title: "This page is for"
 
 Are you still running CBAM, EUDR, and DPP (Digital Product Passport) compliance on Excel sheets and supplier-submitted PDFs? Does verifying multi-tier supply chains still come down to self-declaration?
 
-At audit time, what the regulator asks is not "the data" itself but "the grounds that the data arrived from the supplier of record without tampering." Does your organization have a path that answers that, cryptographically?
+At audit, the regulator is not asking for the data itself — they're asking for verifiable grounds that the data arrived from the supplier of record, untampered. Does your organization have a cryptographic path that answers that?
 
 - ESG, sustainability, and export-compliance leads at manufacturers, forestry, and consumer goods companies
 - Procurement and supply chain teams aligning to CBAM (Carbon Border Adjustment Mechanism), EUDR (EU Deforestation Regulation), and DPP (under ESPR)
