@@ -1,6 +1,6 @@
 ---
-title: "Financial Data Exfiltration"
-abstract: "In operations where customer data is accessed across organizational boundaries, Lemma preserves who accessed what and when as tamper-proof cryptographic proofs. Where trust boundaries between organizations become ambiguous, Lemma provides a shared layer of truth that regulators and parties can independently verify."
+title: "Financial Data Exfiltration Defense"
+abstract: "Make cross-organization data access tamper-evident with ZK proofs. Start with a 30-minute conversation to see if Lemma fits your context."
 thesis: "Access logs exist ≠ untampered"
 pillar: regulatory-attribute-proof
 targetVerticals:
@@ -19,7 +19,7 @@ relatedUseCases:
   - defi-bridge-verification
 ---
 
-# Use Case: Financial Data Exfiltration
+# Use Case: Financial Data Exfiltration Defense
 
 ## Thesis
 
