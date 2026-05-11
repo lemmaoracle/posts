@@ -7,4 +7,4 @@ Lemma lets the institution that already performed KYC (the issuer) emit each cus
 
 Without sharing the data, the attribute's authenticity, issuer, expiry, and the customer's consent become independently verifiable by the regulator, the receiving institution, and the customer. Data residency requirements and FATF Travel Rule alignment ride on top of this structure.
 
-Whether this fits your KYC/AML pipeline is something we can confirm first through a conversation.
+Where this attestation layer slots into your existing KYC/AML pipeline (Onfido, Persona, in-house screening) is what we map out in a first conversation.
