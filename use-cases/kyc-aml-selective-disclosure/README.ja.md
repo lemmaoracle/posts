@@ -1,6 +1,6 @@
 ---
 title: "KYC/AML Selective Disclosure"
-abstract: "銀行間・規制当局間でKYC属性を共有することは、データレジデンシーとプライバシーの両方を脅かします。一方で自己申告された属性だけでは、制裁リスト整合や本人確認は成立しません。Lemmaは「日本居住・18歳以上・制裁リスト外」だけを選択的に開示し、原本は発行者の署名付きで保持します。"
+abstract: "KYC 属性を共有せずに、属性ごとの ZK 証明だけで規制要件を満たす。30 分の会話から、御社の KYC/AML 経路にフィットするかを一緒に確認します。"
 thesis: "申告される ≠ 検証されている"
 pillar: regulatory-attribute-proof
 targetVerticals:
