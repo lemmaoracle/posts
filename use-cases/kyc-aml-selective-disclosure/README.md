@@ -1,6 +1,6 @@
 ---
 title: "KYC/AML Selective Disclosure"
-abstract: "Sharing KYC attributes between banks and regulators threatens both data residency and privacy. Yet self-declared attributes alone cannot establish sanctions compliance or identity verification. Lemma selectively discloses only 'Japanese resident, over 18, not on sanctions list,' keeping originals with issuer signatures."
+abstract: "Satisfy KYC/AML requirements with per-attribute ZK proofs — no shared customer data. Start with a 30-minute conversation to see if Lemma fits your pipeline."
 thesis: "Declared ≠ verified"
 pillar: regulatory-attribute-proof
 targetVerticals:
