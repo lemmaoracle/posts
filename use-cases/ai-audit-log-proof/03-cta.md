@@ -1,5 +1,5 @@
 ---
-title: "Start with a 30-minute conversation"
+title: "Book a 30-minute discovery call"
 ---
 
 
