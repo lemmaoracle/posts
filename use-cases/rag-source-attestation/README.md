@@ -1,6 +1,6 @@
 ---
 title: "RAG Source Attestation"
-abstract: "When an enterprise AI responds 'Based on Internal Policy Section X,' there is no guarantee the cited source matches the unaltered original. RAG indexes are rebuilt regularly, documents are versioned, and embeddings drift. Lemma proves that each citation in an AI response is cryptographically bound to the exact document version it claims to reference."
+abstract: "Bind each AI citation to a ZK proof of the exact docHash it claims to reference. Citation integrity holds across index rebuilds. Book a 30-minute discovery call to see how it fits your workflow."
 thesis: "Cited ≠ verified"
 pillar: verifiable-ai
 targetVerticals:

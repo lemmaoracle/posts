@@ -1,6 +1,6 @@
 ---
 title: "X402 Commerce"
-abstract: "x402のレール上で、買い手エージェントと売り手エージェントが初めて出会い、ミリ秒単位でmicropaymentを実行する。Lemmaは、売り手が主張する属性をZK証明で包む。買い手は平文の主張を信じない。支払う前に、暗号的に検証する。"
+abstract: "x402 のミリ秒決済の前段で、売り手属性を ZK 証明として検証。買い手は平文主張に依存せず取引できます。30 分の会話から、御社の構成に乗るか確認します。"
 thesis: "決済される ≠ 検証されている"
 pillar: agent-trust-chain
 targetVerticals:
