@@ -1,6 +1,6 @@
 ---
 title: "AI Audit Log Proof"
-abstract: "Seal AI decision attribution with a ZK proof at decision time. Make past rationale recoverable after model updates. Start with a 30-minute conversation."
+abstract: "Seal AI decision attribution with a ZK proof at decision time. Make past rationale recoverable after model updates. Book a 30-minute discovery call to see how it fits your AI governance."
 thesis: "Audited ≠ explainable"
 pillar: verifiable-ai
 targetVerticals:
