@@ -1,5 +1,5 @@
 ---
-title: "Multi-Agent Workflows"
+title: "マルチエージェント・ワークフロー"
 abstract: "マルチエージェントの委任チェーンを、各ノードの ZK 証明として束縛。最終成果物に元の主体まで遡れる経路が残ります。30 分の会話から、御社のオーケストレーション構成に乗るか確認します。"
 thesis: "委任した ≠ 追跡できる"
 pillar: agent-trust-chain
@@ -17,7 +17,7 @@ relatedUseCases:
   - delegated-treasury
 ---
 
-# ユースケース: Multi-Agent Workflows
+# ユースケース: マルチエージェント・ワークフロー
 
 ## テーゼ
 
