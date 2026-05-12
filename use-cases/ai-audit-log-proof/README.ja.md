@@ -1,5 +1,5 @@
 ---
-title: "AI Audit Log Proof"
+title: "AI 監査ログ証明"
 abstract: "AI 判断の帰属を、判断時に ZK 証明で封じる。モデル更新後も遡れる説明責任を、30 分の会話から検討します。"
 thesis: "監査される ≠ 説明できる"
 pillar: verifiable-ai
@@ -17,7 +17,7 @@ relatedUseCases:
   - financial-data-exfiltration
 ---
 
-# ユースケース: AI監査ログ証明
+# ユースケース: AI 監査ログ証明
 
 ## テーゼ
 

@@ -1,5 +1,5 @@
 ---
-title: "RAG Content Provenance"
+title: "RAG コンテンツ来歴"
 abstract: "RAG 取り込み時に文書の来歴を docHash と発行者署名として固定。AI 引用の真正性が暗号的に追跡可能になります。30 分の会話から、御社のパイプラインに乗るか確認します。"
 thesis: "インデックス化される ≠ 信頼できる"
 pillar: verifiable-origin
@@ -17,7 +17,7 @@ relatedUseCases:
   - supply-chain-component-provenance
 ---
 
-# ユースケース: RAGコンテンツ来歴
+# ユースケース: RAG コンテンツ来歴
 
 ## テーゼ
 

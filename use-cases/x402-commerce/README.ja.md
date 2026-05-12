@@ -1,5 +1,5 @@
 ---
-title: "X402 Commerce"
+title: "x402 上のエージェント取引"
 abstract: "x402 のミリ秒決済の前段で、売り手属性を ZK 証明として検証。買い手は平文主張に依存せず取引できます。30 分の会話から、御社の構成に乗るか確認します。"
 thesis: "決済される ≠ 検証されている"
 pillar: agent-trust-chain
@@ -17,7 +17,7 @@ relatedUseCases:
   - multi-agent-workflows
 ---
 
-# ユースケース: X402 Commerce
+# ユースケース: x402 上のエージェント取引
 
 ## テーゼ
 
