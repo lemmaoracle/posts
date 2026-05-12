@@ -1,5 +1,5 @@
 ---
-title: "まずは 30 分、会話から"
+title: "Lemma Discovery Call — まずは30分、会話から"
 ---
 
 
@@ -7,4 +7,4 @@ title: "まずは 30 分、会話から"
 
 フィットが見えた段階で、NDA 締結のうえ、業種別の引用要件設計・参照アーキテクチャ・PoC 設計に進みます。
 
-[相談する →](https://tally.so/r/EkBqDX) [ホワイトペーパーをダウンロード](/ja/services)
+[Discovery Call を予約 →](https://tally.so/r/EkBqDX) [ホワイトペーパーをダウンロード](/ja/services)
