@@ -1,5 +1,5 @@
 ---
-title: "Book a 30-minute discovery call"
+title: "Lemma Discovery Call — Start with a 30-minute conversation"
 ---
 
 
@@ -7,4 +7,4 @@ Tell us the scope of authority you're delegating to AI agents today, and where t
 
 If we see a fit, we move to NDA and then into sector-specific control mapping, reference architecture, and PoC design.
 
-[Book a call →](https://tally.so/r/Pd2Rl5) [Download whitepaper](/services)
+[Book a Discovery Call →](https://tally.so/r/Pd2Rl5) [Download whitepaper](/services)

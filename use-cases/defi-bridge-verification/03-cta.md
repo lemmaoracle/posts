@@ -1,5 +1,5 @@
 ---
-title: "Book a 30-minute discovery call"
+title: "Lemma Discovery Call — Start with a 30-minute conversation"
 ---
 
 
@@ -7,4 +7,4 @@ Tell us your current bridge topology, DVN threshold, and the attack surface you'
 
 If we see a fit, we move to NDA and then into protocol-specific threat modeling, reference architecture, and PoC design.
 
-[Book a call →](https://tally.so/r/Pd2Rl5) [Download whitepaper](/services)
+[Book a Discovery Call →](https://tally.so/r/Pd2Rl5) [Download whitepaper](/services)
