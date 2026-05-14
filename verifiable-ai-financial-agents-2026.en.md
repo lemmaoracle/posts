@@ -32,16 +32,14 @@ For context: the United States (Treasury, Federal Reserve), Europe (Project Glas
 
 Facts as of 2026-05-07. Preview scope and regulatory positioning will continue to move.
 
-## TL;DR
-
-*Lemma is the Trust Layer for AI — ZK-proof infrastructure for verifiable AI decisions, agent transactions, and regulatory attributes.*
+## Introduction
 
 - **What Lemma provides**: an infrastructure (pre-execution attestation) that records the lineage of every AI judgment and every cross-system state transition in a tamper-evident form, so the receiving side can verify it independently *before* committing.
 - **Stack it composes with**: BBS+ signatures and zkSNARK-based selective disclosure. Drops into judgment workflows on Claude Cowork / Claude Code / Claude Managed Agents. Compatible with x402 / MCP.
 - **Use cases it opens**: AI-agent KYC screening / credit memo and underwriting decisions / cross-system settlement / oracle → contract — multiple use cases on a single foundation.
 - **Why now**: AI agents reaching the core of financial workflows, US / EU / JP regulators converging on AI-decision accountability, and DeFi bridge exploits (Kelp DAO / rsETH ≈ $292M) — three independent contexts surfacing the same missing layer.
 
-## 1. Where the operational AI × verifiability stack stands today
+## Where the operational AI × verifiability stack stands today
 
 The operationalization of AI inside financial institutions has accelerated sharply over the past months. The technical side and the regulatory side are both moving — a short tour of where each one is.
 
@@ -74,7 +72,7 @@ Signatures pass. Whether the underlying decision was actually legitimate is a se
 
 Operational AI, regulatory motion, DeFi infrastructure — these are independent contexts on the surface. They share a structural question: **the moment of commit itself, where the receiving side could independently verify "is this state transition actually legitimate" before acting**, is still thinly served. That missing layer is what remains. The next section walks through the implementation.
 
-## 2. Composing pre-execution attestation into operations with Lemma
+## Composing pre-execution attestation into operations with Lemma
 
 What the judgment-trail layer must satisfy, and how Lemma's pre-execution attestation answers each requirement.
 
@@ -115,7 +113,7 @@ Two reference implementations from the past two weeks. Both runnable end-to-end.
 
 Code and the design-notes essays ship together for both. Links in Resources.
 
-## 3. Wrapping up
+## Wrapping up
 
 - The operational AI × verifiability stack is coming into place: Anthropic (runtime), Microsoft 365 (interface), data providers (financial data). Lemma's pre-execution attestation layer is the judgment-trail layer that sits on top.
 - BBS+ signatures and zkSNARK selective disclosure compose into a single foundation that supports KYC screening, underwriting, cross-system settlement, and oracle integration as separate but linked use cases.

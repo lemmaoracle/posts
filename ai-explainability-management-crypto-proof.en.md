@@ -23,7 +23,7 @@ Explainability is no longer just a matter of AI ethics. It is a critical managem
 
 ---
 
-## 1. The Era of Accountability: The Wave of Regulation is Quiet but Certain
+## The Era of Accountability: The Wave of Regulation is Quiet but Certain
 
 With the EU AI Act coming into full effect in 2026, recording, explaining, and being auditable for the basis of decisions is becoming mandatory for "high-risk AI" in sectors like finance, healthcare, and hiring. In Japan, the Financial Services Agency and the Ministry of Economy, Trade and Industry are sequentially revising their AI governance guidelines, and the requirement to "be able to retrospectively verify the behavior of the AI being used" is beginning to be explicitly stated as a requirement for internal controls.
 
@@ -31,7 +31,7 @@ What is noteworthy here is that regulators are not saying "don't use AI," but ra
 
 ---
 
-## 2. The AI Black Box Problem: Where the Real Danger Lies
+## The AI Black Box Problem: Where the Real Danger Lies
 
 The term "black box" has long been used among engineers, but the danger for management is slightly different.
 
@@ -49,7 +49,7 @@ Conventional system logs or BI outputs could not ensure this "reproducibility of
 
 ---
 
-## 3. Lemma's Audit Trail: Turning Proof into "Evidence"
+## Lemma's Audit Trail: Turning Proof into "Evidence"
 
 Lemma Oracle's approach is to **cryptographically fix the data and logic used by the AI to make decisions, and permanently record them in a way that can be verified by a third party later**.
 
@@ -65,7 +65,7 @@ This structure is fundamentally different from the idea of "leaving a log." Logs
 
 ---
 
-## 4. How to Design Reporting for the Board and Regulators
+## How to Design Reporting for the Board and Regulators
 
 Having an audit trail and being able to use it for reporting are two different things. Lemma's architecture is practical for management because ZK proofs and on-chain records form the foundation for "reproducible report generation."
 
@@ -75,7 +75,7 @@ Having an audit trail and being able to use it for reporting are two different t
 
 ---
 
-## 5. Incorporation into Internal Control KPIs: Can it be used as a Management Indicator?
+## Incorporation into Internal Control KPIs: Can it be used as a Management Indicator?
 
 When designing AI auditability as an internal control KPI, the granular information provided by Lemma can be broken down into the following indicators:
 
@@ -90,7 +90,7 @@ Once these KPIs are on the table at management meetings, AI governance is elevat
 
 ---
 
-## 6. Conclusion: Toward an Era Where "Provable Management" Becomes a Competitive Advantage
+## Conclusion: Toward an Era Where "Provable Management" Becomes a Competitive Advantage
 
 Explainability is becoming an asset, not a cost.
 
