@@ -10,6 +10,8 @@ abstract: "In recent weeks, movements across the trust infrastructure of finance
 
 **TL;DR**
 
+*Lemma is the Trust Layer for AI — ZK-proof infrastructure for verifiable AI decisions, agent transactions, and regulatory attributes.*
+
 In recent weeks, movements across the trust infrastructure of finance have been running in parallel. Anthropic has pushed AI agents into the core of financial workflows; regulators across the US, EU, and Japan are converging on how to institutionalize accountability for AI-driven decisions; and DeFi has seen large-scale cross-chain bridge exploits. Different topics on the surface — the same shape underneath: **wherever decisions cross system boundaries, "cryptographically valid" and "semantically right" decouple**. Lemma is building infrastructure for that decoupling — pre-execution attestation — and over the past two weeks has made two publicly runnable reference implementations available.
 
 Cryptographically valid ≠ semantically right.
