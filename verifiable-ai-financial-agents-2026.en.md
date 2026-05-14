@@ -52,7 +52,7 @@ In May 2026, Anthropic released ten financial-services agent templates as refere
 The roles of each player in this stack:
 
 - **Anthropic** — operational AI runtime (Claude Cowork / Claude Code / Managed Agents) and the ten financial-services agent templates
-- **Microsoft** — embedded interface through the 365 suite (Excel / PowerPoint / Word)
+- **Microsoft** — embedded interface through the 365 suite (Excel, PowerPoint, Word)
 - **Data providers** (Moody's and others) — financial data access
 - **Lemma** — the pre-execution attestation layer that records judgment lineage
 
@@ -109,7 +109,7 @@ Composing Lemma's pre-execution attestation on top of Anthropic's operational AI
 
 Two reference implementations from the past two weeks. Both runnable end-to-end.
 
-**Trust402 (published 4/28)** — integrates agent-to-agent payments with ZK attribute proofs on top of the x402 settlement protocol. Runs on Base Sepolia via `npm i @lemmaoracle/sdk`.
+**Trust402 (published 4/28)** — integrates agent-to-agent payments with ZK attribute proofs on top of the x402 settlement protocol. Wires BBS+ attribute proofs and HTTP 402 settlement in a single file. `npm i @lemmaoracle/sdk`, then run the bundled demo on Base Sepolia to walk the full payment + verification flow.
 
 **example-origin (published 4/30)** — an end-to-end pre-commit verification pipeline against the Kelp DAO / rsETH bridge / LRT scenario. Runs Poseidon over BN254 + Groth16 with real proof generation. `pnpm demo` walks the full verification pipeline in under five minutes.
 
@@ -121,19 +121,17 @@ Code and the design-notes essays ship together for both. Links in Resources.
 - BBS+ signatures and zkSNARK selective disclosure compose into a single foundation that supports KYC screening, underwriting, cross-system settlement, and oracle integration as separate but linked use cases.
 - US / EU / JP regulatory motion, Anthropic Project Glasswing, and DeFi bridge exploits — three contexts surfacing the same missing layer. For financial institutions answering to regulators in all three jurisdictions, a single foundation that addresses each is the practical advantage.
 
-Technical stacks keep moving. The judgment trail underneath them stays.
+Technical stacks keep moving. The judgment trail underneath them stays. Models rotate on roughly six-month cycles; verification standards for the judgment trail carry forward into the next model — that's the condition for AI-agent operations to become an institutional asset on a decade horizon.
 
 Models change. Proofs remain.
 
----
-
-Now that operational AI has reached the core of financial institutions, the need to institutionalize the AI-decision trail — both technically and as compliance — emerges from the same motion. With Lemma's pre-execution attestation layer in place, you can build:
+Now that operational AI has reached the core of financial institutions, the need to institutionalize the AI-decision trail — both technically and as compliance — emerges from the same motion. With Lemma's pre-execution attestation layer, you can build the following on a single foundation:
 
 - **AI-agent KYC, underwriting, and close** with judgment lineage preserved to a standard that withstands regulatory examination
 - **Cross-system settlement trails** preserved in a tamper-evident form for long-horizon retention
 - **Oracle → smart-contract integration** with pre-commit independent verification
 
-on a single foundation. We welcome inquiries from financial CISOs / IT leaders, regulatory affairs, and agent-payment platform builders — we respond within one business day.
+We welcome inquiries from financial CISOs / IT leaders, regulatory affairs, and agent-payment platform builders — we respond within one business day.
 
 [**Talk to us →**](https://tally.so/r/EkBqDX)
 
