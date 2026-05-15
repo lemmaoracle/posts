@@ -10,8 +10,9 @@ tags:
   - ppsi
   - genius-act
   - stablecoin
-  - aml-kyc
+  - kyc-aml
   - x402
+  - payments
   - zk-proof
   - compliance
 ---
