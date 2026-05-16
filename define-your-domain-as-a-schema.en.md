@@ -7,7 +7,7 @@ title: "Define Your Domain as a Schema"
 abstract: "Model how your AI retrieves and clusters knowledge — bucket ages, risk scores, regions — with typed schemas and normalization. Register ZK circuits and generators so every fact traces back to its source."
 tags:
   - schema-design
-  - zero-knowledge-proof
+  - zk-proof
   - provenance
   - rag
 ---

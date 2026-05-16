@@ -8,7 +8,7 @@ abstract: "Traditionally, supply chains have faced a trade-off between data shar
 cover: "assets/tomPqFRSvng.jpg"
 tags:
   - supply-chain
-  - zero-knowledge-proof
+  - zk-proof
   - provenance
   - agent-security
 ---

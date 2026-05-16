@@ -7,7 +7,7 @@ title: "ドメインをスキーマとして定義する"
 abstract: "AI がどのように知識を取得・分類するかをモデル化。年齢・リスクスコア・地域を型付きスキーマと正規化で定義し、ZK 回路とジェネレーターを登録してすべてのファクトを起源まで追跡可能にします。"
 tags:
   - schema-design
-  - zero-knowledge-proof
+  - zk-proof
   - provenance
   - rag
 ---

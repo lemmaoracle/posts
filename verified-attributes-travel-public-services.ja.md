@@ -8,7 +8,7 @@ abstract: "旅行や公共サービスの現場では、同じ個人情報を何
 cover: "assets/qDu2w2RUZXs.jpg"
 tags:
   - attribute-verification
-  - zero-knowledge-proof
+  - zk-proof
   - privacy
   - compliance
 ---

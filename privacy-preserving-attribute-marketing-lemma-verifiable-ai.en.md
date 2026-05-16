@@ -9,7 +9,7 @@ cover: "assets/rdFbtbFObPk.jpg"
 tags:
   - attribute-verification
   - privacy
-  - zero-knowledge-proof
+  - zk-proof
   - compliance
 ---
 

@@ -7,7 +7,7 @@ abstract: "暗号学的に検証された真実レイヤー。ゼロ知識証明
 tags:
   - verifiable-origin
   - provenance
-  - zero-knowledge-proof
+  - zk-proof
   - selective-disclosure
 ---
 

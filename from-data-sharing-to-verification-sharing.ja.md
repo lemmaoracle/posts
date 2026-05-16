@@ -8,7 +8,7 @@ abstract: "従来のサプライチェーンでは、信頼構築のためにデ
 cover: "assets/tomPqFRSvng.jpg"
 tags:
   - supply-chain
-  - zero-knowledge-proof
+  - zk-proof
   - provenance
   - agent-security
 ---

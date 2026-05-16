@@ -7,7 +7,7 @@ abstract: "A cryptographically verified truth layer enabling AI to reason over c
 tags:
   - verifiable-origin
   - provenance
-  - zero-knowledge-proof
+  - zk-proof
   - selective-disclosure
 ---
 
