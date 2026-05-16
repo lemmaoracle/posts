@@ -12,8 +12,10 @@ tags:
   - zero-knowledge-proof
   - payments
 relatedLinks:
-  - label: "example-x402 (reference implementation)"
+  - label: "example-x402 (resource-side reference implementation)"
     href: "https://github.com/lemmaoracle/example-x402"
+  - label: "trust402 (agent-side reference implementation)"
+    href: "https://github.com/lemmaoracle/trust402"
 ---
 
 ## The design is live
@@ -145,19 +147,19 @@ The full integration cost of the trust layer is **a single import line on the se
 
 This release covers the **resource-side trust layer**: the side of resource providers and data issuers. In other words, an agent can now confirm cryptographically *who issued* a piece of data, *how much it paid* for it, and that the *bytes arrived intact*.
 
-The other half — the **agent-side trust layer**, answering *who paid, under what authority, and under what policy* — is the next milestone. In today's release the paying agent is identified by a wallet address; binding it to a `did:key`, attaching role and spend-limit attestations, all of that comes next.
+The other half — the **agent-side trust layer**, answering *who paid, under what authority, and under what policy* — now has a reference implementation of its own: [github.com/lemmaoracle/trust402](https://github.com/lemmaoracle/trust402). This post covers the resource side, where the paying agent is still identified only by a wallet address; the agent-side layer is what binds it to a `did:key` and attaches role and spend-limit attestations as ZK predicates.
 
 We chose to ship the two layers in stages on purpose. The resource-side layer is already useful by itself: an agent operating in the existing x402 economy can extract verifiable data starting today. The agent-side layer is designed to compose independently, so adding it later does not invalidate any of the resource-side proofs already produced.
 
 ---
 
-## The agent side, next
+## The agent side
 
-The agent-side trust layer aims to turn a paying agent from an anonymous wallet into a verifiable principal.
+The agent-side trust layer turns a paying agent from an anonymous wallet into a verifiable principal.
 
 Concretely, this means identifying the agent as a `did:key` principal, expressing authority through roles and scopes, making spend limits explicit through `spendLimit`, and managing credential lifecycle (issuance and revocation) — all expressed as ZK predicates so they can be verified.
 
-When this lands, `PAYMENT-RESPONSE` will carry an attestation along the lines of "this payment was issued by `did:key:...`, operating under `org:acme` with `payments:read` scope, within spend limit, valid and unrevoked at the moment of settlement." That is the point at which the resource-side trust layer and the agent-side trust layer compose into the unified design previewed in the whitepaper.
+With the agent-side layer in place, `PAYMENT-RESPONSE` carries an attestation along the lines of "this payment was issued by `did:key:...`, operating under `org:acme` with `payments:read` scope, within spend limit, valid and unrevoked at the moment of settlement." Composed with the resource-side trust layer, that is the unified design previewed in the whitepaper.
 
 ---
 
@@ -193,7 +195,7 @@ x402 is already agent-callable at the protocol level, so payments do not need an
 
 ## What's next
 
-The next post in this series will cover the **agent-side trust layer** — DID binding, role / scope / spend-limit attestations — with a view of the full picture once both layers compose.
+The **agent-side trust layer** — DID binding, role / scope / spend-limit attestations — now has its own reference implementation ([lemmaoracle/trust402](https://github.com/lemmaoracle/trust402)). A follow-up post will walk through both layers composed end to end.
 
 The demo runs without credentials — try it first. For teams evaluating production rollout and looking for pricing, plan details, or the whitepaper, please join the [**developer waitlist**](https://tally.so/r/kd0bZR). Waitlist members also get access to the whitepaper PDF.
 
