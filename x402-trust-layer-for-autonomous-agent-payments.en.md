@@ -147,7 +147,7 @@ The full integration cost of the trust layer is **a single import line on the se
 
 This release covers the **resource-side trust layer**: the side of resource providers and data issuers. In other words, an agent can now confirm cryptographically *who issued* a piece of data, *how much it paid* for it, and that the *bytes arrived intact*.
 
-The other half — the **agent-side trust layer**, answering *who paid, under what authority, and under what policy* — now has a reference implementation of its own: [github.com/lemmaoracle/trust402](https://github.com/lemmaoracle/trust402). This post covers the resource side, where the paying agent is still identified only by a wallet address; the agent-side layer is what binds it to a `did:key` and attaches role and spend-limit attestations as ZK predicates.
+The other half — the **agent-side trust layer**, answering *who paid, under what authority, and under what policy* — is now in place too: Trust402's agent-side reference implementation lives at [github.com/lemmaoracle/trust402](https://github.com/lemmaoracle/trust402). This post covers the resource side, where the paying agent is still identified only by a wallet address; the agent-side layer is what binds it to a `did:key` and attaches role and spend-limit attestations as ZK predicates.
 
 We chose to ship the two layers in stages on purpose. The resource-side layer is already useful by itself: an agent operating in the existing x402 economy can extract verifiable data starting today. The agent-side layer is designed to compose independently, so adding it later does not invalidate any of the resource-side proofs already produced.
 
@@ -195,7 +195,7 @@ x402 is already agent-callable at the protocol level, so payments do not need an
 
 ## What's next
 
-The **agent-side trust layer** — DID binding, role / scope / spend-limit attestations — now has its own reference implementation ([lemmaoracle/trust402](https://github.com/lemmaoracle/trust402)). A follow-up post will walk through both layers composed end to end.
+Trust402's **agent-side trust layer** — DID binding, role / scope / spend-limit attestations — now has its reference implementation ([lemmaoracle/trust402](https://github.com/lemmaoracle/trust402)). A follow-up post will walk through both layers composed end to end.
 
 The demo runs without credentials — try it first. For teams evaluating production rollout and looking for pricing, plan details, or the whitepaper, please join the [**developer waitlist**](https://tally.so/r/kd0bZR). Waitlist members also get access to the whitepaper PDF.
 
