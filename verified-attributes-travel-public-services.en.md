@@ -8,7 +8,7 @@ abstract: "Travel and public services suffer from an inefficient structure where
 cover: "assets/qDu2w2RUZXs.jpg"
 tags:
   - attribute-verification
-  - zero-knowledge-proof
+  - zk-proof
   - privacy
   - compliance
 ---

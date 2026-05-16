@@ -9,7 +9,7 @@ cover: "assets/PheXNJawcEc.jpg"
 tags:
   - kyc-aml
   - compliance
-  - zero-knowledge-proof
+  - zk-proof
   - privacy
 ---
 

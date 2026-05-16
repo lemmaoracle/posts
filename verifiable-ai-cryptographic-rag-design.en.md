@@ -8,7 +8,7 @@ abstract: "Addressing the trust challenges of AI agents and RAG systems, we prop
 cover: "assets/fjcJFETT2r8.jpg"
 tags:
   - rag
-  - zero-knowledge-proof
+  - zk-proof
   - selective-disclosure
   - provenance
 ---

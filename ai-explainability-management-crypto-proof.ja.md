@@ -9,7 +9,7 @@ cover: "assets/7ewkO-JbRiE.jpg"
 tags:
   - audit-trail
   - compliance
-  - zero-knowledge-proof
+  - zk-proof
   - provenance
 ---
 

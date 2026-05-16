@@ -9,7 +9,7 @@ abstract: "AI agents can now pay over HTTP through x402, but a wallet address an
 tags:
   - agent-security
   - provenance
-  - zero-knowledge-proof
+  - zk-proof
   - payments
 relatedLinks:
   - label: "example-x402 (resource-side reference implementation)"
