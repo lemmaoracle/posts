@@ -8,21 +8,13 @@ jobs:
   trigger-rebuild:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Trigger Lemma Rebuild
+      - name: Trigger Cloudflare Deploy Hook
         run: |
-          # Trigger repository_dispatch for the lemma repository
-          curl -X POST \
-            -H "Authorization: token ${{ secrets.LEMMA_GH_TOKEN || secrets.GITHUB_TOKEN }}" \
-            -H "Accept: application/vnd.github.v3+json" \
-            https://api.github.com/repos/lemmaoracle/lemma/dispatches \
-            -d '{"event_type": "rebuild", "client_payload": {"repository": "posts", "branch": "${{ github.ref_name }}", "commit": "${{ github.sha }}"}}'
+          curl -X POST "https://api.cloudflare.com/client/v4/pages/webhooks/deploy_hooks/${{ secrets.CLOUDFLARE_DEPLOY_HOOK_ID }}"
 
       - name: Log Trigger Details
         run: |
-          echo "Triggered rebuild for lemma repository"
+          echo "Triggered Cloudflare deploy hook for lemma"
           echo "Posts repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref_name }}"
           echo "Commit: ${{ github.sha }}"
