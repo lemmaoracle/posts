@@ -71,17 +71,105 @@ That is the full UI. Anything not in those tabs is via SDK or direct API call.
 
 These are the six nouns the Dashboard uses everywhere. None are vendor-specific buzzwords; they map cleanly onto the cryptography you already know.
 
-**Scope.** Your tenant boundary. Everything you register — keys, schemas, circuits, documents, proofs — lives under one scope ID. A new GitHub sign-in creates a new scope. Two scopes never see each other's data, even if they share an issuer DID.
+### Scope
 
-**Schema.** A typed declaration that pins what a document's attributes look like, anchored to a normalize artifact (a WASM module that hashes into the same circuit). Schemas are immutable once registered; version them in the `id` (`age-over-eighteen.v2`) rather than mutating in place.
+Your tenant boundary. Everything you register — keys, schemas, circuits, documents, proofs — lives under one scope ID. A new GitHub sign-in creates a new scope. Two scopes never see each other's data, even if they share an issuer DID.
 
-**Circuit.** A ZK circuit registered against a schema, addressable by circuit ID. Most circuits today are Groth16 on BN254 compiled with `snarkjs`. See the Reference tab for the exact algorithm strings the API accepts. Related: [Zero-Knowledge Proof](/glossary/zk-proof/).
+You do not register a scope explicitly; it is created automatically the first time you sign in through GitHub OAuth on the Dashboard. The scope ID is shown in the footer of every signed-in page.
 
-**Generator.** The client-side artifact that proves against a circuit — typically a witness builder plus a proving key location. It exists so an external party can produce proofs without re-implementing your circuit logic.
+### Schema
 
-**Document.** An issuer-signed assertion. The Dashboard stores only `docHash`, `cid`, `issuerId`, `subjectId`, and the document commitments plus revocation state — never the cleartext payload. Related: [docHash](/glossary/doc-hash/), [CID](/glossary/cid/), [Provenance](/glossary/provenance/).
+A typed declaration that pins what a document's attributes look like, anchored to a normalize artifact (a WASM module that hashes into the same circuit). Schemas are immutable once registered; version them in the `id` (`age-over-eighteen.v2`) rather than mutating in place.
 
-**Proof.** A submitted Groth16 instance against a registered circuit, optionally tied to a document. The Overview lists every proof your scope has produced along with its verification status. Related: [Selective Disclosure](/glossary/selective-disclosure/).
+**How to register.** Call `schemas.register` from the SDK. The new schema appears in **Overview → Schemas** once the API accepts it.
+
+```ts
+import { schemas } from "@lemmaoracle/sdk";
+
+await schemas.register(client, {
+  id: "weather.v1",
+  normalize: { type: "ipfs", wasm: "Qm…" },
+});
+```
+
+### Circuit
+
+A ZK circuit registered against a schema, addressable by circuit ID. Most circuits today are Groth16 on BN254 compiled with `snarkjs`. See the Reference tab for the exact algorithm strings the API accepts. Related: [Zero-Knowledge Proof](/glossary/zk-proof/).
+
+**How to register.** Call `circuits.register` from the SDK. The new circuit appears in **Overview → Circuits**, and proofs you later submit can target it by `circuitId`.
+
+```ts
+import { circuits } from "@lemmaoracle/sdk";
+
+await circuits.register(client, {
+  circuitId: "weather-threshold.v1",
+  artifact: {
+    type: "ipfs",
+    wasm: "Qm…",
+    provingKey: "Qm…",
+    verificationKey: "Qm…",
+  },
+});
+```
+
+### Generator
+
+The client-side artifact that proves against a circuit — typically a witness builder plus a proving key location. It exists so an external party can produce proofs without re-implementing your circuit logic.
+
+**How to register.** Call `generators.register` after the underlying circuit exists. The new generator appears in **Overview → Generators**.
+
+```ts
+import { generators } from "@lemmaoracle/sdk";
+
+await generators.register(client, {
+  generatorId: "weather-threshold-gen.v1",
+  circuitId: "weather-threshold.v1",
+  artifact: { type: "ipfs", wasm: "Qm…" },
+});
+```
+
+### Document
+
+An issuer-signed assertion. The Dashboard stores only `docHash`, `cid`, `issuerId`, `subjectId`, and the document commitments plus revocation state — never the cleartext payload. Related: [docHash](/glossary/doc-hash/), [CID](/glossary/cid/), [Provenance](/glossary/provenance/).
+
+**How to register.** Run `prepare()` first to normalize the raw document and compute commitments, then pass the resulting `commitments` to `documents.register`. The new document appears in **Overview → Documents**.
+
+```ts
+import { documents } from "@lemmaoracle/sdk";
+
+// commitments come from prepare()
+await documents.register(client, {
+  schema: "weather.v1",
+  docHash: "0x…",
+  cid: "Qm…",
+  issuerId: "weather-issuer",
+  subjectId: "tokyo-1",
+  commitments,
+});
+```
+
+### Proof
+
+A submitted Groth16 instance against a registered circuit, optionally tied to a document. The Overview lists every proof your scope has produced along with its verification status. Related: [Selective Disclosure](/glossary/selective-disclosure/).
+
+**How to submit.** Generate a proof in-browser with `prover.prove`, then send it to the API with `proofs.submit`. The proof appears in **Overview → Proofs** with its verification status.
+
+```ts
+import { prover, proofs } from "@lemmaoracle/sdk";
+
+// witness shape depends on your circuit
+const { proof, inputs } = await prover.prove(client, {
+  circuitId: "weather-threshold.v1",
+  witness,
+});
+
+await proofs.submit(client, {
+  docHash: "0x…",
+  circuitId: "weather-threshold.v1",
+  proof,
+  inputs,
+});
+```
 
 ## Where to go next
 
