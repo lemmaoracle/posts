@@ -85,9 +85,9 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 ## 次に読むもの
 
-- **概念の深さ** — [用語集](/ja/glossary/)。ZK・プロヴナンス・エージェント決済・規制レイヤーを横断する27項目が相互リンクされています。
+- **概念の深さ** — [用語集](/ja/glossary/)。ZK・プロヴナンス・エージェント決済・規制レイヤーを横断する27項目を紹介しています。
 - **API仕様** — [`@lemmaoracle/sdk`](https://www.npmjs.com/package/@lemmaoracle/sdk) のREADME。関数名・fetchヘルパー・正確なペイロード形状の出典です。
 - **AIエージェント向けMCP** — Referenceタブに [`@lemmaoracle/mcp`](https://www.npmjs.com/package/@lemmaoracle/mcp) の設定スニペットがそのまま貼ってあります。Claude Desktopに入れれば、エージェントから検証済み属性が見えます。
 - **サインインで詰まったとき** — Seal Proofはサーバ側のverification keyが未登録だと `503` を返します。ローカル開発中はGitHub OAuthをフォールバックとして使ってください。
 
-このページで足りない情報があれば、それはページ側の欠陥でありプロダクトの欠陥ではありません。docsリポジトリにissueを立ててください。
+このページで足りない情報があれば、それはこのページで埋めるべきギャップです。[docsリポジトリ](https://github.com/lemmaoracle/posts/issues) に issue を立ててください。
