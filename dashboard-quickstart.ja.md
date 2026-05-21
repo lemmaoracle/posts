@@ -90,4 +90,4 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 - **AIエージェント向けMCP** — Referenceタブに [`@lemmaoracle/mcp`](https://www.npmjs.com/package/@lemmaoracle/mcp) の設定スニペットがそのまま貼ってあります。Claude Desktopに入れれば、エージェントから検証済み属性が見えます。
 - **サインインで詰まったとき** — Seal Proofはサーバ側のverification keyが未登録だと `503` を返します。ローカル開発中はGitHub OAuthをフォールバックとして使ってください。
 
-このページで足りない情報があれば、それはこのページで埋めるべきギャップです。[docsリポジトリ](https://github.com/lemmaoracle/posts/issues) に issue を立ててください。
+足りない情報があれば、[docsリポジトリ](https://github.com/lemmaoracle/posts/issues) に issue を立ててください。

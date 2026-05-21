@@ -90,4 +90,4 @@ These are the six nouns the Dashboard uses everywhere. None are vendor-specific 
 - **MCP for AI agents** — the Reference tab carries the [`@lemmaoracle/mcp`](https://www.npmjs.com/package/@lemmaoracle/mcp) configuration; drop it into Claude Desktop and your agent can read verified attributes.
 - **Trouble signing in** — Seal returns `503` until the seal verification key is registered server-side; use GitHub OAuth as the fallback in local development.
 
-If something is missing from this page, that's a gap on the page side — please open an issue in the [docs repo](https://github.com/lemmaoracle/posts/issues).
+If something is missing, please open an issue in the [docs repo](https://github.com/lemmaoracle/posts/issues).
