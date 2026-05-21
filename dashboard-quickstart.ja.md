@@ -1,7 +1,7 @@
 ---
 slug: dashboard-quickstart
 title: "Lemma Dashboard — 5分クイックスタート"
-date: 2026-05-21
+date: "2026.05.21"
 category: ガイド
 section: Essays
 abstract: "dashboard.lemma.workers.dev の Dashboard をひと通り触ります。サインイン・APIキー発行・各タブの役割確認・AIエージェント接続まで。x402とゼロ知識証明をすでに知っている開発者向けです。"

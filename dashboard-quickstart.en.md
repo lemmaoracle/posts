@@ -1,7 +1,7 @@
 ---
 slug: dashboard-quickstart
 title: "Lemma Dashboard — 5-minute Quickstart"
-date: 2026-05-21
+date: "2026.05.21"
 category: Guides
 section: Essays
 abstract: "A tour of the Lemma Dashboard at dashboard.lemma.workers.dev — sign in, mint an API key, learn what each tab does, and connect your first AI agent. Written for developers already familiar with x402 and zero-knowledge proofs."
