@@ -63,7 +63,7 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 ## Concepts — Dashboardが使う6つの名詞
 
-どれも特別な造語ではなく、既存の暗号技術の概念に対応します。各リソースを登録するSDK呼び出しは、Dashboardの該当する空状態、または [`@lemmaoracle/sdk`](https://www.npmjs.com/package/@lemmaoracle/sdk) のREADMEを参照してください。
+6つとも、一般的な暗号技術の概念にそのまま対応します。各リソースを登録するSDK呼び出しは、Dashboardの該当する空状態、または [`@lemmaoracle/sdk`](https://www.npmjs.com/package/@lemmaoracle/sdk) のREADMEを参照してください。
 
 ### Scope（スコープ）
 
