@@ -63,7 +63,7 @@ That is the full UI. Anything not in those tabs is via SDK or direct API call.
 
 ## Concepts
 
-These are the six nouns the Dashboard uses everywhere. None are vendor-specific buzzwords; they map cleanly onto the cryptography you already know.
+These are the six nouns the Dashboard uses everywhere. None are vendor-specific buzzwords; they map cleanly onto the cryptography you already know. For the SDK call that registers each one, see the matching empty state in the Dashboard or the [`@lemmaoracle/sdk`](https://www.npmjs.com/package/@lemmaoracle/sdk) README.
 
 ### Scope
 
@@ -75,99 +75,21 @@ You do not register a scope explicitly; it is created automatically the first ti
 
 A typed declaration that pins what a document's attributes look like, anchored to a normalize artifact (a WASM module that hashes into the same circuit). Schemas are immutable once registered; version them in the `id` (`age-over-eighteen.v2`) rather than mutating in place.
 
-**How to register.** Call `schemas.register` from the SDK. The new schema appears in **Overview → Schemas** once the API accepts it.
-
-```ts
-import { schemas } from "@lemmaoracle/sdk";
-
-await schemas.register(client, {
-  id: "weather.v1",
-  normalize: { type: "ipfs", wasm: "Qm…" },
-});
-```
-
 ### Circuit
 
 A ZK circuit registered against a schema, addressable by circuit ID. Most circuits today are Groth16 on BN254 compiled with `snarkjs`. See the Reference tab for the exact algorithm strings the API accepts. Related: [Zero-Knowledge Proof](/glossary/zk-proof/).
-
-**How to register.** Call `circuits.register` from the SDK. The new circuit appears in **Overview → Circuits**, and proofs you later submit can target it by `circuitId`.
-
-```ts
-import { circuits } from "@lemmaoracle/sdk";
-
-await circuits.register(client, {
-  circuitId: "weather-threshold.v1",
-  artifact: {
-    type: "ipfs",
-    wasm: "Qm…",
-    provingKey: "Qm…",
-    verificationKey: "Qm…",
-  },
-});
-```
 
 ### Generator
 
 Metadata for a document generation script — it describes how to produce a rawDoc: inputs (`inputsSpec`), outputs (`outputsSpec`), and a source location (`source`). Execution happens on developer infrastructure, not on Lemma; the `generatorId` and its hash are treated as ZK public inputs for verification.
 
-**How to register.** Call `generators.register`. The new generator appears in **Overview → Generators**.
-
-```ts
-import { generators } from "@lemmaoracle/sdk";
-
-await generators.register(client, {
-  generatorId: "weather-report-gen.v1",
-  schema: "weather.v1",
-  description: "Fetch weather data from external API and assemble a rawDoc",
-  language: "typescript",
-  source: { type: "url", uri: "https://api.example.com/generate-weather-doc" },
-  inputsSpec: { subjectId: "string", location: "string" },
-  outputsSpec: { raw_document: "RawWeather", schema: "weather.v1" },
-});
-```
-
 ### Document
 
 An issuer-signed assertion. The Dashboard stores only `docHash`, `cid`, `issuerId`, `subjectId`, and the document commitments plus revocation state — never the cleartext payload. Related: [docHash](/glossary/doc-hash/), [CID](/glossary/cid/), [Provenance](/glossary/provenance/).
 
-**How to register.** Run `prepare()` first to normalize the raw document and compute commitments, then pass the resulting `commitments` to `documents.register`. The new document appears in **Overview → Documents**.
-
-```ts
-import { documents } from "@lemmaoracle/sdk";
-
-// commitments come from prepare()
-await documents.register(client, {
-  schema: "weather.v1",
-  docHash: "0x…",
-  cid: "Qm…",
-  issuerId: "weather-issuer",
-  subjectId: "tokyo-1",
-  commitments,
-});
-```
-
 ### Proof
 
 A submitted ZK proof instance against a registered circuit, optionally tied to a document. The Overview lists every proof your scope has produced along with its verification status. Related: [Selective Disclosure](/glossary/selective-disclosure/).
-
-**How to submit.** Generate a proof in-browser with `prover.prove`, then send it to the API with `proofs.submit`. The proof appears in **Overview → Proofs** with its verification status.
-
-```ts
-import { prover, proofs } from "@lemmaoracle/sdk";
-
-// witness shape depends on your circuit
-const { proof, inputs } = await prover.prove(client, {
-  circuitId: "weather-threshold.v1",
-  witness,
-});
-
-await proofs.submit(client, {
-  docHash: "0x…",
-  circuitId: "weather-threshold.v1",
-  proof,
-  inputs,
-});
-```
 
 ## Where to go next
 
