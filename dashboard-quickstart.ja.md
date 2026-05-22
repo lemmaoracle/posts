@@ -27,7 +27,7 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 [dashboard.lemma.workers.dev](https://dashboard.lemma.workers.dev/signin) を開き、**Continue with GitHub** をクリックします。OAuthフローが新しい **scope**（テナント境界）と、それに紐づく最初のAPIキーを発行します。キーのシークレットは次画面で1度だけ表示されます。コピーし忘れた場合は、revokeして作り直すしかありません。
 
-2回目以降は **Seal Proof** が使えます。これはAPIキーを所有していることをGroth16 ZK証明でクライアント側だけで示す方式で、シークレットそのものはサーバに送りません。Sealはキーが既に存在している必要があるため、新規アカウントを作る経路としては使えません。新規はGitHub経由で行ってください。Sealが `503` を返す場合はサーバ側のverification keyがまだ登録されていない状態なので、開発中はGitHub OAuthをフォールバックとして使ってください。
+2回目以降は **Seal Proof** が使えます。これはAPIキーを所有していることをGroth16 ZK証明でクライアント側だけで示す方式で、シークレットそのものはサーバに送りません。Sealはキーが既に存在している必要があるため、新規アカウントを作る経路としては使えません。新規はGitHub経由で行ってください。
 
 ### 2. API keys — 認証情報
 
@@ -55,13 +55,7 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 何かを登録したら、**Overview** タブで反映を確認します。ページは `/api/resources` を10秒間隔でポーリングしており、スコープ配下を Schemas / Circuits / Generators / Documents / Proofs の5セクションに分けて表示します。各行をクリックすると、フルレコードが右ドロワーで開き、コピー用ヘルパーが付きます。
 
-### 6. （任意）Marketplace — リソースを公開する
-
-所有しているスキーマ・回路・ジェネレータが再利用可能なものであれば、**Marketplace** タブで公開できます。Withdrawはワンクリックで、リスティングはinactiveに切り替わり公開検索から外れます。掲載できるのは自分のスコープに登録されたリソースだけで、他人の作ったものを勝手に並べることはできません。
-
-ここでいう Marketplace は、Dashboard が独自に持つリスティングUI（ご自身のスコープに登録されたリソースを公開するための機能）です。x402 のルートディスカバリー（x402 facilitator が広告するルートごとのメタデータ）や、ロードマップにある将来の「Bazaar」系インデックスとは別概念・別サーフェスですのでご注意ください。
-
-### 7. Usage — リクエスト量を見る
+### 6. Usage — リクエスト量を見る
 
 **Usage** タブは、スコープのAPIリクエスト量グラフです。読み取り専用で、リクエストが溜まるにつれて更新されます。課金や rate limit を気にしはじめる前に状態を確認する用途で使ってください。
 
@@ -73,7 +67,7 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 ### Scope（スコープ）
 
-あなたのテナント境界です。登録物（キー・スキーマ・回路・ドキュメント・証明）はすべて1つのscope IDに紐づきます。GitHubで新規サインインすると新しいscopeが作られます。発行者DIDが同じでも、scopeをまたいでデータが見えることはありません。
+あなたのテナント境界です。登録物（キー・スキーマ・回路・ドキュメント・証明）はすべて1つのscope IDに紐づきます。GitHubで新規サインインすると新しいscopeが作られます。
 
 scopeは明示的に登録するものではなく、DashboardでGitHub OAuthサインインした時点で自動的に作成されます。サインイン後の各ページのフッターにscope IDが表示されます。
 
@@ -114,17 +108,21 @@ await circuits.register(client, {
 
 ### Generator（ジェネレータ）
 
-回路に対して証明を生成するクライアント側のアーティファクトで、通常はwitness builderとproving keyの所在を指します。外部の主体が回路ロジックを再実装せずに証明を作れるようにするための仕組みです。
+ドキュメント（rawDoc）を生成するスクリプトのメタデータです。入力仕様（`inputsSpec`）・出力仕様（`outputsSpec`）・ソースの所在（`source`）を記述します。実行は開発者のインフラで行われ、Lemmaは `generatorId` とそのハッシュをZKパブリックインプットとして検証に用います。
 
-**登録方法。** 対象の回路を登録してから `generators.register` を呼び出します。登録後は **Overview → Generators** に表示されます。
+**登録方法。** `generators.register` を呼び出します。登録後は **Overview → Generators** に表示されます。
 
 ```ts
 import { generators } from "@lemmaoracle/sdk";
 
 await generators.register(client, {
-  generatorId: "weather-threshold-gen.v1",
-  circuitId: "weather-threshold.v1",
-  artifact: { type: "ipfs", wasm: "Qm…" },
+  generatorId: "weather-report-gen.v1",
+  schema: "weather.v1",
+  description: "外部APIから天気データを取得しrawDocを生成する",
+  language: "typescript",
+  source: { type: "url", uri: "https://api.example.com/generate-weather-doc" },
+  inputsSpec: { subjectId: "string", location: "string" },
+  outputsSpec: { raw_document: "RawWeather", schema: "weather.v1" },
 });
 ```
 
@@ -150,7 +148,7 @@ await documents.register(client, {
 
 ### Proof（証明）
 
-登録された回路に対して提出されたGroth16のinstanceで、ドキュメントに紐付けることもできます。Overviewには、scopeが生成したすべての証明がverification状態とともに並びます。関連：[選択的開示](/ja/glossary/selective-disclosure/)。
+登録された回路に対して提出されたZK証明のinstanceで、ドキュメントに紐付けることもできます。Overviewには、scopeが生成したすべての証明がverification状態とともに並びます。関連：[選択的開示](/ja/glossary/selective-disclosure/)。
 
 **提出方法。** `prover.prove` でブラウザ内で証明を生成し、`proofs.submit` でAPIに送信します。**Overview → Proofs** にverification状態とともに表示されます。
 
@@ -176,6 +174,5 @@ await proofs.submit(client, {
 - **概念の深さ** — [用語集](/ja/glossary/)。ZK・プロヴナンス・エージェント決済・規制レイヤーを横断する27項目を紹介しています。
 - **API仕様** — [`@lemmaoracle/sdk`](https://www.npmjs.com/package/@lemmaoracle/sdk) のREADME。関数名・fetchヘルパー・正確なペイロード形状の出典です。
 - **AIエージェント向けMCP** — Referenceタブに [`@lemmaoracle/mcp`](https://www.npmjs.com/package/@lemmaoracle/mcp) の設定スニペットがそのまま貼ってあります。Claude Desktopに入れれば、エージェントから検証済み属性が見えます。
-- **サインインで詰まったとき** — Seal Proofはサーバ側のverification keyが未登録だと `503` を返します。ローカル開発中はGitHub OAuthをフォールバックとして使ってください。
 
 足りない情報があれば、[docsリポジトリ](https://github.com/lemmaoracle/posts/issues) に issue を立ててください。
