@@ -63,7 +63,7 @@ Lemma Dashboard（[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 ## Concepts — Dashboardが使う6つの名詞
 
-すべてLemma独自の言葉ですが、既知の暗号要素にきれいに対応します。
+すべてLemma独自の言葉ですが、既知の暗号要素にきれいに対応します。各リソースを登録するSDK呼び出しは、Dashboardの該当する空状態、または [`@lemmaoracle/sdk`](https://www.npmjs.com/package/@lemmaoracle/sdk) のREADMEを参照してください。
 
 ### Scope（スコープ）
 
@@ -75,99 +75,21 @@ scopeは明示的に登録するものではなく、DashboardでGitHub OAuthサ
 
 ドキュメントの属性形状を固定する型宣言で、normalize artifact（同じ回路に解決されるWASMモジュール）にひも付きます。登録後はimmutableなので、変更したい場合は `age-over-eighteen.v2` のように `id` でバージョンを切ってください。
 
-**登録方法。** SDKの `schemas.register` を呼び出します。登録後は **Overview → Schemas** に表示されます。
-
-```ts
-import { schemas } from "@lemmaoracle/sdk";
-
-await schemas.register(client, {
-  id: "weather.v1",
-  normalize: { type: "ipfs", wasm: "Qm…" },
-});
-```
-
 ### Circuit（回路）
 
 スキーマに紐づくZK回路で、circuit IDで参照します。現状ほぼすべてが `snarkjs` でコンパイルしたBN254上のGroth16です。APIが受け付けるアルゴリズム文字列はReferenceタブに列挙されています。関連：[ゼロ知識証明](/ja/glossary/zk-proof/)。
-
-**登録方法。** SDKの `circuits.register` を呼び出します。登録後は **Overview → Circuits** に表示され、以降の証明送信で `circuitId` 指定して利用できます。
-
-```ts
-import { circuits } from "@lemmaoracle/sdk";
-
-await circuits.register(client, {
-  circuitId: "weather-threshold.v1",
-  artifact: {
-    type: "ipfs",
-    wasm: "Qm…",
-    provingKey: "Qm…",
-    verificationKey: "Qm…",
-  },
-});
-```
 
 ### Generator（ジェネレータ）
 
 ドキュメント（rawDoc）を生成するスクリプトのメタデータです。入力仕様（`inputsSpec`）・出力仕様（`outputsSpec`）・ソースの所在（`source`）を記述します。実行は開発者のインフラで行われ、Lemmaは `generatorId` とそのハッシュをZKパブリックインプットとして検証に用います。
 
-**登録方法。** `generators.register` を呼び出します。登録後は **Overview → Generators** に表示されます。
-
-```ts
-import { generators } from "@lemmaoracle/sdk";
-
-await generators.register(client, {
-  generatorId: "weather-report-gen.v1",
-  schema: "weather.v1",
-  description: "外部APIから天気データを取得しrawDocを生成する",
-  language: "typescript",
-  source: { type: "url", uri: "https://api.example.com/generate-weather-doc" },
-  inputsSpec: { subjectId: "string", location: "string" },
-  outputsSpec: { raw_document: "RawWeather", schema: "weather.v1" },
-});
-```
-
 ### Document（ドキュメント）
 
 発行者署名付きの主張です。Dashboardは `docHash`・`cid`・`issuerId`・`subjectId`・document commitments・revocation状態だけを保存し、平文ペイロードは持ちません。関連：[docHash](/ja/glossary/doc-hash/)・[CID](/ja/glossary/cid/)・[プロヴナンス](/ja/glossary/provenance/)。
 
-**登録方法。** まず `prepare()` で原ドキュメントの正規化とcommitments計算を行い、その結果を `documents.register` に渡します。登録後は **Overview → Documents** に表示されます。
-
-```ts
-import { documents } from "@lemmaoracle/sdk";
-
-// commitments は prepare() の結果
-await documents.register(client, {
-  schema: "weather.v1",
-  docHash: "0x…",
-  cid: "Qm…",
-  issuerId: "weather-issuer",
-  subjectId: "tokyo-1",
-  commitments,
-});
-```
-
 ### Proof（証明）
 
 登録された回路に対して提出されたZK証明のinstanceで、ドキュメントに紐付けることもできます。Overviewには、scopeが生成したすべての証明がverification状態とともに並びます。関連：[選択的開示](/ja/glossary/selective-disclosure/)。
-
-**提出方法。** `prover.prove` でブラウザ内で証明を生成し、`proofs.submit` でAPIに送信します。**Overview → Proofs** にverification状態とともに表示されます。
-
-```ts
-import { prover, proofs } from "@lemmaoracle/sdk";
-
-// witness の形は回路に依存
-const { proof, inputs } = await prover.prove(client, {
-  circuitId: "weather-threshold.v1",
-  witness,
-});
-
-await proofs.submit(client, {
-  docHash: "0x…",
-  circuitId: "weather-threshold.v1",
-  proof,
-  inputs,
-});
-```
 
 ## 次に読むもの
 
