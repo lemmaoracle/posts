@@ -83,5 +83,5 @@ Built for decisions that matter.
 - MetLife Japan 4.5-year / 2,476-file exfiltration (Diamond, 2026-05-01): https://diamond.jp/articles/-/388708
 - MetLife Japan coverage (Toyo Keizai, 2026-05-01): https://toyokeizai.net/articles/-/942994?display=b
 - MetLife Japan precursor coverage (Nikkei, 2026-04-30): https://www.nikkei.com/article/DGXZQOUB301MD0Q6A430C2000000/
-- Project Glasswing (Anthropic, 2026-04-07): https://www.anthropic.com/news/project-glasswing
+- Project Glasswing (Anthropic, 2026-04-07): https://www.anthropic.com/glasswing
 - Japan's Active Cyber Defense Act (Cabinet Secretariat): https://www.cas.go.jp/jp/seisaku/cyber_anzen_hosyo_torikumi/index.html

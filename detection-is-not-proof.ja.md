@@ -83,5 +83,5 @@ Built for decisions that matter.
 - MetLife 生命 4 年半・2,476 件持ち出し (ダイヤモンド 2026-05-01): https://diamond.jp/articles/-/388708
 - MetLife 生命 報道 (東洋経済 2026-05-01): https://toyokeizai.net/articles/-/942994?display=b
 - MetLife 生命 前段報道 (日経 2026-04-30): https://www.nikkei.com/article/DGXZQOUB301MD0Q6A430C2000000/
-- Project Glasswing (Anthropic 2026-04-07): https://www.anthropic.com/news/project-glasswing
+- Project Glasswing (Anthropic 2026-04-07): https://www.anthropic.com/glasswing
 - 能動的サイバー防御法施行 (内閣官房): https://www.cas.go.jp/jp/seisaku/cyber_anzen_hosyo_torikumi/index.html
