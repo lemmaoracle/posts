@@ -26,7 +26,7 @@ In ten days, Japan's AI cyber defense response cascaded from cabinet directive t
 
 ## ▸ Domestic momentum: AI cyber defense reaching the field
 
-In May 2026, Japan's government walked the AI cyber defense staircase down to the field in ten days. On May 12, the Prime Minister issued the directive. On May 18, a multi-ministry council released a four-pillar package: intelligence aggregation, response capacity, international cooperation, vendor patching. On May 21, the Minister for Internal Affairs and Communications convened telecom operators, NHK, the commercial broadcasters' association, Japan Post, and the National Governors' Association — and asked them directly. The backdrop is Anthropic's Claude Mythos Preview, released on April 7 under Project Glasswing, a model whose automated zero-day discovery capability is now widely recognized as a dual-use risk.
+In May 2026, Japan's government walked the AI cyber defense staircase down to the field in ten days. On May 12, the Prime Minister issued the directive. On May 18, a multi-ministry council released a four-pillar package: intelligence aggregation, response capacity, international cooperation, vendor patching. On May 21, the Minister for Internal Affairs and Communications convened telecom operators, NHK, the commercial broadcasters' association, Japan Post, and the National Governors' Association — and asked them directly. The backdrop is Project Glasswing — the defensive program Anthropic launched on April 7 to give a limited set of defenders access to its unreleased frontier model, Claude Mythos Preview (participants include AWS, Apple, Cisco, Google, Microsoft, and Cloudflare). A model whose automated zero-day discovery capability is now widely recognized as a dual-use risk: it can turn to the attacker's side too.
 
 What matters is the substance of those requests. Vulnerability assessments, prompt patching, budget and headcount allocation, intelligence aggregation, personnel development, vendor-side patching — every line item resolves to either detection-layer hardening or post-detection containment. Japan's Active Cyber Defense Act, taking effect on October 1 across 15 sectors and roughly 250 designated entities, runs on the same axis.
 
@@ -38,6 +38,8 @@ Three problems stack. First, Mythos-grade AI attacks leave no attribution residu
 
 Across domains, the structural commonality is the same. MetLife Japan disclosed on May 1, 2026, that employees stationed across 36 bank-channel agencies had exfiltrated 2,476 internal files over four and a half years, undetected. SolarWinds-class supply-chain compromises went unnoticed for years. Municipal contractor-side leaks involving resident records and medical vendor intrusions follow the same pattern. The list runs across sectors and converges on one form: incidents that stayed hidden left no usable post-hoc trail.
 
+The same structural gap is being named on the participant side of Project Glasswing. Cloudflare CSO Grant Bourzikas — Cloudflare is a participant — writes plainly on the company's blog that "patching faster is not enough," acknowledging that the more you compress regression testing, the more new bugs you introduce. That speeding up the detection-to-repair axis alone will not narrow the structural gap is the view of a security chief at one of the industry's largest players, too.
+
 ## ▸ Why the gap widens at AI speed
 
 So far this is the human-speed story. MetLife's four and a half years of zero detection unfolded in a world where attackers and operators were human, and API call rates were within human supervisory bandwidth.
@@ -48,7 +50,11 @@ The history of security operations is a history of where humans sit on the loop.
 
 ## ▸ Lemma's answer: guardrails inside the system
 
-Strengthening detection further does not close the structural gap. What closes it is moving guardrails inside the system. Generate cryptographic proof — of who, to whom, what authority, to what limit — *before* the transaction settles. Not post-hoc forensic recovery, but pre-execution attestation. Two conditions define this layer: verifiability (any third party can re-check) and pre-emptiveness (the record exists before the trade clears).
+Strengthening detection further does not close the structural gap.
+
+The same question is being posed from the Cloudflare side. On the company's blog, Bourzikas lays out three principles that change the shape of the patch pipeline itself — (1) block the path to a bug before it reaches the application, (2) design the application so a flaw in one part of the code cannot give an attacker access to other parts, (3) roll a fix out to every place the code runs at the same moment, rather than waiting on individual teams to deploy. The point is a shift away from speeding up the detection-to-repair axis and toward making an attack hard even when the bug exists.
+
+Lemma's "move guardrails inside the system" approach sits on that axis. *Make an attack hard even when the bug exists* — the principle Bourzikas pursues through architecture and operations, Lemma implements in cryptographic proof. Generate the record of who, to whom, what authority, to what limit, *before* the transaction settles — not post-hoc forensic recovery, but pre-execution attestation. A provenance layer that satisfies both verifiability (any third party can re-check) and pre-emptiveness (the record exists before the trade clears) guarantees, from inside the system in code and mathematics, a state where an attack does not succeed even if a bug exists.
 
 Lemma builds this inside-the-system guardrail across multiple domains, rolling it out in sequence. The axes currently public are payments and authentication.
 
@@ -78,4 +84,5 @@ Built for decisions that matter.
 - Developer waitlist (Trust402 / API): https://tally.so/r/kd0bZR
 - Multi-ministry package briefing (NISC): https://www.cyber.go.jp/pdf/press/20260518_AI_CS_kankeishouchoukaigi.pdf
 - Project Glasswing (Anthropic, 2026-04-07): https://www.anthropic.com/glasswing
+- Cloudflare's commentary on Project Glasswing (Grant Bourzikas, 2026): https://blog.cloudflare.com/cyber-frontier-models/
 - Japan's Active Cyber Defense Act (Cabinet Secretariat): https://www.cas.go.jp/jp/seisaku/cyber_anzen_hosyo_torikumi/index.html
