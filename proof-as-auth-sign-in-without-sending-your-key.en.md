@@ -11,6 +11,7 @@ tags:
   - seal
   - verifiable-ai
   - provenance
+cover: "assets/fWD2aenS5Xo.jpg"
 ---
 
 **TL;DR**
@@ -109,7 +110,7 @@ The same principle applies to AI agents signing themselves into sessions. The ag
 
 ## A note on the Dashboard
 
-Lemma Dashboard at [dashboard.lemma.workers.dev](https://dashboard.lemma.workers.dev/signin) is live in a quiet early-access state. The Seal proof sign-in is the secondary path — first-time sign-in requires GitHub OAuth to bootstrap the account and issue the first API key. Once you have a key, subsequent sign-ins can use the Seal proof path entirely. The circuit snippet shown above is the verbatim code the Dashboard renders as a preview of what runs in your browser.
+Lemma Dashboard at [dashboard.lemma.workers.dev](https://dashboard.lemma.workers.dev/signin) is available as a preview release. The Seal proof sign-in is the secondary path — first-time sign-in requires GitHub OAuth to bootstrap the account and issue the first API key. Once you have a key, subsequent sign-ins can use the Seal proof path entirely. The circuit snippet shown above is the verbatim code the Dashboard renders as a preview of what runs in your browser.
 
 ---
 
@@ -117,4 +118,4 @@ Lemma Dashboard at [dashboard.lemma.workers.dev](https://dashboard.lemma.workers
 
 The server receives `proof` and public signals (`nullifier`, `nonce`). It verifies the proof's validity, confirms identity through the nullifier, and issues a session.
 
-At no point does the server see, transmit, store, or compare your API key or its SHA-256 hash. The key existed on your machine. The hash lived inside the circuit. The proof proved it. The nullifier confirmed it, once, for this session only.
+At no point does the server see, transmit, store, or compare your API key or its SHA-256 hash. The key is processed in the browser and the hash is handled as an intermediate value in the circuit. The proof verifies identity, and the nullifier ensures uniqueness per session.

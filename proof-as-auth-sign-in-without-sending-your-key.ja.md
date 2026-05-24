@@ -11,6 +11,7 @@ tags:
   - seal
   - verifiable-ai
   - provenance
+cover: "assets/fWD2aenS5Xo.jpg"
 ---
 
 **TL;DR**
@@ -109,7 +110,7 @@ AIエージェントがセッションに自らサインインする場合も同
 
 ## Dashboardについて
 
-Lemma Dashboardは[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.dev/signin)で静かに公開中です。Sealプルーフサインインはセカンダリパスとして実装されています。初回サインインはGitHub OAuthが必要で、アカウントの作成と最初のAPIキーの発行を行います。一度鍵を持てば、その後のサインインはSealプルーフで完結できます。上のスニペットはDashboardがブラウザで実行するコードのプレビューとして常時表示しているものと同一です。
+Lemma Dashboardは[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.dev/signin)でプレビュー公開中です。Sealプルーフサインインはセカンダリパスとして実装されています。初回サインインはGitHub OAuthが必要で、アカウントの作成と最初のAPIキーの発行を行います。一度鍵を持てば、その後のサインインはSealプルーフで完結できます。上のスニペットはDashboardがブラウザで実行するコードのプレビューとして常時表示しているものと同一です。
 
 ---
 
@@ -117,4 +118,4 @@ Lemma Dashboardは[dashboard.lemma.workers.dev](https://dashboard.lemma.workers.
 
 サーバーは`proof`と公開シグナル(`nullifier`、`nonce`)を受け取ります。証明の正当性を検証し、nullifierで身元を確認し、セッションを発行します。
 
-この過程でサーバーがあなたのAPIキーもそのSHA-256ハッシュも参照、送受信、保存、照合することは一切ありません。鍵はあなたのマシンに存在した。ハッシュは回路の中に生きた。証明がそれを証明した。nullifierが確認した――このセッション、一度だけ。
+この過程でサーバーがあなたのAPIキーもそのSHA-256ハッシュも参照、送受信、保存、照合することは一切ありません。鍵はブラウザ内で処理され、ハッシュは回路の中間値として扱われます。証明が身元を検証し、nullifierがセッションごとの一意性を担保します。
