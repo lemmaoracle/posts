@@ -37,7 +37,7 @@ Lemma DashboardでSealプルーフサインインを選ぶと、3つのことが
 
 **1. チャレンジ取得。** サーバーがランダムなノンスを発行し、有効期限5分の署名付きトークンに包む。このノンスが証明を「この特定のサインイン試行」に結びつけ、ヌリファイアをこのセッション限定のものにする。
 
-**2. 証明生成。** APIキーが512ビット(64 ASCIIバイト)に展開される。WebAssemblyでブラウザ内で動く`seal-identity-v2` Groth16回路が、そのビット列を*プライベート入力*として、ノンスを*パブリック入力*として受け取る。回路の内部では次のことが起きる:
+**2. 証明生成。** APIキーが512ビット(64 ASCIIバイト)に展開される。WebAssemblyでブラウザ内で動く`seal-identity-v1` Groth16回路が、そのビット列を*プライベート入力*として、ノンスを*パブリック入力*として受け取る。回路の内部では次のことが起きる:
 
 - `keyHash = SHA-256(keyBits)` を計算する――ただし**中間シグナルとして扱い、公開出力には出さない**
 - 256ビットのhashを2つの128ビットフィールド要素に分割: `keyHash_hi` と `keyHash_lo`
@@ -58,7 +58,7 @@ const witness = {
 
 const client = create({});
 const { proof, inputs } = await prover.prove(client, {
-  circuitId: "seal-identity-v2",
+  circuitId: "seal-identity-v1",
   witness,
 });
 ```
@@ -97,7 +97,7 @@ const { proof, inputs } = await prover.prove(client, {
 
 答えは線形スキャンだ。サーバーは登録済みの各key_hashについて`Poseidon(keyHash_hi, keyHash_lo, nonce)`を計算し、送信されたヌリファイアと比較する。PoseidonはZKフレンドリーなハッシュ関数で、まさにこの用途向けに設計されている――JavaScriptで1件あたりサブミリ秒で動く(`poseidon-lite`: 純JS実装で、Cloudflare Workersと互換し、回路が使うcircomlibの定数と一致する)。現実的な登録API鍵数であれば、CloudflareワーカーのCPUバジェット内で十分完了する。
 
-これがv2のプライバシーと計算量のトレードオフだ: サインイン1回あたり少し多く計算する代わりに、key_hashは回路の外には一切出なくなる。
+これがプライバシーと計算量のトレードオフだ: サインイン1回あたり少し多く計算する代わりに、key_hashは回路の外には一切出なくなる。
 
 **スキャンのスケーリング。** 現行のO(N)スキャンは現実的なAPI鍵数なら問題ない――V8でPoseidonは1鍵あたりサブミリ秒なので、10,000鍵で約100ms。そのバジェットが問題になる場面が来れば、shardヒントを回路の公開シグナルに追加する方法や、チャレンジ発行時の事前計算といった手が既に見えている。今は必要ない。
 

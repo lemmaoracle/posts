@@ -37,7 +37,7 @@ When you click "Sign in with a Seal proof" on the Lemma Dashboard, three things 
 
 **1. Challenge fetch.** The server issues a random nonce and wraps it in a short-lived signed token (5-minute TTL). This nonce is what binds the proof to this specific sign-in attempt — and what makes the nullifier unique to this session.
 
-**2. Proof generation.** Your API key is expanded into 512 bits (64 ASCII bytes). The `seal-identity-v2` Groth16 circuit running in your browser via WebAssembly takes those bits as a *private* input alongside the nonce as a *public* input. Internally, the circuit:
+**2. Proof generation.** Your API key is expanded into 512 bits (64 ASCII bytes). The `seal-identity-v1` Groth16 circuit running in your browser via WebAssembly takes those bits as a *private* input alongside the nonce as a *public* input. Internally, the circuit:
 
 - Computes `keyHash = SHA-256(keyBits)` — but keeps it as an internal signal, not a public output
 - Splits the 256-bit hash into two 128-bit field elements: `keyHash_hi` and `keyHash_lo`
@@ -58,7 +58,7 @@ const witness = {
 
 const client = create({});
 const { proof, inputs } = await prover.prove(client, {
-  circuitId: "seal-identity-v2",
+  circuitId: "seal-identity-v1",
   witness,
 });
 ```
@@ -97,7 +97,7 @@ One question the new design raises: if the server can't see `keyHash`, how does 
 
 The answer is a linear scan. The server computes `Poseidon(keyHash_hi, keyHash_lo, nonce)` for each registered key hash and compares it to the submitted nullifier. Poseidon is a ZK-friendly hash function designed for exactly this — it runs in sub-millisecond time in JavaScript (via `poseidon-lite`, a pure JS implementation that is compatible with Cloudflare Workers and matches the circomlib round constants used in the circuit). For any realistic number of registered API keys the scan completes well within a Cloudflare Worker's CPU budget.
 
-This is the privacy-for-compute trade-off in v2: the server does a little more work per sign-in, and in exchange, the key hash never appears anywhere outside the circuit.
+This is the privacy-for-compute trade-off: the server does a little more work per sign-in, and in exchange, the key hash never appears anywhere outside the circuit.
 
 **Scaling the scan.** The current O(N) scan is practical for any realistic number of API keys — Poseidon runs in sub-millisecond time per key in V8, so 10,000 keys costs roughly 100 ms of CPU. If that budget ever tightens, there are straightforward approaches for reducing it (shard hints in the circuit's public signals, challenge-time pre-computation, and similar), none of which are needed yet.
 
