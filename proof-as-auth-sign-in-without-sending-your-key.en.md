@@ -4,7 +4,7 @@ title: "Proof-as-Auth: Sign In Without Sending Your Key"
 date: "2026.05.23"
 category: Engineering
 section: Essays
-abstract: "Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Bearer tokens, refresh tokens, hashed passwords — the server receives something it must store and protect. Seal proof authentication breaks that assumption. The key never leaves the browser. What the server receives is a zero-knowledge proof of key possession — unforgeable, nonce-bound, and impossible to replay. The latest version goes further: even the key's hash never appears on the wire."
+abstract: "Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Bearer tokens, refresh tokens, hashed passwords — the server receives something it must store and protect. Seal proof authentication breaks that assumption. The key never leaves the browser. What the server receives is a zero-knowledge proof of key possession — unforgeable, nonce-bound, and impossible to replay. The key's hash never appears on the wire either."
 tags:
   - zk-proof
   - authentication
@@ -15,13 +15,11 @@ tags:
 
 **TL;DR**
 
-Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Bearer tokens, refresh tokens, hashed passwords — the server receives something it must store and protect. Seal proof authentication breaks that assumption. The key never leaves the browser. What the server receives is a zero-knowledge proof of key possession — unforgeable, nonce-bound, and impossible to replay. The current circuit goes further: even the key's hash never appears on the wire.
+Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Bearer tokens, refresh tokens, hashed passwords — the server receives something it must store and protect. Seal proof authentication breaks that assumption. The key never leaves the browser. What the server receives is a zero-knowledge proof of key possession — unforgeable, nonce-bound, and impossible to replay. The key's hash never appears on the wire either.
 
 ---
 
-## The question non-technical people ask first
-
-*"If I never send my key, how does the server know it's me?"*
+## "If I never send my key, how does the server know it's me?"
 
 The intuition behind the question is reasonable. We've all been taught that authentication works by sending something the server recognizes: a password, a token, a cookie. The server checks what it received against what it stored.
 
@@ -93,11 +91,11 @@ The network log shows: one POST to `/api/auth/seal` carrying `proof`, `publicSig
 
 ## The nullifier and the server-side scan
 
-One question the new design raises: if the server can't see `keyHash`, how does it know which account you belong to?
+If the server never sees `keyHash`, how does it know which account you belong to?
 
 The answer is a linear scan. The server computes `Poseidon(keyHash_hi, keyHash_lo, nonce)` for each registered key hash and compares it to the submitted nullifier. Poseidon is a ZK-friendly hash function designed for exactly this — it runs in sub-millisecond time in JavaScript (via `poseidon-lite`, a pure JS implementation that is compatible with Cloudflare Workers and matches the circomlib round constants used in the circuit). For any realistic number of registered API keys the scan completes well within a Cloudflare Worker's CPU budget.
 
-This is the privacy-for-compute trade-off: the server does a little more work per sign-in, and in exchange, the key hash never appears anywhere outside the circuit.
+The server does a little more work per sign-in; in exchange, the key hash never appears anywhere outside the circuit.
 
 **Scaling the scan.** The current O(N) scan is practical for any realistic number of API keys — Poseidon runs in sub-millisecond time per key in V8, so 10,000 keys costs roughly 100 ms of CPU. If that budget ever tightens, there are straightforward approaches for reducing it (shard hints in the circuit's public signals, challenge-time pre-computation, and similar), none of which are needed yet.
 
