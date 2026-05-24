@@ -68,7 +68,7 @@ Models change. Proofs remain.
 
 | ステップ | 内容 | URL |
 |---|---|---|
-| 1. デモを見る | Trust402（決済領域ガードレール）と来歴証明の動作 | demo.lemma.frame00.com |
+| 1. デモを見る | Trust402（決済領域ガードレール）と来歴証明の動作 | demo-lemma.frame00.com |
 | 2. 開発者として参加 | Trust402 API ベータ / waitlist | https://tally.so/r/kd0bZR |
 | 3. エンタープライズ相談 | Whitepaper 取得・PoC 個別相談 | https://tally.so/r/xX0VYv |
 
@@ -78,7 +78,7 @@ Built for decisions that matter.
 
 ## ▸ Resources
 
-- Demo: https://demo.lemma.frame00.com
+- Demo: https://demo-lemma.frame00.com
 - Microsite: https://lemma.frame00.com
 - Whitepaper waitlist (enterprise): https://tally.so/r/xX0VYv
 - Developer waitlist (Trust402 / API): https://tally.so/r/kd0bZR
