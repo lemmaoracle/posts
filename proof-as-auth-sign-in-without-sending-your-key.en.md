@@ -69,7 +69,7 @@ const { proof, inputs } = await prover.prove(client, {
 
 3. **Proof of freshness.** "This proof was generated for *this* nonce, not replayed." The `nonce * nonce` constraint binds the nonce into the circuit. A proof captured from a previous sign-in cannot be submitted against a different challenge.
 
-Taken together, the proof says: *"I hold the secret for a registered identity, and I just produced a one-shot nullifier for this challenge."* The server never learns which identity, only that it exists in its registry. Structurally this mirrors ZK-Schnorr: Schnorr proves knowledge of a discrete log (secret hidden, correctness of the group operation attested), while seal proves knowledge of the pre-image of a registered hash (secret hidden, correctness of an arbitrary SHA-256 + Poseidon chain attested). The flexibility of ZK-SNARKs is what lets seal use real-world hash functions instead of elliptic-curve arithmetic.
+Taken together, the proof says: *"I hold the secret for a registered identity, and I just produced a one-shot nullifier for this challenge."* The server never learns which identity, only that it exists in its registry.
 
 **3. Proof submission.** The proof and two public signals (`nullifier`, `nonce`) are sent to the server. The server verifies the proof's mathematical validity, confirms identity through the nullifier, and issues a session cookie.
 
