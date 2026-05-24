@@ -89,13 +89,7 @@ The answer is a linear scan. The server computes `Poseidon(keyHash_hi, keyHash_l
 
 This is the privacy-for-compute trade-off in v2: the server does a little more work per sign-in, and in exchange, the key hash never appears anywhere outside the circuit.
 
-**Scaling the scan.** The current O(N) scan is practical for any realistic number of API keys — Poseidon runs in sub-millisecond time per key in V8, so 10,000 keys costs roughly 100 ms of CPU. If that budget ever tightens, there are several ways to reduce it, in order of implementation cost:
-
-- **shard\_id hint (cheapest, ~20 added constraints).** Add `shard_id = keyHash_hi[0..7]` as an extra public signal. The server filters `api_keys` by that 8-bit bucket before running Poseidon, cutting the scan target to ~1/256 on average. Privacy is fully preserved — the shard reveals nothing the nullifier does not already imply.
-- **Challenge-time pre-computation.** When a nonce is issued, compute expected nullifiers for all active keys upfront and cache them (keyed by challenge token, 5-minute TTL). Sign-in lookup becomes O(1). The memory cost is manageable combined with shard bucketing — only ~1/256 of keys need to be materialized per challenge.
-- **Dual nullifier (O(1) index, minor privacy trade-off).** The circuit emits two outputs: a stable `lookup_nullifier = Poseidon(hi, lo, 0)` stored in the database at key-registration time, and the per-session `session_nullifier = Poseidon(hi, lo, nonce)` used in audit logs. Sign-in is a direct index lookup on `lookup_nullifier`. The trade-off: `lookup_nullifier` is constant per key, so it can correlate sign-ins if the lookup path is observed — `session_nullifier` stays uncorrelatable, but the two outputs exist on the same proof.
-
-For most deployments the scan alone is sufficient. The shard hint is the natural first step if scale demands it.
+**Scaling the scan.** The current O(N) scan is practical for any realistic number of API keys — Poseidon runs in sub-millisecond time per key in V8, so 10,000 keys costs roughly 100 ms of CPU. If that budget ever tightens, there are straightforward approaches for reducing it (shard hints in the circuit's public signals, challenge-time pre-computation, and similar), none of which are needed yet.
 
 ---
 
