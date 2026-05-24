@@ -68,7 +68,7 @@ Models change. Proofs remain.
 
 | ステップ | 内容 | URL |
 |---|---|---|
-| 1. デモを見る | Trust402（決済領域ガードレール）と来歴証明の動作 | demo-lemma.frame00.com |
+| 1. デモを見る | Trust402（決済領域ガードレール）と来歴証明の動作 | https://demo-lemma.frame00.com/ |
 | 2. 開発者として参加 | Trust402 API ベータ / waitlist | https://tally.so/r/kd0bZR |
 | 3. エンタープライズ相談 | Whitepaper 取得・PoC 個別相談 | https://tally.so/r/xX0VYv |
 
@@ -78,11 +78,11 @@ Built for decisions that matter.
 
 ## ▸ Resources
 
-- Demo: https://demo-lemma.frame00.com
+- Demo: https://demo-lemma.frame00.com/
 - Microsite: https://lemma.frame00.com
 - Whitepaper waitlist (enterprise): https://tally.so/r/xX0VYv
 - Developer waitlist (Trust402 / API): https://tally.so/r/kd0bZR
 - 5/18 関係省庁会議パッケージ (NISC プレス資料): https://www.cyber.go.jp/pdf/press/20260518_AI_CS_kankeishouchoukaigi.pdf
 - Project Glasswing (Anthropic 2026-04-07): https://www.anthropic.com/glasswing
-- Project Glasswing を受けた Cloudflare の論考 (Grant Bourzikas, 2026): https://blog.cloudflare.com/cyber-frontier-models/
+- Project Glasswing を受けた Cloudflare 社の解説 (Grant Bourzikas, 2026): https://blog.cloudflare.com/cyber-frontier-models/
 - 能動的サイバー防御法施行 (内閣官房): https://www.cas.go.jp/jp/seisaku/cyber_anzen_hosyo_torikumi/index.html
