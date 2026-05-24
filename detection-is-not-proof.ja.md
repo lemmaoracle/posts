@@ -84,5 +84,5 @@ Built for decisions that matter.
 - Developer waitlist (Trust402 / API): https://tally.so/r/kd0bZR
 - 5/18 関係省庁会議パッケージ (NISC プレス資料): https://www.cyber.go.jp/pdf/press/20260518_AI_CS_kankeishouchoukaigi.pdf
 - Project Glasswing (Anthropic 2026-04-07): https://www.anthropic.com/glasswing
-- Project Glasswing を受けた Cloudflare の論考 (Grant Bourzikas, 2026): https://blog.cloudflare.com/cyber-frontier-models/
+- Project Glasswing を受けた Cloudflare 社の解説 (Grant Bourzikas, 2026): https://blog.cloudflare.com/cyber-frontier-models/
 - 能動的サイバー防御法施行 (内閣官房): https://www.cas.go.jp/jp/seisaku/cyber_anzen_hosyo_torikumi/index.html
