@@ -78,10 +78,6 @@ Built for decisions that matter.
 
 ## ▸ Resources
 
-- Demo: https://demo-lemma.frame00.com/
-- Microsite: https://lemma.frame00.com
-- Whitepaper waitlist (enterprise): https://tally.so/r/xX0VYv
-- Developer waitlist (Trust402 / API): https://tally.so/r/kd0bZR
 - 5/18 関係省庁会議パッケージ (NISC プレス資料): https://www.cyber.go.jp/pdf/press/20260518_AI_CS_kankeishouchoukaigi.pdf
 - Project Glasswing (Anthropic 2026-04-07): https://www.anthropic.com/glasswing
 - Project Glasswing を受けた Cloudflare 社の解説 (Grant Bourzikas, 2026): https://blog.cloudflare.com/cyber-frontier-models/
