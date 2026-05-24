@@ -62,7 +62,7 @@ Models change. Proofs remain.
 
 | Step | What | URL |
 |---|---|---|
-| 1. See the demo | Trust402 (payments guardrail) and provenance proofs in action | demo.lemma.frame00.com |
+| 1. See the demo | Trust402 (payments guardrail) and provenance proofs in action | https://demo.lemma.frame00.com/ |
 | 2. Build with us | Trust402 API beta / waitlist | https://tally.so/r/kd0bZR |
 | 3. Talk to us | Whitepaper / enterprise PoC consultation | https://tally.so/r/xX0VYv |
 
@@ -72,7 +72,7 @@ Built for decisions that matter.
 
 ## ▸ Resources
 
-- Demo: https://demo.lemma.frame00.com
+- Demo: https://demo.lemma.frame00.com/
 - Microsite: https://lemma.frame00.com
 - Whitepaper waitlist (enterprise): https://tally.so/r/xX0VYv
 - Developer waitlist (Trust402 / API): https://tally.so/r/kd0bZR
