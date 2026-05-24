@@ -77,15 +77,15 @@ The network log shows: one POST to `/api/auth/seal` carrying `proof`, `publicSig
 
 ---
 
-## How this differs from bearer tokens and refresh tokens
+## How this compares to access tokens, refresh tokens, and Passkeys
 
-**What the server stores.** A bearer-token system stores (or can reconstruct) the secret itself. A refresh-token system keeps a long-lived token server-side. In both cases, a database breach exposes credentials. With Seal proof auth, the server stores only the key's hash — a one-way commitment. Even then, the hash never travels over the wire during authentication. An attacker who intercepts every sign-in request sees only a nullifier: a session-specific value that reveals nothing about the key and cannot be reused.
+**What the server stores.** An access token (also called a Bearer token) system stores (or can reconstruct) the secret itself. A refresh-token system keeps a long-lived token server-side. Passkeys (WebAuthn) keep the key on the client device, and the server registers only the public key. Seal proof auth also keeps the key on the client, like a Passkey, but the server registers only the key's hash — not a public key. All of these carry some risk from database breaches or key theft. With Seal, however, only the nullifier crosses the wire during authentication — not the key, not even its hash.
 
-**Replay resistance.** A leaked bearer token works until it expires. A leaked Seal proof is inert. The nullifier is uniquely bound to the nonce issued for this session. The same key producing two proofs for two different sessions yields two completely unrelated nullifiers. There is no correlation surface.
+**Replay resistance.** A leaked access token works until it expires. A leaked Seal proof is inert. The nullifier is uniquely bound to the nonce issued for this session. The same key producing two proofs for two different sessions yields two completely unrelated nullifiers. There is no correlation surface. (Passkeys share this property: each challenge is unique, so replays fail.)
 
-**What an observer learns.** With bearer tokens, any observer of the auth request learns the token — a reusable credential. With Seal proof auth, an observer learns a nullifier that is valid only for the nonce it was bound to, which the server will not reissue. Capturing the proof transcript yields nothing actionable.
+**Where the secret lives.** With access tokens, the secret (the token) is sent to the server. With both Passkeys and Seal proofs, the secret never leaves the device or browser. The distinction is that Passkeys rely on hardware (security keys, biometrics) while Seal relies on a software key (an API key). That makes Seal applicable to agent auth and M2M (system-to-system) auth as well.
 
-**The more fundamental difference.** In a bearer token flow, trust is established by *possession of the secret*. In a Seal proof flow, trust is established by *proof of knowledge of the pre-image of a hash* — where the hash itself is also hidden behind a Poseidon commitment. The secret participates in the proof circuit but never appears in the output. The hash participates in the nullifier derivation but also never appears in the output. A server that cannot see your key or its hash cannot leak either.
+**The more fundamental difference.** In an access token flow, trust is established by *possession of the secret*. With a Passkey, it is *possession of the private key*. In a Seal proof flow, trust is established by *proof of knowledge of the pre-image of a hash* — where the hash itself is also hidden behind a Poseidon commitment. The secret participates in the proof circuit but never appears in the output. The hash participates in the nullifier derivation but also never appears in the output. A server that cannot see your key or its hash cannot leak either.
 
 ---
 
