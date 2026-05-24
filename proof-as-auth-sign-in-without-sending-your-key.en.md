@@ -63,6 +63,16 @@ const { proof, inputs } = await prover.prove(client, {
 });
 ```
 
+**What the proof actually convinces the server of.** The resulting proof simultaneously establishes three claims:
+
+1. **Proof of knowledge.** "I know a 512-bit `keyBits` such that `SHA-256(keyBits)` is a registered hash." The secret input exists and is known to the prover; its value is hidden.
+
+2. **Proof of computation.** "I correctly computed `nullifier = Poseidon(SHA-256(keyBits)_hi, SHA-256(keyBits)_lo, nonce)`." The intermediate chain — SHA-256, 128-bit split, Poseidon — was executed correctly, attested only through the public outputs. The server trusts the computation without seeing any intermediate value.
+
+3. **Proof of freshness.** "This proof was generated for *this* nonce, not replayed." The `nonce * nonce` constraint binds the nonce into the circuit. A proof captured from a previous sign-in cannot be submitted against a different challenge.
+
+Taken together, the proof says: *"I hold the secret for a registered identity, and I just produced a one-shot nullifier for this challenge."* The server never learns which identity, only that it exists in its registry. Structurally this mirrors ZK-Schnorr: Schnorr proves knowledge of a discrete log (secret hidden, correctness of the group operation attested), while seal proves knowledge of the pre-image of a registered hash (secret hidden, correctness of an arbitrary SHA-256 + Poseidon chain attested). The flexibility of ZK-SNARKs is what lets seal use real-world hash functions instead of elliptic-curve arithmetic.
+
 **3. Proof submission.** The proof and two public signals (`nullifier`, `nonce`) are sent to the server. The server verifies the Groth16 proof via the Lemma Relay (snarkjs requires browser APIs unavailable on Cloudflare Workers). Then it scans all active `api_keys` rows in D1, computing `Poseidon(keyHash_hi, keyHash_lo, nonce)` for each, until it finds one that equals the submitted nullifier. That match resolves the scope and account, and a session cookie is issued.
 
 The network log shows: one POST to `/api/auth/seal` carrying `proof`, `publicSignals` (two values), and a `token`. No API key. No key hash.
