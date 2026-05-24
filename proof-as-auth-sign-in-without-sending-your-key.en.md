@@ -23,7 +23,7 @@ Every conventional auth flow has one inescapable step: at some point, the secret
 
 The intuition behind the question is reasonable. We've all been taught that authentication works by sending something the server recognizes: a password, a token, a cookie. The server checks what it received against what it stored.
 
-Seal proof authentication works differently. The browser runs a Groth16 zero-knowledge circuit on your key, producing a *proof* and a short *nullifier* — a single field element that is unique to this key and this session, but reveals nothing about the key itself or even its hash. The server verifies the proof, then scans its registered key hashes to find which one produces the same nullifier for this session's nonce. If it finds a match, you're in.
+Seal proof authentication works differently. The browser runs a Groth16 zero-knowledge circuit on your key, producing a *proof* and a short *nullifier* — a value unique to this key and this session, but revealing nothing about the key itself or even its hash. The server verifies the proof and confirms identity through the nullifier. If it matches, you're in.
 
 The proof and nullifier arrive at the server. The key does not. The key's hash does not either.
 
@@ -71,7 +71,7 @@ const { proof, inputs } = await prover.prove(client, {
 
 Taken together, the proof says: *"I hold the secret for a registered identity, and I just produced a one-shot nullifier for this challenge."* The server never learns which identity, only that it exists in its registry. Structurally this mirrors ZK-Schnorr: Schnorr proves knowledge of a discrete log (secret hidden, correctness of the group operation attested), while seal proves knowledge of the pre-image of a registered hash (secret hidden, correctness of an arbitrary SHA-256 + Poseidon chain attested). The flexibility of ZK-SNARKs is what lets seal use real-world hash functions instead of elliptic-curve arithmetic.
 
-**3. Proof submission.** The proof and two public signals (`nullifier`, `nonce`) are sent to the server. The server verifies the Groth16 proof via the Lemma Relay (snarkjs requires browser APIs unavailable on Cloudflare Workers). Then it scans all active `api_keys` rows in D1, computing `Poseidon(keyHash_hi, keyHash_lo, nonce)` for each, until it finds one that equals the submitted nullifier. That match resolves the scope and account, and a session cookie is issued.
+**3. Proof submission.** The proof and two public signals (`nullifier`, `nonce`) are sent to the server. The server verifies the proof's mathematical validity, confirms identity through the nullifier, and issues a session cookie.
 
 The network log shows: one POST to `/api/auth/seal` carrying `proof`, `publicSignals` (two values), and a `token`. No API key. No key hash.
 
@@ -79,7 +79,7 @@ The network log shows: one POST to `/api/auth/seal` carrying `proof`, `publicSig
 
 ## How this differs from bearer tokens and refresh tokens
 
-**What the server stores.** A bearer-token system stores (or can reconstruct) the secret itself. A refresh-token system keeps a long-lived token server-side. In both cases, a database breach exposes credentials. With Seal proof auth, the server stores only `key_hash` — a one-way commitment. Even then, the hash never travels over the wire during authentication. An attacker who intercepts every sign-in request sees only a nullifier: a session-specific value that reveals nothing about the key and cannot be reused.
+**What the server stores.** A bearer-token system stores (or can reconstruct) the secret itself. A refresh-token system keeps a long-lived token server-side. In both cases, a database breach exposes credentials. With Seal proof auth, the server stores only the key's hash — a one-way commitment. Even then, the hash never travels over the wire during authentication. An attacker who intercepts every sign-in request sees only a nullifier: a session-specific value that reveals nothing about the key and cannot be reused.
 
 **Replay resistance.** A leaked bearer token works until it expires. A leaked Seal proof is inert. The nullifier is uniquely bound to the nonce issued for this session. The same key producing two proofs for two different sessions yields two completely unrelated nullifiers. There is no correlation surface.
 
@@ -89,15 +89,11 @@ The network log shows: one POST to `/api/auth/seal` carrying `proof`, `publicSig
 
 ---
 
-## The nullifier and the server-side scan
+## What the nullifier guarantees
 
-If the server never sees `keyHash`, how does it know which account you belong to?
-
-The answer is a linear scan. The server computes `Poseidon(keyHash_hi, keyHash_lo, nonce)` for each registered key hash and compares it to the submitted nullifier. Poseidon is a ZK-friendly hash function designed for exactly this — it runs in sub-millisecond time in JavaScript (via `poseidon-lite`, a pure JS implementation that is compatible with Cloudflare Workers and matches the circomlib round constants used in the circuit). For any realistic number of registered API keys the scan completes well within a Cloudflare Worker's CPU budget.
+The nullifier is unique to this key and this session's nonce. The same key used in two different sessions produces two completely unrelated nullifiers — there is no way to correlate them. The server confirms identity through the nullifier without ever seeing the key or its hash.
 
 The server does a little more work per sign-in; in exchange, the key hash never appears anywhere outside the circuit.
-
-**Scaling the scan.** The current O(N) scan is practical for any realistic number of API keys — Poseidon runs in sub-millisecond time per key in V8, so 10,000 keys costs roughly 100 ms of CPU. If that budget ever tightens, there are straightforward approaches for reducing it (shard hints in the circuit's public signals, challenge-time pre-computation, and similar), none of which are needed yet.
 
 ---
 
@@ -119,6 +115,6 @@ Lemma Dashboard at [dashboard.lemma.workers.dev](https://dashboard.lemma.workers
 
 ## What the server never touches
 
-The server receives `proof`, two public signals (`nullifier`, `nonce`), and a signed challenge token. It verifies the proof is mathematically valid. It checks the nonce in the challenge token. It scans key hashes to find the one that produces the submitted nullifier. It issues a session.
+The server receives `proof` and public signals (`nullifier`, `nonce`). It verifies the proof's validity, confirms identity through the nullifier, and issues a session.
 
 At no point does the server see, transmit, store, or compare your API key or its SHA-256 hash. The key existed on your machine. The hash lived inside the circuit. The proof proved it. The nullifier confirmed it, once, for this session only.
