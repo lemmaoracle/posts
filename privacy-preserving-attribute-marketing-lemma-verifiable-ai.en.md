@@ -130,6 +130,6 @@ If these effects are realized, marketing in FinTech, Retail, and E-commerce coul
 
 Lemma Verifiable AI presents a new approach to attribute marketing in data non-disclosure environments. As part of the Trusted Web infrastructure envisioned for Society 5.0, it offers one potential path forward. For more details, please refer to our whitepaper.
 
-Partner registration (1 minute required) is currently open for PoC demos and priority support. Please apply below.
+See it in action on the Dashboard. The Explorer tier is free, no registration required.
 
-[Register as a Partner Candidate (1 minute)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+[Try the Dashboard →](https://lemma.frame00.com/services)

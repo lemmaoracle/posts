@@ -80,9 +80,9 @@ Which use case fits your situation is a conversation we'd like to have.
 
 16 pages. Executive summary through five-layer architecture, TypeScript SDK reference, pricing overview, and FAQ — the complete design and philosophy behind Lemma Oracle.
 
-We're currently prioritizing access for companies and engineers considering our closed partner program.
+Try the Dashboard to see cryptographic verification in action.
 
-[Register as a partner candidate (1 min) →](https://lemma.frame00.com/services)
+[Try the Dashboard →](https://lemma.frame00.com/services)
 
 Next week, we'll be making a formal announcement on one of the designs previewed in this whitepaper.
 
