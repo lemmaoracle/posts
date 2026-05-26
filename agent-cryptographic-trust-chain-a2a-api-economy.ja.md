@@ -1,7 +1,7 @@
 ---
 slug: "agent-cryptographic-trust-chain-a2a-api-economy"
 date: "2026.03.12"
-category: "Business Strategy"
+category: "Solutions"
 section: "Essays"
 title: "エージェント間の暗号的信頼チェーン：A2A連携が変えるAPI経済"
 abstract: "AIエージェント同士の連携（A2A）が広がる中、信頼性の担保が最大の課題です。Lemmaは組織アイデンティティの署名、ポリシー属性のZK証明、権限スコープの検証可能化の3層からなる暗号的信頼チェーンを提案し、API経済の構造的な問題を解決します。これにより、KYC/AML審査のプロトコルレベル自動化や、経営レベルの信頼指標の確立が可能になります。"

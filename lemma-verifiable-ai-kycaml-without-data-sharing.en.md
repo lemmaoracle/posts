@@ -1,7 +1,7 @@
 ---
 slug: "lemma-verifiable-ai-kycaml-without-data-sharing"
 date: "2026.03.26"
-category: "Business Strategy"
+category: "Solutions"
 section: "Essays"
 title: "Verifiable AI KYC/AML Without Data Sharing: Lemma's Practical Approach"
 abstract: "In KYC/AML operations for financial institutions, balancing privacy protection and rapid verification poses the biggest dilemma. Lemma Verifiable AI, built on ZK-proof foundations, offers a solution. This article explains the practical approach of verifying attributes without data sharing while ensuring AI transparency, covering technical design to business impact."

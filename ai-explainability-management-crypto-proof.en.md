@@ -1,7 +1,7 @@
 ---
 slug: "ai-explainability-management-crypto-proof"
 date: "2026.04.16"
-category: "Business Strategy"
+category: "Solutions"
 section: "Essays"
 title: '"Explainable Management" Powered by Cryptographic Proofs'
 abstract: "As AI decision-making becomes widespread, 'explainability'—the ability to retrospectively prove the basis for decisions, not just the outcomes—has become a critical management issue. Against the backdrop of strengthening regulations like the EU AI Act, this article explains the management risks posed by the technical black-box problem. Furthermore, it explores an architecture for 'provable management' and its practical KPIs, utilizing Lemma's Zero-Knowledge Proofs (ZK proofs) and blockchain technology to permanently record AI decision logic and data as a tamper-proof audit trail."

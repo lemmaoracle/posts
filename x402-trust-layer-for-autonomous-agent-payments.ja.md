@@ -1,7 +1,7 @@
 ---
 slug: "x402-trust-layer-for-autonomous-agent-payments"
 date: "2026.04.28"
-category: "Announcement"
+category: "Announcements"
 section: "Essays"
 title: "x402 に信頼レイヤーを足す"
 cover: "assets/Q50vhoUkafc.jpg"

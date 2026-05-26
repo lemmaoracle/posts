@@ -1,9 +1,9 @@
 ---
-slug: proof-as-auth-sign-in-without-sending-your-key
+slug: "proof-as-auth-sign-in-without-sending-your-key"
 title: "Proof-as-Auth: Sign In Without Sending Your Key"
 date: "2026.05.25"
-category: Engineering
-section: Essays
+category: "Technical"
+section: "Essays"
 abstract: "Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Bearer tokens, refresh tokens, hashed passwords — the server receives something it must store and protect. Seal proof authentication breaks that assumption. The key never leaves the browser. What the server receives is a zero-knowledge proof of key possession — unforgeable, nonce-bound, and impossible to replay. The key's hash never appears on the wire either."
 tags:
   - zk-proof

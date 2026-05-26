@@ -1,7 +1,7 @@
 ---
 slug: "privacy-preserving-attribute-marketing-lemma-verifiable-ai"
 date: "2026.04.01"
-category: "Business Strategy"
+category: "Solutions"
 section: "Essays"
 title: "Privacy-Preserving Attribute Marketing: Lemma Verifiable AI's Practical Approach"
 abstract: "As data sharing within corporate groups becomes restricted by regulations, Lemma Verifiable AI uses Zero-Knowledge Proof technology to verify attributes without disclosing data, enabling secure marketing collaboration. This article explains the technical approach to attribute marketing based on ZK proofs, implementation details, and expected KPI improvements."
