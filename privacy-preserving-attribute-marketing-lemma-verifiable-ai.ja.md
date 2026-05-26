@@ -1,7 +1,7 @@
 ﻿---
 slug: "privacy-preserving-attribute-marketing-lemma-verifiable-ai"
 date: "2026.04.01"
-category: "Business Strategy"
+category: "Solutions"
 section: "Essays"
 title: "データ非開示で属性活用マーケティング：Lemma検証可能AIの実践アプローチ"
 abstract: "企業グループ内でのデータ共有が法規制により制限される中、Lemma検証可能AIはZero-Knowledge Proof技術を用いてデータを非開示のまま属性を証明し、セキュアなマーケティング連携を実現します。本稿では、ZK証明を基盤とした属性マーケティングの技術的アプローチ、実装詳細、期待されるKPI向上効果について解説します。"

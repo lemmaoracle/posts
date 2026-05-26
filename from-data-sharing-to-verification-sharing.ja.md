@@ -1,7 +1,7 @@
 ---
 slug: "from-data-sharing-to-verification-sharing"
 date: "2026.03.18"
-category: "Human Impact"
+category: "Solutions"
 section: "Essays"
 title: "データ共有から検証共有へ：サプライチェーン信頼基盤の進化"
 abstract: "従来のサプライチェーンでは、信頼構築のためにデータ共有か第三者監査というトレードオフが避けられませんでした。Lemmaはゼロ知識証明を用い、データそのものを共有せずに検証結果だけを流通させる「検証共有」という第三の選択肢を提案します。これにより、プライバシーを保持したままリアルタイムでの自動検証が可能になり、AIエージェントによる自律的な調達判断を実現します。"

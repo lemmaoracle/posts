@@ -1,7 +1,7 @@
 ---
 slug: "verifiable-ai-cryptographic-rag-design"
 date: "2026.03.04"
-category: "Tech Insight"
+category: "Technical"
 section: "Essays"
 title: "Verifiable AI: A New RAG Design that Demonstrates Trust Origins with Cryptography"
 abstract: "Addressing the trust challenges of AI agents and RAG systems, we propose a novel design that leverages cryptographic technologies (zero-knowledge proofs, selective disclosure, and provenance tracking). This approach builds a verification layer for data origins and condition compliance before AI reads the data, ensuring the overall reliability of the system."

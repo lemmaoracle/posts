@@ -1,7 +1,7 @@
 ---
 slug: "ppsi-stablecoin-aml-kyc-third-layer"
 date: "2026.05.15"
-category: "Business Strategy"
+category: "Industry"
 section: "Essays"
 title: "x402 に第3層を足す — ステーブルコイン事業者の選択肢"
 cover: "assets/ppsi-stablecoin-layer3.jpg"

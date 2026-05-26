@@ -1,7 +1,7 @@
 ---
 slug: "detection-is-not-proof"
 date: "2026.05.22"
-category: "Business Strategy"
+category: "Industry"
 section: "Essays"
 title: "AI 時代のサイバー防衛に残された、最後の層"
 cover: "assets/bMBGwXIAgC4.jpg"
