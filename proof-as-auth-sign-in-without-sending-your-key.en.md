@@ -16,13 +16,13 @@ cover: "assets/fWD2aenS5Xo.jpg"
 
 **TL;DR**
 
-Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Bearer tokens, refresh tokens, hashed passwords — the server receives something it must store and protect. Seal proof authentication breaks that assumption. The key never leaves the browser. What the server receives is a zero-knowledge proof of key possession — unforgeable, nonce-bound, and impossible to replay. The key's hash never appears on the wire either.
+Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Seal proof authentication breaks that assumption. The key never leaves the browser — what the server receives is a zero-knowledge proof of key possession, unforgeable and nonce-bound. The key's hash never crosses the wire either.
 
 ---
 
-## "If I never send my key, how does the server know it's me?"
+## Authentication without ever receiving the key
 
-The intuition behind the question is reasonable. We've all been taught that authentication works by sending something the server recognizes: a password, a token, a cookie. The server checks what it received against what it stored.
+We've all been taught that authentication works by sending something the server recognizes: a password, a token, a cookie. The server checks what it received against what it stored — that instinct is reasonable.
 
 Seal proof authentication works differently. The browser runs a Groth16 zero-knowledge circuit on your key, producing a *proof* and a short *nullifier* — a value unique to this key and this session, but revealing nothing about the key itself or even its hash. The server verifies the proof and confirms identity through the nullifier. If it matches, you're in.
 
@@ -119,3 +119,17 @@ Lemma Dashboard at [dashboard.lemma.workers.dev](https://dashboard.lemma.workers
 The server receives `proof` and public signals (`nullifier`, `nonce`). It verifies the proof's validity, confirms identity through the nullifier, and issues a session.
 
 At no point does the server see, transmit, store, or compare your API key or its SHA-256 hash. The key is processed in the browser and the hash is handled as an intermediate value in the circuit. The proof verifies identity, and the nullifier ensures uniqueness per session.
+
+---
+
+## Where to start
+
+Proof-as-Auth is one expression of a broader Seal pattern: prove possession of a secret without ever exposing it. Keyless dashboard sign-in, agent and M2M authentication, and unlinkable per-session identity all build on the same foundation.
+
+For **platform engineers**, **security and identity teams**, and **builders of agentic systems**, three concrete starting points:
+
+- **Try it in the Dashboard.** Seal proof sign-in is live in preview at [dashboard.lemma.workers.dev](https://dashboard.lemma.workers.dev/signin).
+- **Join the developer waitlist.** [tally.so/r/kd0bZR](https://tally.so/r/kd0bZR) — early access to the SDK and circuits.
+- **Talk to us.** Book a [Discovery Call](https://tally.so/r/Pd2Rl5) about keyless auth for your product or agents. We respond within one business day.
+
+*Built for decisions that matter.*
