@@ -1,7 +1,7 @@
 ---
 slug: "verified-attributes-travel-public-services"
 date: "2026.04.07"
-category: "Human Impact"
+category: "Solutions"
 section: "Essays"
 title: "旅行・公共サービスにおける検証済み属性"
 abstract: "旅行や公共サービスの現場では、同じ個人情報を何度も提出し、複数機関に保存される非効率な構造が続いています。パスポートコピー、所得証明、医療情報などが拡散し、漏洩リスクが高まります。Lemmaは「生データを共有せず、検証された事実だけを流通させる」という第三の選択肢を提案。ZK証明を用いて、ホテルのKYC、ビザ審査、公共給付の資格確認を、プライバシーを保護したまま効率化する実践的なアプローチを解説します。"

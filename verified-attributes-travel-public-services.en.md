@@ -1,7 +1,7 @@
 ---
 slug: "verified-attributes-travel-public-services"
 date: "2026.04.07"
-category: "Human Impact"
+category: "Solutions"
 section: "Essays"
 title: "Verified Attributes in Travel and Public Services"
 abstract: "Travel and public services suffer from an inefficient structure where the same personal information is repeatedly submitted and stored across multiple organizations. Passport copies, income certificates, and medical records spread across systems, increasing breach exposure. Lemma proposes a third option: 'Do not share raw data — circulate only verified facts.' This article explores a practical approach to streamlining hotel KYC, visa processing, and public benefit eligibility checks using ZK proofs, all while protecting privacy."
