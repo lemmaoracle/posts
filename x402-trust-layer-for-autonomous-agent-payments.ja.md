@@ -2,7 +2,7 @@
 slug: "x402-trust-layer-for-autonomous-agent-payments"
 date: "2026.04.28"
 category: "Announcements"
-section: "Essays"
+section: "Changelog"
 title: "x402 に信頼レイヤーを足す"
 cover: "assets/Q50vhoUkafc.jpg"
 abstract: "AIエージェントは x402 によって HTTP 経由で自律的に支払えるようになりました。しかし、ウォレットアドレスとトランザクションハッシュだけでは、受け手のサーバーは「誰が・どの権限で支払ったのか」「返したデータが改ざんなく届いたか」を知ることができません。本日、Lemma × x402 のリファレンス実装を Base Sepolia 上で公開します。すべての決済は PAYMENT-RESPONSE に ZK 証明バンドル — 発行者の身元・支払い完了・データ整合性 — を同梱し、独立に検証可能になります。"

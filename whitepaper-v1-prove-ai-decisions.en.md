@@ -2,7 +2,7 @@
 slug: "whitepaper-v1-prove-ai-decisions"
 date: "2026.04.23"
 category: "Announcements"
-section: "Essays"
+section: "Changelog"
 title: "Whitepaper: Prove What Your AI Decided On."
 abstract: "As AI agents start making real operational decisions, most systems cannot cryptographically prove what those decisions were based on. Lemma Oracle publishes its whitepaper (v1.0), introducing a trust infrastructure that proves facts without disclosing the underlying data. The paper details three guarantees — authenticity, privacy, and auditability — alongside five CORE use cases and two ADVANCED agent-economy scenarios, framed for the EU AI Act era."
 cover: "assets/nv1onQJsNJm.jpg"
