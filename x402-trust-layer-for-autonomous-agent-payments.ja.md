@@ -11,6 +11,7 @@ tags:
   - provenance
   - zk-proof
   - payments
+  - x402
 relatedLinks:
   - label: "example-x402（資源側リファレンス実装）"
     href: "https://github.com/lemmaoracle/example-x402"

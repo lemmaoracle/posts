@@ -80,9 +80,9 @@ Which use case fits your situation is a conversation we'd like to have.
 
 16 pages. Executive summary through five-layer architecture, TypeScript SDK reference, pricing overview, and FAQ — the complete design and philosophy behind Lemma Oracle.
 
-Try the Dashboard to see cryptographic verification in action.
+Talk to us about putting cryptographic verification to work for your organization. We respond within one business day.
 
-[Try the Dashboard →](https://lemma.frame00.com/services)
+[Talk to us →](https://tally.so/r/Pd2Rl5)
 
 Next week, we'll be making a formal announcement on one of the designs previewed in this whitepaper.
 
