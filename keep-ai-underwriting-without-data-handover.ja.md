@@ -4,6 +4,7 @@ date: "2026.05.28"
 category: "Solutions"
 section: "Essays"
 title: "渡さずに、審査する。データを抱えずに、AI 与信を続ける"
+cover: "assets/ixEQfXIlOsC.jpg"
 abstract: "融資審査の生データを AI に渡さずに業務を続ける設計について。マスキング・選択的開示・ZK 証明の違い、5 つの利害関係者（申請者・融資担当者・コンプライアンス責任者・経営層・規制当局）にとって責任と安心の構造がどう変わるか、Lemma のデモで体験できる検証フローを整理しました。"
 tags:
   - zk-proof
