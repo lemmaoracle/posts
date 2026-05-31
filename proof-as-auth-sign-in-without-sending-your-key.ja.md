@@ -47,11 +47,11 @@ Lemma DashboardでSealプルーフサインインを選ぶと、3つのことが
 ブラウザで動くコードはそのままこれです。
 
 ```ts
-import { apiKeyToBits } from "@lemmaoracle/seal";
+import { secretToBits } from "@lemmaoracle/seal";
 import { create, prover } from "@lemmaoracle/sdk";
 
 const witness = {
-  keyBits: apiKeyToBits(key).map(Number),
+  keyBits: secretToBits(key).map(Number),
   nonce: challenge.nonce,
 };
 
