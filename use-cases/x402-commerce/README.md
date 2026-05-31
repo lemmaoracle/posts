@@ -1,6 +1,6 @@
 ---
 title: "X402 Commerce"
-abstract: "Verify seller attributes as ZK proofs before x402 settlement runs. Buyer agents transact without relying on plaintext claims. Book a 30-minute discovery call to see how it fits your stack."
+abstract: "Verify seller attributes as ZK proofs before x402 settlement runs. Buyer agents transact without relying on plaintext claims."
 thesis: "Paid ≠ verified"
 pillar: agent-trust-chain
 targetVerticals:

@@ -1,6 +1,6 @@
 ---
 title: "Multi-Agent Workflows"
-abstract: "Bind every multi-agent delegation step as a ZK proof. The final output carries a verifiable trace back to the original principal. Book a 30-minute discovery call to see how it fits your orchestration setup."
+abstract: "Bind every multi-agent delegation step as a ZK proof. The final output carries a verifiable trace back to the original principal."
 thesis: "Delegated ≠ traceable"
 pillar: agent-trust-chain
 targetVerticals:
