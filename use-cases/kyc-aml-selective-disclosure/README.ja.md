@@ -3,6 +3,9 @@ title: "KYC/AML 選択的開示"
 abstract: "KYC 属性を共有せずに、属性ごとの ZK 証明だけで規制要件を満たす。30 分の会話から、御社の KYC/AML 経路にフィットするかを一緒に確認します。"
 thesis: "申告される ≠ 検証されている"
 pillar: regulatory-attribute-proof
+industries:
+  - fin
+cardSummary: "KYC属性を共有せず、必要な項目だけを証明して規制要件を満たします。"
 targetVerticals:
   - 銀行
   - フィンテック

@@ -3,6 +3,10 @@ title: "サプライチェーン部品来歴"
 abstract: "部品ロット単位の来歴属性を、各サプライヤ階層から発行者署名付きで連鎖。組立側は ZK 証明として検証できます。30 分の会話から、御社の調達経路に乗るか確認します。"
 thesis: "記録される ≠ 改ざんされていない"
 pillar: verifiable-origin
+industries:
+  - mfg
+  - sc
+cardSummary: "部品の来歴を各サプライヤから署名付きで連鎖させ、組立側が検証できます。"
 targetVerticals:
   - 製造業
   - 自動車

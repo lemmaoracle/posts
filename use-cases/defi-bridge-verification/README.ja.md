@@ -3,6 +3,9 @@ title: "DeFiブリッジ検証"
 abstract: "クロスチェーンメッセージの起点を、受信コミット前に独立検証。DVN と並走させる第二の暗号レイヤを 30 分の会話から検討します。"
 thesis: "暗号論理的に有効 ≠ 意味的に正しい"
 pillar: verifiable-origin
+industries:
+  - dev
+cardSummary: "クロスチェーンメッセージの起点を、受信前に独立検証できます。"
 targetVerticals:
   - リキッドステーキング/リステーキングプロトコル
   - クロスチェーンブリッジ
