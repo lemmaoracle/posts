@@ -3,6 +3,10 @@ title: "Verify Supplier Licenses, ISO & Certificates Without Handing Over Origin
 abstract: "Verify that a supplier \"validly holds\" a license, ISO, or quality/insurance certificate as a proof — without receiving the original. Remove forgery, expiry, and reuse; track revocation."
 thesis: "Submitted ≠ valid"
 pillar: regulatory-attribute-proof
+industries:
+  - mfg
+  - sc
+cardSummary: "Confirm a license or ISO is valid without receiving the original certificate."
 targetVerticals:
   - Manufacturing
   - Procurement & supply chain

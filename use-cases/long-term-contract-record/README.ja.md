@@ -3,6 +3,10 @@ title: "長期契約の記録・見積の証明"
 abstract: "15〜20 年の長期契約で、後年に金額・仕様・点検記録を巡る係争が起きても、中身を出さずに「その時、正当に存在し・正当に修正された」を暗号的に証明する。"
 thesis: "記録がある ≠ 証明できる"
 pillar: verifiable-origin
+industries:
+  - mfg
+  - pub
+cardSummary: "数年後の係争でも、契約や見積の記録を中身を出さず改ざんなく証明できます。"
 targetVerticals:
   - 製造業
   - 基幹インフラ(電力・水・交通)

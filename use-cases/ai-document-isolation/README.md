@@ -3,6 +3,12 @@ title: "Let AI Use Internal Documents Without Touching the Raw Data"
 abstract: "Keep confidential documents encrypted while passing AI only the needed facts/attributes — with proof. The AI never touches raw PII or originals, and what it used remains provable after the fact."
 thesis: "Letting AI use it ≠ handing over the raw data"
 pillar: verifiable-ai
+industries:
+  - ai
+  - mfg
+  - fin
+  - pub
+cardSummary: "Let AI use only the needed facts, with proof — never the raw data."
 targetVerticals:
   - AI-adopting enterprises (cross-industry)
   - Manufacturing

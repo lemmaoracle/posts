@@ -3,6 +3,12 @@ title: "社内文書を AI に使わせるが生データは触らせない"
 abstract: "機密文書を暗号化したまま、AI には「必要な事実・属性」だけを証明付きで渡す。生の PII や原本に触れさせず、何を使ったかを後から証明できる状態にする。"
 thesis: "AI に使わせる ≠ 生データを渡す"
 pillar: verifiable-ai
+industries:
+  - ai
+  - mfg
+  - fin
+  - pub
+cardSummary: "生データを渡さず、AIには必要な事実だけを証明付きで使わせます。"
 targetVerticals:
   - AI 導入企業横断
   - 製造業
