@@ -3,6 +3,10 @@ title: "仕入先の許認可・ISO・証書を原本を渡さず確認"
 abstract: "サプライヤーの許認可・ISO・品質／保険証書を、原本を渡さず「有効に保有している」だけ証明として検証。偽造・期限切れ・使い回しを外し、失効も追える。"
 thesis: "提出された ≠ 有効である"
 pillar: regulatory-attribute-proof
+industries:
+  - mfg
+  - sc
+cardSummary: "サプライヤの許認可・ISO・保険の有効な保有を、原本を渡さず証明として検証でき、失効も追えます。"
 targetVerticals:
   - 製造業
   - 調達・サプライチェーン
