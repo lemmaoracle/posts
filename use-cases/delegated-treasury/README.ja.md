@@ -2,7 +2,7 @@
 title: "委任型トレジャリー"
 abstract: "AI エージェントに渡す支出権限を、ソフトプロンプトではなくオンチェーンの支出制御アテステーションとして発行。30 分の会話から、御社の運用に乗るか一緒に確認します。"
 thesis: "承認されている ≠ 証明されている"
-pillar: agent-trust-chain
+pillar: agent-authority-proof
 industries:
   - fin
   - dev
