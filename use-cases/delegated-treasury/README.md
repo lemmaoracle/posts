@@ -2,7 +2,7 @@
 title: "Delegated Treasury"
 abstract: "Issue agent spend authority as an on-chain spend-control attestation — not as a soft prompt. Book a 30-minute discovery call to see how it fits your operations."
 thesis: "Authorized ≠ attested"
-pillar: agent-trust-chain
+pillar: agent-authority-proof
 industries:
   - fin
   - dev
