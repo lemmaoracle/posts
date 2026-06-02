@@ -3,6 +3,9 @@ title: "RAG Content Provenance"
 abstract: "Anchor RAG documents to verifiable provenance at ingest — docHash, CID, issuer signature. Citation authenticity becomes cryptographically traceable. Book a 30-minute discovery call to see how it fits your pipeline."
 thesis: "Indexed ≠ trustworthy"
 pillar: verifiable-origin
+industries:
+  - ai
+cardSummary: "Fix document provenance at RAG ingestion so AI citations stay traceable."
 targetVerticals:
   - Enterprise RAG platforms
   - Knowledge management

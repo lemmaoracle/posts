@@ -3,6 +3,9 @@ title: "KYC/AML Selective Disclosure"
 abstract: "Satisfy KYC/AML requirements with per-attribute ZK proofs — no shared customer data. Book a 30-minute discovery call to see if Lemma fits your pipeline."
 thesis: "Declared ≠ verified"
 pillar: regulatory-attribute-proof
+industries:
+  - fin
+cardSummary: "Meet regulatory requirements by proving only the needed KYC attributes, not sharing them."
 targetVerticals:
   - Banking
   - Fintech

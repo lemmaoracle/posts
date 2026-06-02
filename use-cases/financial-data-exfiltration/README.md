@@ -3,6 +3,9 @@ title: "Financial Data Exfiltration Defense"
 abstract: "Make cross-organization data access tamper-evident with ZK proofs. Book a 30-minute discovery call to see if Lemma fits your context."
 thesis: "Access logs exist ≠ untampered"
 pillar: regulatory-attribute-proof
+industries:
+  - fin
+cardSummary: "Make cross-org data access tamper-proof and verify who accessed what."
 targetVerticals:
   - Life insurance
   - Banking
