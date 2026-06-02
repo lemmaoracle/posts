@@ -3,6 +3,10 @@ title: "Long-Term Contract Records, Provable Years Later"
 abstract: "On 15–20 year contracts, prove \"it legitimately existed and was legitimately amended at that time\" cryptographically — without revealing the contents — even when amounts, specs, or inspection records are disputed years later."
 thesis: "Having a record ≠ being able to prove it"
 pillar: verifiable-origin
+industries:
+  - mfg
+  - pub
+cardSummary: "Prove a 15–20 year contract's amount, spec, or amendment legitimately existed at the time — without revealing the contents."
 targetVerticals:
   - Manufacturing
   - Critical infrastructure (power, water, transport)
