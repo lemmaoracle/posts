@@ -6,7 +6,7 @@ pillar: regulatory-attribute-proof
 industries:
   - mfg
   - sc
-cardSummary: "サプライヤの許認可・ISO・保険の有効な保有を、原本を渡さず証明として検証でき、失効も追えます。"
+cardSummary: "証書の原本を渡さず、許認可やISOが有効であることだけを確認できます。"
 targetVerticals:
   - 製造業
   - 調達・サプライチェーン

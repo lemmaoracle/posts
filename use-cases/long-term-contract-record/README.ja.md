@@ -6,7 +6,7 @@ pillar: verifiable-origin
 industries:
   - mfg
   - pub
-cardSummary: "15〜20 年契約の金額・仕様・修正が当時正当に存在したことを、中身を出さずに後年証明できます。"
+cardSummary: "数年後の係争でも、契約や見積の記録を中身を出さず改ざんなく証明できます。"
 targetVerticals:
   - 製造業
   - 基幹インフラ(電力・水・交通)
