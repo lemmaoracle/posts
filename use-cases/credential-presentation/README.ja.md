@@ -5,6 +5,7 @@ thesis: "提出された ≠ 本物である"
 pillar: verifiable-origin
 industries:
   - pub
+  - edu
 cardSummary: "学修歴や資格を原本を送らず「保有」だけ証明し、採用・編入先が検証できます。"
 targetVerticals:
   - 大学・教育機関
