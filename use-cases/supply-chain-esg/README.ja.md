@@ -1,6 +1,6 @@
 ---
 title: "サプライチェーン ESG"
-abstract: "CBAM・EUDR・DPP への適合を、サプライヤ属性の暗号的連鎖で証明。営業秘密を守りながら 30 分の会話から検討します。"
+abstract: "CBAM・EUDR・DPP への適合を、サプライヤ属性の暗号的連鎖で証明。営業秘密を守りながら検証できる構成です。"
 thesis: "申告される ≠ 証明される"
 pillar: regulatory-attribute-proof
 industries:
