@@ -1,6 +1,6 @@
 ---
 title: "Supply Chain ESG Compliance"
-abstract: "Prove CBAM, EUDR, and DPP compliance through a cryptographic chain of supplier attestations — without exposing trade secrets. Book a 30-minute discovery call to see how it fits your supply chain."
+abstract: "Prove CBAM, EUDR, and DPP compliance through a cryptographic chain of supplier attestations — without exposing trade secrets."
 thesis: "Declared ≠ proven"
 pillar: regulatory-attribute-proof
 industries:

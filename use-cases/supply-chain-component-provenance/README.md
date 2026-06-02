@@ -1,6 +1,6 @@
 ---
 title: "Supply Chain Component Provenance"
-abstract: "Chain per-lot component provenance — issuer-signed at every supplier tier — into a ZK proof the assembler can verify. Book a 30-minute discovery call to see how it fits your procurement."
+abstract: "Chain per-lot component provenance — issuer-signed at every supplier tier — into a ZK proof the assembler can verify."
 thesis: "Recorded ≠ untampered"
 pillar: verifiable-origin
 industries:
