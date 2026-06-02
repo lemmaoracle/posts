@@ -2,7 +2,7 @@
 title: "x402 上のエージェント取引"
 abstract: "x402 のミリ秒決済の前段で、売り手属性を ZK 証明として検証。買い手は平文主張に依存せず取引できます。30 分の会話から、御社の構成に乗るか確認します。"
 thesis: "決済される ≠ 検証されている"
-pillar: agent-trust-chain
+pillar: verifiable-origin
 industries:
   - dev
 cardSummary: "決済の前に売り手の属性を検証し、平文の主張に頼らず取引できます。"
