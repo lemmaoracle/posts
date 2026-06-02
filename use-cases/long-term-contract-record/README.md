@@ -6,7 +6,7 @@ pillar: verifiable-origin
 industries:
   - mfg
   - pub
-cardSummary: "Prove a 15–20 year contract's amount, spec, or amendment legitimately existed at the time — without revealing the contents."
+cardSummary: "Prove contract and quote records tamper-free, without revealing contents — even years later."
 targetVerticals:
   - Manufacturing
   - Critical infrastructure (power, water, transport)

@@ -6,7 +6,7 @@ pillar: regulatory-attribute-proof
 industries:
   - mfg
   - sc
-cardSummary: "Verify a supplier validly holds a license, ISO, or insurance as a proof — without receiving the original — with revocation tracked."
+cardSummary: "Confirm a license or ISO is valid without receiving the original certificate."
 targetVerticals:
   - Manufacturing
   - Procurement & supply chain

@@ -5,9 +5,10 @@ thesis: "Letting AI use it ≠ handing over the raw data"
 pillar: verifiable-ai
 industries:
   - ai
+  - mfg
   - fin
   - pub
-cardSummary: "Pass AI only the needed facts from encrypted documents — never raw PII — and keep what it used provable."
+cardSummary: "Let AI use only the needed facts, with proof — never the raw data."
 targetVerticals:
   - AI-adopting enterprises (cross-industry)
   - Manufacturing

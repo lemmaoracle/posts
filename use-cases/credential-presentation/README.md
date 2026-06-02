@@ -5,6 +5,7 @@ thesis: "Submitted ≠ authentic"
 pillar: verifiable-origin
 industries:
   - pub
+  - edu
 cardSummary: "Prove you hold a credential without sending the original; employers and schools verify it."
 targetVerticals:
   - Universities & education

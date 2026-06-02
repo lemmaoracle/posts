@@ -5,9 +5,10 @@ thesis: "AI に使わせる ≠ 生データを渡す"
 pillar: verifiable-ai
 industries:
   - ai
+  - mfg
   - fin
   - pub
-cardSummary: "機密文書を暗号化したまま、AI には必要な事実だけを証明付きで渡し、生の PII に触れさせません。"
+cardSummary: "生データを渡さず、AIには必要な事実だけを証明付きで使わせます。"
 targetVerticals:
   - AI 導入企業横断
   - 製造業
