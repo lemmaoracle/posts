@@ -3,6 +3,10 @@ title: "委任型トレジャリー"
 abstract: "AI エージェントに渡す支出権限を、ソフトプロンプトではなくオンチェーンの支出制御アテステーションとして発行。30 分の会話から、御社の運用に乗るか一緒に確認します。"
 thesis: "承認されている ≠ 証明されている"
 pillar: agent-trust-chain
+industries:
+  - fin
+  - dev
+cardSummary: "AIエージェントの支出権限を、オンチェーンの支出制御証明として発行できます。"
 targetVerticals:
   - 企業の財務管理
   - SaaS調達

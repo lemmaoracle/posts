@@ -3,6 +3,9 @@ title: "DeFi Bridge Verification"
 abstract: "Verify cross-chain message origin before the receiving side commits state — a second cryptographic layer that runs alongside the DVN. Book a 30-minute discovery call to see how it fits your bridge."
 thesis: "Cryptographically valid ≠ semantically right"
 pillar: verifiable-origin
+industries:
+  - dev
+cardSummary: "Independently verify a cross-chain message's origin before receipt."
 targetVerticals:
   - Liquid staking / restaking protocols
   - Cross-chain bridges

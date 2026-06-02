@@ -3,6 +3,9 @@ title: "RAGソース認証"
 abstract: "AI 回答の引用ごとに、参照先文書バージョンの docHash を ZK 証明として紐付け。インデックス再構築後も引用整合性が暗号的に保たれます。30 分の会話から、御社のワークフローに乗るか確認します。"
 thesis: "引用される ≠ 検証されている"
 pillar: verifiable-ai
+industries:
+  - ai
+cardSummary: "AI回答の引用ごとに参照元の版を紐付け、引用の真正性を保てます。"
 targetVerticals:
   - 法務テック
   - 企業ナレッジマネジメント

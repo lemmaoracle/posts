@@ -3,6 +3,9 @@ title: "金融データ流出防止"
 abstract: "組織を跨いだデータアクセスを、ZK 認証で改ざん不能化。30 分の会話から、御社の課題にフィットするかを一緒に確認します。"
 thesis: "アクセスログがある ≠ 改ざんされていない"
 pillar: regulatory-attribute-proof
+industries:
+  - fin
+cardSummary: "組織を跨いだデータアクセスを改ざん不能にし、誰が何にアクセスしたかを検証できます。"
 targetVerticals:
   - 生命保険
   - 銀行
