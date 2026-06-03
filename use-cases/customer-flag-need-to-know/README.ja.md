@@ -4,6 +4,7 @@ abstract: "要注意客の取扱いフラグを、理由を現場に出さず「
 thesis: "対応は伝わる。理由は伝わらない。"
 pillar: regulatory-attribute-proof
 industries:
+  - svc
   - fin
 cardSummary: "要注意フラグの理由を現場に出さず、必要な対応区分だけを証明。根拠は権限者だけが見られ、改ざんなく残せます。"
 targetVerticals:

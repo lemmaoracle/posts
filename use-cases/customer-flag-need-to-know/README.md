@@ -4,6 +4,7 @@ abstract: "Pass a \"how to handle this customer\" flag to the front line as a pr
 thesis: "The action travels. The reason doesn't."
 pillar: regulatory-attribute-proof
 industries:
+  - svc
   - fin
 cardSummary: "Pass only the needed handling flag to the front line; the reason stays with authorized staff, tamper-proof."
 targetVerticals:
