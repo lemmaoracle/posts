@@ -5,7 +5,7 @@ category: "Industry"
 section: "Essays"
 title: "AI-era cybersecurity in financial services — a new era of compliance"
 cover: "assets/15.jpg"
-abstract: "Akamai's SOTI 2026 (Financial Services) puts numbers on the moment attacks on finance moved from automation to autonomous agents — banks absorbing 83% of API-endpoint attacks, only 27% of defenders knowing which APIs return sensitive data. Beyond detection and mitigation, a layer remains that cryptographically attests, before the transaction, who acted under whose authority."
+abstract: "Akamai's SOTI 2026 (Financial Services) puts numbers on the moment attacks on finance moved from automation to autonomous agents. Asia-Pacific is the top Layer 7 DDoS target (up +40% YoY); banks absorb 83% of API-endpoint attacks; only 27% of defenders know which APIs return sensitive data. Beyond detection and mitigation, a layer remains that cryptographically attests, before the transaction, who acted under whose authority."
 tags:
   - financial-services
   - ai-cybersecurity
@@ -17,7 +17,7 @@ tags:
 
 **TL;DR**
 
-Akamai's SOTI 2026 (Financial Services edition) puts numbers on the moment attacks on finance moved from automation to autonomous agents. Banks now absorb 83% of API-endpoint attacks; APAC is the top Layer 7 DDoS target; only 27% of defenders know which APIs return sensitive data. As mimicry approaches the indistinguishable, detection scores grow weaker as material for proving "an unauthorised exercise of authority occurred." Detection and mitigation are more necessary than ever — and beyond them, in finance where AI agents enter as counterparties, a layer remains that cryptographically attests, before the transaction, who acted under whose authority and whether they cleared KYC and sanctions screening.
+Akamai's SOTI 2026 (Financial Services edition) puts numbers on the moment attacks on finance moved from automation to autonomous agents. **Asia-Pacific (APAC) is now the top Layer 7 DDoS target, up +40% year-over-year** — attacks are converging on the region where digital adoption and real-time payments have grown fastest. Banks absorb 83% of API-endpoint attacks; only 27% of defenders know which APIs return sensitive data. As mimicry approaches the indistinguishable, detection scores grow weaker as material for proving "an unauthorised exercise of authority occurred." Detection and mitigation are more necessary than ever — and beyond them, in finance where AI agents enter as counterparties, a layer remains that cryptographically attests, before the transaction, who acted under whose authority and whether they cleared KYC and sanctions screening.
 
 What follows traces five points along the report's structure and notes where Lemma draws its line.
 
@@ -74,7 +74,7 @@ The sophistication of cyberattacks is at once a reason to invest more in the det
 - Akamai SOTI 2026 (Financial Services edition) shows that attacks on finance have gone autonomous-agent, that banks absorb 83% of API attacks, and that APAC has become the top Layer 7 DDoS target.
 - On the defending side, even where APIs are inventoried, where sensitive data lives is largely invisible (27% know), and detection alone is showing its limits against mimicry-class agents.
 - Detection and mitigation are indispensable, and that is a specialist domain. Beyond them, in finance where AI agents become transaction principals, a proof layer remains — one that cryptographically attests, before the transaction, "who, under whose authority, KYC- and sanctions-cleared."
-- As DORA, the EU AI Act, NYDFS, and GDPR enforcement step up, Lemma's trust layer (provenance, AI judgment, agent authority, regulatory attributes) is designed to fill that step beyond detection in a form that holds up under audit and regulatory accountability.
+- As DORA, the EU AI Act, NYDFS, and GDPR enforcement step up, Lemma's trust layer (provenance, AI judgment, agent authority, regulatory attributes) is designed to fill that step beyond detection in a form that holds up under audit and regulatory accountability — aligning with the regulatory shift already underway.
 
 ### Read the incidents — Critical Brief
 
