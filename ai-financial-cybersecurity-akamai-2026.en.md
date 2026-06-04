@@ -5,7 +5,7 @@ category: "Industry"
 section: "Essays"
 title: "AI-era cybersecurity in financial services — a new era of compliance"
 cover: "assets/15.jpg"
-abstract: "Akamai's 2026 State of the Internet / Security report (Financial Services edition) puts numbers on the moment attacks on finance moved from automation to autonomous agents. Banks now absorb 83% of API-endpoint attacks; APAC has become the top Layer 7 DDoS target; only 27% of organizations know which APIs return sensitive data. As mimicry approaches the indistinguishable, detection scores grow weaker as material for proving 'an unauthorised exercise of authority occurred.' Detection and mitigation are more necessary than ever — and beyond them, a structurally independent layer remains: cryptographically attesting, before the transaction, who acted under whose authority and whether they cleared KYC and sanctions screening."
+abstract: "Akamai's SOTI 2026 (Financial Services) puts numbers on the moment attacks on finance moved from automation to autonomous agents — banks absorbing 83% of API-endpoint attacks, only 27% of defenders knowing which APIs return sensitive data. Beyond detection and mitigation, a layer remains that cryptographically attests, before the transaction, who acted under whose authority."
 tags:
   - financial-services
   - ai-cybersecurity
@@ -17,11 +17,11 @@ tags:
 
 **TL;DR**
 
-AI governance has emerged as a formal compliance domain. For financial institutions, cybersecurity is no longer a question of detection and defense alone — it is increasingly the question of whether you can prove, to regulators and auditors, "who acted under whose authority." Akamai's latest report (State of the Internet / Security 2026, Financial Services edition) puts numbers on the moment attacks on finance moved from "automation" to "autonomous agents." Banks now absorb 83% of attacks on API endpoints; Asia-Pacific (APAC) has become the top target for Layer 7 DDoS. Many on the defending side cannot even tell which APIs return sensitive data. As attacker-side agents approach perfect mimicry of legitimate behavior, detection scores grow weaker as material for proving "an unauthorised exercise of authority occurred." Detection and mitigation are more necessary than ever. Beyond them, in finance where AI agents enter as counterparties, an independent layer remains — one that cryptographically attests, before the transaction, who acted under whose authority and whether they cleared KYC and sanctions screening.
+Akamai's SOTI 2026 (Financial Services edition) puts numbers on the moment attacks on finance moved from automation to autonomous agents. Banks now absorb 83% of API-endpoint attacks; APAC is the top Layer 7 DDoS target; only 27% of defenders know which APIs return sensitive data. As mimicry approaches the indistinguishable, detection scores grow weaker as material for proving "an unauthorised exercise of authority occurred." Detection and mitigation are more necessary than ever — and beyond them, in finance where AI agents enter as counterparties, a layer remains that cryptographically attests, before the transaction, who acted under whose authority and whether they cleared KYC and sanctions screening.
 
 What follows traces five points along the report's structure and notes where Lemma draws its line.
 
-*Every figure cited is drawn from Akamai SOTI 2026 (Financial Services edition). This piece does not reproduce the report; it quotes published statistics with attribution. As of 2026-06-01.*
+*Statistics are drawn from Akamai SOTI 2026 (Financial Services edition). As of 2026-06-01.*
 
 ---
 
