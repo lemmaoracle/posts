@@ -25,7 +25,7 @@ relatedUseCases:
 
 Enterprise RAG systems provide answers with citations, but there's no cryptographic guarantee that the cited source matches the unaltered original. Documents evolve, embeddings drift, and indexes are rebuilt without preserving citation integrity.
 
-**Cited ≠ verified.** That is the structural gap Lemma closes.
+**Cited ≠ verified.** That is the gap between detection and proof Lemma closes.
 
 ## Contents
 
