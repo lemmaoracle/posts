@@ -1,12 +1,12 @@
 ---
 title: "Prove agent-to-agent transactions with delegation chains."
-abstract: "In an Agent2Agent (A2A) environment where autonomous AI agents transact with each other, record each agent's delegation as a chain. Lemma makes the final transaction verifiable as resting on a legitimate chain of delegations."
+abstract: "In an Agent2Agent (A2A) environment where autonomous AI agents transact with each other, record each agent's delegation as a chain. Lemma makes it verifiable whether the final transaction rests on a legitimate chain of delegations."
 thesis: "A transaction settled ≠ a chain of delegations made it legitimate"
 pillar: agent-authority-proof
 industries:
   - dev
   - fin
-cardSummary: "Record agent-to-agent delegations as a chain, making the final transaction verifiable as resting on a legitimate chain of authority."
+cardSummary: "Record agent-to-agent delegations as a chain, making it verifiable whether the final transaction rests on a legitimate chain of authority."
 targetVerticals:
   - Developers
   - AI adoption (cross-industry)
