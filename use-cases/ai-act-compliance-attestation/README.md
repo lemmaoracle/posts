@@ -46,7 +46,7 @@ AI Act compliance is typically pursued in one of two ways:
 1. **Documentation-first** — assemble model cards and risk assessments. But you can't show, continuously and verifiably, that the AI actually met the provisions at the moment of a given decision.
 2. **Disclosing originals** — submit training data and model details for each audit. That carries trade-secret and customer-data leakage risk and doesn't scale to frequent verification.
 
-Neither structures compliance to be shown "without surfacing originals, continuously, third-party verifiable."
+Neither gives you a way to show compliance continuously and third-party-verifiable, without surfacing the originals.
 
 ## How Lemma Changes It
 
@@ -56,4 +56,4 @@ Lemma has the AI system issue **per-provision compliance proofs**:
 2. **In operation:** every decision issues a satisfiesPolicy proof. What is disclosed is only attributes like "risk assessment done," "human oversight" and "transparency," while training data, model internals and customer data stay hidden and protected.
 3. **At audit:** compliance can be presented to regulators and third-party auditors without surfacing the originals. Because it's issued continuously, you show compliance across operations, not at a single point in time.
 
-Compliance is proven as attributes, and the originals stay in. Regulatory-breach risk is minimized technically.
+Compliance is proven as attributes, and the originals never leave. Regulatory-breach risk is minimized technically.

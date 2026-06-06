@@ -27,7 +27,7 @@ relatedUseCases:
 
 **Handing over the key ≠ handing over scope.**
 
-You want an AI agent to call external APIs. But handing it the raw API key binds nothing — not the billing ceiling, not the callee, not the validity. "Up to $100 a month," "this endpoint only," "until month-end" must be fixed as a verifiable delegation.
+You want an AI agent to call external APIs. But handing it the raw API key constrains nothing — not the billing ceiling, not the callee, not the validity. "Up to $100 a month," "this endpoint only," "until month-end" must be fixed as a verifiable delegation.
 
 ## What Lemma Proves
 
