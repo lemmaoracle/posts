@@ -42,9 +42,9 @@ When you update an AI model, "which model, under which policy, decided what" bec
 Integrity across model updates is typically handled in one of two ways:
 
 1. **Logging version numbers** — record which model was used. But you can't cryptographically pin "on that version, under that policy, this decision was made for this input."
-2. **Archiving the model** — keep the old model. But reproducing the runtime environment, policy and surrounding context is hard, and a third party can't verify it independently.
+2. **Archiving the model** — keep the old model. But reproducing the runtime environment, policy and surrounding context is hard, and a third party can't verify the result independently.
 
-Neither structures past decisions to be reproduced "point-in-time-pinned, retroactively, verifiably."
+Neither gives you a way to reproduce past decisions point-in-time-pinned, retroactively, and verifiably.
 
 ## How Lemma Changes It
 
