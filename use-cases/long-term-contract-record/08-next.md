@@ -11,4 +11,4 @@ We enter through AI-adoption and data-governance support and a PoC, and stay alo
 4. **Prove one path via a (quote-based) PoC**.
 5. **Hands-on support from rollout through operations** — existing plan tiers (Civic / Critical / Compliance) serve only as a cost reference; the setup and pricing are designed together.
 
-Using the Metawater work (Nishikawa, Hayama) as a template, we'll confirm in the first 30 minutes where to start anchoring in your ledgers/contracts.
+We'll confirm in the first 30 minutes where to start anchoring in your ledgers/contracts.
