@@ -94,9 +94,9 @@ The four layers touched on here (provenance proof, verifiable AI, agent authorit
 - The center of this article, the "under whose authority it acted" layer: [**Agent Authority Proof**](https://lemma.frame00.com/pillars/agent-authority-proof/)
 - See it mapped to your own operations: [**Use cases**](https://lemma.frame00.com/solutions/use-cases)
 
-### Get the beyond-detection story, monthly
+### Get the beyond-detection insight, monthly
 
-Lemma Critical Monthly is built on a backbone of structural incident analysis (Critical Brief), delivering — once a month — the kind of "boundary between detection and proof" arguments this article makes. For audit, control, and security leaders who want to keep tracking the step that detection logs don't reach.
+Lemma Critical Monthly — the structural analysis of real-world risk incidents (Critical Brief) at its core, plus insight on the proof needed beyond detection, once a month.
 
 [**Subscribe to the newsletter →**](https://tally.so/r/rjvN2X)
 
