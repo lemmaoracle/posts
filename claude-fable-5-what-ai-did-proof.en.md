@@ -98,7 +98,7 @@ The four layers touched on here (provenance proof, verifiable AI, agent authorit
 
 Lemma Critical Monthly is built on a backbone of structural incident analysis (Critical Brief), delivering — once a month — the kind of "boundary between detection and proof" arguments this article makes. For audit, control, and security leaders who want to keep tracking the step that detection logs don't reach.
 
-[**Subscribe to the newsletter →**](https://tally.so/r/EkMj82)
+[**Subscribe to the newsletter →**](https://tally.so/r/rjvN2X)
 
 If you are already weighing a concrete application in your operations, a 30-minute Discovery Call can map it to your specific workflows. You do not need to disclose any sensitive data (personal or confidential).
 
