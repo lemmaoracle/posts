@@ -5,7 +5,7 @@ thesis: "Handing over the key ≠ handing over scope"
 pillar: agent-authority-proof
 industries:
   - dev
-cardSummary: "Without handing over the API key, verify a billing-ceiling / allowed-API / validity delegation via x402 at runtime — and let the AI call only inside that scope."
+cardSummary: "Without handing over the API key, verify a billing-ceiling / allowed-API / validity delegation at runtime — and let the AI call only inside that scope."
 targetVerticals:
   - Developers
   - All industries

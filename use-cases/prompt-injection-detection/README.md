@@ -6,7 +6,7 @@ pillar: verifiable-ai
 industries:
   - ai
   - dev
-cardSummary: "Commit the normalized form of the input and verify \"human-saw = AI-read\" integrity — without exposing the content."
+cardSummary: "Verify that what the human saw is what the AI read — detecting injection without exposing the content."
 targetVerticals:
   - AI adoption (cross-industry)
   - Security

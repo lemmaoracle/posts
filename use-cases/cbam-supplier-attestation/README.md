@@ -6,7 +6,7 @@ pillar: regulatory-attribute-proof
 industries:
   - mfg
   - sc
-cardSummary: "Prove CBAM-required supplier attributes by ZK attestation, keeping the underlying production data inside each supplier's perimeter."
+cardSummary: "Prove CBAM-required supplier attributes by cryptographic attestation, keeping the underlying production data inside each supplier's perimeter."
 targetVerticals:
   - Manufacturing exporting to the EU
   - Steel, aluminum, cement, fertilizer

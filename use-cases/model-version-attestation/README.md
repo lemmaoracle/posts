@@ -6,7 +6,7 @@ pillar: verifiable-ai
 industries:
   - fin
   - ai
-cardSummary: "Pin the decision-time modelId@timestamp and policyHash so past AI decisions stay retroactively verifiable after a model update."
+cardSummary: "Pin the model version and policy at decision time so past AI decisions stay retroactively verifiable after a model update."
 targetVerticals:
   - Finance / FinTech
   - AI adoption (cross-industry)
