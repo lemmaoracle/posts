@@ -3,7 +3,7 @@ slug: "verification-note-001-6models-attack-sim"
 date: "2026.06.12"
 category: "Technical"
 section: "Essays"
-title: "Training and Detection Are Powerless. Attack Simulation Across 6 Models, From Fable 5 to Kimi."
+title: "From Fable 5 to Kimi: Detection Is Powerless — Attack Simulation Across 6 Models"
 abstract: "In June 2026, Anthropic released Fable 5, a safety-filtered version of Mythos. Google announced a suite of AI-powered security agents designed to detect attacks. Yet in Lemma's independent verification, Opus 4.8 autonomously breached all five attack scenarios. GPT-5.5 and DeepSeek v4 Pro breached 4/5, Qwen3.7 Max breached 3/5, and Kimi-K2.6 breached 2/5. Meanwhile, every model was blocked in every scenario where ZK proofs were enforced. Fable 5 refused overt attack prompts, but leaked SSNs and executed a $67,800 payment under benign business prompts. Neither safety training nor AI detection can replace cryptographic proof."
 cover: "assets/evjdnqevjdnqevjd.png"
 tags:
