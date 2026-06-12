@@ -6,7 +6,7 @@ pillar: regulatory-attribute-proof
 industries:
   - mfg
   - sc
-cardSummary: "CBAM 要件のサプライヤ属性を ZK 証明として連鎖し、各社の生産データは社内に留めたまま規制対応する。"
+cardSummary: "CBAM 要件のサプライヤ属性を暗号証明として連鎖し、各社の生産データは社内に留めたまま規制対応する。"
 targetVerticals:
   - EU 向け輸出を行う製造業
   - 鉄鋼・アルミ・セメント・肥料

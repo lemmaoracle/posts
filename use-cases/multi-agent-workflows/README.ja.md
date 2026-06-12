@@ -6,7 +6,7 @@ pillar: agent-authority-proof
 industries:
   - ai
   - dev
-cardSummary: "多段の委任チェーンを各ノードの証明で束ね、成果物から元の主体まで遡れます。"
+cardSummary: "多段の委任チェーンを検証可能なステップで束ね、成果物から元の主体まで遡れます。"
 targetVerticals:
   - AIオーケストレーションプラットフォーム
   - MCP対応ツールエコシステム

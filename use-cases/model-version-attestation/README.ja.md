@@ -6,7 +6,7 @@ pillar: verifiable-ai
 industries:
   - fin
   - ai
-cardSummary: "判断時点の modelId@timestamp と policyHash を固定し、モデル更新後も過去の AI 判断を遡及検証できるようにする。"
+cardSummary: "判断時点のモデルバージョンとポリシーを固定し、モデル更新後も過去の AI 判断を遡及検証できるようにする。"
 targetVerticals:
   - 金融・FinTech
   - AI 導入（業種横断）
