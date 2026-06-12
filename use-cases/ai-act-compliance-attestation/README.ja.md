@@ -7,7 +7,7 @@ industries:
   - fin
   - pub
   - ai
-cardSummary: "high-risk AI の AI Act 適合を、学習データ・モデル詳細を出さず、条項単位の属性証明として継続的に示す。"
+cardSummary: "high-risk AI の AI Act 適合を、学習データ・モデル詳細を出さず、検証可能な適合証明として継続的に示す。"
 targetVerticals:
   - 金融・FinTech
   - 自治体・公共

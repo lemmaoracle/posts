@@ -5,7 +5,7 @@ thesis: "API キーを渡す ≠ 範囲を渡す"
 pillar: agent-authority-proof
 industries:
   - dev
-cardSummary: "API キーを渡さず、課金上限・許可 API・期限の範囲つき委任を x402 で runtime 検証し、範囲内だけ AI に呼ばせる。"
+cardSummary: "API キーを渡さず、課金上限・許可 API・期限の範囲つき委任を runtime 検証し、範囲内だけ AI に呼ばせる。"
 targetVerticals:
   - 開発者
   - 全業種

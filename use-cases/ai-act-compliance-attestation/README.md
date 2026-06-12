@@ -7,7 +7,7 @@ industries:
   - fin
   - pub
   - ai
-cardSummary: "Show a high-risk AI's AI Act compliance as per-provision attribute proofs, without surfacing training data or model details."
+cardSummary: "Show a high-risk AI's AI Act compliance as verifiable proofs, without surfacing training data or model details."
 targetVerticals:
   - Finance / FinTech
   - Public sector

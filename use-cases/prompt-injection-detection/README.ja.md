@@ -6,7 +6,7 @@ pillar: verifiable-ai
 industries:
   - ai
   - dev
-cardSummary: "入力の正規化形をコミットし、「人が見た入力 = AI が読む入力」の整合性を、content を出さずに検証する。"
+cardSummary: "人が見た入力と AI が読む入力の整合性を、content を出さずに検証する。"
 targetVerticals:
   - AI 導入（業種横断）
   - セキュリティ

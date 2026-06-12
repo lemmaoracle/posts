@@ -6,7 +6,7 @@ pillar: agent-authority-proof
 industries:
   - ai
   - dev
-cardSummary: "Bind multi-hop delegation as per-node proofs, traceable back to the originating principal."
+cardSummary: "Bind multi-hop delegation as verifiable steps, traceable back to the originating principal."
 targetVerticals:
   - AI orchestration platforms
   - MCP-enabled tool ecosystems
