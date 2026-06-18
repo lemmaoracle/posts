@@ -62,11 +62,9 @@ Cryptographically valid ≠ semantically right.
 
 ## ▸ What we're shipping
 
-What Lemma is releasing is **Verifiable OKF** — a **producer-side extension plus open tooling** for attaching provenance to OKF bundles.
+What Lemma is releasing is **Verifiable OKF** — a **producer-side extension** that attaches provenance to OKF bundles.
 
-**It is the first implementation that adds provenance, shipped within days of OKF's release. Not a proposal to the standard — code that runs now.**
-
-This is the crucial point. This is not a proposal to the standard saying "please add this field to OKF." The OKF spec already states *"Producers may add any extra keys; consumers should preserve them and not reject documents with unknown fields."* In other words, the freedom for a producer to add arbitrary keys is open from the start. We use that existing extension mechanism to provide an optional `provenance` key, and the tools to verify it. **There is no need to change the standard. Producers write existing OKF as-is, and attach verifiable provenance on top, optionally.**
+The OKF spec allows producers to add arbitrary keys from the start (*"Producers may add any extra keys; consumers should preserve them and not reject documents with unknown fields."*). We use this existing extension mechanism to provide a `provenance` key, and the tools to verify signatures, integrity, and condition proofs. Producers write OKF as they always have, and optionally attach verifiable provenance on top.
 
 Models change. Proofs remain.
 

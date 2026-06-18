@@ -62,11 +62,9 @@ Cryptographically valid ≠ semantically right.
 
 ## ▸ What we're shipping
 
-Lemma が公開するのは **Verifiable OKF** —— OKF バンドルに来歴を付与するための、**供給者側の拡張＋オープンなツール**です。
+Lemma が公開するのは **Verifiable OKF** —— OKF に来歴（provenance）を付与する、**供給者側の拡張ツール**です。
 
-**OKF 公開から数日で出した、来歴を足す最初の実装です。標準への提案ではなく、いま動くコードです。**
-
-ここが肝心な点です。これは「OKF にこのフィールドを足してください」という標準への提案ではありません。OKF の仕様にはもともと *"Producers may add any extra keys; consumers should preserve them and not reject documents with unknown fields."* と書かれています。つまり供給者が任意のキーを足す自由は最初から開かれている。私たちはその既存の拡張機構を使って、`provenance` という任意キーと、それを検証するツールを提供します。**標準を変更する必要はありません。供給者は既存の OKF をそのまま記述し、その上に検証可能な来歴を任意で付与します。**
+OKF の仕様は、供給者が任意のキーを追加することを最初から開いています（*"Producers may add any extra keys; consumers should preserve them and not reject documents with unknown fields."*）。私たちはこの既存の拡張機構を使って `provenance` キーと、署名・整合・条件証明を検証するツールを提供します。供給者はこれまでどおり OKF を書き、その上に検証可能な来歴を任意で付与するだけです。
 
 Models change. Proofs remain.
 
