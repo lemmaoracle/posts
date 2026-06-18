@@ -5,6 +5,7 @@ category: "Announcement"
 section: "Essays"
 title: "読める知識から、検証できる知識へ —— OKF に来歴を足す最初の実装を、OSS で公開しました"
 abstract: "AI エージェントが読む「知識」を、組織やツールをまたいで同じ形式で共有する共通仕様 —— Google の Open Knowledge Format（OKF）が登場しました。ただし OKF が標準化したのは知識の表現と共有であり、「読める」ことと「信頼できる」ことは別の層です。誰が発行したか、改ざんされていないか、条件を満たすか —— その来歴は仕様の対象外です。Lemma は OKF 公開からわずか数日で、OKF に来歴（provenance）を足す最初の実装を OSS として公開しました。標準は一切変更せず、署名・検証・条件証明（Groth16）まで、誰でも自分のバンドルで試せる形でエコシステムに開きます。"
+cover: "assets/cover-verifiable-okf.png"
 tags:
   - open-knowledge-format
   - verifiable-okf
@@ -65,8 +66,6 @@ Cryptographically valid ≠ semantically right.
 Lemma が公開するのは **Verifiable OKF** —— OKF に来歴（provenance）を付与する、**供給者側の拡張ツール**です。
 
 OKF の仕様は、供給者が任意のキーを追加することを最初から開いています（*"Producers may add any extra keys; consumers should preserve them and not reject documents with unknown fields."*）。私たちはこの既存の拡張機構を使って `provenance` キーと、署名・整合・条件証明を検証するツールを提供します。供給者はこれまでどおり OKF を書き、その上に検証可能な来歴を任意で付与するだけです。
-
-Models change. Proofs remain.
 
 提供するのは、OKF 自身が producer / consumer / visualizer の参照実装を出しているのに倣った3点です。
 
