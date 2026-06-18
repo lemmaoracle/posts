@@ -57,7 +57,6 @@ In OKF's case, the moment the table of contents crosses an organizational bounda
 
 In regulated work such as audit, KYC/AML, and supply chains, "the file said so" is not enough.
 
-Cryptographically valid ≠ semantically right.
 
 ---
 
