@@ -11,6 +11,7 @@ A P4 complement on the same multi-tier supply chain structure, guaranteeing ESG 
 [View use case →](/use-cases/supply-chain-esg/)
 
 ### DeFi Bridge Verification — Pre-Execution Authentication
+**Cryptographically valid ≠ semantically right**
 
 A complement within the same Pillar (P1). Physical component provenance and crypto-asset provenance are structurally isomorphic. The same problem — "asset origin is not cryptographically verified" — applied to finance rather than manufacturing.
 

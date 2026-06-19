@@ -1,6 +1,7 @@
 ---
 title: "DeFi Bridge Verification"
 abstract: "Verify cross-chain message origin before the receiving side commits state — a second cryptographic layer that runs alongside the DVN."
+thesis: "Cryptographically valid ≠ semantically right"
 pillar: verifiable-origin
 industries:
   - dev
@@ -25,5 +26,6 @@ relatedUseCases:
 
 ## Thesis
 
+**Cryptographically valid ≠ semantically right**
 
 Cross-chain bridge messages are cryptographically valid yet not necessarily semantically correct. Lemma adds a cryptographic layer that enables the receiving system to independently verify message origin before committing state.
