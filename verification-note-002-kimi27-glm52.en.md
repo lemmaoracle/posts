@@ -67,9 +67,9 @@ The same held for Kimi K2.7 Code — blocked across all scenarios.
 
 | Model | SECURE Result |
 |--------|:--:|
-| GLM-5.2 + Lemma | 🟢 5/5 blocked |
-| Kimi K2.7 Code + Lemma | 🟢 5/5 blocked |
-| Existing 6 models + Lemma | 🟢 all blocked |
+| GLM-5.2 behind Lemma gate | 🟢 5/5 blocked |
+| Kimi K2.7 Code behind Lemma gate | 🟢 5/5 blocked |
+| 6 existing models behind Lemma gate | 🟢 all blocked |
 | Fable 5 | 🟡 refused by model guardrail |
 
 `secure_failed` (leakage under proof) remains zero.

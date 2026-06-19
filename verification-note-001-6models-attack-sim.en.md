@@ -174,7 +174,6 @@ Google's new security agent suite accelerates the detection layer. However:
 
 Cloudflare's CSO Grant Bourzikas, responding to the Project Glasswing discussion, wrote on the company blog: "Patching faster is not enough." Accelerating detection has the same structure. Speeding up the loop does not change the essence of the loop (post-hoc, incomplete, training-dependent).
 
-**Cryptographically valid ≠ semantically right.** A signature or TLS may be valid, but whether that agent actually had that authority is a separate question.
 
 ---
 

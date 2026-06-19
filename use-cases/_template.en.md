@@ -240,7 +240,6 @@ Pillar tagline derivation:
 
 | Pillar tagline | Derived thesis examples |
 |---|---|
-| Cryptographically valid ≠ semantically right (P1) | Recorded ≠ untampered |
 | Finding bugs ≠ proving decisions (P2) | Audited ≠ explainable |
 | Paying ≠ trusting (P3) | Authorized ≠ attested |
 | Compliance promised ≠ compliance proven (P4) | Declared ≠ verified |
