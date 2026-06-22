@@ -100,7 +100,7 @@ Verifiable AI can be started without replacing your foundation.
 The consent layer is handled by the standards. **The provenance layer can be confirmed with a demo that runs today.**
 
 - ▶ **See the provenance-proof demo**: [demo.lemma.frame00.com](https://demo.lemma.frame00.com)
-- ▶ **Discuss it for your own use case (30 minutes, no disclosure of sensitive data required)**: [Request a demo / Discovery Call](https://tally.so/r/EkBqDX?utm_source=blog&utm_medium=cta_mid&utm_campaign=verifiable_intent)
+- ▶ **Discuss it for your own use case (30 minutes, no disclosure of sensitive data required)**: [Request a demo / Discovery Call](https://tally.so/r/Pd2Rl5?utm_source=blog&utm_medium=cta_mid&utm_campaign=verifiable_intent)
 
 In an era where intent is proven, let's design together a way to make the grounding of those judgments verifiable too.
 
@@ -127,13 +127,13 @@ The authenticity of intent (who authorized what) can be proven. On the other han
 Not the "semantic correctness" of the output itself, but **what the output was grounded in — its provenance** — verified cryptographically. With primitives such as Groth16 / Circom / Poseidon over BN254, Lemma demonstrates that "the grounding can be traced" without disclosing the original text.
 
 **Q. How do I try it?**
-You can confirm provenance proof in the [demo environment](https://demo.lemma.frame00.com). For verification aligned to your own use case, start from a [demo request / Discovery Call](https://tally.so/r/EkBqDX?utm_source=blog&utm_medium=faq&utm_campaign=verifiable_intent) (no disclosure of sensitive data required).
+You can confirm provenance proof in the [demo environment](https://demo.lemma.frame00.com). For verification aligned to your own use case, start from a [demo request / Discovery Call](https://tally.so/r/Pd2Rl5?utm_source=blog&utm_medium=faq&utm_campaign=verifiable_intent) (no disclosure of sensitive data required).
 
 ## ▸ Let's design it together (CTA)
 
 For x402 builders, MCP developers, teams operating AI agents, and enterprises building trust workflows that span systems. Precisely because we are in an era where intent is proven, there is value in layering on a **layer that verifies the grounding of the judgments** made on the basis of that intent.
 
-- ▶ **Request a demo / Discovery Call (30 minutes)**: [here](https://tally.so/r/EkBqDX?utm_source=blog&utm_medium=cta_tail&utm_campaign=verifiable_intent)
+- ▶ **Request a demo / Discovery Call (30 minutes)**: [here](https://tally.so/r/Pd2Rl5?utm_source=blog&utm_medium=cta_tail&utm_campaign=verifiable_intent)
 - ▶ **See the provenance-proof demo**: [demo.lemma.frame00.com](https://demo.lemma.frame00.com)
 
 **Built for decisions that matter.**
