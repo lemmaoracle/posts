@@ -4,6 +4,7 @@ date: "2026.06.22"
 category: "Industry"
 section: "Essays"
 title: "意図の証明に、根拠の検証を重ねる──AIエージェント決済時代の検証可能AI"
+cover: "assets/cover-industry.png"
 abstract: "AP2 と Mastercard の Verifiable Intent によって、AIエージェント決済で「意図の真正性」を証明する標準が揃いつつあります。実運用では、その上に「エージェントの出力が何を根拠にしているか＝来歴」を独立に検証する層が要ります。本稿は意図の真正性（consent layer）と根拠の検証可能性（provenance layer）を整理し、検証可能AIの観点から、標準の上に重ねる来歴証明の層を解説します。"
 tags:
   - verifiable-ai

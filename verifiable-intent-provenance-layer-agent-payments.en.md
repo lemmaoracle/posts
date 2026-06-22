@@ -4,6 +4,7 @@ date: "2026.06.22"
 category: "Industry"
 section: "Essays"
 title: "From Proof of Intent to Verification of Grounding — Verifiable AI for the Agent-Payments Era"
+cover: "assets/cover-industry.png"
 abstract: "With AP2 and Mastercard's Verifiable Intent, the standards for proving the authenticity of intent in AI-agent payments are falling into place. In real-world operation, you need an additional layer on top — one that independently verifies what an agent's output is grounded in, i.e. its provenance. This essay distinguishes the authenticity of intent (the consent layer) from the verifiability of grounding (the provenance layer), and explains, from a verifiable-AI standpoint, the provenance-proof layer that sits on top of the standards."
 tags:
   - verifiable-ai
