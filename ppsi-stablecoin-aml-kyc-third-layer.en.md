@@ -167,6 +167,6 @@ PPSI taking effect is a forcing function for businesses handling stablecoins to 
 
 We welcome inquiries from stablecoin issuers and adopters considering Lemma — both for PPSI response and beyond. We typically reply within one business day.
 
-[**Talk to us →**](https://tally.so/r/EkBqDX)
+[**Talk to us →**](https://tally.so/r/Pd2Rl5)
 
 *Built for decisions that matter.*
