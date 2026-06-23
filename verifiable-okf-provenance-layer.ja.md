@@ -1,8 +1,8 @@
 ---
 slug: "verifiable-okf-provenance-layer"
 date: "2026.06.15"
-category: "Announcement"
-section: "Essays"
+category: "Announcements"
+section: "Changelog"
 title: "読める知識から、検証できる知識へ —— OKF に来歴を足す最初の実装を、OSS で公開しました"
 abstract: "AI エージェントが読む「知識」を、組織やツールをまたいで同じ形式で共有する共通仕様 —— Google の Open Knowledge Format（OKF）が登場しました。ただし OKF が標準化したのは知識の表現と共有であり、「読める」ことと「信頼できる」ことは別の層です。誰が発行したか、改ざんされていないか、条件を満たすか —— その来歴は仕様の対象外です。Lemma は OKF 公開からわずか数日で、OKF に来歴（provenance）を足す最初の実装を OSS として公開しました。標準は一切変更せず、署名・検証・条件証明（Groth16）まで、誰でも自分のバンドルで試せる形でエコシステムに開きます。"
 cover: "assets/cover-verifiable-okf.png"
