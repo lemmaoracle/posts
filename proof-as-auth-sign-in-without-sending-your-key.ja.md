@@ -5,7 +5,7 @@ date: "2026.05.25"
 category: "Technical"
 secondary_categories:
   - "Announcements"
-section: "Essays"
+section: "Changelog"
 abstract: "従来のあらゆる認証フローには、避けられない瞬間があります。秘密がネットワークを渡る瞬間です。Bearerトークン、リフレッシュトークン、ハッシュ化されたパスワード――サーバーは何かを受け取り、保存し、守り続けなければなりません。Sealプルーフ認証はその前提を崩します。鍵はブラウザを出ない。サーバーが受け取るのは鍵の所持を証明するゼロ知識証明で、鍵そのものも鍵のハッシュもネットワークには出ません。"
 tags:
   - zk-proof
