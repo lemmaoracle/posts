@@ -4,7 +4,7 @@ date: "2026.05.07"
 category: "Industry"
 section: "Essays"
 title: "AI agents in financial operations: the case for the judgment-trail layer"
-cover: "assets/kF7nQ3rXa2P.jpg"
+cover: "assets/cover-industry.png"
 abstract: "On April 24, 2026, Japan's FSA convened an emergency session in response to Anthropic's Mythos attack model and the US Treasury / Federal Reserve briefings the prior week. Both attackers and defenders are acquiring agentic AI capability at the same speed. What remains is the layer that lets a judgment be reproduced six months later — the judgment-trail layer."
 tags:
   - verifiable-ai

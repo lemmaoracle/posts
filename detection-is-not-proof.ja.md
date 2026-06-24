@@ -4,7 +4,7 @@ date: "2026.05.22"
 category: "Industry"
 section: "Essays"
 title: "AI 時代のサイバー防衛に残された、最後の層"
-cover: "assets/bMBGwXIAgC4.jpg"
+cover: "assets/cover-industry.png"
 abstract: "国内の AI サイバー対策はこの十日間で政府方針から重要インフラ事業者・自治体への直接実装要請まで一気に降りました。要請の中身はいずれも検出側の強化です。横断して欠落しているのは、検出強化の延長線では埋まらない来歴証明レイヤー — 取引前に「何が・誰に・どこまで許可されたか」を暗号証明で証跡化する層です。"
 tags:
   - provenance

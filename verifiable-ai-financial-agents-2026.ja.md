@@ -4,7 +4,7 @@ date: "2026.05.07"
 category: "Industry"
 section: "Essays"
 title: "金融 AI が業務の中核に入った 2026 — 判断証跡という残された層"
-cover: "assets/kF7nQ3rXa2P.jpg"
+cover: "assets/cover-industry.png"
 abstract: "2026 年 4 月の FSA 緊急会合と Anthropic Mythos / Project Glasswing が示すのは、攻撃側と防衛側の両方が AI エージェント能力を獲得しつつあり、判断の証跡を残す層が技術・制度の両面で要求されていること。Lemma の pre-execution attestation 設計について。"
 tags:
   - verifiable-ai

@@ -4,7 +4,7 @@ date: "2026.06.04"
 category: "Industry"
 section: "Essays"
 title: "AI 時代の金融サイバー攻撃対策 — コンプライアンスの新時代"
-cover: "assets/15.jpg"
+cover: "assets/cover-industry.png"
 abstract: "Akamai SOTI 2026(金融サービス版)が示す、自動化から自律エージェントへ移った金融への攻撃実態。APAC が Layer 7 DDoS の最多標的(前年比 +40%)、銀行は API エンドポイント攻撃の 83% を吸収、一方で機微データを返す API を把握できているのは 27%。検出と緩和の先に残る、取引前に「誰が・どの権限で動いたか」を暗号で証跡化する層の必要性。"
 tags:
   - financial-services

@@ -5,7 +5,7 @@ category: "Solutions"
 section: "Essays"
 title: "Cryptographic Trust Chains Between Agents: How A2A Collaboration Will Transform the API Economy"
 abstract: "As AI agent-to-agent (A2A) collaboration expands, ensuring trustworthiness has become the paramount challenge. Lemma proposes a cryptographic trust chain consisting of three layers: organizational identity signatures, zero-knowledge proofs of policy attributes, and verifiable authority scopes. This approach solves structural problems in the API economy, enabling protocol-level automation of KYC/AML compliance and establishing trust metrics at the management level."
-cover: "assets/x1J5qFkoU.jpg"
+cover: "assets/cover-solutions.png"
 tags:
   - agent-security
   - provenance

@@ -5,7 +5,7 @@ category: "Announcements"
 section: "Changelog"
 title: "From readable knowledge to verifiable knowledge — we've open-sourced the first implementation that adds provenance to OKF"
 abstract: "A common format for the \"knowledge\" AI agents read — Google's Open Knowledge Format (OKF) — has arrived, letting that knowledge be shared in one shape across organizations and tools. But what OKF standardizes is the representation and sharing of knowledge; \"readable\" and \"trustworthy\" are two different layers. Who issued it, whether it has been tampered with, whether it meets the required conditions — that provenance is out of the spec's scope. Just days after OKF's release, Lemma is open-sourcing the first implementation that adds provenance to OKF. It changes the standard not at all: signing, verification, and condition proofs (Groth16) included, in a form anyone can try on their own bundles."
-cover: "assets/cover-verifiable-okf.png"
+cover: "assets/cover-announcements.png"
 tags:
   - open-knowledge-format
   - verifiable-okf
