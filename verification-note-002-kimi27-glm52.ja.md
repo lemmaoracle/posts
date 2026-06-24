@@ -100,4 +100,4 @@ https://github.com/lemmaoracle/example-cyber-attack
 
 **御社のシステムは、AI攻撃に耐えますか？** 同じ攻撃シナリオで検証し、証明ゲートを差すべき場所を特定します。まずは30分のディスカバリーコールから（機微データの開示は不要です）。
 
-[Discovery Call を予約 →](https://tally.so/r/Pd2Rl5)
+[Discovery Call を予約 →](https://tally.so/r/EkBqDX)
