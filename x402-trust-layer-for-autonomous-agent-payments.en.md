@@ -4,7 +4,7 @@ date: "2026.04.28"
 category: "Announcements"
 section: "Changelog"
 title: "A Trust Layer for x402"
-cover: "assets/Q50vhoUkafc.jpg"
+cover: "assets/cover-announcements.png"
 abstract: "AI agents can now pay over HTTP through x402, but a wallet address and a transaction hash do not tell the receiving server who authorized the payment, under what policy, or whether the data returned was tampered with. Today we publish the Lemma × x402 reference implementation, live on Base Sepolia: every settlement carries a ZK proof bundle inside PAYMENT-RESPONSE — issuer identity, settlement, and data integrity, independently verifiable end-to-end."
 tags:
   - agent-security

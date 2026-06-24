@@ -4,7 +4,7 @@ date: "2026.06.10"
 category: "Industry"
 section: "Essays"
 title: "The more capable AI gets, the more you need proof of what it did — what Claude Fable 5 showed"
-cover: "assets/16.jpg"
+cover: "assets/cover-industry.png"
 abstract: "On June 9, 2026, Anthropic released Claude Fable 5, its most capable model yet, and implemented at scale a safeguard that stops dangerous outputs at the model layer in high-misuse domains. But stopping a dangerous output and being able to prove, after the fact, what the AI actually did are two different layers. As capability and autonomy rise, enterprises increasingly need to show — to auditors and regulators — who acted, under whose authority, and how far they were permitted to go. Detection stops the intrusion; proof leaves an un-overturnable record of what happened. Lemma's trust infrastructure is designed to fill that step beyond detection."
 tags:
   - ai-governance

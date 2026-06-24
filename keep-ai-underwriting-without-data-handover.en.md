@@ -4,7 +4,7 @@ date: "2026.05.28"
 category: "Solutions"
 section: "Essays"
 title: "Underwriting without the handover: keep AI credit decisions without holding the data"
-cover: "assets/ixEQfXIlOsC.jpg"
+cover: "assets/cover-solutions.png"
 abstract: "How to keep AI underwriting running without handing the raw data to the AI. We compare masking, selective disclosure, and ZK proofs, walk through how responsibility and assurance shift for five stakeholders — applicants, loan officers, compliance leads, executives, and regulators — and show the verification flow you can experience in Lemma's demo."
 tags:
   - zk-proof

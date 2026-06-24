@@ -13,7 +13,7 @@ tags:
   - seal
   - verifiable-ai
   - provenance
-cover: "assets/fWD2aenS5Xo.jpg"
+cover: "assets/cover-technical.png"
 ---
 
 **TL;DR**

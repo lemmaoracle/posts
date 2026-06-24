@@ -4,7 +4,7 @@ date: "2026.05.15"
 category: "Industry"
 section: "Essays"
 title: "Adding Layer 3 to x402 — Choices for Stablecoin Issuers and Adopters"
-cover: "assets/ppsi-stablecoin-layer3.jpg"
+cover: "assets/cover-industry.png"
 abstract: "Layer 3 for businesses handling stablecoins — a design that proves customer attributes across agent payments without sharing the underlying data. Lemma's ZK attribute proof layer unifies multiple use cases, including U.S. PPSI and EU MiCA compliance, on a single foundation."
 tags:
   - ppsi

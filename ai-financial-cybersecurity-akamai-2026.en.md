@@ -4,7 +4,7 @@ date: "2026.06.04"
 category: "Industry"
 section: "Essays"
 title: "AI-era cybersecurity in financial services — a new era of compliance"
-cover: "assets/15.jpg"
+cover: "assets/cover-industry.png"
 abstract: "Akamai's SOTI 2026 (Financial Services) puts numbers on the moment attacks on finance moved from automation to autonomous agents. Asia-Pacific is the top Layer 7 DDoS target (up +40% YoY); banks absorb 83% of API-endpoint attacks; only 27% of defenders know which APIs return sensitive data. Beyond detection and mitigation, a layer remains that cryptographically attests, before the transaction, who acted under whose authority."
 tags:
   - financial-services

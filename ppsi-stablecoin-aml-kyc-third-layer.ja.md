@@ -4,7 +4,7 @@ date: "2026.05.15"
 category: "Industry"
 section: "Essays"
 title: "x402 に第3層を足す — ステーブルコイン事業者の選択肢"
-cover: "assets/ppsi-stablecoin-layer3.jpg"
+cover: "assets/cover-industry.png"
 abstract: "ステーブルコインを扱う事業者にとっての「Layer 3」 — エージェント決済における顧客理解を、データを送らずに証明する設計。米国 PPSI 規則案・EU MiCA 対応を含む複数ユースケースを、Lemma の ZK 属性証明で単一基盤に統合する選択肢。"
 tags:
   - ppsi
