@@ -5,7 +5,7 @@ category: "Technical"
 section: "Essays"
 title: "新しいモデルでも、証明だけが止め続ける——Kimi K2.7 CodeとGLM-5.2を追加検証"
 abstract: "Kimi K2.7 CodeとGLM-5.2を攻撃マトリクスに追加検証した結果、GLM-5.2はOpus 4.8に次ぎ全5シナリオを自律突破。Kimi K2.7 Codeも3/5を突破した。しかしLemmaのZK証明ゲートは全モデル・全シナリオで攻撃をブロック。GLM-5.2は監査ログ改ざんのSECUREモードで181回の呼び出しを試みたがすべて403。モデルが進化しても、証明ゲートの不変性は揺るがない。"
-cover: "assets/cover-technical.png"
+cover: "assets/evjdnqevjdnqevjd.png"
 tags:
   - verification-notes
   - attack-simulation

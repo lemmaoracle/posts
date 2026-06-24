@@ -5,7 +5,7 @@ category: "Technical"
 section: "Essays"
 title: "検出は無力。Fable 5からKimiまで6モデル攻撃実験"
 abstract: "2026年6月、AnthropicはMythosの安全弁付き版Fable 5を公開しました。GoogleはAIで攻撃を検出するセキュリティエージェント群を発表しました。しかしLemmaの独自検証では、Opus 4.8が5つすべての攻撃シナリオを自律的に突破しました。GPT-5.5とDeepSeek v4 Proが4/5、Qwen3.7 Maxが3/5を突破。Kimi-K2.6も2/5を突破しています。いっぽうZK証明が有効な全シナリオで全モデルがブロックされました。Fable 5は攻撃を拒否しましたが、業務ライクなプロンプトではSSNを流出させ支払実行も行いました。「安全訓練」も「AI検出」も、証明の代わりにはなりません。"
-cover: "assets/cover-technical.png"
+cover: "assets/evjdnqevjdnqevjd.png"
 tags:
   - verification-notes
   - attack-simulation
