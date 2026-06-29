@@ -1,5 +1,5 @@
 ---
-title: "For teams sharing credit and sanctions decisions"
+title: "For credit and screening teams"
 ---
 
 

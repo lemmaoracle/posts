@@ -1,5 +1,5 @@
 ---
-title: "For internal-control teams audited on approval legitimacy"
+title: "For internal-control teams"
 ---
 
 

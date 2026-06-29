@@ -1,5 +1,5 @@
 ---
-title: "For teams running enterprise RAG on internal documents"
+title: "For enterprise RAG teams"
 ---
 
 

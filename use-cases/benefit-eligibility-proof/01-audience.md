@@ -1,5 +1,5 @@
 ---
-title: "For teams verifying benefit eligibility"
+title: "For benefit eligibility teams"
 ---
 
 

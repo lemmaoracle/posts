@@ -1,5 +1,5 @@
 ---
-title: "For procurement teams verifying supplier credentials"
+title: "For supplier-vetting procurement teams"
 ---
 
 

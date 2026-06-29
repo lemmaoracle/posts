@@ -1,5 +1,5 @@
 ---
-title: "For teams running high-risk customer flags"
+title: "For teams running customer flags"
 ---
 
 

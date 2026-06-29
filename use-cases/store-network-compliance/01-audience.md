@@ -1,5 +1,5 @@
 ---
-title: "For HQ and area managers verifying store-network compliance"
+title: "For chain HQ and area managers"
 ---
 
 

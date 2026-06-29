@@ -1,5 +1,5 @@
 ---
-title: "For those who evaluate, supply into, or shape public procurement"
+title: "For public-procurement teams"
 ---
 
 

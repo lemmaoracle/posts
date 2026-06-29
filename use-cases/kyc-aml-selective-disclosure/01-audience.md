@@ -1,5 +1,5 @@
 ---
-title: "For compliance teams caught between sharing and minimizing KYC data"
+title: "For KYC compliance teams"
 ---
 
 

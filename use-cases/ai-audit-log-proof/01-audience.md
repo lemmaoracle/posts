@@ -1,5 +1,5 @@
 ---
-title: "For governance teams accountable for AI decisions"
+title: "For AI governance teams"
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: "For those managing 15–20 year contracts and ledgers"
+title: "For long-term contract owners"
 ---
 
 
