@@ -1,5 +1,5 @@
 ---
-title: "For financial institutions running cross-organization access"
+title: "For financial data-access teams"
 ---
 
 

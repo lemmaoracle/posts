@@ -1,5 +1,5 @@
 ---
-title: "For procurement and quality teams tracing component provenance"
+title: "For procurement and quality teams"
 ---
 
 

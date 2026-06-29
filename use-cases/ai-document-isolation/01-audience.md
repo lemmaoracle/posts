@@ -1,5 +1,5 @@
 ---
-title: "For teams wanting AI on confidential documents"
+title: "For teams putting AI on confidential documents"
 ---
 
 

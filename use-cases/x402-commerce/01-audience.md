@@ -1,5 +1,5 @@
 ---
-title: "For teams designing agent commerce on x402"
+title: "For agent-commerce teams"
 ---
 
 

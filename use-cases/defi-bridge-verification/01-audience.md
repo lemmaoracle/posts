@@ -1,5 +1,5 @@
 ---
-title: "For teams securing cross-chain bridges"
+title: "For bridge security teams"
 ---
 
 

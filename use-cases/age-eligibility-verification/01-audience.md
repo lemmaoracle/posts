@@ -1,5 +1,5 @@
 ---
-title: "For teams verifying age-restricted sales"
+title: "For age-restricted sales teams"
 ---
 
 

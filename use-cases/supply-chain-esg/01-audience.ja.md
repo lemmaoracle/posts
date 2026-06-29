@@ -1,5 +1,5 @@
 ---
-title: "CBAM・EUDR・DPP 対応を担う調達・ESG 部門へ"
+title: "調達・ESG 部門へ"
 ---
 
 

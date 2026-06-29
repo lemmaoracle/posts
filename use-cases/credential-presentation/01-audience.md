@@ -1,5 +1,5 @@
 ---
-title: "For teams presenting or verifying credentials"
+title: "For teams handling credentials"
 ---
 
 

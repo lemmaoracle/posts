@@ -1,5 +1,5 @@
 ---
-title: "For procurement and ESG teams facing CBAM, EUDR, and DPP"
+title: "For procurement and ESG teams"
 ---
 
 

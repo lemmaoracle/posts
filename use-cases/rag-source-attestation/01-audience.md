@@ -1,5 +1,5 @@
 ---
-title: "For teams accountable for AI citation integrity"
+title: "For AI citation-integrity teams"
 ---
 
 

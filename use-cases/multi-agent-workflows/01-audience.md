@@ -1,5 +1,5 @@
 ---
-title: "For teams operating multi-agent delegation chains"
+title: "For multi-agent platform teams"
 ---
 
 

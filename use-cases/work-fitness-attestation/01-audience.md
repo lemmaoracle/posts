@@ -1,5 +1,5 @@
 ---
-title: "For teams verifying staff work-fitness"
+title: "For work-fitness teams"
 ---
 
 

@@ -1,5 +1,5 @@
 ---
-title: "For finance and governance teams delegating spend to AI agents"
+title: "For finance and governance teams"
 ---
 
 

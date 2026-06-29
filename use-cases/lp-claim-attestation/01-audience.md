@@ -1,5 +1,5 @@
 ---
-title: "For DeFi teams bounding LP participation by eligibility"
+title: "For DeFi protocol teams"
 ---
 
 

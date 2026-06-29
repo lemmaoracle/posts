@@ -1,5 +1,5 @@
 ---
-title: "For businesses moving EUDR-covered commodities into the EU"
+title: "For EUDR-covered businesses"
 ---
 
 
