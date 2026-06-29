@@ -3,7 +3,7 @@ title: "For enterprise RAG teams"
 ---
 
 
-You index thousands of internal documents into RAG every day, while identity with the source, issuer signatures, and revision history quietly drop at the moment of ingestion.
+Source identity, issuer signatures, and revision history dropping the moment documents are ingested into RAG, solved by provenance anchored through ingestion.
 
 - Heads and architects of enterprise RAG and knowledge platforms
 - AI product owners ingesting internal documents (policies, contracts, SOPs, technical specs) at scale

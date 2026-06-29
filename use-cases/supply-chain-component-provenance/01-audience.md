@@ -3,7 +3,7 @@ title: "For procurement and quality teams"
 ---
 
 
-You receive component provenance (country of origin, manufacturing lot, modification history) as Excel sheets and supplier-submitted PDFs, with no structural way to detect tampering several tiers back.
+Receiving component provenance as Excel sheets and supplier-submitted PDFs with no structural way to detect tampering several tiers back, solved by cryptographic provenance.
 
 - Procurement leads and supply chain management at manufacturers (automotive, electronics, industrial equipment)
 - Quality assurance teams setting up traceability and recall-response evidence at the component level

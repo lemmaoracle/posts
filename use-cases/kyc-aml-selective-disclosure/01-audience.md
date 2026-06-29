@@ -3,7 +3,7 @@ title: "For KYC compliance teams"
 ---
 
 
-"Share to demonstrate compliance" and "minimize data sharing" run in parallel inside the same regulation, and every cross-border PII transfer means revalidating against GDPR, the amended APPI, or another data-protection law.
+Resolve the bind between sharing to demonstrate compliance and minimizing data — proving the required attributes with zero-knowledge instead of transferring PII across borders.
 
 - CCOs, KYC/AML leads, and DPOs at banks, fintechs, and crypto-asset service providers
 - Teams aligning to FATF Travel Rule, extraterritorial GDPR, the amended APPI, and FSA guidelines

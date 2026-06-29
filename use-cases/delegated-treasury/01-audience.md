@@ -3,7 +3,7 @@ title: "For finance and governance teams"
 ---
 
 
-You've started handing SaaS renewals, procurement orders, and contractor payments to AI agents while still managing spend caps and approval thresholds through a mix of prompts and internal documents, and when prompt injection hits, you can't show the agent stayed within authority.
+Prove an agent stayed within authority even when prompt injection hits — replacing soft prompt-based spend caps with a cryptographic attestation.
 
 - CFOs, treasurers, and controllers at enterprises rolling out AI agents
 - Heads of SaaS procurement and purchasing ops who have agents in the loop

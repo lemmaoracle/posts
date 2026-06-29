@@ -3,7 +3,7 @@ title: "For credit and screening teams"
 ---
 
 
-Every time you share a credit or sanctions decision with another firm or auditor, you have to choose between shipping the reasons and scores along with it — moving leakage risk — or making them re-screen the same party from scratch.
+End the choice between shipping the reasons and scores — moving leakage risk — and making the other side re-screen the same party, by sharing only the decision, proven.
 
 - Credit / compliance leads at banks, FinTechs, and crypto exchanges
 - Procurement, purchasing, and risk teams at manufacturers, trading firms, and critical-infrastructure operators running supplier vetting

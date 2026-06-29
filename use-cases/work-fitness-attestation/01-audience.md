@@ -3,7 +3,7 @@ title: "For work-fitness teams"
 ---
 
 
-Where employment requires health checks, training, or qualifications (food/retail, manufacturing/critical-infra, logistics), showing stool-test results or medical data becomes a storage-and-leakage liability for special-category data.
+Show that a worker is fit for duty without exposing stool-test results or medical data — eliminating the storage-and-leakage liability for special-category data.
 
 - Hygiene managers in food/retail; safety and special-training leads in manufacturing/infra
 - Teams verifying work-fitness across many staff or contractors

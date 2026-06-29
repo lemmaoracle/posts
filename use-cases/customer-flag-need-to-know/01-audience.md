@@ -3,7 +3,7 @@ title: "For teams running customer flags"
 ---
 
 
-You run internal "handle with care" flags on customers with past trouble, but showing the reason to the front line invites leakage and friction, while hiding it leaves you unable to later show the flag was legitimate.
+Resolve the bind between showing a flag's reason — inviting leakage and friction — and hiding it, leaving you unable to prove the flag was legitimate, by proving the basis without revealing it.
 
 - Hospitality, retail & services, and membership businesses running customer-handling flags
 - Finance teams that must share high-risk-customer or transaction-restriction flags with the front line

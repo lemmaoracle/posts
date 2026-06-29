@@ -3,7 +3,7 @@ title: "For AI citation-integrity teams"
 ---
 
 
-Vector DB rebuilds and embedding drift quietly break the mapping between an AI answer's citation and the source version that was live at the time.
+Vector DB rebuilds and embedding drift breaking the link between an AI answer's citation and the source version live at the time, solved by verifiable citation provenance.
 
 - Product leads and legal heads at legal-tech (case research, contract analysis AI)
 - Teams running enterprise knowledge platforms where citation integrity in AI answers has become an operational issue

@@ -3,7 +3,7 @@ title: "For CBAM compliance teams"
 ---
 
 
-You export to the EU or import CBAM-covered categories into it, and in the 2026 reporting cycle you're caught between auditors now asking for evidence and suppliers asking why they must share more than before.
+Attest CBAM conformance without making suppliers expose raw data to auditors — resolving the bind between disclosure and confidentiality.
 
 - Regulatory-affairs leads at manufacturers exporting steel, aluminum, cement, or fertilizer to the EU
 - Procurement leads gathering CBAM evidence from upstream suppliers, including multi-tier suppliers they don't directly contract with
