@@ -1,6 +1,6 @@
 ---
 title: "Agentic Payment Fraud"
-abstract: "Per-call delegated authority for AI agent payments — proven who delegated, within what scope, and up to what limit."
+abstract: "Attach a ZK proof to every AI-agent payment call — who delegated, within what scope, and up to what limit — so the receiving side can verify the delegation cryptographically before settlement, instead of trusting an API key."
 thesis: "Paid ≠ delegated"
 pillar: agent-authority-proof
 industries:

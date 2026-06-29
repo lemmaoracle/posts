@@ -1,6 +1,6 @@
 ---
 title: "Let AI Use Internal Documents Without Touching the Raw Data"
-abstract: "Keep confidential documents encrypted while passing AI only the needed facts/attributes — with proof. The AI never touches raw PII or originals, and what it used remains provable after the fact."
+abstract: "Keep confidential documents encrypted while passing AI only the facts and attributes it needs, with proof, so the AI never touches raw PII or originals and you can prove afterward what it actually used."
 thesis: "Letting AI use it ≠ handing over the raw data"
 pillar: verifiable-ai
 industries:

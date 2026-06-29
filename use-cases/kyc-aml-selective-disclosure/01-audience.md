@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For compliance teams caught between sharing and minimizing KYC data"
 ---
 
 
-Are you still photocopying the same KYC packet for every bank, exchange, and counterparty? Every time PII crosses a border, does another team have to revalidate it against GDPR, the amended APPI, or local data protection laws?
-
-"Share to demonstrate compliance" and "minimize data sharing" coexist inside the same regulation. Do you have a technical path that satisfies both at once?
+"Share to demonstrate compliance" and "minimize data sharing" run in parallel inside the same regulation, and every cross-border PII transfer means revalidating against GDPR, the amended APPI, or another data-protection law — this is for compliance teams at banks, fintechs, and crypto-asset firms in that bind.
 
 - CCOs, KYC/AML leads, and DPOs at banks, fintechs, and crypto-asset service providers
 - Teams aligning to FATF Travel Rule, extraterritorial GDPR, the amended APPI, and FSA guidelines

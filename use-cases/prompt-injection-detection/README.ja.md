@@ -1,6 +1,6 @@
 ---
 title: "プロンプトインジェクションを、見せずに検知する。"
-abstract: "不可視 Unicode・隠しコマンドで「人が見た入力」と「AI が読む入力」がずれるプロンプトインジェクション。Lemma で入力の normalized 形を hash 化し、人が意図した入力と AI が受け取った入力の visible_eq を runtime に検証。content を開示せずに、改ざんを検知。"
+abstract: "不可視 Unicode や隠しコマンドで「人が見た入力」と「AI が読む入力」がずれる prompt-injection を検知します。Lemma が入力の normalized 形を hash 化し、人が意図した入力と AI が受け取った入力の visible_eq を runtime に検証するため、content を開示せずに改ざんを検知できます。"
 thesis: "AI が読んだ ≠ 人が見た"
 pillar: verifiable-ai
 industries:

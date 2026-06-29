@@ -1,6 +1,6 @@
 ---
 title: "Prove AI model integrity across version changes, retroactively."
-abstract: "When you update an AI model (v3.5 → v4.0, etc.), you want to verify later whether past decisions are reproducible or whether results change. Lemma commits each point-in-time modelId and policyHash at decision time, keeping past decision logic cryptographically traceable even after the model updates."
+abstract: "When you update an AI model (v3.5 → v4.0, etc.), you often need to verify later whether past decisions are reproducible or whether the results change. Lemma commits each point-in-time modelId and policyHash at decision time, so past decision logic stays cryptographically traceable even after the model updates."
 thesis: "The model updates ≠ past decisions become irreproducible"
 pillar: verifiable-ai
 industries:

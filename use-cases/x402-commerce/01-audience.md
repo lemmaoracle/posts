@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For teams designing agent commerce on x402"
 ---
 
 
-Are you building on x402 rails, where buyer agents and seller agents transact in milliseconds? Are seller claims — inventory, price, SLA, identity — still being trusted on plaintext API responses and reputation scores?
-
-Settlement is millisecond-fast. Reputation only delivers post-incident penalties; it does not prevent commits. In a world of ephemeral agents, the counterparty may not even exist by the time the lie is discovered.
+Settlement runs in milliseconds on x402 rails, yet seller claims — inventory, price, SLA, identity — are still trusted on plaintext API responses and reputation scores — this is for teams building agent-payment platforms in that position.
 
 - Operators of agent-commerce platforms and marketplaces built on the x402 protocol
 - Product leads designing buyer and seller agents in MCP-compatible agent ecosystems

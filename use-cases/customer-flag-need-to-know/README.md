@@ -1,6 +1,6 @@
 ---
 title: "Need-to-Know Customer Flags"
-abstract: "Pass a \"how to handle this customer\" flag to the front line as a proof — without exposing the reason. Only authorized staff can see the basis, and who set it when stays tamper-proof."
+abstract: "Pass a customer-handling flag to the front line as a proof of only the action needed — without exposing the reason — so the basis stays visible to authorized staff alone and who set it when remains tamper-proof."
 thesis: "The action travels. The reason doesn't."
 pillar: regulatory-attribute-proof
 industries:

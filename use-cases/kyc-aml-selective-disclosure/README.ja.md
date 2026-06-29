@@ -1,6 +1,6 @@
 ---
 title: "KYC/AML 選択的開示"
-abstract: "KYC 属性を共有せずに、属性ごとの ZK 証明だけで規制要件を満たします。"
+abstract: "顧客の KYC 属性そのものを共有せずに、属性ごとの ZK 証明だけで KYC/AML の規制要件を満たします。PII を越境させないまま、コンプライアンスとデータ最小化を両立できます。"
 thesis: "申告される ≠ 検証されている"
 pillar: regulatory-attribute-proof
 industries:

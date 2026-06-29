@@ -1,9 +1,9 @@
 ---
-title: "Who this is for"
+title: "For teams verifying age-restricted sales"
 ---
 
 
-For those selling products gated by age or eligibility — alcohol, tobacco, pharmacy. Taking a birth date or ID at every check makes that storage a leakage surface. "Verified" and "handed over the birth date" are not the same.
+Handling goods gated by age — alcohol, tobacco, pharmacy — where taking a birth date or ID at every check turns that storage into a leakage surface: this is for teams in that position.
 
 - Retail, convenience, and e-commerce handling age-restricted goods
 - Unmanned stores, vending, self-checkout where in-person checks are hard

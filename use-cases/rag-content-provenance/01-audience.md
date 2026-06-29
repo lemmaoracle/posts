@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For teams running enterprise RAG on internal documents"
 ---
 
 
-Is your enterprise RAG indexing thousands of internal documents every day? At ingestion, are identity with the source, issuer signatures, and revision history all being quietly dropped?
-
-When the AI cites a specific sentence in an answer, can you cryptographically trace it back to the currently-valid version of the original document — from the indexed chunk forward?
+Indexing thousands of internal documents into RAG every day, while identity with the source, issuer signatures, and revision history quietly drop at the moment of ingestion — this is for teams in that position.
 
 - Heads and architects of enterprise RAG and knowledge platforms
 - AI product owners ingesting internal documents (policies, contracts, SOPs, technical specs) at scale

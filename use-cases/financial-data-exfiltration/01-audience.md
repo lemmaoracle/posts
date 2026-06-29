@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For financial institutions running cross-organization access"
 ---
 
 
-Secondments, contractors, joint ventures, agency partners — cross-organization personnel movement is daily reality in financial services. Are you still running employees who hold valid credentials and legitimate access to both organizations' customer data on logs that can be disputed?
-
-When an incident surfaces, can your organization prove who accessed what, and when, in a matter of hours?
+You hold people with valid credentials and legitimate access to both organizations' customer data — secondments, contractors, JVs, agency partners — and when an incident surfaces you can't prove who accessed what, and when, within hours; this is for financial institutions in that position.
 
 - CISOs and compliance leads at financial institutions operating secondment, contractor, or agency partner models
 - Information security leads responding to amended APPI, FSA cybersecurity guidelines, data residency requirements, and extraterritorial GDPR application

@@ -1,9 +1,9 @@
 ---
-title: "Who this is for"
+title: "For teams presenting or verifying credentials"
 ---
 
 
-For those presenting or verifying academic records, qualifications, and enrollment/graduation in hiring, transfer, and reskilling. Exchanging certificate PDFs or originals carries forgery, tampering, and reuse risk — and tends to over-disclose the individual's data.
+Every time you exchange academic records, qualifications, or enrollment/graduation in hiring, transfer, or reskilling, the certificate PDFs and originals carry forgery, tampering, and reuse risk while over-disclosing the individual's data — this is for those in that position.
 
 - Universities, education and certification bodies that issue records, completions, qualifications
 - Corporate HR and schools verifying credentials in hiring/transfer

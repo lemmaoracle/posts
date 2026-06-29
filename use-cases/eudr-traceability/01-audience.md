@@ -1,9 +1,9 @@
 ---
-title: "Who this page is for"
+title: "For businesses moving EUDR-covered commodities into the EU"
 ---
 
 
-You move EUDR-covered commodities into the EU — directly, or as the trader between producer and importer. The 2026 due-diligence deadline is here, your suppliers don't all speak the same language about what "geolocation evidence" means, and you're holding onto liability for chains you don't fully see.
+With the 2026 due-diligence deadline here, your suppliers don't all speak the same language about what "geolocation evidence" means and you carry liability for chains you don't fully see — this is for businesses moving EUDR-covered commodities into the EU.
 
 - Procurement and trade-compliance leads at EU-bound exporters of coffee, cocoa, palm oil, soy, rubber, beef, or timber
 - Cooperatives and traders aggregating producer-side data across smallholder networks

@@ -1,6 +1,6 @@
 ---
 title: "Tamper-Proof Internal Control & Approval Records"
-abstract: "Prove approvals and segregation of duties happened \"under legitimate authority and process\" — verified independently by auditors without exposing contents, tamper-proof, and durable across staff turnover."
+abstract: "Prove that approvals and segregation of duties happened \"under legitimate authority and process,\" so auditors can verify it independently without seeing the contents. The records cannot be tampered with afterward, and the basis survives staff turnover."
 thesis: "Approved ≠ provably legitimate"
 pillar: verifiable-origin
 industries:

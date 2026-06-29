@@ -1,6 +1,6 @@
 ---
 title: "Presenting Academic & Employment Credentials"
-abstract: "Prove you hold a degree, qualification, or employment record — without sending the original. Employers and schools verify without seeing the contents; forgery-proof. Aligned with W3C VC 2.0."
+abstract: "Prove that you hold a degree, qualification, or employment record without sending the original, so employers and schools can verify it without seeing the contents and forgery becomes impossible — all aligned with the W3C VC 2.0 standard."
 thesis: "Submitted ≠ authentic"
 pillar: verifiable-origin
 industries:

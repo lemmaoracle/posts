@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For teams operating multi-agent delegation chains"
 ---
 
 
-An orchestrator calls sub-agents. Sub-agents reach external tools via MCP. When something goes wrong in that chain — wrong decision, data leak, unexpected access — are you still piecing together "who authorized whom for what" from logs and agent memory?
-
-Logs are mutable and fragmented across systems. Do you have a path that keeps the delegation chain itself cryptographically traceable?
+When something goes wrong in an orchestrator-to-sub-agent-to-tool (MCP) chain, you're left piecing together "who authorized whom for what" from mutable, fragmented logs and agent memory — this is for teams running multi-agent platforms in that position.
 
 - AI platform and product leads rolling out multi-agent orchestration
 - Engineering leads building tool ecosystems on MCP servers and A2A protocols

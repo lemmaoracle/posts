@@ -1,9 +1,9 @@
 ---
-title: "Who this is for"
+title: "For sites recording complaint and incident response"
 ---
 
 
-For sites that may later be asked "how did you handle it then?" — food safety, injury, complaints. Records survive, but is there a guarantee they weren't rewritten? Can you show the response was legitimate without exposing the customer's data or details?
+On food safety, injury, and complaints, you may be asked years later how you handled it — and there's no guarantee the response records you kept weren't rewritten; this is for sites in that position.
 
 - Quality, safety, and customer-care leads in hospitality, food service, retail, facilities
 - Teams required to evidence response records for PL, litigation, or regulators

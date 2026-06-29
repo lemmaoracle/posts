@@ -1,9 +1,9 @@
 ---
-title: "Who this is for"
+title: "For internal-control teams audited on approval legitimacy"
 ---
 
 
-For those asked, in audit, whether "this approval was made under legitimate authority and process" — in internal control (J-SOX) and approval workflows. Workflow logs survive, but is there a guarantee they weren't rewritten? Can you show the legitimacy of segregation of duties (who may approve) without exposing the contents?
+Workflow logs survive, but with no guarantee they weren't rewritten, you can't show that an approval or segregation of duties was legitimate when a J-SOX audit asks — this is for internal-control and internal-audit teams in that position.
 
 - Internal-control, internal-audit, and finance leads at listed companies, finance, manufacturing
 - Teams required to evidence approval workflows (requisition, payment, segregation of duties)
