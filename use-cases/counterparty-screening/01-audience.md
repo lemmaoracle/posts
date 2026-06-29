@@ -1,11 +1,9 @@
 ---
-title: "Who this page is for"
+title: "For teams sharing credit and sanctions decisions"
 ---
 
 
-Are you in the bind where, every time you want to share a credit or sanctions decision with another firm or auditor, you have to choose between shipping the basis along with the decision or letting them re-check the same party themselves? Ship the reasons, scores, and query history and you move leakage, defamation, and interference risk. Withhold them and the group companies, the partner banks, and the trading partners each re-screen the same party from scratch.
-
-Do you have a technical path that keeps "share the trust of the decision" and "don't share the basis" satisfied at the same time?
+Every time you share a credit or sanctions decision with another firm or auditor, you have to choose between shipping the reasons and scores along with it — moving leakage risk — or making them re-screen the same party from scratch; this is for credit and compliance teams in that bind.
 
 - Credit / compliance leads at banks, FinTechs, and crypto exchanges
 - Procurement, purchasing, and risk teams at manufacturers, trading firms, and critical-infrastructure operators running supplier vetting

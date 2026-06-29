@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For teams accountable for AI citation integrity"
 ---
 
 
-When the AI replies "based on internal policy section X," can you later prove that the citation came from the exact version of the policy that was live at the time? Are vector DBs being rebuilt, embeddings drifting, and citation-to-source mappings quietly slipping?
-
-Cited ≠ verified. Do you have a path that cryptographically traces the basis behind an AI's answer back to the source?
+Vector DB rebuilds and embedding drift quietly break the mapping between an AI answer's citation and the source version that was live at the time — this is for teams where citation integrity has become an operational issue.
 
 - Product leads and legal heads at legal-tech (case research, contract analysis AI)
 - Teams running enterprise knowledge platforms where citation integrity in AI answers has become an operational issue

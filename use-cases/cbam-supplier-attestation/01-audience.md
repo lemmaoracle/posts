@@ -1,9 +1,9 @@
 ---
-title: "Who this page is for"
+title: "For teams gathering CBAM evidence"
 ---
 
 
-Your business exports to the EU, or sits inside the EU as an importer for products in CBAM-covered categories. The 2026 reporting cycle is no longer a forecast — auditors are starting to ask for evidence, and your suppliers are starting to ask why they have to share more than they used to.
+You export to the EU or import CBAM-covered categories into it, and in the 2026 reporting cycle you're caught between auditors now asking for evidence and suppliers asking why they must share more than before — this is for teams in that position.
 
 - Regulatory-affairs leads at manufacturers exporting steel, aluminum, cement, or fertilizer to the EU
 - Procurement leads gathering CBAM evidence from upstream suppliers, including multi-tier suppliers they don't directly contract with

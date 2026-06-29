@@ -1,6 +1,6 @@
 ---
 title: "Delegate procurement to AI agents."
-abstract: "You want an AI agent to handle routine ordering. With Lemma, \"spend ceiling,\" \"budget category\" and \"approved vendors\" become a scoped delegation — inside scope the agent orders autonomously, outside it stops."
+abstract: "With Lemma, you can hand routine ordering to an AI agent as a delegation scoped by spend ceiling, budget category, and approved vendors: inside that scope the agent orders autonomously, and outside it the request simply stops — so you hand over scope, not the whole decision."
 thesis: "Hand over scope, not the whole decision"
 pillar: agent-authority-proof
 industries:

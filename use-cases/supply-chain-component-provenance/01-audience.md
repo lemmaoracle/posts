@@ -1,11 +1,9 @@
 ---
-title: "This page is for"
+title: "For procurement and quality teams tracing component provenance"
 ---
 
 
-Are you still receiving component provenance (country of origin, manufacturing lot, modification history) as Excel sheets and supplier-submitted PDFs, then aggregating internally? Does it feel like there's no structural way to detect tampering several tiers back?
-
-In a world where autonomous procurement agents read component attributes and confirm orders, do those attributes carry the basis for "which issuer signed this, when, and untampered"?
+Receiving component provenance (country of origin, manufacturing lot, modification history) as Excel sheets and supplier-submitted PDFs, with no structural way to detect tampering several tiers back — this is for procurement and quality teams in that position.
 
 - Procurement leads and supply chain management at manufacturers (automotive, electronics, industrial equipment)
 - Quality assurance teams setting up traceability and recall-response evidence at the component level

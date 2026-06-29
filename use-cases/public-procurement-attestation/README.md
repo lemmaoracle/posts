@@ -1,6 +1,6 @@
 ---
 title: "Public Procurement Attestation"
-abstract: "Verify supplier eligibility for public procurement via ZK attestations of qualifications, track record, and certifications — buyers confirm compliance, suppliers protect proprietary information."
+abstract: "Verify supplier origin, track record, and eligibility attributes for public procurement via ZK attestations with no raw-document submission, so buyers can confirm the requirements are met while bidders keep their originals and protect proprietary information."
 thesis: "Submitted ≠ proven eligible"
 pillar: regulatory-attribute-proof
 industries:

@@ -1,6 +1,6 @@
 ---
 title: "Delegate API billing to AI agents."
-abstract: "You want an AI agent to call external APIs (SaaS, payments, data), without the risk of handing it the API key. With Lemma, \"billing ceiling,\" \"allowed APIs\" and \"validity\" become a scoped delegation — via x402, inside scope the agent runs autonomously, outside it stops."
+abstract: "You want an AI agent to call external APIs (SaaS, payments, data) without the risk of handing over the API key. Lemma issues a scoped delegation — billing ceiling, allowed APIs, and validity — so that via x402 the agent runs autonomously inside scope and stops before acting outside it, letting you operate safely without ever sharing the key."
 thesis: "Handing over the key ≠ handing over scope"
 pillar: agent-authority-proof
 industries:

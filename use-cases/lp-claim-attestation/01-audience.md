@@ -1,9 +1,9 @@
 ---
-title: "Who this page is for"
+title: "For DeFi teams bounding LP participation by eligibility"
 ---
 
 
-You run a DeFi protocol that needs to bound LP participation by regulatory eligibility — and you don't want the result to be "we collect KYC docs in a custodial database now." The compromises feel binary today: either accept the privacy and custodian cost of off-chain KYC, or accept the regulatory tail risk of permissionless participation.
+You must bound LP participation by regulatory eligibility but don't want the result to be a custodial KYC database, leaving the choice looking binary — the cost of off-chain KYC or the tail risk of permissionless participation — and this is for protocol teams in that bind.
 
 - Protocol design leads building regulated DEXes, lending markets, or cross-border liquidity venues
 - Compliance and risk owners weighing privacy promises against AML / KYC obligations

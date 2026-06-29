@@ -1,9 +1,9 @@
 ---
-title: "Who this is for"
+title: "For safety teams confirming qualified assignment"
 ---
 
 
-For those asked, after the fact, whether "qualified, safety-trained personnel performed this hazardous/regulated task." Rosters and license copies pile up — but should the worker's sensitive record be disclosed, and can you show the qualification was valid at the time, to a prime or auditor?
+Rosters and license copies pile up, yet you can't show a prime or auditor whether a qualification was valid at the time without disclosing the worker's sensitive record — this is for safety and construction managers on hazardous and regulated work.
 
 - Safety / construction managers in manufacturing, critical infrastructure, construction
 - Primes and clients verifying many workers' and subcontractors' qualifications

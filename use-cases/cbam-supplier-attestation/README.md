@@ -1,6 +1,6 @@
 ---
 title: "CBAM Supplier Attestation"
-abstract: "Chain country, origin, and carbon-intensity attributes required by EU CBAM as cryptographic attestations — without exposing supplier raw data or trade secrets."
+abstract: "Chain the country, origin, and carbon-intensity attributes required by EU CBAM as cryptographic attestations without exposing supplier raw data, so importers can verify CBAM compliance against cryptographic facts while each supplier's production data stays inside its own perimeter."
 thesis: "Reported ≠ provable"
 pillar: regulatory-attribute-proof
 industries:

@@ -1,6 +1,6 @@
 ---
 title: "EUDR Traceability"
-abstract: "Chain origin, harvest date, and permit attributes required by EUDR through ZK attestations across the supply chain — no raw production records shared."
+abstract: "Chain the origin, harvest date, and permit attributes required by EUDR through ZK attestations across the supply chain, verifying them tier by tier without sharing any raw production records."
 thesis: "Traced ≠ provable"
 pillar: regulatory-attribute-proof
 industries:

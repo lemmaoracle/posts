@@ -1,6 +1,6 @@
 ---
 title: "CBAM サプライヤ属性証明"
-abstract: "EU CBAM が要求する国・原産・カーボン強度の属性を、サプライヤの原本データを開示せずに ZK 証明として連鎖する設計。"
+abstract: "EU CBAM が要求する国・原産・カーボン強度の属性を、サプライヤの原本データを開示せずに ZK 証明として連鎖します。輸入者は各社の生産データを社内に留めたまま、CBAM 適合を暗号的事実に対して検証できます。"
 thesis: "申告される ≠ 証明できる"
 pillar: regulatory-attribute-proof
 industries:

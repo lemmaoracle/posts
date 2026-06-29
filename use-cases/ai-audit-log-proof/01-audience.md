@@ -1,9 +1,9 @@
 ---
-title: "This page is for"
+title: "For governance teams accountable for AI decisions"
 ---
 
 
-Lending. Insurance. Underwriting. Clinical triage. Public benefits. AI makes these decisions every day. A year later, when an appeal or an audit lands, can your organization return the original rationale? Once the model is updated, can you precisely reconstruct what it decided and why?
+For those whose AI makes daily high-stakes decisions — lending, insurance, underwriting, clinical triage, public benefits — and who get asked for the original rationale when an appeal or audit lands later.
 
 The EU AI Act, ISO 42001, and FSA AI governance guidelines have all moved the bar from "logs exist" to "each decision's rationale is cryptographically sealed as tamper-proof evidence."
 

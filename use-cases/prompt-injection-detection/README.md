@@ -1,6 +1,6 @@
 ---
 title: "Detect prompt injection without exposing content."
-abstract: "Prompt injection uses invisible Unicode and hidden commands to make \"what the human saw\" diverge from \"what the AI reads.\" Lemma hashes the normalized form of the input and verifies, at runtime, the visible_eq between the input the human intended and the input the AI received — detecting tampering without disclosing the content."
+abstract: "Detect prompt injection, where invisible Unicode and hidden commands make what the human saw diverge from what the AI reads, by having Lemma hash the normalized input and verify at runtime the visible_eq between the intended and received input — catching tampering without disclosing the content."
 thesis: "What the AI read ≠ what the human saw"
 pillar: verifiable-ai
 industries:

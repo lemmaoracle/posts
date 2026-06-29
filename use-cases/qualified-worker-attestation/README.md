@@ -1,6 +1,6 @@
 ---
 title: "Proof of Qualified Assignment & Safety Training"
-abstract: "Prove that qualified, safety-trained personnel performed a task — without exposing their record. Primes and auditors verify only \"qualified,\" tamper-free."
+abstract: "Prove that qualified, safety-trained personnel performed a task without exposing their record. Primes and auditors can verify only that the worker is qualified, and the records cannot be tampered with afterward."
 thesis: "Assigned ≠ qualified"
 pillar: regulatory-attribute-proof
 industries:
