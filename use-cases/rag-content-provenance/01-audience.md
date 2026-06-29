@@ -3,7 +3,7 @@ title: "For enterprise RAG teams"
 ---
 
 
-Indexing thousands of internal documents into RAG every day, while identity with the source, issuer signatures, and revision history quietly drop at the moment of ingestion — this is for teams in that position.
+You index thousands of internal documents into RAG every day, while identity with the source, issuer signatures, and revision history quietly drop at the moment of ingestion.
 
 - Heads and architects of enterprise RAG and knowledge platforms
 - AI product owners ingesting internal documents (policies, contracts, SOPs, technical specs) at scale

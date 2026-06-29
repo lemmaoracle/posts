@@ -3,7 +3,7 @@ title: "For procurement and ESG teams"
 ---
 
 
-Running CBAM, EUDR, and DPP (Digital Product Passport) compliance on Excel sheets and supplier-submitted PDFs, where verifying multi-tier supply chains still comes down to self-declaration — this is for procurement and ESG teams in that position.
+You run CBAM, EUDR, and DPP (Digital Product Passport) compliance on Excel sheets and supplier-submitted PDFs, where verifying multi-tier supply chains still comes down to self-declaration.
 
 - ESG, sustainability, and export-compliance leads at manufacturers, forestry, and consumer goods companies
 - Procurement and supply chain teams aligning to CBAM (Carbon Border Adjustment Mechanism), EUDR (EU Deforestation Regulation), and DPP (under ESPR)

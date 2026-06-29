@@ -3,7 +3,7 @@ title: "For public-procurement teams"
 ---
 
 
-Today's verification path forces buyers to take custody of submitted documents and forces bidders to disclose more than the evaluator actually checks, and that asymmetry pushes risk in both directions — this is for those who evaluate, supply into, or design the policy for public procurement.
+Today's verification path forces buyers to take custody of submitted documents and forces bidders to disclose more than the evaluator actually checks, and that asymmetry pushes risk in both directions.
 
 - Procurement leads at municipalities and central-government buyers
 - Procurement-policy designers operationalizing eligibility schemas across multiple tenders

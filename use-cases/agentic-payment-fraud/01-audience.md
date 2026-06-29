@@ -3,7 +3,7 @@ title: "For teams running AI agent payments"
 ---
 
 
-Your AI agents have started paying for cloud resources, API access, and cross-agent settlement, while the chain of authority behind each payment is still held together by an API key and a prompt-engineered guardrail — this is for teams in that position.
+Your AI agents have started paying for cloud resources, API access, and cross-agent settlement, while the chain of authority behind each payment is still held together by an API key and a prompt-engineered guardrail.
 
 - Security leads at organizations starting to embed AI agents into operational workflows
 - Developers and operators running payments over x402 / MCP / A2A environments

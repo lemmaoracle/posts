@@ -3,7 +3,7 @@ title: "For AI governance teams"
 ---
 
 
-For those whose AI makes daily high-stakes decisions — lending, insurance, underwriting, clinical triage, public benefits — and who get asked for the original rationale when an appeal or audit lands later.
+Your AI makes daily high-stakes decisions — lending, insurance, underwriting, clinical triage, public benefits — and when an appeal or audit lands later, you get asked for the original rationale.
 
 The EU AI Act, ISO 42001, and FSA AI governance guidelines have all moved the bar from "logs exist" to "each decision's rationale is cryptographically sealed as tamper-proof evidence."
 

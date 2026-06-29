@@ -3,7 +3,7 @@ title: "For agent-commerce teams"
 ---
 
 
-Settlement runs in milliseconds on x402 rails, yet seller claims — inventory, price, SLA, identity — are still trusted on plaintext API responses and reputation scores — this is for teams building agent-payment platforms in that position.
+Settlement runs in milliseconds on x402 rails, yet seller claims — inventory, price, SLA, identity — are still trusted on plaintext API responses and reputation scores.
 
 - Operators of agent-commerce platforms and marketplaces built on the x402 protocol
 - Product leads designing buyer and seller agents in MCP-compatible agent ecosystems
