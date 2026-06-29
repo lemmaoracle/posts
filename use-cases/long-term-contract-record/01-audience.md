@@ -3,7 +3,7 @@ title: "For long-term contract owners"
 ---
 
 
-You hold 15–20 year maintenance contracts and infrastructure ledgers and get asked years later what the price was, which spec was agreed, and whether the inspection actually happened — with no guarantee the surviving records weren't rewritten; this is for you.
+Prove years later that surviving records weren't rewritten — ending the doubt over price, spec, and whether the inspection really happened.
 
 - Long-term maintenance / contract managers in manufacturing and critical infrastructure (power, water, transport)
 - Public-sector teams accountable for ledgers and inspection records

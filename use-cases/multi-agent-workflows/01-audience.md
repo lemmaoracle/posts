@@ -3,7 +3,7 @@ title: "For multi-agent platform teams"
 ---
 
 
-When something goes wrong in an orchestrator-to-sub-agent-to-tool (MCP) chain, you're left piecing together "who authorized whom for what" from mutable, fragmented logs and agent memory — this is for teams running multi-agent platforms in that position.
+Replace piecing together "who authorized whom for what" from mutable, fragmented logs with a tamper-proof delegation trail — resolving the gap when something goes wrong.
 
 - AI platform and product leads rolling out multi-agent orchestration
 - Engineering leads building tool ecosystems on MCP servers and A2A protocols

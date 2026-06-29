@@ -3,7 +3,7 @@ title: "For teams putting AI on confidential documents"
 ---
 
 
-You want AI in operations but are stalled by the worry that internal documents or personal data leak to the model or outside — "want it, but scared" is the shared language, and this is for teams in that position.
+Put AI on confidential documents without letting them leak to the model or outside — clearing the worry that stalls adoption.
 
 - Enterprises handling confidential docs / PII whose AI adoption is blocked by leakage fears
 - Teams evaluating generative AI / RAG / agents but stuck on data governance

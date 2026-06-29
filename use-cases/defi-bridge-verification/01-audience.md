@@ -3,7 +3,7 @@ title: "For bridge security teams"
 ---
 
 
-Your cross-chain assets rest on a DVN threshold and RPC-node trust, with fully-signed messages executed by the receiving adapter as-designed and no independent origin check in between — this is for protocol and security teams who can't treat Ronin- and Wormhole-scale losses as someone else's problem.
+The risk of fully-signed cross-chain messages being executed as-designed with no independent origin check, prevented by verification before execution.
 
 - Protocol ops leads for DApps that depend on cross-chain messaging (LayerZero, Wormhole, IBC, etc.)
 - Security and audit leads for liquid staking and restaking protocols

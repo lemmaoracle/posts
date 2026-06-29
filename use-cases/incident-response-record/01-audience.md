@@ -3,7 +3,7 @@ title: "For incident-response sites"
 ---
 
 
-On food safety, injury, and complaints, you may be asked years later how you handled it — and there's no guarantee the response records you kept weren't rewritten; this is for sites in that position.
+The worry that the incident-response records you kept might have been rewritten, resolved by a tamper-proof trail.
 
 - Quality, safety, and customer-care leads in hospitality, food service, retail, facilities
 - Teams required to evidence response records for PL, litigation, or regulators
