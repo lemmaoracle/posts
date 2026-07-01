@@ -3,6 +3,7 @@ slug: "gemma4-verifiable-claim-check"
 date: "2026.06.30"
 category: "Announcement"
 section: "Essays"
+cover: "assets/cover-announcements.png"
 title: "Verifiable Claim-Check：オンデバイスのGemma 4と、暗号論的なモデル証明を組み合わせる"
 abstract: "GoogleのGemma 4ハッカソン（Safety & Trust部門）に、example-claim-checkを提出しました。AIの出力を、それを生成したモデルと暗号論的に結びつけるオープンソース（Apache 2.0）のリファレンス実装です。モデルをすり替えると証明が破綻し、それが即座に可視化されます。"
 tags:

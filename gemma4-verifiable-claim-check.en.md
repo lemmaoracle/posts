@@ -3,6 +3,7 @@ slug: "gemma4-verifiable-claim-check"
 date: "2026.06.30"
 category: "Announcement"
 section: "Essays"
+cover: "assets/cover-announcements.png"
 title: "Verifiable Claim-Check: pairing on-device Gemma 4 with cryptographic model attestation"
 abstract: "For Google's Gemma 4 hackathon (Safety & Trust track), we built example-claim-check — an open-source reference implementation that binds every AI verdict to the exact model that produced it. Swap the weights and the proof breaks, visibly. A reference for Verifiable AI."
 tags:
