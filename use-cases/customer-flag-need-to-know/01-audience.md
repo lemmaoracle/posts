@@ -1,10 +1,11 @@
 ---
-title: "For teams running customer flags"
+title: "For teams circulating risk flags to the front line"
 ---
 
 
-Resolve the bind between showing a flag's reason — inviting leakage and friction — and hiding it, leaving you unable to prove the flag was legitimate, by proving the basis without revealing it.
+Resolve the bind between showing a flag's reason — inviting leakage and inconsistent judgment — and hiding it, leaving you unable to prove the flag was legitimate, by circulating only the fact that a case applies, without revealing the basis.
 
-- Hospitality, retail & services, and membership businesses running customer-handling flags
-- Finance teams that must share high-risk-customer or transaction-restriction flags with the front line
-- Roles accountable for explaining the basis of a flag to complaints, subject-access requests, or audits
+- Retail & services, hospitality, and membership businesses running customer-handling flags (customer management, blacklist sharing)
+- Finance & insurance teams sharing credit flags, transaction restrictions, or high-risk parties with the front line
+- Public & infrastructure teams circulating risk signals such as two-person-rule triggers to the field
+- Roles accountable for explaining the basis for issuing a flag to complaints, subject-access requests, or audits

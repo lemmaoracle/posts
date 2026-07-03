@@ -7,4 +7,8 @@ The front line receives only a "handling category" (flagged / normal) as a proof
 
 The front line not holding the reason is itself **need-to-know minimization** — reducing leakage and inconsistent judgment. And later, against complaints, subject-access requests, or audits, "the flag was legitimate" can be explained while opening the basis only as needed.
 
+- The front line sees only the mark (the details stay on the org side via selective disclosure)
+- At audit time, the basis for issuing the mark can be proven after the fact
+- Your existing customer-management system stays as-is — you add only the proof layer
+
 *(A lawful operating design — flagging criteria, subject notification, retention — is assumed; we design this separately with legal.)*
