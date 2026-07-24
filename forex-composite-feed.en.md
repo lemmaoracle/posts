@@ -35,7 +35,7 @@ In Lemma feeds, "proof-backed" means a proof is issued where the data is born, a
 - **Anyone can re-verify the proof.** Each proof is verifiable with Groth16, and the public signals include the actual rate values. If re-verification succeeds, the values have not been tampered with.
 - **Verification is free — no key, no account.** From anywhere in the world, authenticity can be checked with public information alone.
 
-So "proof-backed" is not decoration meant to earn trust. It is a mechanism that lets you verify without having to trust. That distinction is the root of the later decision not to disclose sources.
+So "proof-backed" is not decoration meant to earn trust. It is a mechanism that lets you verify without presupposing trust. That distinction underpins the later decision not to disclose sources.
 
 ## What it returns
 
