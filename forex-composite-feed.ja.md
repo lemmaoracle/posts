@@ -12,7 +12,7 @@ tags:
   - zk-proof
 relatedLinks:
   - label: "検証センターで内訳を見る"
-    href: "https://lemma.frame00.com/ja/verify/"
+    href: "https://lemma.frame00.com/verify/"
   - label: "3つの中核技術（Pillars）"
     href: "https://lemma.frame00.com/ja/pillars/"
 ---
@@ -90,7 +90,7 @@ curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 # verified === total なら、全 proof 検証済み
 ```
 
-累計の検証実行数は公開レジストリ（`GET /v1/counters`）でも見られ、その数字自体にも検証センターで出典が付いています。検証コストは ¥0 です。
+累計の検証実行数は公開レジストリ（`GET /v1/counters`）でも見られ、その数字自体にも[検証センター](https://lemma.frame00.com/verify/)で出典が付いています。検証コストは ¥0 です。
 
 ### 詳細検証（値の束縛と、proof の再検証）
 

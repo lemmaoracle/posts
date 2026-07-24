@@ -90,7 +90,7 @@ curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 # if verified === total, all proofs are verified
 ```
 
-Cumulative verification counts are also available from the public registry (`GET /v1/counters`), and those numbers themselves carry provenance in the Verification Center. Verification costs ¥0.
+Cumulative verification counts are also available from the public registry (`GET /v1/counters`), and those numbers themselves carry provenance in the [Verification Center](https://lemma.frame00.com/verify/). Verification costs ¥0.
 
 ### Detailed verification (value binding and re-verifying the proof)
 
