@@ -35,7 +35,7 @@ In Lemma feeds, "proof-backed" means a proof is issued where the data is born, a
 - **Anyone can re-verify the proof.** Each proof is verifiable with Groth16, and the public signals include the actual rate values. If re-verification succeeds, the values have not been tampered with.
 - **Verification is free — no key, no account.** From anywhere in the world, authenticity can be checked with public information alone.
 
-So "proof-backed" is not decoration meant to earn trust. It is a mechanism that lets you verify without presupposing trust. That distinction underpins the later decision not to disclose sources.
+So "proof-backed" is not decoration meant to earn trust. It is a mechanism that lets you verify without presupposing trust. That distinction underpins the later decision not to put the raw source rates in the response.
 
 ## What it returns
 
@@ -54,7 +54,9 @@ The response includes the composite rates plus a `verification` object that show
     "date": "2026-07-23",
     "rates.JPY": 163.27832,
     "rates.JPY_scaled": 16327832000,
-    "rates.EUR": 0.877087
+    "rates.EUR": 0.877087,
+    "sourceRoot.frankfurter": "0x1cdd656f…",
+    "sourceRoot.erApi": "0x149dfeba…"
   },
   "verification": {
     "total": 29,
@@ -172,15 +174,15 @@ We currently use two sources, designed so more can be added later. The more sour
 
 ## How far we disclose sources
 
-Short version: we do not publish individual provider names or the raw rates we fetched.
+Short version: **raw rates fetched from the forex APIs stay private; the source APIs are disclosed.** In the response, `sourceRoot.frankfurter` and `sourceRoot.erApi` name which public APIs were used and carry the Merkle commitment root of each fetch.
 
-The point we most want to make is this: **you do not need the original values, because the ZK cryptographic binding already holds.** The `forex-average-v1` circuit proves that "the average was correctly computed from two inputs." If re-verification passes, the composite computation is confirmed. There was no need to put the originals in the API response — the proof already does that job.
+The point we most want to make is this: **you do not need those raw rates, because the ZK cryptographic binding already holds.** The `forex-average-v1` circuit proves that "the average was correctly computed from two inputs." If re-verification passes, the composite computation is confirmed. There was no need to put the originals in the API response — the proof already does that job.
 
-On top of that, the sources themselves are public APIs. Anyone can call them directly and obtain the original rates. Cross-checking against those values, a third party can also primitively confirm that "this composite was correctly computed from these sources." It is not hidden; it is reproducible.
+On top of that, the source APIs are disclosed. Anyone can call the same public APIs, build a commitment from the returned rates, and check whether it matches `sourceRoot.*`. Even without the raw rates in our response, a third party can primitively confirm that the fetch results were the same.
 
 Some forex API terms forbid redistributing the rates as fetched; serving a composite does not violate those terms. Because the design already lets you check without the originals, omitting them from the response is consistent with those terms.
 
-For feeds where the origin itself is the value — postal codes, holidays — we do the opposite and surface the sources (Japan Post, Cabinet Office) prominently. That is not a disclosure strategy; it is terms-of-use compliance, and "being that data" is the point. On the same substrate, a composite feed and an official single-source feed point information in opposite directions.
+For feeds where the origin itself is the value — postal codes, holidays — we surface the sources (Japan Post, Cabinet Office) as attribution. The forex composite feed exposes source identifiers and commitment roots; that is a different orientation from making "being that institution's data" the product.
 
 ## What we guarantee — and what we do not
 
