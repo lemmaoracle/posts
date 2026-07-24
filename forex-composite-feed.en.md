@@ -44,31 +44,31 @@ The response includes the composite rates plus a `verification` object that show
 ```json
 {
   "feedId": "forex/composite",
-  "docHash": "0x68d4bff9…",
+  "docHash": "0x…",
   "schema": "canonical-sort-v1",
-  "subjectId": "forex/composite-2026-07-23",
-  "createdAt": "2026-07-23 17:46:00",
+  "subjectId": "forex/composite-…",
+  "createdAt": "…",
   "attributes": {
     "source": "forex-composite",
     "base": "USD",
-    "date": "2026-07-23",
-    "rates.JPY": 163.27832,
-    "rates.JPY_scaled": 16327832000,
-    "rates.EUR": 0.877087,
-    "sourceRoot.frankfurter": "0x1cdd656f…",
-    "sourceRoot.erApi": "0x149dfeba…"
+    "date": "<YYYY-MM-DD>",
+    "rates.JPY": "<float>",
+    "rates.JPY_scaled": "<float × 10^8>",
+    "rates.EUR": "<float>",
+    "sourceRoot.frankfurter": "0x…",
+    "sourceRoot.erApi": "0x…"
   },
   "verification": {
     "total": 29,
     "verified": 29,
     "failed": 0,
     "verifyIds": ["…"],
-    "verifyUrl": "https://workers.lemma.workers.dev/v1/documents/0x68d4bff9…"
+    "verifyUrl": "https://workers.lemma.workers.dev/v1/documents/0x…"
   }
 }
 ```
 
-`verification.total` is the number of proofs attached to the document; `verified` is how many passed Groth16 verify; `failed` is the failure count. `verifyIds` are content-derived receipts from each verify call (the ID returned by `POST /v1/proofs/verify`); `verifyUrl` points at `GET /v1/documents/{docHash}` (the registration record). `rates.JPY_scaled` is the same scaled integer that appears in the proof's public inputs. The `rates` above are excerpted from a live API snapshot.
+`verification.total` is the number of proofs attached to the document; `verified` is how many passed Groth16 verify; `failed` is the failure count. `verifyIds` are content-derived receipts from each verify call (the ID returned by `POST /v1/proofs/verify`); `verifyUrl` points at `GET /v1/documents/{docHash}` (the registration record). `rates.JPY_scaled` is the same scaled integer that appears in the proof's public inputs. Rate values change with each snapshot (each call).
 
 Each proof includes the circuit's **public signals**, which contain the actual rate values. The public-input order for `forex-average-v1` is (confirm with `GET /v1/circuits/forex-average-v1`):
 
@@ -76,7 +76,7 @@ Each proof includes the circuit's **public signals**, which contain the actual r
 sourceRootA, sourceRootB, randomnessA, randomnessB, pathHash, averageRate
 ```
 
-The last field, `averageRate`, is the rate. Values are scaled by 10⁸ to avoid floating-point error — for example, `JPY = 163.27832` becomes `16327832000`.
+The last field, `averageRate`, is the rate. Values are scaled by 10⁸ to avoid floating-point error: `rates.<CCY>_scaled === rates.<CCY> × 10⁸`.
 
 ## Verification — two stages
 
@@ -106,9 +106,11 @@ You can separate "is this value in the public inputs?" from "does Groth16 accept
 curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest \
   | jq '{
       jpy: .attributes["rates.JPY"],
-      scaled: .attributes["rates.JPY_scaled"]
+      scaled: .attributes["rates.JPY_scaled"],
+      ok: (.attributes["rates.JPY_scaled"] == (.attributes["rates.JPY"] * 1e8 | round))
     }'
-# scaled === 16327832000 means it matches the public-input value
+# ok === true means the float and _scaled in the response match at ×10^8
+# scaled is the same integer as public-input averageRate
 ```
 
 Circuit public-input names:
@@ -125,7 +127,7 @@ With an API key, you can fetch the public-signal arrays themselves by `docHash` 
 curl -s -X POST https://workers.lemma.workers.dev/v1/verified-attributes/query \
   -H "Authorization: Bearer $LEMMA_API_KEY" \
   -H "content-type: application/json" \
-  -d '{"docHash":"0x68d4bff9…","attributes":[]}' \
+  -d '{"docHash":"<docHash from feed>","attributes":[]}' \
   | jq '.results[].proof | {circuitId, averageRate: .inputs[-1]}'
 # confirm inputs[-1] === rates.JPY_scaled
 ```
@@ -140,7 +142,7 @@ curl -s -X POST https://workers.lemma.workers.dev/v1/proofs/verify \
   -d '{
     "circuitId": "forex-average-v1",
     "proof": "<proof JSON or base64>",
-    "publicSignals": ["<sourceRootA>", "<sourceRootB>", "<randomnessA>", "<randomnessB>", "<pathHash>", "16327832000"]
+    "publicSignals": ["<sourceRootA>", "<sourceRootB>", "<randomnessA>", "<randomnessB>", "<pathHash>", "<averageRate>"]
   }' \
   | jq '{valid, verifyId, circuitId}'
 # valid === true means the pairing check passed; verifyId is the receipt
@@ -186,15 +188,16 @@ For feeds where the origin itself is the value — postal codes, holidays — we
 
 ## What we guarantee — and what we do not
 
-If we call it a proof, the boundary has to be clear. This feed's proof goes this far:
+This feed's proof covers only the following:
 
-- This composite rate was correctly computed by this composite procedure, and that value is included in a verified proof.
+- That the composite rate was computed according to the stated composite procedure
+- That that value is included in the public inputs of a verified proof
 
-What it does not say, also clearly:
+It does not cover the following:
 
-- It does not guarantee that any individual source's value is the "correct" market value. The proof covers the composite computation and value integrity — not the truth of the primary inputs.
+- That any individual source's value is the "correct" market rate
 
-The composite's job is precisely to narrow, in practice, the gap that "we cannot guarantee the truth of primary inputs" leaves open — by cross-checking multiple sources. Proofs handle "the value was correctly computed and not tampered with"; the composite handles "the value is reasonable." Not letting either one speak for both is the design's core.
+The proof addresses composite computation and value integrity, not the truth of the primary inputs. Reasonableness of those inputs is handled in practice by the composite step — cross-checking multiple sources. Correctness of computation and reasonableness of value are kept on separate mechanisms.
 
 ## Where it fits
 

@@ -44,31 +44,31 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
 ```json
 {
   "feedId": "forex/composite",
-  "docHash": "0x68d4bff9…",
+  "docHash": "0x…",
   "schema": "canonical-sort-v1",
-  "subjectId": "forex/composite-2026-07-23",
-  "createdAt": "2026-07-23 17:46:00",
+  "subjectId": "forex/composite-…",
+  "createdAt": "…",
   "attributes": {
     "source": "forex-composite",
     "base": "USD",
-    "date": "2026-07-23",
-    "rates.JPY": 163.27832,
-    "rates.JPY_scaled": 16327832000,
-    "rates.EUR": 0.877087,
-    "sourceRoot.frankfurter": "0x1cdd656f…",
-    "sourceRoot.erApi": "0x149dfeba…"
+    "date": "<YYYY-MM-DD>",
+    "rates.JPY": "<float>",
+    "rates.JPY_scaled": "<float × 10^8>",
+    "rates.EUR": "<float>",
+    "sourceRoot.frankfurter": "0x…",
+    "sourceRoot.erApi": "0x…"
   },
   "verification": {
     "total": 29,
     "verified": 29,
     "failed": 0,
     "verifyIds": ["…"],
-    "verifyUrl": "https://workers.lemma.workers.dev/v1/documents/0x68d4bff9…"
+    "verifyUrl": "https://workers.lemma.workers.dev/v1/documents/0x…"
   }
 }
 ```
 
-`verification.total` はこのドキュメントに紐づく全 proof 数、`verified` は Groth16 verify が通った数、`failed` は失敗数です。`verifyIds` は各 verify 実行の内容由来レシート（`POST /v1/proofs/verify` が返す ID）で、`verifyUrl` は `GET /v1/documents/{docHash}`（登録記録）への到達先です。`rates.JPY_scaled` は proof の公開入力と同じスケール整数です。上記の `rates` は実 API のスナップショットから抜粋しています。
+`verification.total` はこのドキュメントに紐づく全 proof 数、`verified` は Groth16 verify が通った数、`failed` は失敗数です。`verifyIds` は各 verify 実行の内容由来レシート（`POST /v1/proofs/verify` が返す ID）で、`verifyUrl` は `GET /v1/documents/{docHash}`（登録記録）への到達先です。`rates.JPY_scaled` は proof の公開入力と同じスケール整数です。レート値はスナップショット（呼び出し）ごとに変わります。
 
 各 proof には**回路の公開入力（public signals）**が含まれ、その中に実際のレート値が入っています。`forex-average-v1` の公開入力の並びは次のとおりです（`GET /v1/circuits/forex-average-v1` で確認できます）。
 
@@ -76,7 +76,7 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
 sourceRootA, sourceRootB, randomnessA, randomnessB, pathHash, averageRate
 ```
 
-末尾の `averageRate` がレートです。誤差を避けるため ×10⁸ の整数で、たとえば `JPY = 163.27832` は `16327832000` です。
+末尾の `averageRate` がレートです。誤差を避けるため ×10⁸ の整数で表し、`rates.<CCY>_scaled === rates.<CCY> × 10⁸` となります。
 
 ## 検証する — 2段階
 
@@ -106,9 +106,11 @@ curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest \
   | jq '{
       jpy: .attributes["rates.JPY"],
-      scaled: .attributes["rates.JPY_scaled"]
+      scaled: .attributes["rates.JPY_scaled"],
+      ok: (.attributes["rates.JPY_scaled"] == (.attributes["rates.JPY"] * 1e8 | round))
     }'
-# scaled === 16327832000 なら、公開入力に載る値と一致
+# ok === true なら、応答内の float と _scaled が ×10^8 で一致
+# scaled は公開入力 averageRate と同じ整数
 ```
 
 回路の公開入力名の確認:
@@ -125,7 +127,7 @@ APIキーがある場合は、`docHash` を指定して公開信号配列その�
 curl -s -X POST https://workers.lemma.workers.dev/v1/verified-attributes/query \
   -H "Authorization: Bearer $LEMMA_API_KEY" \
   -H "content-type: application/json" \
-  -d '{"docHash":"0x68d4bff9…","attributes":[]}' \
+  -d '{"docHash":"<docHash from feed>","attributes":[]}' \
   | jq '.results[].proof | {circuitId, averageRate: .inputs[-1]}'
 # inputs[-1] === rates.JPY_scaled を確認
 ```
@@ -140,7 +142,7 @@ curl -s -X POST https://workers.lemma.workers.dev/v1/proofs/verify \
   -d '{
     "circuitId": "forex-average-v1",
     "proof": "<proof JSON or base64>",
-    "publicSignals": ["<sourceRootA>", "<sourceRootB>", "<randomnessA>", "<randomnessB>", "<pathHash>", "16327832000"]
+    "publicSignals": ["<sourceRootA>", "<sourceRootB>", "<randomnessA>", "<randomnessB>", "<pathHash>", "<averageRate>"]
   }' \
   | jq '{valid, verifyId, circuitId}'
 # valid === true なら pairing check 通過。verifyId が検証レシート
@@ -186,15 +188,16 @@ const { ok } = await verifier.verify({
 
 ## 何を保証し、何を保証しないか
 
-証明を名乗る以上、境界をはっきりさせます。このフィードの proof が言えるのは、次までです。
+このフィードの proof が保証するのは、次の範囲に限ります。
 
-- この合成レートは、この合成手順で正しく計算され、その値が検証済みの proof に含まれている。
+- 合成レートが所定の合成手順どおりに計算されていること
+- その値が、検証済みの proof の公開入力に含まれていること
 
-言えないことも、はっきりさせます。
+保証しないのは、次の点です。
 
-- 個々のソースが出した値が、市場の「正しい」値である保証はしません。proof が対象にしているのは合成の計算と値の完全性であって、一次情報の真偽ではありません。
+- 個々のソースが返す値が、市場における「正しい」レートであること
 
-合成が担っているのは、まさにこの「一次情報の真偽は保証できない」という穴を、複数ソースの突き合わせで実務的に狭めることです。proof は「値が正しく計算され改ざんされていないこと」を、合成は「値の妥当性」を、それぞれ別の手段で受け持っています。どちらか一方に両方を語らせないことが、設計上の芯です。
+proof が対象とするのは合成計算と値の完全性であり、一次情報の真偽ではありません。一次情報の妥当性は、複数ソースを突き合わせる合成側で実務的に扱います。計算の正しさと値の妥当性は、それぞれ別の仕組みに分けています。
 
 ## 使いどころ
 
