@@ -172,13 +172,13 @@ We currently use two sources, designed so more can be added later. The more sour
 
 ## How far we disclose sources
 
-This is the part we most wanted to write. Short version: we do not publish individual provider names or the raw rates we fetched. Two reasons.
+Short version: we do not publish individual provider names or the raw rates we fetched.
 
-First, license constraints. Some forex API terms forbid redistributing the rates as fetched. Serving a composite does not violate those terms; putting the original rates in the API response would.
+The point we most want to make is this: **you do not need the original values, because the ZK cryptographic binding already holds.** The `forex-average-v1` circuit proves that "the average was correctly computed from two inputs." If re-verification passes, the composite computation is confirmed. There was no need to put the originals in the API response — the proof already does that job.
 
-Second, design. Even without revealing the original rates, the correctness of the composite can be checked by verifying the proof. The `forex-average-v1` circuit proves that "the average was correctly computed from two inputs." If re-verification passes, the composite computation is confirmed. There was no need to include the originals in the API response — the proof already does that job.
+On top of that, the sources themselves are public APIs. Anyone can call them directly and obtain the original rates. Cross-checking against those values, a third party can also primitively confirm that "this composite was correctly computed from these sources." It is not hidden; it is reproducible.
 
-Also, the sources themselves are public APIs. Anyone can call them directly and obtain the original rates. Using those values to re-verify the proof locally, a third party can independently confirm that "this composite was correctly computed from these sources." It is not hidden; it is reproducible.
+Some forex API terms forbid redistributing the rates as fetched; serving a composite does not violate those terms. Because the design already lets you check without the originals, omitting them from the response is consistent with those terms.
 
 For feeds where the origin itself is the value — postal codes, holidays — we do the opposite and surface the sources (Japan Post, Cabinet Office) prominently. That is not a disclosure strategy; it is terms-of-use compliance, and "being that data" is the point. On the same substrate, a composite feed and an official single-source feed point information in opposite directions.
 
