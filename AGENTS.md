@@ -113,3 +113,20 @@ gh pr create --base main --head content/<topic> --title "content: ..." --body ".
 Golden rule for edits to an existing article: **never change the
 `slug`** — it is the URL and carries the SEO history. A title change
 goes in the frontmatter `title` field only.
+
+## Cursor Cloud specific instructions
+
+- This is a **content-only repo**. There is no server, no application to
+  run, and no automated test suite. The rendered site lives in a separate
+  repo (`lemmaoracle/lemma` → `packages/web`), which fetches these `.md`
+  files at build time via the GitHub API.
+- Tooling is just Prettier. Standard commands are in `README.md` /
+  `package.json`: `pnpm install`, `pnpm format` (write), `pnpm format:check`
+  (the "lint"). Node 22 + pnpm 10 are already available.
+- `pnpm format:check` currently reports pre-existing warnings on hundreds of
+  files — the repo is **not** fully Prettier-clean. Do **not** mass-reformat
+  existing content. Only format files you actually touch, e.g.
+  `npx prettier --write <file>.md`, so diffs stay scoped.
+- CI (`.github/workflows/trigger-lemma-rebuild.yml`) only fires a Cloudflare
+  deploy hook on push to `main`; it runs no lint/test/build. Changes go live
+  only after a PR is merged **and** the Lemma site redeploys.
