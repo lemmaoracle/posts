@@ -181,8 +181,6 @@ The point we most want to make is this: **you do not need those raw rates, becau
 
 On top of that, the source APIs are disclosed. Anyone can call the same public APIs, build a commitment from the returned rates, and check whether it matches `sourceRoot.*`. Even without the raw rates in our response, a third party can primitively confirm that the fetch results were the same.
 
-Some forex API terms forbid redistributing the rates as fetched; serving a composite does not violate those terms. Because the design already lets you check without the originals, omitting them from the response is consistent with those terms.
-
 For feeds where the origin itself is the value — postal codes, holidays — we surface the sources (Japan Post, Cabinet Office) as attribution. The forex composite feed exposes source identifiers and commitment roots; that is a different orientation from making "being that institution's data" the product.
 
 ## What we guarantee — and what we do not
