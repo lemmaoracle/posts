@@ -53,6 +53,7 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
     "base": "USD",
     "date": "2026-07-23",
     "rates.JPY": 163.27832,
+    "rates.JPY_scaled": 16327832000,
     "rates.EUR": 0.877087
   },
   "verification": {
@@ -65,9 +66,15 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
 }
 ```
 
-`verification.total` はこのドキュメントに紐づく全 proof 数、`verified` は Groth16 verify が通った数、`failed` は失敗数、`verifyIds` は個別の検証記録 ID、`verifyUrl` はドキュメント登録記録への到達先です。上記の `rates` は実 API のスナップショットから抜粋しています。`verification` の件数は、全 proof が検証済みのときの形を示しています。
+`verification.total` はこのドキュメントに紐づく全 proof 数、`verified` は Groth16 verify が通った数、`failed` は失敗数です。`verifyIds` は各 verify 実行の内容由来レシート（`POST /v1/proofs/verify` が返す ID）で、`verifyUrl` は `GET /v1/documents/{docHash}`（登録記録）への到達先です。`rates.JPY_scaled` は proof の公開入力と同じスケール整数です。上記の `rates` は実 API のスナップショットから抜粋しています。
 
-各 proof には**回路の公開入力（public signals）**が含まれ、その中に実際のレート値が入っています。為替の `forex-average-v1` 回路では、公開信号に `averageRate` が含まれます。値は誤差を避けるためスケールした整数で、たとえば `JPY = 163.27832` は `16327832000` として入ります。
+各 proof には**回路の公開入力（public signals）**が含まれ、その中に実際のレート値が入っています。`forex-average-v1` の公開入力の並びは次のとおりです（`GET /v1/circuits/forex-average-v1` で確認できます）。
+
+```
+sourceRootA, sourceRootB, randomnessA, randomnessB, pathHash, averageRate
+```
+
+末尾の `averageRate` がレートです。誤差を避けるため ×10⁸ の整数で、たとえば `JPY = 163.27832` は `16327832000` です。
 
 ## 検証する — 2段階
 
@@ -75,7 +82,7 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
 
 ### 基本検証（誰でも、その場で）
 
-`verification.verified` が `verification.total` と一致していれば、そのドキュメントに紐づく全 proof が Groth16 で検証済みだということです。
+フィードの `GET .../latest` は、応答を組み立てるときに各 proof を内部で `POST /v1/proofs/verify` にかけて再検証します。`verification.verified` が `verification.total` と一致していれば、そのドキュメントに紐づく全 proof が Groth16 で検証済みです。
 
 ```bash
 curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest \
@@ -85,15 +92,73 @@ curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 
 累計の検証実行数は公開レジストリ（`GET /v1/counters`）でも見られ、その数字自体にも検証センターで出典が付いています。検証コストは ¥0 です。
 
-### 詳細検証（値まで確かめたい場合）
+### 詳細検証（値の束縛と、proof の再検証）
 
-「返ってきた `JPY = 163.27832` が、本当に proof の公開入力に入っているか」まで確かめることもできます。
+値の一致だけでなく、「その値が公開入力に入り、かつ Groth16 検証が通る」ところまで分けて確かめられます。なお **`GET /v1/proofs/{id}` はありません**。`verifyId` は検証レシートであり、proof 本体を取り出すキーではありません。
 
-1. `verification.verifyIds[0]` を取得する
-2. その `verifyId` で個別の検証記録を参照し、proof の公開入力を取得する
-3. 公開入力の `averageRate` が期待値（`163.27832` → `16327832000`）と一致することを確認する
+#### 1. 公開入力の値を確かめる（キー不要）
 
-ここまで来ると、**「受け取った値そのものが、検証済みの proof の中に入っている」**ことを、第三者が独立に確かめられます。手順の詳細は、別途ドキュメントと今後の記事で扱います。この記事では「proof の公開信号に実際の値が含まれ、検証済みである」という事実の確認までにとどめます。
+フィード応答の `rates.<CCY>_scaled` が、proof の `averageRate` と同じ整数です。
+
+```bash
+curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest \
+  | jq '{
+      jpy: .attributes["rates.JPY"],
+      scaled: .attributes["rates.JPY_scaled"]
+    }'
+# scaled === 16327832000 なら、公開入力に載る値と一致
+```
+
+回路の公開入力名の確認:
+
+```bash
+curl -s https://workers.lemma.workers.dev/v1/circuits/forex-average-v1 \
+  | jq '.inputs'
+# [..., "averageRate"] — 末尾がレート
+```
+
+APIキーがある場合は、`docHash` を指定して公開信号配列そのものを取れます（SDK なら `attributes.query`）。
+
+```bash
+curl -s -X POST https://workers.lemma.workers.dev/v1/verified-attributes/query \
+  -H "Authorization: Bearer $LEMMA_API_KEY" \
+  -H "content-type: application/json" \
+  -d '{"docHash":"0x68d4bff9…","attributes":[]}' \
+  | jq '.results[].proof | {circuitId, averageRate: .inputs[-1]}'
+# inputs[-1] === rates.JPY_scaled を確認
+```
+
+#### 2. proof を Groth16 で再検証する（キー不要）
+
+手元に `{ circuitId, proof, publicSignals }` があるとき、認証なしで再検証できます。
+
+```bash
+curl -s -X POST https://workers.lemma.workers.dev/v1/proofs/verify \
+  -H "content-type: application/json" \
+  -d '{
+    "circuitId": "forex-average-v1",
+    "proof": "<proof JSON or base64>",
+    "publicSignals": ["<sourceRootA>", "<sourceRootB>", "<randomnessA>", "<randomnessB>", "<pathHash>", "16327832000"]
+  }' \
+  | jq '{valid, verifyId, circuitId}'
+# valid === true なら pairing check 通過。verifyId が検証レシート
+```
+
+SDK で手元検証する場合は、`circuits.getById` で vkey を取り、`verifier.verify` に渡します。
+
+```ts
+import { create, circuits, verifier } from "@lemmaoracle/sdk";
+
+const client = create({ apiBase: "https://workers.lemma.workers.dev" });
+const meta = await circuits.getById(client, "forex-average-v1");
+// meta.artifact.location.vkey から vkey JSON を取得したうえで:
+const { ok } = await verifier.verify({
+  alg: "groth16-bn254-snarkjs",
+  inputs: { vkey, proof, publicSignals },
+});
+```
+
+フィードの `verification` ブロックは、上記と同じ `POST /v1/proofs/verify` をサーバー側で全 proof に対して実行した結果です。値の束縛は `rates.*_scaled`（または `proof.inputs`）で、暗号的な正しさは `valid: true` / `verified === total` で、それぞれ別の軸として確かめます。
 
 補足: `contentHash` を再ハッシュして手元照合する検証方法は、祝日・郵便番号のフィードで使えます（canonical JSON の SHA-256 と照合）。為替は合成値を回路で証明する仕組みのため、`verification` と公開信号で確かめます。フィードの性質に応じて、確かめ方が変わります。
 

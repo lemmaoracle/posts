@@ -53,6 +53,7 @@ The response includes the composite rates plus a `verification` object that show
     "base": "USD",
     "date": "2026-07-23",
     "rates.JPY": 163.27832,
+    "rates.JPY_scaled": 16327832000,
     "rates.EUR": 0.877087
   },
   "verification": {
@@ -65,9 +66,15 @@ The response includes the composite rates plus a `verification` object that show
 }
 ```
 
-`verification.total` is the number of proofs attached to the document; `verified` is how many passed Groth16 verify; `failed` is the failure count; `verifyIds` are individual verification record IDs; `verifyUrl` points to the document registration record. The `rates` above are excerpted from a live API snapshot. The `verification` counts show the shape of a fully verified document.
+`verification.total` is the number of proofs attached to the document; `verified` is how many passed Groth16 verify; `failed` is the failure count. `verifyIds` are content-derived receipts from each verify call (the ID returned by `POST /v1/proofs/verify`); `verifyUrl` points at `GET /v1/documents/{docHash}` (the registration record). `rates.JPY_scaled` is the same scaled integer that appears in the proof's public inputs. The `rates` above are excerpted from a live API snapshot.
 
-Each proof includes the circuit's **public signals**, which contain the actual rate values. In the forex `forex-average-v1` circuit, the public signals include `averageRate`. Values are stored as scaled integers to avoid floating-point error — for example, `JPY = 163.27832` becomes `16327832000`.
+Each proof includes the circuit's **public signals**, which contain the actual rate values. The public-input order for `forex-average-v1` is (confirm with `GET /v1/circuits/forex-average-v1`):
+
+```
+sourceRootA, sourceRootB, randomnessA, randomnessB, pathHash, averageRate
+```
+
+The last field, `averageRate`, is the rate. Values are scaled by 10⁸ to avoid floating-point error — for example, `JPY = 163.27832` becomes `16327832000`.
 
 ## Verification — two stages
 
@@ -75,7 +82,7 @@ Verification for this feed has two stages, depending on what you need.
 
 ### Basic verification (anyone, on the spot)
 
-If `verification.verified` equals `verification.total`, every proof attached to that document has passed Groth16 verification.
+On each `GET .../latest`, the feed re-verifies every attached proof via an internal `POST /v1/proofs/verify`. If `verification.verified` equals `verification.total`, every proof attached to that document has passed Groth16 verification.
 
 ```bash
 curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest \
@@ -85,15 +92,73 @@ curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 
 Cumulative verification counts are also available from the public registry (`GET /v1/counters`), and those numbers themselves carry provenance in the Verification Center. Verification costs ¥0.
 
-### Detailed verification (when you need to check the values themselves)
+### Detailed verification (value binding and re-verifying the proof)
 
-You can also go further and confirm that the returned `JPY = 163.27832` is actually present in the proof's public inputs.
+You can separate "is this value in the public inputs?" from "does Groth16 accept this proof?". There is **no `GET /v1/proofs/{id}`** — a `verifyId` is a verification receipt, not a key for fetching the proof body.
 
-1. Take `verification.verifyIds[0]`
-2. Look up that `verifyId`'s verification record and read the proof's public inputs
-3. Confirm that the public input `averageRate` matches the expected value (`163.27832` → `16327832000`)
+#### 1. Check the public-input value (no API key)
 
-At that point, a third party can independently confirm that **the value they received is inside a verified proof**. Detailed steps will appear in separate documentation and future posts. This article stops at confirming that "the actual values are in the proof's public signals and have been verified."
+`rates.<CCY>_scaled` in the feed response is the same integer as the proof's `averageRate`.
+
+```bash
+curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest \
+  | jq '{
+      jpy: .attributes["rates.JPY"],
+      scaled: .attributes["rates.JPY_scaled"]
+    }'
+# scaled === 16327832000 means it matches the public-input value
+```
+
+Circuit public-input names:
+
+```bash
+curl -s https://workers.lemma.workers.dev/v1/circuits/forex-average-v1 \
+  | jq '.inputs'
+# [..., "averageRate"] — rate is last
+```
+
+With an API key, you can fetch the public-signal arrays themselves by `docHash` (SDK: `attributes.query`):
+
+```bash
+curl -s -X POST https://workers.lemma.workers.dev/v1/verified-attributes/query \
+  -H "Authorization: Bearer $LEMMA_API_KEY" \
+  -H "content-type: application/json" \
+  -d '{"docHash":"0x68d4bff9…","attributes":[]}' \
+  | jq '.results[].proof | {circuitId, averageRate: .inputs[-1]}'
+# confirm inputs[-1] === rates.JPY_scaled
+```
+
+#### 2. Re-verify the proof with Groth16 (no API key)
+
+When you have `{ circuitId, proof, publicSignals }`, re-verification needs no auth:
+
+```bash
+curl -s -X POST https://workers.lemma.workers.dev/v1/proofs/verify \
+  -H "content-type: application/json" \
+  -d '{
+    "circuitId": "forex-average-v1",
+    "proof": "<proof JSON or base64>",
+    "publicSignals": ["<sourceRootA>", "<sourceRootB>", "<randomnessA>", "<randomnessB>", "<pathHash>", "16327832000"]
+  }' \
+  | jq '{valid, verifyId, circuitId}'
+# valid === true means the pairing check passed; verifyId is the receipt
+```
+
+For local verification with the SDK, load the vkey via `circuits.getById` and pass it to `verifier.verify`:
+
+```ts
+import { create, circuits, verifier } from "@lemmaoracle/sdk";
+
+const client = create({ apiBase: "https://workers.lemma.workers.dev" });
+const meta = await circuits.getById(client, "forex-average-v1");
+// resolve meta.artifact.location.vkey to a vkey JSON, then:
+const { ok } = await verifier.verify({
+  alg: "groth16-bn254-snarkjs",
+  inputs: { vkey, proof, publicSignals },
+});
+```
+
+The feed's `verification` block is the result of running that same `POST /v1/proofs/verify` server-side against every proof. Value binding is checked via `rates.*_scaled` (or `proof.inputs`); cryptographic validity via `valid: true` / `verified === total` — two separate axes.
 
 Note: for holiday and postal-code feeds, you can re-hash `contentHash` locally and compare (against the SHA-256 of the canonical JSON). Forex proves a composite value in-circuit, so you check via `verification` and the public signals. The verification method follows the nature of each feed.
 
