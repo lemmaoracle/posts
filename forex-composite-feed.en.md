@@ -52,9 +52,8 @@ The response includes the composite rates plus a `verification` object that show
     "source": "forex-composite",
     "base": "USD",
     "date": "<YYYY-MM-DD>",
-    "rates.JPY": "<float>",
-    "rates.JPY_scaled": "<float × 10^8>",
-    "rates.EUR": "<float>",
+    "rates.AUD…rates.ZAR": "<float>",
+    "rates.AUD_scaled…rates.ZAR_scaled": "<float × 10^8>",
     "sourceRoot.frankfurter": "0x…",
     "sourceRoot.erApi": "0x…"
   },
@@ -96,7 +95,7 @@ Cumulative verification counts are also available from the public registry (`GET
 
 ### Detailed verification (value binding and re-verifying the proof)
 
-You can separate "is this value in the public inputs?" from "does Groth16 accept this proof?". There is **no `GET /v1/proofs/{id}`** — a `verifyId` is a verification receipt, not a key for fetching the proof body.
+You can separate "is this value in the public inputs?" from "does Groth16 accept this proof?".
 
 #### 1. Check the public-input value (no API key)
 

@@ -52,9 +52,8 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
     "source": "forex-composite",
     "base": "USD",
     "date": "<YYYY-MM-DD>",
-    "rates.JPY": "<float>",
-    "rates.JPY_scaled": "<float × 10^8>",
-    "rates.EUR": "<float>",
+    "rates.AUD…rates.ZAR": "<float>",
+    "rates.AUD_scaled…rates.ZAR_scaled": "<float × 10^8>",
     "sourceRoot.frankfurter": "0x…",
     "sourceRoot.erApi": "0x…"
   },
@@ -70,7 +69,7 @@ Lemma のフィードで言う「証明付き」は、データが生まれた�
 
 `verification.total` はこのドキュメントに紐づく全 proof 数、`verified` は Groth16 verify が通った数、`failed` は失敗数です。`verifyIds` は各 verify 実行の内容由来レシート（`POST /v1/proofs/verify` が返す ID）で、`verifyUrl` は `GET /v1/documents/{docHash}`（登録記録）への到達先です。`rates.JPY_scaled` は proof の公開入力と同じスケール整数です。レート値はスナップショット（呼び出し）ごとに変わります。
 
-各 proof には**回路の公開入力（public signals）**が含まれ、その中に実際のレート値が入っています。`forex-average-v1` の公開入力の並びは次のとおりです（`GET /v1/circuits/forex-average-v1` で確認できます）。
+各 proof には **回路の公開入力（public signals）** が含まれ、その中に実際のレート値が入っています。`forex-average-v1` の公開入力の並びは次のとおりです（`GET /v1/circuits/forex-average-v1` で確認できます）。
 
 ```
 sourceRootA, sourceRootB, randomnessA, randomnessB, pathHash, averageRate
@@ -96,7 +95,7 @@ curl -s https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 
 ### 詳細検証（値の束縛と、proof の再検証）
 
-値の一致だけでなく、「その値が公開入力に入り、かつ Groth16 検証が通る」ところまで分けて確かめられます。なお **`GET /v1/proofs/{id}` はありません**。`verifyId` は検証レシートであり、proof 本体を取り出すキーではありません。
+値の一致だけでなく、「その値が公開入力に入り、かつ Groth16 検証が通る」ところまで分けて確かめられます。
 
 #### 1. 公開入力の値を確かめる（キー不要）
 
