@@ -1,7 +1,7 @@
 ---
 slug: "gemma4-verifiable-claim-check"
 date: "2026.06.30"
-category: "Announcement"
+category: "Announcements"
 section: "Essays"
 cover: "assets/cover-announcements.png"
 title: "Verifiable Claim-Check：オンデバイスのGemma 4と、暗号論的なモデル証明を組み合わせる"
