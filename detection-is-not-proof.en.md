@@ -24,13 +24,13 @@ In ten days, Japan's AI cyber defense response cascaded from cabinet directive t
 
 ---
 
-## ▸ Domestic momentum: AI cyber defense reaching the field
+## Domestic momentum: AI cyber defense reaching the field
 
 In May 2026, Japan's government walked the AI cyber defense staircase down to the field in ten days. On May 12, the Prime Minister issued the directive. On May 18, a multi-ministry council released a four-pillar package: intelligence aggregation, response capacity, international cooperation, vendor patching. On May 21, the Minister for Internal Affairs and Communications convened telecom operators, NHK, the commercial broadcasters' association, Japan Post, and the National Governors' Association — and asked them directly. The backdrop is Project Glasswing — the defensive program Anthropic launched on April 7 to give a limited set of defenders access to its unreleased frontier model, Claude Mythos Preview (participants include AWS, Apple, Cisco, Google, Microsoft, and Cloudflare). A model whose automated zero-day discovery capability is now widely recognized as a dual-use risk: it can turn to the attacker's side too.
 
 What matters is the substance of those requests. Vulnerability assessments, prompt patching, budget and headcount allocation, intelligence aggregation, personnel development, vendor-side patching — every line item resolves to either detection-layer hardening or post-detection containment. Japan's Active Cyber Defense Act, taking effect on October 1 across 15 sectors and roughly 250 designated entities, runs on the same axis.
 
-## ▸ The shared gap: detection alone cannot close it
+## The shared gap: detection alone cannot close it
 
 The bridge from detection to legal proof has not yet emerged as a distinct layer in current security operating models. This is not specific to any single response — it reflects the worldview the industry has shared so far.
 
@@ -40,7 +40,7 @@ Across domains, the structural commonality is the same. MetLife Japan disclosed 
 
 The same structural gap is being named on the participant side of Project Glasswing. Cloudflare CSO Grant Bourzikas — Cloudflare is a participant — writes plainly on the company's blog that "patching faster is not enough," acknowledging that the more you compress regression testing, the more new bugs you introduce. That speeding up the detection-to-repair axis alone will not narrow the structural gap is the view of a security chief at one of the industry's largest players, too.
 
-## ▸ Why the gap widens at AI speed
+## Why the gap widens at AI speed
 
 So far this is the human-speed story. MetLife's four and a half years of zero detection unfolded in a world where attackers and operators were human, and API call rates were within human supervisory bandwidth.
 
@@ -48,7 +48,7 @@ With agents, delegation-to-execution collapses to seconds or minutes. A detectio
 
 The history of security operations is a history of where humans sit on the loop. Human In The Loop (HITL) places human approval after machine judgment. Human Off The Loop (HOTL) removes individual approval and asks machines to verify machine decisions, machine-to-machine. At AI-agent operating speeds, HITL is implementable but not operable; HOTL is the only option that scales. The honest question follows: why would a world without per-transaction human approval be safe? The honest answer: because the system is cryptographically attesting compliance on the human's behalf.
 
-## ▸ Lemma's answer: guardrails inside the system
+## Lemma's answer: guardrails inside the system
 
 Strengthening detection further does not close the structural gap.
 
@@ -64,7 +64,7 @@ Lemma builds this inside-the-system guardrail across multiple domains, rolling i
 
 Models change. Proofs remain.
 
-## ▸ Where to start
+## Where to start
 
 | Step | What | URL |
 |---|---|---|
@@ -76,7 +76,7 @@ For critical infrastructure CISOs, financial regulators, cyber policy operators,
 
 Built for decisions that matter.
 
-## ▸ Resources
+## Resources
 
 - Multi-ministry package briefing (NISC): https://www.cyber.go.jp/pdf/press/20260518_AI_CS_kankeishouchoukaigi.pdf
 - Project Glasswing (Anthropic, 2026-04-07): https://www.anthropic.com/glasswing

@@ -25,7 +25,7 @@ AIエージェントが「何を認可されたか」を改ざん耐性のある
 
 ---
 
-## ▸ いま決済で起きていること：AIエージェント決済と「意図の証明」標準（AP2 / Verifiable Intent）
+## いま決済で起きていること：AIエージェント決済と「意図の証明」標準（AP2 / Verifiable Intent）
 
 2026 年に入って、AIエージェント決済の周辺で「意図（intent）を証明する」標準が急速に揃いました。
 
@@ -35,7 +35,7 @@ Google の **Agent Payments Protocol（AP2）** は、エージェントによ�
 
 AP2 が「意図をどう作り、どう共有するか」を定めるとすれば、Verifiable Intent は「意図をどう証明するか」を定める ―― 業界はそう整理し始めています。AIエージェント決済の土台が、いま一気に標準化へ向かっています。
 
-## ▸ 証明されるのは「意図の真正性」── では、その上に何を重ねるか
+## 証明されるのは「意図の真正性」── では、その上に何を重ねるか
 
 これらの標準が保証しているのは、いずれも「意図の真正性」の層です。
 
@@ -47,7 +47,7 @@ AP2 が「意図をどう作り、どう共有するか」を定めるとすれ�
 
 現行のセキュリティ・決済の運用モデルでは、この「根拠の検証可能性」は、まだ独立した一層として標準化されていません。決済の標準化が進むほど、その上に必要な**検証可能AI**の層の要件は、より明確になります。
 
-## ▸ どこまで証明され、どこに検証の層を重ねるのか（consent layer と provenance layer）
+## どこまで証明され、どこに検証の層を重ねるのか（consent layer と provenance layer）
 
 技術プリミティブのレベルで見ると、境界はより明確になります。
 
@@ -61,19 +61,19 @@ AP2 が「意図をどう作り、どう共有するか」を定めるとすれ�
 
 だからこそ、検証の層はモデルから独立していなければならない ―― これが Lemma の出発点です。Lemma の[4 つの柱](https://lemma.frame00.com/ja/pillars)のうち、ここで効くのは [Pillar 01・来歴証明](https://lemma.frame00.com/ja/pillars/verifiable-origin/) と [Pillar 03・エージェント権限証明](https://lemma.frame00.com/ja/pillars/agent-authority-proof/) です。
 
-## ▸ Lemma の強み（3点）
+## Lemma の強み（3点）
 
 - **標準と並ぶ（相互運用）**：AP2 / Verifiable Intent が依拠する W3C Verifiable Credential に加え、**MCP・A2A・x402・C2PA** と並んで動く設計。consent layer を置き換えず、その上に provenance layer を噛み合わせます。
 - **開示せず検証（prove ≠ reveal）**：原文を渡さず、Lemma も平文を見ません。受け取るのは「根拠が辿れる」証明だけ。確率的な検出ではなく、決定的な証明です。
 - **モデル非依存**：Models change. Proofs remain. 検証の層をモデルから独立させ、モデルが入れ替わっても根拠は残ります。
 
-## ▸ 対エージェントの「信頼」を底上げする
+## 対エージェントの「信頼」を底上げする
 
 AIエージェントに任せられる範囲は、そのエージェントを「どこまで信頼できるか」で決まります。Lemma の [Agent Authority Proof（Pillar 03）](https://lemma.frame00.com/ja/pillars/agent-authority-proof/) は、エージェントの権限と、判断の根拠（来歴）を検証可能にします。
 
 「誰の・どの権限のエージェントか」を確かめ、「何を根拠に動いたか」を後から辿れる。これは脅威を数える話ではなく、エージェントを安心して実務に出すための、信頼の底上げです。意図が証明される時代に、その意図にもとづく行動の確からしさまで重ねられます。
 
-## ▸ どこで効くか（ユースケース）
+## どこで効くか（ユースケース）
 
 来歴の検証は、すでにある業務の上にそのまま乗ります。
 
@@ -85,7 +85,7 @@ AIエージェントに任せられる範囲は、そのエージェントを「
 
 業種・タスク横断の全ユースケースは[こちら](https://lemma.frame00.com/ja/solutions/use-cases)。
 
-## ▸ 開発者は数行から試せる
+## 開発者は数行から試せる
 
 検証可能AIは、基盤を入れ替えなくても始められます。
 
@@ -95,7 +95,7 @@ AIエージェントに任せられる範囲は、そのエージェントを「
 
 ---
 
-### ▸ デモで確かめる：あなたのエージェントの「根拠」は辿れますか
+### デモで確かめる：あなたのエージェントの「根拠」は辿れますか
 
 consent layer は標準が担います。**provenance layer は、いま動くデモで確かめられます。**
 
@@ -106,7 +106,7 @@ consent layer は標準が担います。**provenance layer は、いま動く�
 
 ---
 
-## ▸ これから取り組む方向性
+## これから取り組む方向性
 
 - consent layer（Verifiable Intent / AP2）と provenance layer（来歴証明）の接続点を設計し、相互運用の参照実装を示す
 - エージェント来歴（[Agent Authority Proof / Pillar 03](https://lemma.frame00.com/ja/pillars/agent-authority-proof/)）を、検証可能な形で提供する
@@ -115,7 +115,7 @@ consent layer は標準が担います。**provenance layer は、いま動く�
 
 エンタープライズ向けはカスタム導入で提供します。自社の要件に合わせた検証可能AIの構成は、デモリクエスト / Discovery Call でご相談ください。
 
-## ▸ FAQ
+## FAQ
 
 **Q. Verifiable Intent と AP2 は何が違うのですか？**
 AP2（Agent Payments Protocol）は「意図をどう作り、どう共有するか」を、3 つの署名済み Mandate として定めます。Verifiable Intent は「その意図をどう証明するか」を、利用者の identity・指示・結果を束ねた改ざん耐性レコードとして定めます。両者は補完関係で、2026 年 4 月に FIDO Alliance へ寄贈されました。
@@ -129,7 +129,7 @@ AP2（Agent Payments Protocol）は「意図をどう作り、どう共有する
 **Q. 試すには？**
 [デモ環境](https://demo.lemma.frame00.com)で来歴証明を確認できます。自社のユースケースに沿った検証は[デモリクエスト / Discovery Call](https://tally.so/r/EkBqDX?utm_source=blog&utm_medium=faq&utm_campaign=verifiable_intent)から（機微データの開示は不要です）。
 
-## ▸ 一緒に設計しませんか（CTA）
+## 一緒に設計しませんか（CTA）
 
 x402 builder、MCP 開発者、AIエージェントを運用するチーム、あるいはシステムをまたいだ信頼のワークフローを構築するエンタープライズの方へ。意図が証明される時代だからこそ、その意図にもとづく**判断の根拠を検証する層**を重ねる価値があります。
 
@@ -138,7 +138,7 @@ x402 builder、MCP 開発者、AIエージェントを運用するチーム、�
 
 **Built for decisions that matter.**
 
-## ▸ 関連リンク
+## 関連リンク
 
 - [エージェント間の暗号的信頼チェーン：A2A連携が変えるAPI経済](https://lemma.frame00.com/ja/blog/agent-cryptographic-trust-chain-a2a-api-economy/)
 - [x402 のためのトラストレイヤー](https://lemma.frame00.com/ja/blog/x402-trust-layer-for-autonomous-agent-payments)
