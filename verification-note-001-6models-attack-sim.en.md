@@ -91,7 +91,7 @@ The code for all scenarios used in this verification is published in the `lemmao
 
 ---
 
-### ▸ Results
+### Results
 
 #### Main matrix: Frontier models × all 5 scenarios
 

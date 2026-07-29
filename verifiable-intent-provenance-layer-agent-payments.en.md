@@ -25,7 +25,7 @@ Standards that let an AI agent prove "what it was authorized to do" as a tamper-
 
 ---
 
-## ▸ What's happening in payments now: AI-agent payments and the "proof of intent" standards (AP2 / Verifiable Intent)
+## What's happening in payments now: AI-agent payments and the "proof of intent" standards (AP2 / Verifiable Intent)
 
 As 2026 began, standards for "proving intent" around AI-agent payments came together rapidly.
 
@@ -35,7 +35,7 @@ In contrast, **Verifiable Intent**, which Mastercard co-developed with Google, i
 
 If AP2 defines "how intent is created and shared," then Verifiable Intent defines "how intent is proven" — that is how the industry is beginning to frame it. The foundation for AI-agent payments is now moving toward standardization all at once.
 
-## ▸ What gets proven is the "authenticity of intent" — so what do you layer on top?
+## What gets proven is the "authenticity of intent" — so what do you layer on top?
 
 What all of these standards guarantee is the layer of "the authenticity of intent."
 
@@ -47,7 +47,7 @@ In real-world operation, one more requirement joins this picture: "what the outp
 
 In current operating models for security and payments, this "verifiability of grounding" has not yet been standardized as an independent layer. The further payments standardization advances, the clearer the requirements become for the **verifiable-AI** layer that needs to sit on top of it.
 
-## ▸ How far is it proven, and where do you add the verification layer? (consent layer and provenance layer)
+## How far is it proven, and where do you add the verification layer? (consent layer and provenance layer)
 
 Viewed at the level of technical primitives, the boundary becomes clearer.
 
@@ -61,19 +61,19 @@ The authenticity of intent (the consent layer) and the verifiability of groundin
 
 That is precisely why the verification layer must be independent of the model — this is Lemma's starting point. Among Lemma's [four pillars](https://lemma.frame00.com/pillars), the ones that matter here are [Pillar 01 · Verifiable Origin](https://lemma.frame00.com/pillars/verifiable-origin/) and [Pillar 03 · Agent Authority Proof](https://lemma.frame00.com/pillars/agent-authority-proof/).
 
-## ▸ Lemma's strengths (three points)
+## Lemma's strengths (three points)
 
 - **Stands alongside the standards (interoperability)**: In addition to the W3C Verifiable Credentials that AP2 / Verifiable Intent rely on, it is designed to work alongside **MCP, A2A, x402, and C2PA**. It does not replace the consent layer; it meshes a provenance layer on top of it.
 - **Verify without revealing (prove ≠ reveal)**: The original text is never handed over, and Lemma never sees the plaintext. All it receives is a proof that "the grounding can be traced." This is not probabilistic detection but deterministic proof.
 - **Model-independent**: Models change. Proofs remain. The verification layer is kept independent of the model, so even when models are swapped out, the grounding remains.
 
-## ▸ Raising the baseline of "trust" toward agents
+## Raising the baseline of "trust" toward agents
 
 The scope you can delegate to an AI agent is determined by "how far you can trust that agent." Lemma's [Agent Authority Proof (Pillar 03)](https://lemma.frame00.com/pillars/agent-authority-proof/) makes both an agent's authority and the grounding (provenance) of its judgments verifiable.
 
 You confirm "whose agent, and with what authority," and you can trace after the fact "on what basis it acted." This is not about counting threats; it is about raising the baseline of trust so you can confidently put agents into real-world use. In an era where intent is proven, you can also layer on the soundness of the actions taken on the basis of that intent.
 
-## ▸ Where it pays off (use cases)
+## Where it pays off (use cases)
 
 Provenance verification fits right on top of work you already do.
 
@@ -85,7 +85,7 @@ Provenance verification fits right on top of work you already do.
 
 See all use cases across industries and tasks [here](https://lemma.frame00.com/solutions/use-cases).
 
-## ▸ Developers can try it in a few lines
+## Developers can try it in a few lines
 
 Verifiable AI can be started without replacing your foundation.
 
@@ -95,7 +95,7 @@ Verifiable AI can be started without replacing your foundation.
 
 ---
 
-### ▸ Confirm it with the demo: can your agent's "grounding" be traced?
+### Confirm it with the demo: can your agent's "grounding" be traced?
 
 The consent layer is handled by the standards. **The provenance layer can be confirmed with a demo that runs today.**
 
@@ -106,7 +106,7 @@ In an era where intent is proven, let's design together a way to make the ground
 
 ---
 
-## ▸ Where we're headed
+## Where we're headed
 
 - Design the connection point between the consent layer (Verifiable Intent / AP2) and the provenance layer (provenance proof), and provide a reference implementation for interoperability.
 - Provide agent provenance ([Agent Authority Proof / Pillar 03](https://lemma.frame00.com/pillars/agent-authority-proof/)) in a verifiable form.
@@ -115,7 +115,7 @@ In an era where intent is proven, let's design together a way to make the ground
 
 Enterprise offerings are provided through custom deployment. For a verifiable-AI configuration tailored to your requirements, please get in touch via a demo request / Discovery Call.
 
-## ▸ FAQ
+## FAQ
 
 **Q. What is the difference between Verifiable Intent and AP2?**
 AP2 (Agent Payments Protocol) defines "how intent is created and shared" as three signed Mandates. Verifiable Intent defines "how that intent is proven" as a tamper-resistant record bundling the user's identity, instruction, and outcome. The two are complementary, and both were contributed to the FIDO Alliance in April 2026.
@@ -129,7 +129,7 @@ Not the "semantic correctness" of the output itself, but **what the output was g
 **Q. How do I try it?**
 You can confirm provenance proof in the [demo environment](https://demo.lemma.frame00.com). For verification aligned to your own use case, start from a [demo request / Discovery Call](https://tally.so/r/Pd2Rl5?utm_source=blog&utm_medium=faq&utm_campaign=verifiable_intent) (no disclosure of sensitive data required).
 
-## ▸ Let's design it together (CTA)
+## Let's design it together (CTA)
 
 For x402 builders, MCP developers, teams operating AI agents, and enterprises building trust workflows that span systems. Precisely because we are in an era where intent is proven, there is value in layering on a **layer that verifies the grounding of the judgments** made on the basis of that intent.
 
@@ -138,7 +138,7 @@ For x402 builders, MCP developers, teams operating AI agents, and enterprises bu
 
 **Built for decisions that matter.**
 
-## ▸ Related links
+## Related links
 
 - [Cryptographic chains of trust between agents: how A2A interoperability transforms the API economy](https://lemma.frame00.com/blog/agent-cryptographic-trust-chain-a2a-api-economy/)
 - [A trust layer for x402](https://lemma.frame00.com/blog/x402-trust-layer-for-autonomous-agent-payments)

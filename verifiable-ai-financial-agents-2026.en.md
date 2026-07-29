@@ -36,11 +36,11 @@ Decisions render. Whether they were legitimate is reproducible — only if the t
 
 *Facts as of 2026-05-07. Preview scope and regulatory positioning will continue to move.*
 
-## ▸ Where the financial AI stack stands today
+## Where the financial AI stack stands today
 
 Through April and May 2026, a structural picture is forming: attackers acquire AI agent capability, defenders deploy it operationally, regulators rush to define accountability — all in the same quarter. The technical side and the regulatory side both moved. A short tour of each.
 
-### ▸ Technical side — what defenders are deploying
+### Technical side — what defenders are deploying
 
 In May 2026, Anthropic released ten financial-services agent templates as reference architectures running inside Claude Cowork, Claude Code, and Claude Managed Agents. Claude is embedded directly into Microsoft 365 (Excel, PowerPoint, Word), and the templates compose with financial data from providers including Moody's.
 
@@ -55,7 +55,7 @@ The roles of each player in this stack:
 
 Agents drafting pitchbooks, screening KYC files, and closing the month — that mode of operation is starting in earnest.
 
-### ▸ Regulatory side — three jurisdictions moving
+### Regulatory side — three jurisdictions moving
 
 How to institutionalize accountability for AI-driven decisions is on the table simultaneously in the US, Europe, and Japan.
 
@@ -69,18 +69,18 @@ Signatures pass. Whether the underlying decision was actually legitimate is a se
 
 Operational AI, regulatory motion, DeFi infrastructure — these are independent contexts on the surface. They share a structural question: **the moment of commit itself, where the receiving side could independently verify "is this state transition actually legitimate" before acting**, is still thinly served. That missing layer is what remains. The next section walks through the implementation.
 
-## ▸ The missing layer: pre-execution attestation
+## The missing layer: pre-execution attestation
 
 What the judgment-trail layer must satisfy, and how Lemma's pre-execution attestation answers each requirement.
 
-### ▸ What pre-execution attestation must satisfy
+### What pre-execution attestation must satisfy
 
 - A tamper-evident record of every AI judgment — its input data, applied rules, and outputs
 - Pre-commit, receiver-side independent verification across system boundaries
 - A configuration that does not expose customer PII directly to the AI (raw data does not move; only attributes pass, via ZK proofs)
 - Reproducibility against examinations, litigation, and audits six and twelve months later
 
-### ▸ Lemma's pre-execution attestation layer
+### Lemma's pre-execution attestation layer
 
 Lemma provides an infrastructure that, when AI renders an operational judgment and when state transitions across systems, **records the lineage of the judgment or transition in a tamper-evident form and lets the receiving side verify it independently before commit**. Technically, it composes **Poseidon over BN254** in-circuit commitments, **BBS+ over BLS12-381** issuance-side selective disclosure, **Groth16** ZK proofs, and on-chain anchoring. Specification highlights:
 
@@ -91,7 +91,7 @@ Lemma provides an infrastructure that, when AI renders an operational judgment a
 
 Relative to existing tooling: where EDR / SIEM is the "block / observe" layer and forensics / SOC is the "trace after the fact" layer, this is the **"verify before commit" layer**. The roles are distinct, so it does not compete with the existing stack; resilience for financial AI operations holds only when both are in place.
 
-### ▸ Use cases that open when Lemma is composed in
+### Use cases that open when Lemma is composed in
 
 Composing Lemma's pre-execution attestation on top of Anthropic's operational AI runtime, Microsoft 365's embedded interfaces, and the data-provider layer lets one foundation support several financial workflows.
 
@@ -100,7 +100,7 @@ Composing Lemma's pre-execution attestation on top of Anthropic's operational AI
 - **Cross-system settlement**: on top of agent-payment protocols like x402, "who, on whose authority, against which data, paid what" is provable without exposing the underlying data
 - **Oracle → smart contract**: the issuer, conditions, and timestamp of price feeds or attribute data are independently verified by the receiving contract before commit
 
-### ▸ Reference implementations
+### Reference implementations
 
 Two reference implementations from the past two weeks. Both runnable end-to-end.
 
@@ -110,7 +110,7 @@ Two reference implementations from the past two weeks. Both runnable end-to-end.
 
 Code and the design-notes essays ship together for both. Links in Resources.
 
-## ▸ Wrapping up
+## Wrapping up
 
 - The operational AI × verifiability stack is coming into place: Anthropic (runtime), Microsoft 365 (interface), data providers (financial data). Lemma's pre-execution attestation layer is the judgment-trail layer that sits on top.
 - BBS+ signatures and zkSNARK selective disclosure compose into a single foundation that supports KYC screening, underwriting, cross-system settlement, and oracle integration as separate but linked use cases.
@@ -120,7 +120,7 @@ Technical stacks keep moving. The judgment trail underneath them stays. Models r
 
 Models change. Proofs remain.
 
-## ▸ Where to start
+## Where to start
 
 For financial CISOs, compliance leaders, regulatory affairs, and agent-payment platform builders, three concrete starting points:
 
@@ -130,7 +130,7 @@ For financial CISOs, compliance leaders, regulatory affairs, and agent-payment p
 
 *Built for decisions that matter.*
 
-## ▸ Resources
+## Resources
 
 - Trust402 demo — [lemma.frame00.com/trust402](https://lemma.frame00.com/trust402)
 - example-origin reference — [github.com/lemmaoracle/example-origin](https://github.com/lemmaoracle/example-origin)

@@ -43,7 +43,7 @@ Lemma has implemented this layer. **It is the first implementation that adds pro
 
 ---
 
-## ▸ Background: layering trust onto rail and format
+## Background: layering trust onto rail and format
 
 Over the past few weeks, the infrastructure of the agent economy has rapidly taken concrete shape. x402 extended the rail by which agents pay per API call to multiple chains (Injective, XRPL, and others), and Google Cloud showed, with OKF, a common format for agents to read the "table of contents" of enterprise data. At the same time, "Know Your Agent (KYA)" — a framework to make an agent's identity, provenance, and authority verifiable — is rising as an enterprise trend.
 
@@ -60,7 +60,7 @@ In regulated work such as audit, KYC/AML, and supply chains, "the file said so" 
 
 ---
 
-## ▸ What we're shipping
+## What we're shipping
 
 What Lemma is releasing is **Verifiable OKF** — a **producer-side extension** that attaches provenance to OKF bundles.
 
@@ -74,7 +74,7 @@ What we provide is three pieces, mirroring the fact that OKF itself ships produc
 
 ---
 
-## ▸ How it works (for developers)
+## How it works (for developers)
 
 Producers add an optional `provenance` key to the frontmatter. Everything inside is optional; you emit only what you can.
 
@@ -101,7 +101,7 @@ A consumer that does not understand `provenance` ignores it and reads it as plai
 
 ---
 
-## ▸ What's next
+## What's next
 
 1. Add selective disclosure of attributes (BBS+ over BLS12-381) and condition-proof circuits beyond `contains_no_pii`.
 2. KMS/HSM integration for production signing keys, and a Python reference implementation.
@@ -110,7 +110,7 @@ A consumer that does not understand `provenance` ignores it and reads it as plai
 
 ---
 
-## ▸ Who this is for
+## Who this is for
 
 To x402 builders, MCP developers, AI-agent operators, data producers publishing OKF bundles, and enterprise teams handling workflows that carry trust across systems — we'd love to hear from anyone who wants to shape the verifiability layer with us. Whether you want to try signing and verification on your own bundles, or design condition proofs for your own use case, both are welcome. The working code is yours to touch today.
 
@@ -118,7 +118,7 @@ To x402 builders, MCP developers, AI-agent operators, data producers publishing 
 
 ---
 
-## ▸ Resources
+## Resources
 
 - Verifiable OKF repository: https://github.com/lemmaoracle/verifiable-okf
 - Extension spec, SPEC v0.3: https://github.com/lemmaoracle/verifiable-okf/blob/main/SPEC.md

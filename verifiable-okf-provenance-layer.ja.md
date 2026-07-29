@@ -43,7 +43,7 @@ Lemma は、この層を実装しました。**OKF に来歴（provenance）を�
 
 ---
 
-## ▸ 背景：rail・format に、trust を重ねる
+## 背景：rail・format に、trust を重ねる
 
 この数週間で、エージェント経済のインフラが一気に具体化しました。x402 はエージェントが API コールごとに支払う rail をマルチチェーンへ広げ（Injective、XRPL ほか）、Google Cloud は OKF で企業データの「目次」をエージェントが読むための共通フォーマットを示しました。同時に「Know Your Agent（KYA）」——エージェントの身元・来歴・権限を検証可能にする枠組み——が企業トレンドとして立ち上がっています。
 
@@ -60,7 +60,7 @@ OKF の場合、目次が組織の境界を越えた瞬間に、フォーマッ�
 
 ---
 
-## ▸ What we're shipping
+## What we're shipping
 
 Lemma が公開するのは **Verifiable OKF** —— OKF に来歴（provenance）を付与する、**供給者側の拡張ツール**です。
 
@@ -74,7 +74,7 @@ OKF の仕様は、供給者が任意のキーを追加することを最初か�
 
 ---
 
-## ▸ How it works（開発者向け）
+## How it works（開発者向け）
 
 供給者は frontmatter に任意の `provenance` キーを足します。中身はすべて任意で、出せるものだけを出します。
 
@@ -101,7 +101,7 @@ OKF の仕様は、供給者が任意のキーを追加することを最初か�
 
 ---
 
-## ▸ What's next
+## What's next
 
 1. 属性の選択的開示（BBS+ over BLS12-381）と、`contains_no_pii` 以外の条件証明回路を追加。
 2. 本番署名鍵の KMS/HSM 連携と、Python 版の参照実装。
@@ -110,7 +110,7 @@ OKF の仕様は、供給者が任意のキーを追加することを最初か�
 
 ---
 
-## ▸ Who this is for
+## Who this is for
 
 x402 のビルダー、MCP 開発者、AI エージェントの運用者、OKF バンドルを公開するデータ供給者、そしてシステムをまたいで信頼を運ぶワークフローを扱うエンタープライズチームへ——一緒に検証可能性のレイヤーを形にしたい方からのご連絡をお待ちしています。署名・検証を自分のバンドルで試したい、自社のユースケースで条件証明を設計したい、どちらも歓迎です。動くコードは今日から触れます。
 
@@ -118,7 +118,7 @@ x402 のビルダー、MCP 開発者、AI エージェントの運用者、OKF �
 
 ---
 
-## ▸ Resources
+## Resources
 
 - Verifiable OKF リポジトリ: https://github.com/lemmaoracle/verifiable-okf
 - 拡張仕様 SPEC v0.3: https://github.com/lemmaoracle/verifiable-okf/blob/main/SPEC.md

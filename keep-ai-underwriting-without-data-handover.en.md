@@ -25,7 +25,7 @@ Lemma is the trust foundation for the AI era — a way to make a loan underwriti
 
 **Cryptographically verifiable ≠ disclosed.**
 
-## ▸ What's actually happening in loan underwriting today
+## What's actually happening in loan underwriting today
 
 Loan underwriting is one of the business domains that moves the largest volumes of raw personal data. The applicant submits ID, residence certificate, withholding statement, employment verification, and tax filings; the bank transcribes those into internal systems, credit-decision models, AML check APIs, and credit-bureau queries. Duplicate copies persist across multiple systems, and the responsibility for retention windows and deletion cuts across organizational lines.
 
@@ -33,7 +33,7 @@ In recent years, AI-driven automation has joined the workflow. OCR reads the doc
 
 The EU AI Act puts lending decisions under its high-risk AI classification, and in Japan the FSA's AI governance review is ongoing. Voices asking "how is AI handling my data?" have grown louder. Instead of layering on more masking, the question of whether a design where **the AI never touches the original data** is feasible is starting to surface as a practical option.
 
-## ▸ Masking vs. selective disclosure vs. ZK proofs
+## Masking vs. selective disclosure vs. ZK proofs
 
 Three distinct approaches; first, draw the line clearly between them.
 
@@ -47,13 +47,13 @@ Masking is an operation that *controls the visibility of data*. Selective disclo
 
 ZK proofs are backed by proof schemes like Groth16, ZK-friendly hash functions like Poseidon over BN254, and selectively-disclosable signature schemes like BBS+ over BLS12-381. Compose these and you can hand over only **boolean facts** — "the applicant has an annual income of at least X yen," "the applicant is not present in the AML database" — without anything ever leaving the applicant's device.
 
-## ▸ The underwriting data flow, before / after
+## The underwriting data flow, before / after
 
 Today's underwriting data flow is a one-way transfer of raw data from applicant to bank, plus internal replication across multiple downstream paths. Document bundle → intake system → credit-decision model / AML API / credit-bureau query / AI scoring: the applicant's personal data is transcribed into at least four to five systems.
 
 In a ZK-proof-based design, attribute proofs are generated inside the applicant's browser, and what reaches the bank is only the proof and the public signals. The AI scoring model receives only the facts — "income condition met," "residence condition met," "not present in the AML database," "credit score above threshold" — and never touches the raw data. The underwriting decision itself is also recorded as a ZK proof, so a later audit can cryptographically verify that "this applicant was judged to meet the specified conditions."
 
-## ▸ Who changes how — what assurance means, by stakeholder
+## Who changes how — what assurance means, by stakeholder
 
 When this configuration holds, the responsibilities and anxieties of the people involved in loan underwriting shift in distinct ways.
 
@@ -67,7 +67,7 @@ When this configuration holds, the responsibilities and anxieties of the people 
 
 **For regulators**, whether AI is judging properly can be checked mechanically against verifiable ZK proofs. Instead of decoding the inside of the AI black box, a new supervisory model holds: cryptographically verifying the fact that "the AI judged this attribute condition to be met."
 
-## ▸ What gets streamlined and automated
+## What gets streamlined and automated
 
 Beyond the change in how assurance is structured, business efficiency moves concretely too. Document-bundle copy-transcription disappears, and the scope of personal-data-protection compliance shrinks. Minimum disclosure of AML and credit-bureau data lowers the legal risk tied to unnecessary information contact. Detection of tampered applications stops being a matter of human eyeballing or multi-path reconciliation and becomes automated via cryptographic verification.
 
@@ -75,11 +75,11 @@ And most importantly, because the trail of the AI's decision itself is preserved
 
 **Models change. Proofs remain.**
 
-## ▸ Try the demo
+## Try the demo
 
 The actual verification flow for loan underwriting is available in the Lemma demo. Under the Finance scenario at `demo-lemma.frame00.com`, two samples — "Loan approval (valid)" and "Loan approval (tampered)" — let you see, in-browser, the valid case verifying as a clean ZK proof and the tampered case being cryptographically detected and rejected. As the page footer notes, "the file never leaves your device" — the verification runs inside the applicant's browser, exactly as advertised.
 
-## ▸ For builders / lenders
+## For builders / lenders
 
 Lemma is at the PoC stage, grounded in a reference architecture and a verifiable demo.
 
@@ -90,7 +90,7 @@ For lenders, financial-infrastructure integrators, or compliance leads exploring
 
 **Built for decisions that matter.**
 
-## ▸ Resources
+## Resources
 
 - Demo: [demo-lemma.frame00.com](https://demo-lemma.frame00.com/) (Finance / Loan approval)
 - Whitepaper: [Prove What Your AI Decided On.](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions)
