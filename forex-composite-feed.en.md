@@ -3,9 +3,9 @@ slug: "forex-composite-feed"
 date: "2026.07.24"
 category: "Announcements"
 section: "Changelog"
-title: "We've published a proof-backed forex rate feed"
+title: "Announcing our proof-backed forex rate feed — verify any rate, free"
 cover: "assets/cover-announcements.png"
-abstract: "A composite rate built from multiple public forex APIs, delivered with a proof at the moment of capture. No key required to call it; anyone can re-verify the returned rate against its proof. This post covers what we guarantee, what we do not — and how far we disclose sources."
+abstract: "The first release of Lemma's proof-backed data API is live: a composite forex rate, cross-checked across multiple public sources and delivered with a cryptographic proof issued at the moment of capture. No key, no account — and anyone, anywhere can re-verify every rate for free. Here's what it guarantees, what it doesn't, and why that distinction is the whole point."
 tags:
   - verifiable-origin
   - provenance
@@ -17,15 +17,15 @@ relatedLinks:
     href: "https://lemma.frame00.com/pillars/"
 ---
 
-As the first release of Lemma's proof-backed data API, we have published a composite forex rate feed. No key and no account required.
+Today we're shipping the first release of Lemma's proof-backed data API: a composite forex rate feed. It is live right now — no key, no account, nothing to sign up for. One GET away:
 
 ```
 GET https://workers.lemma.workers.dev/v1/suites/feeds/forex/composite/latest
 ```
 
-It returns a composite rate built by cross-checking multiple public forex APIs — and only after every source has been verified. Updates are daily.
+It returns a composite rate built by cross-checking multiple public forex APIs — published only after every source has been verified — with a cryptographic proof issued at the moment the data was born. Updates are daily.
 
-This post covers what the feed returns, what it guarantees, and how far we disclose sources. First, though, we need to be clear about what "proof-backed" means here.
+Exchange-rate data is everywhere. Exchange-rate data that can **prove itself** is not. That is the gap this feed opens: you don't have to trust us, or any single vendor — you can check. This post covers what the feed returns, what it guarantees, and how far we disclose sources. First, though, we need to be clear about what "proof-backed" means here.
 
 ## What "proof-backed" means here
 
@@ -198,13 +198,13 @@ The proof addresses composite computation and value integrity, not the truth of 
 
 ## Where it fits
 
-For example: when booking overseas revenue (USD) into yen, the conversion rate carries a proof of "when and from what." The same applies on the expense side — yen conversion of a USD invoice gets provenance. Unlike a self-reported screenshot, a third party can verify the conversion rate itself. That is the practical difference a proof-backed feed makes.
+Picture the close of a quarter: overseas revenue (USD) has to be booked into yen, and an auditor asks where the conversion rate came from. With this feed, the rate arrives carrying its own answer — a proof of "when, and from what." The same applies on the expense side: the yen conversion of a USD invoice gets provenance. Unlike a self-reported screenshot, a third party can verify the conversion rate itself. That is the practical difference a proof-backed feed makes — and it's available today, for free.
 
-## Next
+## This is just the start
 
-In the posts that follow, we will cover the remaining two feeds one at a time.
+The forex feed is the opening move. Two more proof-backed feeds are already on deck, and we'll introduce them here one at a time:
 
-- **Postal codes:** over 120,000 nationwide entries, also fetchable one at a time. What a 4/4 data-commitment means (this feed supports local `contentHash` checks).
-- **Holidays:** why put a proof on data that changes only once a year.
+- **Postal codes:** over 120,000 nationwide entries, also fetchable one at a time — and what a 4/4 data-commitment means (this feed supports local `contentHash` checks).
+- **Holidays:** why it's worth putting a proof on data that changes only once a year.
 
-This feed is part of Lemma's proof-backed public data API.
+One dataset at a time, we're building public data that carries its own evidence. Issue once — verify free, any number of times. Try the feed, re-verify a proof, and see the numbers accumulate in the [Verification Center](https://lemma.frame00.com/verify/).
