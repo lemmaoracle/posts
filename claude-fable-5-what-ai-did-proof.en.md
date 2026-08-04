@@ -3,6 +3,7 @@ slug: "claude-fable-5-what-ai-did-proof"
 date: "2026.06.10"
 category: "Industry"
 audience: business
+coverPhoto: /assets/covers/claude-fable-5-what-ai-did-proof.jpg
 section: "Essays"
 title: "The more capable AI gets, the more you need proof of what it did — what Claude Fable 5 showed"
 ogTitle: "What Claude Fable 5 showed: capability needs proof"

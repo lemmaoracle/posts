@@ -3,6 +3,7 @@ slug: "ai-financial-cybersecurity-akamai-2026"
 date: "2026.06.04"
 category: "Industry"
 audience: business
+coverPhoto: /assets/covers/ai-financial-cybersecurity-akamai-2026.jpg
 section: "Essays"
 title: "AI 時代の金融サイバー攻撃対策 — コンプライアンスの新時代"
 cover: "assets/cover-industry.png"
