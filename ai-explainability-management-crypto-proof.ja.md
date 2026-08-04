@@ -3,6 +3,7 @@ slug: "ai-explainability-management-crypto-proof"
 date: "2026.04.16"
 category: "Solutions"
 audience: business
+coverPhoto: /assets/covers/ai-explainability-management-crypto-proof.jpg
 section: "Essays"
 title: '暗号証明で支える"説明可能経営"'
 abstract: "AIによる意思決定が普及する中、結果だけでなくその判断根拠を事後的に証明できる「説明可能性」が経営課題となっています。本記事では、EUのAI法など規制強化の波を背景に、技術的なブラックボックス問題がもたらす経営上のリスクを解説。さらに、Lemmaのゼロ知識証明（ZK証明）とレジストリ登録を活用し、AIの判断ロジックと使用データを独立に検証できる監査トレイルとして永続化する「証明可能な経営」のアーキテクチャとその実践的KPIについて考察します。"
