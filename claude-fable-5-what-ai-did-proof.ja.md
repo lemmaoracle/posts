@@ -2,6 +2,7 @@
 slug: "claude-fable-5-what-ai-did-proof"
 date: "2026.06.10"
 category: "Industry"
+audience: business
 section: "Essays"
 title: "AIの能力が上がるほど、「何をしたか」の証明が要る — Claude Fable 5 が示したもの"
 ogTitle: "能力が上がるほど、「何をしたか」の証明が要る"

@@ -2,6 +2,7 @@
 slug: "verifiable-intent-provenance-layer-agent-payments"
 date: "2026.06.22"
 category: "Industry"
+audience: business
 section: "Essays"
 title: "意図の証明に、根拠の検証を重ねる──AIエージェント決済時代の検証可能AI"
 cover: "assets/cover-industry.png"

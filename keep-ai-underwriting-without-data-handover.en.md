@@ -2,6 +2,7 @@
 slug: "keep-ai-underwriting-without-data-handover"
 date: "2026.05.28"
 category: "Solutions"
+audience: business
 section: "Essays"
 title: "Underwriting without the handover: keep AI credit decisions without holding the data"
 cover: "assets/cover-solutions.png"

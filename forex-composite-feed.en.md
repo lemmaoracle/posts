@@ -2,6 +2,7 @@
 slug: "forex-composite-feed"
 date: "2026.07.24"
 category: "Announcements"
+audience: technical
 section: "Changelog"
 title: "Announcing our proof-backed forex rate feed — verify any rate, free"
 cover: "assets/cover-announcements.png"

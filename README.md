@@ -1,7 +1,7 @@
-# Lemma Oracle — Posts
+# Lemma — Posts
 
 Blog posts, essays, guides, and media assets for
-[Lemma Oracle](https://lemma.frame00.com).
+[Lemma](https://lemma.frame00.com).
 
 Markdown 管理専用リポジトリ。lemma のブログ（`lemma/packages/web`）が
 ビルド時に GitHub API でこのリポジトリの `.md` を取得して表示する。

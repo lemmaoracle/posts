@@ -2,6 +2,7 @@
 slug: "verifiable-ai-cryptographic-rag-design"
 date: "2026.03.04"
 category: "Technical"
+audience: technical
 section: "Essays"
 title: "検証可能なAI：信頼の出所を暗号で示す新しいRAG設計"
 abstract: "AIエージェントやRAGの信頼性課題に対し、暗号技術（ゼロ知識証明・選択的開示・プロヴナンス追跡）を活用した新しい設計を提案。AIが読む前の段階でデータの出所と条件適合を検証するレイヤを構築し、システム全体の信頼性を担保するアプローチを解説する。"
@@ -184,7 +185,7 @@ Lemmaは、
 
 ---
 
-Lemma Oracle による「検証可能なAI」および暗号的 RAG 設計の詳細な技術仕様やデモ環境は、現在クローズドで提供準備を進めています。
+Lemma による「検証可能なAI」および暗号的 RAG 設計の詳細な技術仕様やデモ環境は、現在クローズドで提供準備を進めています。
 本記事のアプローチに関心をお持ちの事業会社・SIer・プロダクト開発チームの方で、パートナー候補としての優先案内をご希望の場合は、以下よりお申込みください。
 
-[パートナー候補として登録する（1分）](https://429bpd.share-na2.hsforms.com/2RxuIcA8OSYyAcsEKpxTM9Q)
+[エンタープライズ相談 →](https://tally.so/r/EkBqDX)

@@ -2,7 +2,7 @@
 slug: "lemma-oracle-specs"
 date: "2026.02.24"
 category: "Foundations"
-title: "Lemma Oracle Specs"
+title: "Lemma Specs"
 abstract: "A cryptographically verified truth layer enabling AI to reason over confidential data via zero‑knowledge proofs, selective disclosure, and on‑chain provenance — all while keeping raw content encrypted."
 tags:
   - verifiable-origin

@@ -3,6 +3,7 @@ slug: "proof-as-auth-sign-in-without-sending-your-key"
 title: "Proof-as-Auth: Sign In Without Sending Your Key"
 date: "2026.05.25"
 category: "Technical"
+audience: technical
 secondary_categories:
   - "Announcements"
 section: "Changelog"
