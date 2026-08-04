@@ -197,7 +197,7 @@ CloudflareのCSO、Grant BourzikasはProject Glasswingの議論を受け、同�
 ### Resources
 
 - ブログ一覧: https://lemma.frame00.com/ja/blog
-- Pillar 03 エージェント権限証明: https://lemma.frame00.com/ja/pillars/agent-authority-proof/
-- Pillar 02 検証可能AI: https://lemma.frame00.com/ja/pillars/verifiable-ai/
+- Pillar 03 エージェント権限証明: https://lemma.frame00.com/ja/pillars/#authority
+- Pillar 02 検証可能AI: https://lemma.frame00.com/ja/pillars/#inference
 - ユースケース AI監査ログ証明: https://lemma.frame00.com/ja/solutions/use-cases/ai-audit-log-proof/
 - シミュレーションコード。全5シナリオのコードと手順: https://github.com/lemmaoracle/example-cyber-attack

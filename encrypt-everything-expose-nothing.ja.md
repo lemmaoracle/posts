@@ -4,7 +4,7 @@ date: "2026.02.28"
 category: "Guides"
 section: "Essays"
 title: "すべてを暗号化し、何も露出しない"
-abstract: "Lemma がすべてのドキュメントを AES-GCM で暗号化し、AI が生の PII に触れないようにする仕組み。docHash と CID だけが来歴の安定したアンカーとして公開されます。"
+abstract: "@lemmaoracle/sdk がクライアント側ですべてのドキュメントを AES-256-GCM で暗号化し、AI が生の PII に触れないようにする仕組み。docHash と CID だけが来歴の安定したアンカーとして公開されます。"
 tags:
   - privacy
   - provenance
@@ -20,7 +20,7 @@ tags:
 
 ## Lemma のドキュメント暗号化
 
-Lemma はすべてのドキュメントをシステムに入る**前に**暗号化し、一切復号しません。
+すべてのドキュメントは、`@lemmaoracle/sdk` がクライアント側でシステムに入る**前に**暗号化します。Lemma のサーバーは原本を平文でも暗号文でも受け取らず、復号することもありません。
 
 1. ホルダーの公開鍵を取得（DID またはウォレットから導出）。
 2. ECDH + HKDF により共有鍵 `K_doc` をハイブリッド暗号化鍵として導出。
