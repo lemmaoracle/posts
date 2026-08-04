@@ -20,6 +20,7 @@ tags:
 ---
 
 **TL;DR**
+
 Standards that let an AI agent prove "what it was authorized to do" as a tamper-resistant credential are coming together fast in the payments space. With AP2 and Mastercard's Verifiable Intent, the authenticity of intent is now an industry assumption. Add one more layer on top, and AI-agent payments become far easier to put into real-world use. That layer independently verifies "what an agent's output — produced on the basis of authentic intent — is actually grounded in." It is **AI provenance proof**. This essay maps out the layers now in place and the verifiable-AI layer that sits on top of them.
 
 > Pays ≠ trustworthy. — Being able to pay (authorization) and being trustworthy (grounding) are different layers.

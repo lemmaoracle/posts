@@ -18,6 +18,7 @@ tags:
 ---
 
 **TL;DR**
+
 A common specification for sharing the "knowledge" AI agents read — in one shape across organizations and tools — has arrived (Google's OKF). But what OKF standardizes is the representation and sharing of knowledge, and "readable" is a different problem from "trustworthy." Who issued it, whether it has been tampered with, whether it meets the conditions — that provenance is out of the spec's scope. **Just days after OKF's release, Lemma is releasing the first implementation that adds provenance to OKF, as open source.** It changes the standard not at all, and opens it to the ecosystem in a form anyone can use.
 
 Represented ≠ trusted.
