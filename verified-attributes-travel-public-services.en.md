@@ -3,6 +3,7 @@ slug: "verified-attributes-travel-public-services"
 date: "2026.04.07"
 category: "Solutions"
 audience: business
+industries: [public-sector, retail]
 coverPhoto: /assets/covers/verified-attributes-travel-public-services.jpg
 section: "Essays"
 title: "Verified Attributes in Travel and Public Services"

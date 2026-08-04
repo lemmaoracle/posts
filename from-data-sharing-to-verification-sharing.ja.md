@@ -3,6 +3,7 @@ slug: "from-data-sharing-to-verification-sharing"
 date: "2026.03.18"
 category: "Solutions"
 audience: business
+industries: [supply-chain, manufacturing]
 coverPhoto: /assets/covers/from-data-sharing-to-verification-sharing.jpg
 section: "Essays"
 title: "データ共有から検証共有へ：サプライチェーン信頼基盤の進化"
