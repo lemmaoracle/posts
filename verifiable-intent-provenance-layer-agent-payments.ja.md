@@ -59,7 +59,7 @@ AP2 が「意図をどう作り、どう共有するか」を定めるとすれ�
 
 > Models change. Proofs remain. — モデルは入れ替わります。証明は残ります。
 
-だからこそ、検証の層はモデルから独立していなければならない ―― これが Lemma の出発点です。Lemma の[4 つの柱](https://lemma.frame00.com/ja/pillars)のうち、ここで効くのは [Pillar 01・来歴証明](https://lemma.frame00.com/ja/pillars/verifiable-origin/) と [Pillar 03・エージェント権限証明](https://lemma.frame00.com/ja/pillars/agent-authority-proof/) です。
+だからこそ、検証の層はモデルから独立していなければならない ―― これが Lemma の出発点です。Lemma の[4 つの柱](https://lemma.frame00.com/ja/pillars)のうち、ここで効くのは [Pillar 01・来歴証明](https://lemma.frame00.com/ja/pillars/#provenance) と [Pillar 03・エージェント権限証明](https://lemma.frame00.com/ja/pillars/#authority) です。
 
 ## Lemma の強み（3点）
 
@@ -69,7 +69,7 @@ AP2 が「意図をどう作り、どう共有するか」を定めるとすれ�
 
 ## 対エージェントの「信頼」を底上げする
 
-AIエージェントに任せられる範囲は、そのエージェントを「どこまで信頼できるか」で決まります。Lemma の [Agent Authority Proof（Pillar 03）](https://lemma.frame00.com/ja/pillars/agent-authority-proof/) は、エージェントの権限と、判断の根拠（来歴）を検証可能にします。
+AIエージェントに任せられる範囲は、そのエージェントを「どこまで信頼できるか」で決まります。Lemma の [Agent Authority Proof（Pillar 03）](https://lemma.frame00.com/ja/pillars/#authority) は、エージェントの権限と、判断の根拠（来歴）を検証可能にします。
 
 「誰の・どの権限のエージェントか」を確かめ、「何を根拠に動いたか」を後から辿れる。これは脅威を数える話ではなく、エージェントを安心して実務に出すための、信頼の底上げです。意図が証明される時代に、その意図にもとづく行動の確からしさまで重ねられます。
 
@@ -109,7 +109,7 @@ consent layer は標準が担います。**provenance layer は、いま動く�
 ## これから取り組む方向性
 
 - consent layer（Verifiable Intent / AP2）と provenance layer（来歴証明）の接続点を設計し、相互運用の参照実装を示す
-- エージェント来歴（[Agent Authority Proof / Pillar 03](https://lemma.frame00.com/ja/pillars/agent-authority-proof/)）を、検証可能な形で提供する
+- エージェント来歴（[Agent Authority Proof / Pillar 03](https://lemma.frame00.com/ja/pillars/#authority)）を、検証可能な形で提供する
 - 規制側の要請（高リスク AI のログ義務など）と業界標準の収斂点を、Regulatory Attribute Proof（Pillar 04）として接続する
 - 業種横断（製造・基幹インフラ・金融など）の来歴証明ユースケースを、順次デモとして公開する
 

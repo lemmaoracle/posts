@@ -59,7 +59,7 @@ The authenticity of intent (the consent layer) and the verifiability of groundin
 
 > Models change. Proofs remain. — Models get swapped out. Proofs remain.
 
-That is precisely why the verification layer must be independent of the model — this is Lemma's starting point. Among Lemma's [four pillars](https://lemma.frame00.com/pillars), the ones that matter here are [Pillar 01 · Verifiable Origin](https://lemma.frame00.com/pillars/verifiable-origin/) and [Pillar 03 · Agent Authority Proof](https://lemma.frame00.com/pillars/agent-authority-proof/).
+That is precisely why the verification layer must be independent of the model — this is Lemma's starting point. Among Lemma's [four pillars](https://lemma.frame00.com/pillars), the ones that matter here are [Pillar 01 · Verifiable Origin](https://lemma.frame00.com/pillars/#provenance) and [Pillar 03 · Agent Authority Proof](https://lemma.frame00.com/pillars/#authority).
 
 ## Lemma's strengths (three points)
 
@@ -69,7 +69,7 @@ That is precisely why the verification layer must be independent of the model �
 
 ## Raising the baseline of "trust" toward agents
 
-The scope you can delegate to an AI agent is determined by "how far you can trust that agent." Lemma's [Agent Authority Proof (Pillar 03)](https://lemma.frame00.com/pillars/agent-authority-proof/) makes both an agent's authority and the grounding (provenance) of its judgments verifiable.
+The scope you can delegate to an AI agent is determined by "how far you can trust that agent." Lemma's [Agent Authority Proof (Pillar 03)](https://lemma.frame00.com/pillars/#authority) makes both an agent's authority and the grounding (provenance) of its judgments verifiable.
 
 You confirm "whose agent, and with what authority," and you can trace after the fact "on what basis it acted." This is not about counting threats; it is about raising the baseline of trust so you can confidently put agents into real-world use. In an era where intent is proven, you can also layer on the soundness of the actions taken on the basis of that intent.
 
@@ -109,7 +109,7 @@ In an era where intent is proven, let's design together a way to make the ground
 ## Where we're headed
 
 - Design the connection point between the consent layer (Verifiable Intent / AP2) and the provenance layer (provenance proof), and provide a reference implementation for interoperability.
-- Provide agent provenance ([Agent Authority Proof / Pillar 03](https://lemma.frame00.com/pillars/agent-authority-proof/)) in a verifiable form.
+- Provide agent provenance ([Agent Authority Proof / Pillar 03](https://lemma.frame00.com/pillars/#authority)) in a verifiable form.
 - Connect the convergence point of regulatory requirements (such as logging obligations for high-risk AI) and industry standards as a Regulatory Attribute Proof (Pillar 04).
 - Publish cross-industry (manufacturing, critical infrastructure, finance, and more) provenance-proof use cases as demos, one after another.
 

@@ -92,7 +92,7 @@ Lemma は、モデルのセーフガードを置き換えるものではあり�
 本記事で触れた四つの層(来歴証明・検証可能 AI・エージェント権限証明・規制属性証明)は、それぞれの仕組みと、どの業務でどう使うかを個別ページにまとめています。
 
 - 全体像から: [**信頼インフラ — 4つの柱**](https://lemma.frame00.com/ja/pillars)
-- 本記事の中心、「誰の権限で動いたか」の層: [**エージェント権限証明**](https://lemma.frame00.com/ja/pillars/agent-authority-proof/)
+- 本記事の中心、「誰の権限で動いたか」の層: [**エージェント権限証明**](https://lemma.frame00.com/ja/pillars/#authority)
 - 自社の業務に当てはめて見る: [**ユースケース一覧**](https://lemma.frame00.com/ja/solutions/use-cases)
 
 ### 毎週、検出の先の視点を受け取る
