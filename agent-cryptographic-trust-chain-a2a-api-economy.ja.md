@@ -1,7 +1,7 @@
 ---
 slug: "agent-cryptographic-trust-chain-a2a-api-economy"
 date: "2026.03.12"
-category: "Solutions"
+category: "Industry"
 audience: technical
 section: "Essays"
 title: "エージェント間の暗号的信頼チェーン：A2A連携が変えるAPI経済"
