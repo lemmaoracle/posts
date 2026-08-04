@@ -19,6 +19,7 @@ tags:
 ---
 
 **TL;DR**
+
 For Google's Gemma 4 hackathon, we built `example-claim-check` — an open-source (Apache 2.0) reference implementation that does one thing precisely: it binds an AI-generated verdict to the specific model that produced it. If the local model is swapped out — even subtly — the cryptographic check breaks immediately and visibly. The pipeline is deliberately small: read the model digest, hash the claim, canonicalise the payload, and call Lemma. No heavyweight crypto client-side. This post is the announcement and walkthrough.
 
 ---
