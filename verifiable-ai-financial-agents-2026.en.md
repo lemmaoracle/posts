@@ -3,6 +3,7 @@ slug: "verifiable-ai-financial-agents-2026"
 date: "2026.05.07"
 category: "Industry"
 audience: business
+coverPhoto: /assets/covers/verifiable-ai-financial-agents-2026.jpg
 section: "Essays"
 title: "AI agents in financial operations: the case for the judgment-trail layer"
 cover: "assets/cover-industry.png"
