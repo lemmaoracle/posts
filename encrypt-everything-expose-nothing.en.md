@@ -24,7 +24,7 @@ Every document is encrypted on the client by `@lemmaoracle/sdk` **before** it en
 
 1. The Holder's public key is obtained (derived from a DID or wallet).
 2. A shared key `K_doc` is derived via ECDH + HKDF as a hybrid encryption key.
-3. The raw document is encrypted with AES-GCM to produce `encryptedDoc`.
+3. The raw document is encrypted with AES-256-GCM to produce `encryptedDoc`.
 4. The encrypted blob is stored off-chain on IPFS or Ceramic, yielding a `cid`.
 5. A `docHash = SHA3-256(encryptedDoc)` is computed and used as the on-chain primary key.
 
