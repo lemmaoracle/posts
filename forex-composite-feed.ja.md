@@ -2,6 +2,7 @@
 slug: "forex-composite-feed"
 date: "2026.07.24"
 category: "Announcements"
+audience: technical
 section: "Changelog"
 title: "証明付きの為替レートフィードを公開しました"
 cover: "assets/cover-announcements.png"

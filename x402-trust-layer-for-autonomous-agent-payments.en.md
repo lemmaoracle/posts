@@ -2,6 +2,7 @@
 slug: "x402-trust-layer-for-autonomous-agent-payments"
 date: "2026.04.28"
 category: "Announcements"
+audience: technical
 section: "Changelog"
 title: "A Trust Layer for x402"
 cover: "assets/cover-announcements.png"

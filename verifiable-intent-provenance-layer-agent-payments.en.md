@@ -2,6 +2,8 @@
 slug: "verifiable-intent-provenance-layer-agent-payments"
 date: "2026.06.22"
 category: "Industry"
+audience: business
+coverPhoto: /assets/covers/verifiable-intent-provenance-layer-agent-payments.jpg
 section: "Essays"
 title: "From Proof of Intent to Verification of Grounding — Verifiable AI for the Agent-Payments Era"
 cover: "assets/cover-industry.png"

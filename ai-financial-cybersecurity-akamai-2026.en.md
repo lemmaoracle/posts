@@ -2,6 +2,8 @@
 slug: "ai-financial-cybersecurity-akamai-2026"
 date: "2026.06.04"
 category: "Industry"
+audience: business
+coverPhoto: /assets/covers/ai-financial-cybersecurity-akamai-2026.jpg
 section: "Essays"
 title: "AI-era cybersecurity in financial services — a new era of compliance"
 cover: "assets/cover-industry.png"
@@ -74,7 +76,7 @@ The sophistication of cyberattacks is at once a reason to invest more in the det
 - Akamai SOTI 2026 (Financial Services edition) shows that attacks on finance have gone autonomous-agent, that banks absorb 83% of API attacks, and that APAC has become the top Layer 7 DDoS target.
 - On the defending side, even where APIs are inventoried, where sensitive data lives is largely invisible (27% know), and detection alone is showing its limits against mimicry-class agents.
 - Detection and mitigation are indispensable, and that is a specialist domain. Beyond them, in finance where AI agents become transaction principals, a proof layer remains — one that cryptographically attests, before the transaction, "who, under whose authority, KYC- and sanctions-cleared."
-- As DORA, the EU AI Act, NYDFS, and GDPR enforcement step up, Lemma's trust layer (provenance, AI judgment, agent authority, regulatory attributes) is designed to fill that step beyond detection in a form that holds up under audit and regulatory accountability — aligning with the regulatory shift already underway.
+- As DORA, the EU AI Act, NYDFS, and GDPR enforcement step up, Lemma's trust layer (provenance, AI judgment, agent authority, regulatory attributes) is designed to fill that step beyond detection in a form you can present as the basis for audit and regulatory reporting — aligning with the regulatory shift already underway.
 
 ### Read the incidents — Critical Brief
 

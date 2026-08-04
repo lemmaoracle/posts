@@ -2,6 +2,8 @@
 slug: "from-data-sharing-to-verification-sharing"
 date: "2026.03.18"
 category: "Solutions"
+audience: business
+coverPhoto: /assets/covers/from-data-sharing-to-verification-sharing.jpg
 section: "Essays"
 title: "From Data Sharing to Verification Sharing: The Evolution of Supply Chain Trust Infrastructure"
 abstract: "Traditionally, supply chains have faced a trade-off between data sharing and third-party audits for building trust. Lemma proposes a third option—'verification sharing'—using zero-knowledge proofs to verify facts without sharing the underlying data. This enables real-time automated verification while preserving privacy, allowing AI agents to make autonomous procurement decisions."
@@ -53,7 +55,7 @@ The concrete workflow:
 
 - A supplier's factory generates a ZK proof stating "Our CO₂ emissions are below the threshold"
 - The purchaser verifies this proof alone—never receiving the actual emission values
-- Proof generation and verification logs are recorded on-chain for post-audit compliance
+- Proofs are registered in Lemma's registry, where the receiving party can verify them independently
 
 This allows suppliers to **prove compliance while preserving production secrets**. Purchasers can conduct **real-time, automated verification**.
 
@@ -68,11 +70,11 @@ In Lemma's near future, AI agents autonomously perform this verification.
 
   `→ Automatically fetches and verifies 'Environmental Standard Compliance' proof from Tier 1`
 
-  `→ Cross-checks Tier 2 factory 'Labor Standard' proof via Lemma Oracle`
+  `→ Cross-checks Tier 2 factory 'Labor Standard' proof via Lemma`
 
   `→ Auto-approves order only if criteria are met`
 
-  `→ Records approval evidence (proof hash) on-chain`
+  `→ Registers approval evidence (proof hash) in the registry`
 ```
 
 Human intervention occurs only in exceptional cases. Normal procurement workflows conclude entirely between agents—**only verified facts inform decision-making**. This represents Lemma's answer to the question: "What can AI be trusted to believe?"
@@ -87,7 +89,7 @@ Traditionally, the assumption dominated: "Greater transparency means lower priva
 | ---------------------------------------------- | ------------------------------------------ |
 | Data disclosed for verification                | Verification shared without data           |
 | Audits conducted 1–2 times/year                | Real-time verification                     |
-| Certificates issued by centralized authorities | Cryptographic proofs issued (tamper-proof) |
+| Certificates issued by centralized authorities | Verified by the receiver, without asking the issuer |
 | Supplier secret leakage risk                   | Secrets remain locally                     |
 | Manual verification required                   | Agents verify automatically                |
 

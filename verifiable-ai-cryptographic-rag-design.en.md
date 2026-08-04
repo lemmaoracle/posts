@@ -2,6 +2,7 @@
 slug: "verifiable-ai-cryptographic-rag-design"
 date: "2026.03.04"
 category: "Technical"
+audience: technical
 section: "Essays"
 title: "Verifiable AI: A New RAG Design that Demonstrates Trust Origins with Cryptography"
 abstract: "Addressing the trust challenges of AI agents and RAG systems, we propose a novel design that leverages cryptographic technologies (zero-knowledge proofs, selective disclosure, and provenance tracking). This approach builds a verification layer for data origins and condition compliance before AI reads the data, ensuring the overall reliability of the system."
@@ -184,9 +185,9 @@ In the next article, we will delve into how, building on this verification layer
 
 ---
 
-**Partner with Lemma Oracle**
+**Partner with Lemma**
 
-Technical details and demo environments for Lemma Oracle’s “verifiable AI” and cryptographic RAG design are currently available in a closed, partner-only phase.
+Technical details and demo environments for Lemma’s “verifiable AI” and cryptographic RAG design are currently available in a closed, partner-only phase.
 If you are interested in this approach and would like to receive priority access as a potential partner organization, please apply below.
 
-[Register as a partner candidate (1 min)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+[Enterprise consultation →](https://tally.so/r/EkBqDX)

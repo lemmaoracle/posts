@@ -2,6 +2,8 @@
 slug: "detection-is-not-proof"
 date: "2026.05.22"
 category: "Industry"
+audience: business
+coverPhoto: /assets/covers/detection-is-not-proof.jpg
 section: "Essays"
 title: "The last layer left in AI-era cyber defense"
 cover: "assets/cover-industry.png"

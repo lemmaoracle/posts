@@ -2,6 +2,8 @@
 slug: "ai-financial-cybersecurity-akamai-2026"
 date: "2026.06.04"
 category: "Industry"
+audience: business
+coverPhoto: /assets/covers/ai-financial-cybersecurity-akamai-2026.jpg
 section: "Essays"
 title: "AI 時代の金融サイバー攻撃対策 — コンプライアンスの新時代"
 cover: "assets/cover-industry.png"
@@ -74,7 +76,7 @@ DNS フラッドは最大の DDoS 攻撃ベクトルで、前年比 +29%。さ�
 - Akamai SOTI 2026（金融版）は、金融への攻撃が自律エージェント化し、銀行が API 攻撃の 83% を吸収、APAC が Layer 7 DDoS の最多標的になったことを示しました。
 - 守る側は、API の棚卸しはできても機微データの所在（把握は 27%）が見えておらず、模倣型エージェントの前で検出単独の限界が露呈しています。
 - 検出と緩和は不可欠で、そこは専業の領域です。その先に、AI エージェントが取引主体となる金融では「誰が・どの権限で・KYC/制裁クリアか」を取引前に暗号で証跡化する証明層が残ります。
-- DORA・EU AI Act・NYDFS・GDPR と規制執行が一段強まるなか、Lemma の信頼インフラ（来歴・AI 判断・エージェント権限・規制属性）は、検出の先のこの一段を、監査・規制報告の説明責任に耐える形で埋める設計です — 既に動き始めている規制シフトと足並みをそろえます。
+- DORA・EU AI Act・NYDFS・GDPR と規制執行が一段強まるなか、Lemma の信頼インフラ（来歴・AI 判断・エージェント権限・規制属性）は、検出の先のこの一段を、監査・規制報告の根拠として示せる形で埋める設計です — 既に動き始めている規制シフトと足並みをそろえます。
 
 ### 実際の事案で確認する — Critical Brief
 

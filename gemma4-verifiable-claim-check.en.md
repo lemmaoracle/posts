@@ -2,6 +2,7 @@
 slug: "gemma4-verifiable-claim-check"
 date: "2026.06.30"
 category: "Announcements"
+audience: technical
 section: "Essays"
 cover: "assets/cover-announcements.png"
 title: "Verifiable Claim-Check: pairing on-device Gemma 4 with cryptographic model attestation"

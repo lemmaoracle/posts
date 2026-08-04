@@ -2,6 +2,7 @@
 slug: "lemma-verifiable-ai-kycaml-without-data-sharing"
 date: "2026.03.26"
 category: "Solutions"
+audience: technical
 section: "Essays"
 title: "Verifiable AI KYC/AML Without Data Sharing: Lemma's Practical Approach"
 abstract: "In KYC/AML operations for financial institutions, balancing privacy protection and rapid verification poses the biggest dilemma. Lemma Verifiable AI, built on ZK-proof foundations, offers a solution. This article explains the practical approach of verifying attributes without data sharing while ensuring AI transparency, covering technical design to business impact."
@@ -63,7 +64,7 @@ if (result.status === "verified") {
 }
 ```
 
-AES-GCM encryption protects inputs, and Retrieval-Augmented Generation (RAG) integrates financial domain knowledge. Outputs become tamper-proof via ZK-snarks (Succinct Non-interactive). BBS+ signatures chain logs for auditability. WebCrypto compliance enables browser implementation.
+AES-GCM encryption protects inputs, and Retrieval-Augmented Generation (RAG) integrates financial domain knowledge. Outputs become tamper-proof via zk-SNARKs (Succinct Non-interactive). BBS+ signatures chain logs for auditability. WebCrypto compliance enables browser implementation.
 
 ## Expected Impact and Industry Trends
 
@@ -98,10 +99,6 @@ High compatibility with existing systems ensures smooth transition.
 
 ## Conclusion
 
-Lemma's practical approach transforms KYC/AML into trustworthy infrastructure. Whitepapers and demos will be released shortly. We are currently offering priority access to select partner companies.
+Lemma's practical approach transforms KYC/AML into trustworthy infrastructure. Financial institutions and FinTech companies interested in exploring Lemma's solution can apply below:
 
-Financial institutions and FinTech companies interested in exploring Lemma's solution can apply below:
-
-[Register as a Partner Candidate (1 minute)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
-
-Limited early access is currently available to priority partners.
+[Enterprise consultation →](https://tally.so/r/EkBqDX)

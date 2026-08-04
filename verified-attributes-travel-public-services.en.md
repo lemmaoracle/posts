@@ -2,6 +2,8 @@
 slug: "verified-attributes-travel-public-services"
 date: "2026.04.07"
 category: "Solutions"
+audience: business
+coverPhoto: /assets/covers/verified-attributes-travel-public-services.jpg
 section: "Essays"
 title: "Verified Attributes in Travel and Public Services"
 abstract: "Travel and public services suffer from an inefficient structure where the same personal information is repeatedly submitted and stored across multiple organizations. Passport copies, income certificates, and medical records spread across systems, increasing breach exposure. Lemma proposes a third option: 'Do not share raw data — circulate only verified facts.' This article explores a practical approach to streamlining hotel KYC, visa processing, and public benefit eligibility checks using ZK proofs, all while protecting privacy."
@@ -79,7 +81,7 @@ It is 2028. Person A is an overseas visitor from Tokyo.
 
 In the morning, at hotel check-in, the front desk points a "Verifiable Credentials–compatible" tablet toward Person A. On Person A's smartphone, verified attributes issued by their home government are stored, set up before departure. "Adult status," "No criminal record," "Valid travel insurance" — these ZK proofs are sent to the hotel system with a single tap.
 
-The hotel verifies the proofs through the Lemma Oracle. The result is simple: "All conditions met." Check-in is complete in two minutes. Person A's passport number, nationality, and exact date of birth do not exist in the hotel's database.
+The hotel verifies the proofs through Lemma. The result is simple: "All conditions met." Check-in is complete in two minutes. Person A's passport number, nationality, and exact date of birth do not exist in the hotel's database.
 
 At midday, Person A tries to claim a senior discount at a city art museum. There is no need to dig through a wallet for ID. They simply present an attribute proof from the same smartphone showing "Age is 65 or older." The receptionist does not see a number. They only confirm whether the proof is "valid" or "invalid."
 
@@ -105,7 +107,7 @@ Lemma's verified attributes dismantle this trade-off.
 
 Convenience improves. Verification gets faster. But what circulates is not raw data — only the fact that conditions are met.
 
-For regulators, this model is equally effective. An on-chain log proving that "review was conducted" makes audit compliance easier than before. Detecting fraudulent benefit claims can also be automated as a proof integrity check.
+For regulators, this model is equally effective. A proof that "review was conducted" remains in an independently verifiable form, making audit compliance easier than before. Detecting fraudulent benefit claims can also be automated as a proof integrity check.
 
 ---
 
@@ -120,6 +122,5 @@ Separating "the fact you want to verify" from "the raw data behind it" — this 
 ---
 
 For travel, public services, and administrative digitalization professionals interested in Lemma's verified attributes architecture —
-Whitepapers and demos are coming soon. We are currently offering early access to select partner companies and local governments.
 
-[Register as a partner candidate (1 minute)](https://429bpd.share-na2.hsforms.com/2E6_TsCd2RUSdP4fKsuhxzw)
+[Enterprise consultation →](https://tally.so/r/EkBqDX)

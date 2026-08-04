@@ -2,6 +2,8 @@
 slug: "ppsi-stablecoin-aml-kyc-third-layer"
 date: "2026.05.15"
 category: "Industry"
+audience: business
+coverPhoto: /assets/covers/ppsi-stablecoin-aml-kyc-third-layer.jpg
 section: "Essays"
 title: "Adding Layer 3 to x402 — Choices for Stablecoin Issuers and Adopters"
 cover: "assets/cover-industry.png"

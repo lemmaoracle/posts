@@ -2,6 +2,7 @@
 slug: "lemma-verifiable-ai-kycaml-without-data-sharing"
 date: "2026.03.26"
 category: "Solutions"
+audience: technical
 section: "Essays"
 title: "データを出さずに証明するKYC/AML：Lemma検証可能AIの実践アプローチ"
 abstract: "金融機関の KYC/AML 業務におけるプライバシー保護と迅速な審査の両立課題に対し、ZK 証明を基盤とした Lemma 検証可能 AI が解決策を提供する。データを出さずに属性を証明し、AI の透明性を確保する実践的なアプローチを、技術設計から経営インパクトまで解説する。"
@@ -55,7 +56,7 @@ if (result.status === "verified") {
 }
 ```
 
-AES-GCM暗号化で入力を保護し、RAGで金融ドメインの知識を統合します。 出力はZKスニーク（Succinct Non-interactive）により改ざん不可能です。BBS+署名でログをチェーン化し、監査を容易にします。またWebCrypto準拠のためブラウザ実装も可能です。
+AES-GCM暗号化で入力を保護し、RAGで金融ドメインの知識を統合します。 出力はzk-SNARK（Succinct Non-interactive）により改ざん不可能です。BBS+署名でログをチェーン化し、監査を容易にします。またWebCrypto準拠のためブラウザ実装も可能です。
 
 ## 期待される効果と業界トレンド
 
@@ -69,8 +70,6 @@ Lemmaアプローチを導入すると、審査時間の大幅短縮と誤検知
 
 ## まとめ
 
-Lemmaの実践アプローチにより、KYC/AMLは信頼できるインフラへと進化します。ホワイトペーパーおよびデモは近日公開予定です。現在は一部のパートナー企業を対象に優先案内を実施しています。ご興味をお持ちの金融機関・FinTech企業様は、以下よりお申し込みください。
+Lemmaの実践アプローチにより、KYC/AMLは信頼できるインフラへと進化します。ご興味をお持ちの金融機関・FinTech企業様は、以下よりお申し込みください。
 
-[パートナー候補として登録する（1分）](https://429bpd.share-na2.hsforms.com/2RxuIcA8OSYyAcsEKpxTM9Q)
-
-現在限定パートナー向け早期アクセスを実施中です。
+[エンタープライズ相談 →](https://tally.so/r/EkBqDX)

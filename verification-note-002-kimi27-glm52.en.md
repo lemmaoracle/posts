@@ -2,6 +2,7 @@
 slug: "verification-note-002-kimi27-glm52"
 date: "2026.06.18"
 category: "Technical"
+audience: technical
 section: "Essays"
 title: "New Models, Same Proof: Adding Kimi K2.7 Code and GLM-5.2 to the Attack Matrix"
 abstract: "We added Kimi K2.7 Code and GLM-5.2 to our attack matrix. GLM-5.2 became the second model after Opus 4.8 to autonomously breach all five scenarios. Kimi K2.7 Code breached 3/5, surpassing its K2.6 predecessor. Yet Lemma's ZK proof gate blocked every model in every scenario. GLM-5.2 made 181 tool calls on the audit-trail SECURE scenario alone — all 403. Models evolve. The proof gate doesn't budge."
