@@ -3,6 +3,7 @@ slug: "verifiable-ai-financial-agents-2026"
 date: "2026.05.07"
 category: "Industry"
 audience: business
+industries: [finance, ai]
 coverPhoto: /assets/covers/verifiable-ai-financial-agents-2026.jpg
 section: "Essays"
 title: "金融 AI が業務の中核に入った 2026 — 判断証跡という残された層"

@@ -3,6 +3,7 @@ slug: "ai-explainability-management-crypto-proof"
 date: "2026.04.16"
 category: "Solutions"
 audience: business
+industries: [finance, healthcare, ai]
 coverPhoto: /assets/covers/ai-explainability-management-crypto-proof.jpg
 section: "Essays"
 title: '"Explainable Management" Powered by Cryptographic Proofs'

@@ -3,6 +3,7 @@ slug: "keep-ai-underwriting-without-data-handover"
 date: "2026.05.28"
 category: "Solutions"
 audience: business
+industries: [finance]
 coverPhoto: /assets/covers/keep-ai-underwriting-without-data-handover.jpg
 section: "Essays"
 title: "渡さずに、審査する。データを抱えずに、AI 与信を続ける"
