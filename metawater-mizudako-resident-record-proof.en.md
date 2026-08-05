@@ -9,7 +9,7 @@ coverLines:
   - "without the data."
 section: "Essays"
 title: "Proving residents' activity records are genuine — without exposing personal data"
-abstract: "Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can prove their authenticity without revealing any personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity. The plan is Lemma Civic, the base plan for local government. It is built for local authorities, public utilities, and B2B2G providers of citizen-facing services, and it attaches tamper-evident provenance and proof of authenticity to the records that arise in the field — counter services, benefits, welfare consultations, resident participation — without exposing what those records contain. You can start small by picking a single process from the public-sector templates, and scale to multiple sites or authorities through tiers based on the number of sites ([more on Lemma Civic](https://lemma.frame00.com/plans/civic/))."
+abstract: "Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can prove their authenticity without revealing any personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity. The plan is Lemma Civic, the base plan for local government."
 tags:
   - case-study
   - zk-proof
@@ -40,7 +40,7 @@ To record this resident-led activity continuously — and to put it to work in a
 
 Lemma, our own AI proof infrastructure, was newly integrated into MizuDAkO, which the two companies have been developing together. Residents' activity is recorded with proof that it is genuine, while personal data stays hidden. It runs comfortably on legacy devices and over limited connectivity, and participants do not have to install a special app or prepare any particular device.
 
-The plan is Lemma Civic, the base plan for local government.
+The plan is Lemma Civic, the base plan for local government. It is the standard-template configuration — issuing proofs against records that already follow a fixed format — so where the conditions fit, it can be up and running quickly.
 
 ## How it works
 
@@ -65,3 +65,4 @@ For those responsible for digital transformation in local government and public 
 
 - [Press release (PR TIMES, in Japanese)](https://prtimes.jp/main/html/rd/p/000000072.000018679.html)
 - [Use cases across industries](https://lemma.frame00.com/solutions/use-cases/)
+- [Plans and pricing](https://lemma.frame00.com/pricing/)
