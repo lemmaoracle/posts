@@ -4,7 +4,9 @@ date: "2026.08.05"
 category: "Solutions"
 audience: business
 industries: [public-sector]
-coverPhoto: /assets/covers/metawater-mizudako-resident-record-proof.jpg
+coverLines:
+  - "個人情報を出さずに、"
+  - "記録を「本物」に。"
 section: "Essays"
 title: "導入事例：個人情報を出さずに、住民の活動記録を「本物」と証明する"
 abstract: "上下水道インフラの維持管理を住民参加型で行うコミュニティづくりをサポートする「MizuDAkO」に、AI証明基盤 Lemma を統合しました。住民の活動記録は、個人情報を明かさないまま真正性を証明でき、行政の事務手続きにも AI のデータ活用にも使える確かな記録になります。ゼロ知識証明により生データを渡さずに「正しさ」だけを検証でき、レガシーな端末や限られた通信環境でも動作します。"

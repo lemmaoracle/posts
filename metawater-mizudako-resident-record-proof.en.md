@@ -4,7 +4,9 @@ date: "2026.08.05"
 category: "Solutions"
 audience: business
 industries: [public-sector]
-coverPhoto: /assets/covers/metawater-mizudako-resident-record-proof.jpg
+coverLines:
+  - "Prove the record"
+  - "without the data."
 section: "Essays"
 title: "Case study: proving residents' activity records are genuine — without exposing personal data"
 abstract: "Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can now prove their authenticity without revealing any personal data, making them dependable input for both administrative procedures and AI. Zero-knowledge proofs let a third party verify correctness without ever receiving the underlying data, and the design runs on legacy devices and constrained networks."
