@@ -1,7 +1,7 @@
 ---
 slug: "agent-cryptographic-trust-chain-a2a-api-economy"
 date: "2026.03.12"
-category: "Solutions"
+category: "Industry"
 audience: technical
 section: "Essays"
 title: "Cryptographic Trust Chains Between Agents: How A2A Collaboration Will Transform the API Economy"

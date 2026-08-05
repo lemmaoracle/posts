@@ -1,7 +1,7 @@
 ---
 slug: "ppsi-stablecoin-aml-kyc-third-layer"
 date: "2026.05.15"
-category: "Industry"
+category: "Solutions"
 audience: business
 industries: [finance, developers]
 coverPhoto: /assets/covers/ppsi-stablecoin-aml-kyc-third-layer.jpg
