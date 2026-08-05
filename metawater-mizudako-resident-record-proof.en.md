@@ -9,7 +9,7 @@ coverLines:
   - "without the data."
 section: "Essays"
 title: "Proving residents' activity records are genuine — without exposing personal data"
-abstract: "Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can prove their authenticity without revealing any personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity. The plan is Lemma Civic, the base plan for local government."
+abstract: "Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can prove their authenticity without revealing any personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity. The plan is Lemma Civic, the base plan for local government. It is built for local authorities, public utilities, and B2B2G providers of citizen-facing services, and it attaches tamper-evident provenance and proof of authenticity to the records that arise in the field — counter services, benefits, welfare consultations, resident participation — without exposing what those records contain. You can start small by picking a single process from the public-sector templates, and scale to multiple sites or authorities through tiers based on the number of sites ([more on Lemma Civic](https://lemma.frame00.com/plans/civic/))."
 tags:
   - case-study
   - zk-proof
@@ -18,7 +18,9 @@ tags:
   - provenance
 ---
 
-Lemma, the AI proof infrastructure, has been integrated into MizuDAkO, Metawater's resident-participation project.
+**TL;DR**
+
+Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can now prove their authenticity without revealing personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity.
 
 | Summary        |                                                                                  |
 | -------------- | -------------------------------------------------------------------------------- |
@@ -27,10 +29,6 @@ Lemma, the AI proof infrastructure, has been integrated into MizuDAkO, Metawater
 | Sector         | Local government and public services                                             |
 | Plan           | Lemma Civic                                                                      |
 | What is proved | The authenticity of residents' activity records, without revealing personal data |
-
-**TL;DR**
-
-Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can now prove their authenticity without revealing personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity.
 
 ## The problem
 
@@ -66,6 +64,4 @@ For those responsible for digital transformation in local government and public 
 ## Resources
 
 - [Press release (PR TIMES, in Japanese)](https://prtimes.jp/main/html/rd/p/000000072.000018679.html)
-- [Lemma](https://lemma.frame00.com/)
 - [Use cases across industries](https://lemma.frame00.com/solutions/use-cases/)
-- [Verification centre](https://lemma.frame00.com/verify/)
