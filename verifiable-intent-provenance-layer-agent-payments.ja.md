@@ -81,7 +81,7 @@ AIエージェントに任せられる範囲は、そのエージェントを「
 
 来歴の検証は、すでにある業務の上にそのまま乗ります。
 
-- **金融・FinTech**：KYC/AML を、書類を渡さず「条件を満たす」証明だけで完結。エージェント決済の相手が「AML 審査済みの組織か」をミリ秒単位で確認でき、与信・審査の説明コストも下げられます。[→ KYC/AML 選択的開示](https://lemma.frame00.com/ja/solutions/use-cases/kyc-aml-selective-disclosure/)
+- **金融・FinTech**：KYC/AML を、書類を渡さず「条件を満たす」証明だけで完結。エージェント決済の相手が「AML 審査済みの組織か」をミリ秒単位で確認でき、与信・審査の説明コストも下げられます。[→ 本人属性照合（KYC/AML）](https://lemma.frame00.com/ja/solutions/use-cases/kyc-aml-selective-disclosure/)
 - **監査・コンプライアンス**：AI が「何を根拠に判断したか」を、後から再現・提出できる形で残す。監査対応・規制報告に出せるのは、検出スコアではなく事前の証跡です。[→ AI 監査ログ証明](https://lemma.frame00.com/ja/solutions/use-cases/ai-audit-log-proof/)
 - **製造・基幹インフラ／調達**：品質・検査記録や取引先の証明を、原本を抱えずに確認。サプライヤーの認証・信用を、データを預からずに検証できます。[→ サプライチェーン ESG](https://lemma.frame00.com/ja/solutions/use-cases/supply-chain-esg/)
 - **自治体・公共**：個人データを見ずに、必要な属性だけを検証して手続きを進める。給付・窓口・徴収などを、生の個人情報を保持せずに回せます。
