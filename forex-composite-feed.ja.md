@@ -15,7 +15,7 @@ relatedLinks:
   - label: "決済レートに、証明を付ける（外貨決済での使いどころ）"
     href: "https://lemma.frame00.com/ja/blog/verifiable-fx-rates-for-payments/"
   - label: "検証センターで内訳を見る"
-    href: "https://lemma.frame00.com/verify/"
+    href: "https://lemma.frame00.com/ja/verify/"
   - label: "3つの中核技術（Pillars）"
     href: "https://lemma.frame00.com/ja/pillars/"
 ---
