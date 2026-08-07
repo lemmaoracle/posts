@@ -12,6 +12,8 @@ tags:
   - provenance
   - zk-proof
 relatedLinks:
+  - label: "Attach a proof to the rate (what it looks like in payments)"
+    href: "https://lemma.frame00.com/blog/verifiable-fx-rates-for-payments/"
   - label: "See the breakdown in the Verification Center"
     href: "https://lemma.frame00.com/verify/"
   - label: "Three core technologies (Pillars)"
@@ -200,6 +202,8 @@ The proof addresses composite computation and value integrity, not the truth of 
 ## Where it fits
 
 Picture the close of a quarter: overseas revenue (USD) has to be booked into yen, and an auditor asks where the conversion rate came from. With this feed, the rate arrives carrying its own answer — a proof of "when, and from what." The same applies on the expense side: the yen conversion of a USD invoice gets provenance. Unlike a self-reported screenshot, a third party can verify the conversion rate itself. That is the practical difference a proof-backed feed makes — and it's available today, for free.
+
+For how a proof-backed rate removes the round-trip to the issuer and the mismatched-rate dispute, taking cross-currency payments as the worked example, see [Attach a proof to the rate](https://lemma.frame00.com/blog/verifiable-fx-rates-for-payments/).
 
 ## This is just the start
 
