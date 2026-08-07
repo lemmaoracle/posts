@@ -12,8 +12,10 @@ tags:
   - provenance
   - zk-proof
 relatedLinks:
+  - label: "決済レートに、証明を付ける（外貨決済での使いどころ）"
+    href: "https://lemma.frame00.com/ja/blog/verifiable-fx-rates-for-payments/"
   - label: "検証センターで内訳を見る"
-    href: "https://lemma.frame00.com/verify/"
+    href: "https://lemma.frame00.com/ja/verify/"
   - label: "3つの中核技術（Pillars）"
     href: "https://lemma.frame00.com/ja/pillars/"
 ---
@@ -200,6 +202,8 @@ proof が対象とするのは合成計算と値の完全性であり、一次�
 ## 使いどころ
 
 たとえば、海外売上（USD 建て）を円に換算して計上するとき、その換算レートに「時点・出典」の証明が付きます。経費側でも同じで、USD 建て請求の円換算に出典が付きます。自己申告のスクリーンショットと違い、換算レートまで第三者が検証できる——これが証明付きフィードの実用的な差です。
+
+外貨決済を例に、証明付きレートが照会の往復やレート不一致をどう解消するかは[決済レートに、証明を付ける](https://lemma.frame00.com/ja/blog/verifiable-fx-rates-for-payments/)で詳しく書いています。
 
 ## 次回
 

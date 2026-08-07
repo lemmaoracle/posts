@@ -64,6 +64,27 @@ Body starts right after the closing `---`. Headings are `##` / `###`
 json, solidity, yaml, …). For Japanese terminology follow existing
 articles (e.g. ゼロ知識証明, not 零知識証明).
 
+## Cross-linking between articles (relatedLinks)
+
+The site's automatic "related articles" block matches on **category only**
+(`getRelatedPosts` in `lemma` → `packages/web/src/data/blog.ts`). Two
+articles in different categories never surface each other, however closely
+they are related — a `Solutions` write-up and the `Announcements` post it
+builds on are exactly the case that falls through.
+
+So: **when a new article cites an existing one, add the reverse link to
+that existing article in the same PR.** Two places, both cheap:
+
+1. `relatedLinks` on the older article — renders as a card at the end.
+2. One sentence in the body, at the point where the topic comes up —
+   `relatedLinks` sits below the fold, so a reader who stops earlier
+   never sees it.
+
+Worked example: `verifiable-fx-rates-for-payments` (Solutions) expands on
+`forex-composite-feed` (Announcements). The new article links back in its
+`relatedLinks`; the older one links forward from its 「使いどころ」 section
+and from its own `relatedLinks`.
+
 ## Assets (cover / OG images)
 
 - Put image files in `assets/` (the existing naming convention is a
