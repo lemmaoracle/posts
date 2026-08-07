@@ -15,7 +15,7 @@ tags:
   - financial-services
 relatedLinks:
   - label: "Finance & FinTech use cases"
-    href: "https://lemma.frame00.com/solutions/use-cases/finance/"
+    href: "https://lemma.frame00.com/solutions/use-cases/#fin"
   - label: "Trust402 — delegate to agents, transact with confidence"
     href: "https://lemma.frame00.com/trust402/"
   - label: "Our proof-backed forex rate feed"
