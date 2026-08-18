@@ -16,6 +16,9 @@ tags:
   - public-sector
   - privacy
   - provenance
+relatedLinks:
+  - label: "Keep the AI decision together with the data it was looking at"
+    href: "https://lemma.frame00.com/blog/ai-decision-record-with-inputs/"
 ---
 
 **TL;DR**
@@ -47,6 +50,8 @@ The plan is Lemma Civic, the base plan for local government. It is the standard-
 What makes this trustworthy is cryptography that proves correctness alone, without handing over the contents of the data. Much like an IC card that confirms your identity without ever showing your PIN, it confirms only that something is genuine, without revealing what it contains — and one of the core techniques behind this is the zero-knowledge proof. Because the raw data does not have to travel back and forth, it remains practical to operate where connectivity is limited, and records are handled as short codes from which the original cannot be reconstructed. Without disclosing sensitive details such as the nature of the work, a third party can later verify that a correct record genuinely exists and has not been tampered with.
 
 Whichever AI model is used, and however it evolves, the proof of authenticity holds.
+
+The same structure extends to the AI's own judgments. Keeping a decision and the data it referenced as a single record is covered in "[Keep the AI decision together with the data it was looking at](https://lemma.frame00.com/blog/ai-decision-record-with-inputs/)."
 
 ## What it delivers
 
