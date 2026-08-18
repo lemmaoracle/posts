@@ -75,6 +75,11 @@ In practice, the moment a decision is finalized, you register the content of the
 
 With this in place, anyone checking the record can trace from the decision back to the inputs.
 
+<figure>
+  <img src="/assets/figures/judgment-input-chain-fig1.en.svg" alt="Input records — an official bulletin and a sensor reading — embedded into the decision record at record time, with the checking side tracing back from the decision to the inputs" />
+  <figcaption>Figure 1 — How input records relate to the decision record</figcaption>
+</figure>
+
 ### Two ways to tie "evidence" to an AI decision
 
 There are two ways to embed inputs, depending on the nature of the data.
