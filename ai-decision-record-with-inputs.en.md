@@ -67,7 +67,7 @@ But a hash kept in the same place as the decision record buys you nothing: whoev
 
 Hashes and registries are also language your IT department will already recognise, which makes them a workable place to start the conversation.
 
-## Embed "what it looked at" into the record of the decision
+## Embed “what it looked at” into the record of the decision
 
 Locking the decision alone still leaves the question of what informed it unanswered. So at the moment you create the record of the decision, you embed the input data that decision referenced along with it.
 
@@ -77,18 +77,16 @@ With this in place, anyone checking the record can trace from the decision back 
 
 ### Two ways to tie “evidence” to an AI decision
 
-There are two ways to embed inputs, depending on the nature of the data.
+There are two ways to embed an input. The data a site handles varies, so you use both side by side.
 
-| Approach                     | Data it suits                                                  | What it proves                                                             |
-| ---------------------------- | -------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| **Point to the source data** | Published data, such as a Japan Meteorological Agency bulletin | You can follow the reference and match it against the publisher’s own text |
-| **Store a hash of the data** | Transient data streaming in from sensors                       | That it has not changed since the moment it was recorded                   |
+| How the input is embedded               | What can be confirmed                                                              |
+| --------------------------------------- | ---------------------------------------------------------------------------------- |
+| **Point to an already-registered item** | The referenced input can be matched, content and all, against the published source |
+| **Store the input’s hash alongside**    | The referenced input has not changed since the record was created                  |
 
-“Pointing to the source data” suits published data — anything anyone can go and look up later.
+The first form requires the input to be registered beforehand. For external data pulled in on a schedule — a Japan Meteorological Agency (JMA) bulletin, say — the practical route is to register it as part of the ingest job. Data that arises on the spot, like raw sensor readings, is hard to register in advance, so it takes the second form. There you keep your own copy of the value in your records; if the copy and the hash agree, the value has not changed since the moment it was recorded.
 
-“Storing a hash of the data” suits values like sensor readings — transient data that cannot be looked up after the fact. You keep your own copy of the value in your records and store its hash alongside the decision. If the copy and the hash agree, the value has not changed since the moment it was recorded.
-
-In either form, being able to say in an audit or a report that “this data can be matched against the publishing source” and “this one can be confirmed as unchanged since the record was created” lets the other side check for themselves.
+Which form was used is visible in the record itself. Being able to say in a report or an audit that “this input can be matched against the published value” and “this one goes as far as showing it was not altered” carries further than making the record sound stronger than it is.
 
 <figure class="figure--diagram">
   <img src="/assets/figures/judgment-input-chain-fig1.en.svg" alt="Input records — an official bulletin and a sensor reading — embedded into the decision record at record time, with the checking side tracing back from the decision to the inputs" />
@@ -101,13 +99,13 @@ Using disaster response as an example, let us separate **the order in which reco
 
 ### One record per event, as it happens
 
-At the moment each event happens, you leave one record, in order.
+Rather than assembling them afterwards, you register each one as it happens.
 
-**1. Record the news or bulletin:** the earthquake information received from the Japan Meteorological Agency (JMA) is stored exactly as it arrived.
+**1. Ingest the official bulletin.** The JMA epicentre and seismic-intensity report is registered exactly as it stood when it was retrieved — one extra step inside the scheduled ingest job.
 
-**2. The AI makes a judgment:** the AI's decision — "a major earthquake bulletin was received, so inspection begins" — is recorded, linked to the record from step 1.
+**2. The AI issues a decision.** “An intensity of upper 5 was reported, so emergency inspection of the affected area is triggered” is recorded, pointing at the registration from step 1.
 
-**3. Inspect on site:** the actual inspection results are stored, linked to the AI's decision from step 2.
+**3. The field carries out the inspection.** The record of the inspection actually performed is registered, pointing at the decision from step 2.
 
 These three records form a chain: each record carries the hash of the one before it, so swapping out a single link leaves the records after it out of step. Trace back from the inspection record and you get a single path: which bulletin triggered it, when, and on what grounds.
 
@@ -117,21 +115,21 @@ The anomaly detection from the opening works the same way. If the AI flags a vib
 
 When the alarm later turns out to be false, that single record is what you open. If the copy and the hash agree, the AI was indeed looking at that value. An abnormal value sends you to the measurement chain; a sound one sends you to the judgment. The triage from the opening comes down to opening one record.
 
-### Checking any time is what keeps the AI switched on
+### Checking as often as you like is what keeps the AI running
 
-The records are created once, but their contents can be checked as many times as you like afterwards. That matters because it means a false alarm no longer forces you to stop the AI in order to improve it.
+Registration happens once per event; checking can happen any number of times. That is what pays off, because **a false alarm no longer forces you to stop the system to fix it**.
 
 The dead end described at the start — you cannot isolate the cause, so all you can do is dull the threshold or drop automatic detection — does not arise when the decision and its inputs are kept as a pair. You can repair exactly what needs repairing.
 
-This chain of records helps in a range of everyday situations.
+The same path pays off in each of the following situations.
 
-**When you are called out to the site:** you can immediately confirm why the AI acted. If it was a false alarm, you can tell without hesitation whether the cause lay in the data or in the AI's judgment.
+**Right after a call-out.** The field can confirm on the spot what the AI was looking at when it triggered. If a false alarm is suspected, tracing back to the input shows whether to go at the measurement chain or at the judgment.
 
-**In monthly reporting:** you can hand the recipient a way to verify the records along with the report. The recipient can check for themselves, which spares you the work of preparing supplementary documents.
+**In monthly reporting.** You can attach a way to check to the report you send the contracting party. They can judge it themselves, without asking you to submit originals.
 
-**When investigating the cause of an incident:** you can explain not only the order of events but the grounds for each action taken.
+**After an incident or a defect.** Every line of the timeline in the incident report can carry its grounds, so “why things happened in that order” is written with the records behind it.
 
-**In audits and inspections:** even six months or a year later, you can trace back smoothly to the judgments and events of the time.
+**In an audit.** Six months or a year later, the same path runs from the inspection record back to the official bulletin.
 
 All four are covered by the same single trail. The scramble to gather evidence for every report and audit goes away, and **you can widen the scope you had been holding back — “we can’t explain it, so we can’t delegate it” — and now you have something to base that call on.**
 
@@ -153,7 +151,7 @@ What this means is that **you no longer need anyone to take the report on faith*
 
 What the record covers is the content and the path of the decision, not an evaluation of whether the decision was right. That belongs to the people on site. The same holds for the inputs: the record's job extends as far as letting you follow the reference and match it against the publishing source.
 
-## Not "the AI is right," but "the path is on record"
+## Not “the AI is right,” but “the path is on record”
 
 The range of judgments delegated to AI will keep widening. What the field will be asked for is not that people believe the AI is right. What matters is which inputs it looked at, when, and what it decided — and keeping that path available for later confirmation is, we believe, the foundation under incident reporting and the give-and-take with whoever contracted the work.
 
