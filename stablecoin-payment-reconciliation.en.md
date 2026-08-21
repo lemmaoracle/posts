@@ -61,31 +61,29 @@ A payment leaves a record in three places.
 Lemma confirms automatically that all three point at the same payment.
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; on the right, the payee's ledger. All three compute a hash from their own record and compare in the center. The contents are never shown. A match clears automatically; a mismatch identifies the field." />
+  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; on the right, the payee's ledger. All three issue a proof from their own record and compare in the center. The contents are never shown. A match clears automatically; a mismatch identifies the field." />
   <figcaption>Figure 1 — Reconciling your record, your counterparty's, and the on-chain settlement without disclosure</figcaption>
 </figure>
 
-From the payee, the amount, the invoice number and the payment date, each side computes a hash (a fingerprint). A hash is a fixed-length value computed from the original contents; change one character and the value is different.
-
-Compare the value you computed with the value your counterparty computed, and if they match, both records point at the same contents. You learn whether they agree without ever touching what is inside the counterparty's books.
+From the payee, the amount, the invoice number and the payment date, each side issues a proof. A proof shows by computation that "these values are in my record" — without handing over the contents themselves. When both proofs point at the same values, both records point at the same payment. You learn whether they agree without ever touching what is inside the counterparty's books.
 
 ### A match clears on the spot
 
 A payment that matches needs no review by anyone.
 
-Where there is a discrepancy, you also learn which field it is in. The hash of the amount matches and only the invoice number differs — the invoice number is the only thing to look at. One query to the counterparty is enough.
+Where there is a discrepancy, you also learn which field it is in. The amount matches and only the invoice number differs — the invoice number is the only thing to look at. One query to the counterparty is enough.
 
-Hashes and reconciliation are both terms your IT department already speaks. They are who to start the conversation with internally, and the call about where in the current accounting system to add one step is theirs to make.
+Proofs and reconciliation are both terms your IT department already speaks. They are who to start the conversation with internally, and the call about where in the current accounting system to add one step is theirs to make.
 
 ## From the moment a payment is approved to the moment the item clears
 
 Rather than assembling everything afterwards, you register one item at a time, as each event happens.
 
-**1. The payment is approved.** Payee, amount, invoice number. Compute a hash from the contents as approved and register it. One step added to the end of the existing approval flow is all it takes.
+**1. The payment is approved.** Payee, amount, invoice number. Issue a proof from the contents as approved and register it. One step added to the end of the existing approval flow is all it takes.
 
 **2. The transfer goes out.** Link the on-chain transaction to step 1. Transfers between operators also trigger travel-rule notifications, and those can ride the same route.
 
-**3. The counterparty recognizes it.** When the receiving side enters it into their own books, they compute a hash from the same fields.
+**3. The counterparty recognizes it.** When the receiving side enters it into their own books, they issue a proof from the same fields.
 
 **4. Reconcile.** Compare 1 and 3, and if they match, the item clears.
 
