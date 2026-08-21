@@ -19,6 +19,8 @@ tags:
 relatedLinks:
   - label: "AI の判断を、見ていたデータごと残す"
     href: "https://lemma.frame00.com/ja/blog/ai-decision-record-with-inputs/"
+  - label: "請求書の内訳は、オンチェーンに乗らない（ステーブルコイン決済の照合）"
+    href: "https://lemma.frame00.com/ja/blog/stablecoin-payment-reconciliation/"
 ---
 
 **TL;DR**
