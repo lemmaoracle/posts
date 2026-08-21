@@ -6,7 +6,7 @@ audience: business
 industries: [finance, supply-chain]
 coverPhoto: /assets/covers/stablecoin-payment-reconciliation.jpg
 section: "Essays"
-title: "The invoice breakdown does not travel with the transfer. Stablecoin payments and the month-end close"
+title: "Reconcile without opening the books. A smoother month-end for stablecoin payments"
 abstract: "With yen-denominated stablecoins, the transfer itself already settles in minutes. What does not travel with it is the breakdown — which invoice, which line item — and because that has to reach the other side by a separate route, any discrepancy adds days to the month-end close. Lemma's reconciliation confirms a match without either side disclosing its data. The on-chain settlement record, the payer's ledger and the payee's ledger: it checks that all three point at the same payment, without showing the contents."
 tags:
   - stablecoin

@@ -6,7 +6,7 @@ audience: business
 industries: [finance, supply-chain]
 coverPhoto: /assets/covers/stablecoin-payment-reconciliation.jpg
 section: "Essays"
-title: "請求書の内訳は、送金に乗らない。ステーブルコイン決済を、締めを止めずに導入する"
+title: "帳簿を開示せずに突き合わせる。ステーブルコイン決済の月末をスムーズに"
 abstract: "円建てステーブルコインでの支払いは、送金そのものはすでに数分で終わります。ただ、どの請求書の、どの号数に対応するかという内訳は送金に乗らないので、それを伝える別経路でずれが起きると、月末の締めに数日かかります。Lemma の照合は、互いのデータを開示せずに一致だけを確かめます。オンチェーンの決済記録と、支払う側の会計と、受け取る側の会計。この3つが同じ支払いを指しているかを、中身を見せずに突き合わせます。"
 tags:
   - stablecoin
