@@ -19,7 +19,7 @@ tags:
 relatedLinks:
   - label: "Keep the AI decision together with the data it was looking at"
     href: "https://lemma.frame00.com/blog/ai-decision-record-with-inputs/"
-  - label: "The invoice breakdown does not travel on chain (stablecoin payment reconciliation)"
+  - label: "The invoice breakdown does not travel with the transfer (stablecoin payment reconciliation)"
     href: "https://lemma.frame00.com/blog/stablecoin-payment-reconciliation/"
 ---
 
