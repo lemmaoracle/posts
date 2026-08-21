@@ -98,12 +98,6 @@ Lemma は、モデルのセーフガードを置き換えるものではあり�
 - 本記事の中心、「誰の権限で動いたか」の層: [**エージェント権限証明**](https://lemma.frame00.com/ja/pillars/#authority)
 - 自社の業務に当てはめて見る: [**ユースケース一覧**](https://lemma.frame00.com/ja/solutions/use-cases)
 
-### 毎週、検出の先の視点を受け取る
-
-Lemma Critical Weekly — 実際に起きたリスク事案の構造分析(Critical Brief)を軸に、検出の先に必要な「証明」への視点を週 1 回お届け。
-
-[**ニュースレターに登録 →**](https://tally.so/r/EkMj82)
-
 すでに具体的な業務での適用を検討中の方は、30分の Discovery Call で、貴社のオペレーションへの当てはめを確認できます。機微なデータ(個人情報・機密)を開示いただく必要はありません。
 
 [Discovery Call を予約 →](https://tally.so/r/EkBqDX)
