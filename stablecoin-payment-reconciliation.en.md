@@ -56,12 +56,12 @@ A payment leaves a record in three places.
 
 - The on-chain settlement record — how much moved from A to B
 - The payer's ledger — invoice number, amount, payment date
-- The payee's ledger — amount received, date recognised
+- The payee's ledger — amount received, date recognized
 
 Lemma confirms automatically that all three point at the same payment.
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; on the right, the payee's ledger. All three compute a hash from their own record and compare in the centre. The contents are never shown. A match clears automatically; a mismatch identifies the field." />
+  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; on the right, the payee's ledger. All three compute a hash from their own record and compare in the center. The contents are never shown. A match clears automatically; a mismatch identifies the field." />
   <figcaption>Figure 1 — Reconciling your record, your counterparty's, and the on-chain settlement without disclosure</figcaption>
 </figure>
 
@@ -85,7 +85,7 @@ Rather than assembling everything afterwards, you register one item at a time, a
 
 **2. The transfer goes out.** Link the on-chain transaction to step 1. Transfers between operators also trigger travel-rule notifications, and those can ride the same route.
 
-**3. The counterparty recognises it.** When the receiving side enters it into their own books, they compute a hash from the same fields.
+**3. The counterparty recognizes it.** When the receiving side enters it into their own books, they compute a hash from the same fields.
 
 **4. Reconcile.** Compare 1 and 3, and if they match, the item clears.
 
