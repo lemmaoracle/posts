@@ -61,7 +61,7 @@ Lemma の照合は、互いのデータを開示せずに一致だけを確か�
 この3つが同じ支払いを指していることを、Lemma は自動で確かめます。
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/stablecoin-reconciliation-fig1.ja.svg" alt="左に決済記録と支払う側の会計、中央に決済レジストリ、右に受け取る側の会計。支払い時に記録し、取引txや見積番号などで照合する。中身は非公開で登録もしない。一致すれば自動で完了、不一致なら項目を特定する" />
+  <img src="/assets/figures/stablecoin-reconciliation-fig1.ja.svg" alt="左に決済記録と支払う側の会計、中央に照合レジストリ、右に受け取る側の会計。支払い時に記録し、取引txや見積番号などで照合する。中身は非公開で登録もしない。一致すれば自動で完了、不一致なら項目を特定する" />
   <figcaption>図1 オンチェーンの決済と、両社の会計が同じ支払いを指していることを自動で確かめる</figcaption>
 </figure>
 

@@ -61,7 +61,7 @@ A payment leaves a record in three places.
 Lemma confirms automatically that all three point at the same payment.
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; in the centre, the settlement registry; on the right, the payee's ledger. Each payment is recorded at the time it is made, then matched by transaction hash or quote number. The contents stay private and are never registered. A match clears automatically; a mismatch identifies the field." />
+  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; in the centre, the reconciliation registry; on the right, the payee's ledger. Each payment is recorded at the time it is made, then matched by transaction hash or quote number. The contents stay private and are never registered. A match clears automatically; a mismatch identifies the field." />
   <figcaption>Figure 1 — Confirming automatically that the on-chain settlement and both companies' books point at the same payment</figcaption>
 </figure>
 
