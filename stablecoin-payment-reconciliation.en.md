@@ -7,7 +7,7 @@ industries: [finance, supply-chain]
 coverPhoto: /assets/covers/stablecoin-payment-reconciliation.jpg
 section: "Essays"
 title: "Reconcile without opening the books. A smoother month-end for stablecoin payments"
-abstract: "With yen-denominated stablecoins, the transfer itself already settles in minutes. What does not travel with it is the breakdown — which invoice, which line item — and because that has to reach the other side by a separate route, any discrepancy adds days to the month-end close. Lemma's reconciliation confirms a match without either side disclosing its data. The on-chain settlement record, the payer's ledger and the payee's ledger: it checks that all three point at the same payment, without showing the contents."
+abstract: "With yen-denominated stablecoins, the transfer itself already settles in minutes. For a business that books hundreds or thousands of payments a month, scanning on-chain events is not enough. The totals do not agree, and you cannot tell which transaction is wrong — because the breakdown never travelled with the transfer. Lemma's reconciliation confirms a match without either side disclosing its data. The on-chain settlement record, the payer's ledger and the payee's ledger: it checks that all three point at the same payment, without showing the contents."
 tags:
   - stablecoin
   - reconciliation
@@ -26,7 +26,7 @@ relatedLinks:
 
 **TL;DR**
 
-Payments in yen-denominated stablecoins have started moving in real operations — subcontractor fees, transfers to overseas subsidiaries. The transfer itself already completes in minutes. What the on-chain record holds is how much moved, and no more: **which invoice, and which line item on it** does not travel with the transfer. Because that breakdown has to reach the other side by a separate route, the next thing that can get shorter is the month-end close. The time the team spends is not the matching work itself so much as the wait for the counterparty to write back.
+Payments in yen-denominated stablecoins have started moving in real operations — subcontractor fees, transfers to overseas subsidiaries. The transfer itself already completes in minutes. What the on-chain record holds is how much moved, and no more: **which invoice, and which line item on it** does not travel with the transfer. For a business that books hundreds or thousands of payments a month, walking the on-chain events still will not tell you which transaction is off when the totals do not agree. Because that breakdown has to reach the other side by a separate route, the next thing that can get shorter is the month-end close. The time the team spends is not the matching work itself so much as the wait for the counterparty to write back.
 
 Lemma's reconciliation confirms a match without either side disclosing its data. The on-chain settlement record, the payer's ledger and the payee's ledger — it checks that all three point at the same payment without showing the contents, so matched items clear on the spot and the only ones left in front of a person are the ones that differ.
 
@@ -34,9 +34,9 @@ Lemma's reconciliation confirms a match without either side disclosing its data.
 
 Yen-denominated stablecoins now have issuers across all three regulatory types — funds-transfer, trust, and foreign-issued — and they are starting to be used for real payments such as subcontractor fees and transfers to overseas subsidiaries. The transfer itself completes in minutes. The question that comes up when adoption is on the table is whether the month-end close gets shorter in the same way.
 
-With a bank transfer, matching your own accounts payable against the bank statement is usually enough. Pay in stablecoins and a third record joins the comparison: the counterparty's accounts receivable (the reason is in the next section). When something does not line up, you ask the counterparty, they go through their own books, and you wait for the answer — and that takes days.
+With a bank transfer, matching your own accounts payable against the bank statement is usually enough. Pay in stablecoins and a third record joins the comparison: the counterparty's accounts receivable (the reason is in the next section). For a business that books hundreds or thousands of payments a month, scanning on-chain events is not enough. The totals do not agree, and you cannot tell which transaction is wrong — that is what pushes the close out by days. When something does not line up, you ask the counterparty, they go through their own books, and you wait for the answer — and that takes days.
 
-Say you make 100 payments a month and each query and confirmation takes 18 minutes. That comes to 30 hours. But what actually pushes the closing date is not those 30 hours; it is the several days of waiting that each individual item generates. Paying in stablecoins shortens the transfer itself to minutes, and leaves that waiting exactly where it was.
+Say you make 1,000 payments a month, 30 of them draw a query, and each query and confirmation takes 18 minutes. That is 9 hours of work. But what actually pushes the closing date is not those 9 hours; it is the several days of waiting that each individual item generates. Paying in stablecoins shortens the transfer itself to minutes, and leaves that waiting exactly where it was.
 
 ## Confirming automatically that the on-chain settlement and both companies' books point at the same payment
 
@@ -61,35 +61,35 @@ A payment leaves a record in three places.
 Lemma confirms automatically that all three point at the same payment.
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; on the right, the payee's ledger. All three compute a hash from their own record and compare in the center. The contents are never shown. A match clears automatically; a mismatch identifies the field." />
-  <figcaption>Figure 1 — Reconciling your record, your counterparty's, and the on-chain settlement without disclosure</figcaption>
+  <img src="/assets/figures/stablecoin-reconciliation-fig1.en.svg" alt="On the left, the settlement record and the payer's ledger; in the centre, the settlement registry; on the right, the payee's ledger. Each payment is recorded at the time it is made, then matched by transaction hash or quote number. The contents stay private and are never registered. A match clears automatically; a mismatch identifies the field." />
+  <figcaption>Figure 1 — Confirming automatically that the on-chain settlement and both companies' books point at the same payment</figcaption>
 </figure>
 
-From the payee, the amount, the invoice number and the payment date, each side computes a hash (a fingerprint). A hash is a fixed-length value computed from the original contents; change one character and the value is different.
+Payee, amount, invoice number and payment date are recorded on each side at the moment the payment happens. The contents themselves are not handed to the other side, and they do not go onto the registry. Matching uses keys both sides already hold — a transaction hash, a quote number — to line up the same payment. You learn whether they agree without ever touching what is inside the counterparty's books.
 
-Compare the value you computed with the value your counterparty computed, and if they match, both records point at the same contents. You learn whether they agree without ever touching what is inside the counterparty's books.
+> What Lemma confirms is not that a transfer happened — the chain already proves that — but that both companies' books point at the same payment. The latter is off-chain information, so it has to be bound cryptographically and matched without disclosure. This is not a plain comparison of values; it verifies that each side's record is bound to that payment.
+
+They are who to start the conversation with internally — IT — and the call about where in the current accounting system to add one step is theirs to make.
 
 ### A match clears on the spot
 
 A payment that matches needs no review by anyone.
 
-Where there is a discrepancy, you also learn which field it is in. The hash of the amount matches and only the invoice number differs — the invoice number is the only thing to look at. One query to the counterparty is enough.
-
-Hashes and reconciliation are both terms your IT department already speaks. They are who to start the conversation with internally, and the call about where in the current accounting system to add one step is theirs to make.
+Where there is a discrepancy, you also learn which field it is in. The amount matches and only the invoice number differs — the invoice number is the only thing to look at. One query to the counterparty is enough.
 
 ## From the moment a payment is approved to the moment the item clears
 
 Rather than assembling everything afterwards, you register one item at a time, as each event happens.
 
-**1. The payment is approved.** Payee, amount, invoice number. Compute a hash from the contents as approved and register it. One step added to the end of the existing approval flow is all it takes.
+**1. The payment is approved.** Payee, amount, invoice number. Record the contents as approved, without handing them over. One step added to the end of the existing approval flow is all it takes.
 
 **2. The transfer goes out.** Link the on-chain transaction to step 1. Transfers between operators also trigger travel-rule notifications, and those can ride the same route.
 
-**3. The counterparty recognizes it.** When the receiving side enters it into their own books, they compute a hash from the same fields.
+**3. The counterparty recognizes it.** When the receiving side enters it into their own books, they record the same fields.
 
-**4. Reconcile.** Compare 1 and 3, and if they match, the item clears.
+**4. Reconcile.** Match 1 and 3 by transaction hash, quote number, or similar keys, and if they match, the item clears.
 
-If 3 of 100 items differ, those 3 are the only ones anyone looks at, and the remaining 97 clear untouched. Registration happens once per event, while there is no limit on how many times you reconcile — you can check again, later, as often as you like.
+If 30 of 1,000 items differ, those 30 are the only ones anyone looks at, and the remaining 970 clear untouched. Registration happens once per event, while there is no limit on how many times you reconcile — you can check again, later, as often as you like.
 
 When a counterparty writes to say the amount received does not agree with their statement, instead of you digging out a copy and resending it, they can reconcile their own record on the spot. With 2,000 counterparties, the procedure is the same as with one.
 
