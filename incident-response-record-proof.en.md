@@ -7,7 +7,7 @@ industries: [retail]
 coverPhoto: /assets/covers/incident-response-record-proof.jpg
 section: "Essays"
 title: "Prove the incident record was never rewritten"
-abstract: "Hotels, restaurants, retailers and shopping centers all keep a record of when and how they handled a food-poisoning complaint or an injury. What no reader of that record can establish is whether it was edited afterwards. Fix the contents at the moment they are saved and head office no longer has to pull the original from the site: it can check the record in hand against the one registered at the time, on the spot, and confirm one thing only — that the response followed proper procedure and authority. The customer data and the details of the response are never disclosed."
+abstract: "Hotels, restaurants, retailers and shopping centers all keep a record of when and how they handled a food-poisoning complaint or an injury. What no reader of that record can establish is whether it was edited afterwards. Fix the contents at the moment they are saved and head office no longer has to pull the original from the site: it can check the record in hand against the value registered at the time, on the spot, and confirm one thing only — that the response followed proper procedure and authority. The customer data and the details of the response are never disclosed."
 tags:
   - provenance
   - audit-trail
@@ -28,7 +28,7 @@ relatedLinks:
 
 Hotels, restaurants, retailers and shopping centers all keep a record of when and how they handled a food-poisoning complaint or an injury. What no reader of that record can establish is whether it was edited afterwards. Even when the staff who handled it did everything right, being unable to show that the record has not been altered weakens the account you can give in a dispute or to a regulator.
 
-Fix the contents at the moment they are saved and head office no longer has to pull the original — the record itself, customer data and response details included — from the site. It can check the record in hand against the one registered at the time, on the spot. What that confirms is one thing only: that the response followed proper procedure and authority. The contents stay closed.
+Fix the contents at the moment they are saved and head office no longer has to pull the original — the record itself, customer data and response details included — from the site. It can check the record in hand against the value registered at the time, on the spot. What that confirms is one thing only: that the response followed proper procedure and authority. The contents stay closed.
 
 ## Can you say the record has not been rewritten since?
 
@@ -51,7 +51,7 @@ Both gaps close with two steps taken at the moment the record is finalized:
 - Fix the contents of the record as a single unit
 - Register that fixed value somewhere the author cannot edit
 
-From then on, comparing the record you hold now against the one registered at the time is enough to establish whether anything changed. None of this replaces the records you already keep. The screen the site uses stays exactly as it is; saving simply adds one proof alongside it. The division of labor is plain — the site only saves, head office only checks, and only when it needs to.
+From then on, comparing the record you hold now against the value registered at the time is enough to establish whether anything changed. None of this replaces the records you already keep. The screen the site uses stays exactly as it is; saving simply adds one proof alongside it. The division of labor is plain — the site only saves, head office only checks, and only when it needs to.
 
 ## The site only saves
 
