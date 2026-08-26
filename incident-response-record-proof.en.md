@@ -61,27 +61,29 @@ On save, one proof issuance is requested automatically in the background. What t
 
 That single automatic request is the only thing added at the site. No forms to file, no extra fields to fill in for the sake of the proof. The value registered here becomes the reference point against which the record in hand is later checked.
 
-## Head office only opens a link
+## Head office only checks
 
-When an incident record starts to matter — a dispute looks likely, a report to a regulator is due, or a routine compliance check comes around — the compliance or customer relations team at head office opens the proof link.
+When an incident record starts to matter — a dispute looks likely, a report to a regulator is due, or a routine compliance check comes around — the compliance or customer relations team at head office checks that record.
 
 What head office actually wants to establish is not the substance of the record but a single point: whether the response followed proper procedure and authority. Until now, establishing that meant calling the site to ask, or requiring a detailed written report.
 
 "Followed proper procedure and authority" here means exactly what the staff who handled the matter wrote down at the time: when, by what steps, by whom and under what authority. What Lemma proves is not that those statements are true, but that they have not been altered in any way since the record was written. This is not a mechanism for auditing from outside whether the internal manual was followed. It is a mechanism that fixes the record the site produced in a state nobody can amend afterwards.
 
-So head office can confirm on the spot that the record has not been rewritten, without pulling the original from the site. Opening the link checks the hash computed from the record in hand against the hash registered with Lemma at the time of saving, and within seconds it shows:
+So head office can confirm on the spot that the record has not been rewritten, without pulling the original from the site. Checking means comparing the hash computed from the record in hand against the hash registered with Lemma at the time of saving, and within seconds it shows:
 
 - What was recorded, at that point in time, about proper procedure and authority
 - That the record has not been tampered with (NOT TAMPERED)
 - That there is no need to call the site to confirm
 
-No login, no key, and very little data moves. The proof itself is around 200 bytes — about the size of a short text message — orders of magnitude smaller than having the site send the whole original file.
+Very little data moves. The proof itself is around 200 bytes — about the size of a short text message — orders of magnitude smaller than having the site send the whole original file.
 
-Once head office is confident here, the account it later gives to opposing counsel or to a regulator can follow whatever format and procedure those settings require. Lemma's verification screen is not intended to be submitted to the other side as it stands. Being confident internally first is what supports the account you give externally.
+How that result reaches the checker is a choice. It can be a shared link opened on the spot, needing no login and no integration, or the result surfaced in an existing console or dashboard by API. Either way, the two values being compared are the same.
+
+Once head office is confident here, the account it later gives to opposing counsel or to a regulator can follow whatever format and procedure those settings require. Lemma's verification result is not intended to be submitted to the other side as it stands. Being confident internally first is what supports the account you give externally.
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/incident-response-record-fig1.en.svg" alt="Two steps: the site saves a record and its contents are turned into a code held in a registry nobody can edit; head office opens the proof link, which checks the code of the record in hand against the code as saved and shows that it has not been rewritten" />
-  <figcaption>Figure 1 The site only saves, head office only checks</figcaption>
+  <img src="/assets/figures/incident-response-record-fig1.en.svg" alt="The site saves the response record and its contents are turned into a code registered with the reconciliation registry; the checking side, the team at head office, matches the code made from the record in hand against the code as saved" />
+  <figcaption>Figure 1 Checking the response record without exposing its contents</figcaption>
 </figure>
 
 ## Why access control and redacted submissions cannot prove it
@@ -108,6 +110,6 @@ The same approach carries directly over to [internal control and approval flow r
 
 Whether a response was correct is, in the end, for people to judge. What Lemma can show is only that the record those people are judging from has not changed since it was written.
 
-Head office can establish that on the spot by opening a link, without calling the site. What gets asked in a dispute or a regulatory review is not that people take the correctness of the response on trust — it is that they be able to check the reliability of the record. Having settled that internally, in advance, is what supports the account you give when the moment comes.
+Head office can establish that on the spot, without calling the site. What gets asked in a dispute or a regulatory review is not that people take the correctness of the response on trust — it is that they be able to check the reliability of the record. Having settled that internally, in advance, is what supports the account you give when the moment comes.
 
 Issuing a proof happens once per save. Checking is free, needs no key and no account, and can be run as many times as you like. Lawful handling of personal data and retention periods remains a precondition throughout.
