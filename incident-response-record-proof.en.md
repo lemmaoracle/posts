@@ -88,15 +88,15 @@ Once head office is confident here, the account it later gives to opposing couns
 
 ## Why access control and redacted submissions cannot prove it
 
-The cases this mechanism is for are the ones that need three things at once: hand something over without exposing the contents, let the other side verify independently, and detect any edit.
+The cases this mechanism is for are the ones that need three things at once: hand something over without disclosing the contents, let the other side verify independently, and detect any edit.
 
-| Approach                               | Hand over without exposing | Independent verification | Detects edits |
-| -------------------------------------- | -------------------------- | ------------------------ | ------------- |
-| Access control and permissions         | △                          | ✗                        | ✗             |
-| Masking or redaction before submission | △                          | ✗                        | ✗             |
-| Encryption at rest and in transit      | ✓                          | ✗                        | ✗             |
-| Incident monitoring alone              | △                          | ✗                        | ✗             |
-| Issue a proof and verify independently | ✓                          | ✓                        | ✓             |
+| Approach                               | Hand over without disclosing | Independent verification | Detects edits |
+| -------------------------------------- | ---------------------------- | ------------------------ | ------------- |
+| Access control and permissions         | △                            | ✗                        | ✗             |
+| Masking or redaction before submission | △                            | ✗                        | ✗             |
+| Encryption at rest and in transit      | ✓                            | ✗                        | ✗             |
+| Incident monitoring alone              | △                            | ✗                        | ✗             |
+| Issue a proof and reconcile            | ✓                            | ✓                        | ✓             |
 
 Access control limits who inside the company can read a record, but it has no answer to the suspicion that someone inside the company edited it. Redaction narrows what gets disclosed, but it adds work and leaves head office without the reference it needs — a registered hash — so it still cannot show that the original record is unaltered. Only when the right-hand two columns are both satisfied can head office check without pulling the original from the site.
 
