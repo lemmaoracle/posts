@@ -1,6 +1,6 @@
 ---
 slug: "incident-response-record-proof"
-date: "2026.09.01"
+date: "2026.08.26"
 category: "Solutions"
 audience: business
 industries: [retail]
