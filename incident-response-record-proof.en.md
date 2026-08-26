@@ -6,7 +6,7 @@ audience: business
 industries: [retail]
 coverPhoto: /assets/covers/incident-response-record-proof.jpg
 section: "Essays"
-title: "Prove the incident record was never rewritten"
+title: "Records that hold up later. Make incident and complaint records tamper-proof"
 abstract: "Hotels, restaurants, retailers and shopping centers all keep a record of when and how they handled a food-poisoning complaint or an injury. What no reader of that record can establish is whether it was edited afterwards. Fix the contents at the moment they are saved and head office no longer has to pull the original from the site: it can check the record in hand against the value registered at the time, on the spot, and confirm one thing only — that the response followed proper procedure and authority. The customer data and the details of the response are never disclosed."
 tags:
   - provenance
