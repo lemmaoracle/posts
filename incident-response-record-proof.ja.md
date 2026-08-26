@@ -80,7 +80,7 @@ relatedLinks:
 本部がこの場で確信を持てれば、その後の係争相手の代理人や行政の担当者への説明も、必要な書式・手続きに沿って進められます。Lemma の検証画面そのものを相手方への提出物として使うことは想定していません。社内で先に確信を持てていることが、外に向けた説明を支えます。
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/incident-response-record-fig1.ja.svg" alt="現場が記録を保存すると同時にハッシュ値が登録され、本部が検証リンクを開いていまの記録と登録時点のハッシュ値を照合し、NOT TAMPERED を確認する2ステップの流れ" />
+  <img src="/assets/figures/incident-response-record-fig1.ja.svg" alt="現場が記録を保存すると同時にその内容が秘密コード化されて書き換えられない預け先に渡り、本部が証明のリンクを開いて、いまの記録のコードと保存した時のコードを照合し、書き換えなしを確認する2ステップの流れ" />
   <figcaption>図1 現場は保存するだけ、本部は照合するだけ</figcaption>
 </figure>
 

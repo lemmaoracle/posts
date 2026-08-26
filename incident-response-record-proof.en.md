@@ -80,7 +80,7 @@ No login, no key, and very little data moves. The proof itself is around 200 byt
 Once head office is confident here, the account it later gives to opposing counsel or to a regulator can follow whatever format and procedure those settings require. Lemma's verification screen is not intended to be submitted to the other side as it stands. Being confident internally first is what supports the account you give externally.
 
 <figure class="figure--diagram">
-  <img src="/assets/figures/incident-response-record-fig1.en.svg" alt="Two steps: the site saves a record and its hash is registered at the same moment; head office opens the verification link, which checks the hash of the record in hand against the registered one and shows NOT TAMPERED" />
+  <img src="/assets/figures/incident-response-record-fig1.en.svg" alt="Two steps: the site saves a record and its contents are turned into a code held in a registry nobody can edit; head office opens the proof link, which checks the code of the record in hand against the code as saved and shows that it has not been rewritten" />
   <figcaption>Figure 1 The site only saves, head office only checks</figcaption>
 </figure>
 
