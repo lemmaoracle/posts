@@ -150,7 +150,6 @@ leafPreimages[0]: {
 
 ```ts
 await documents.register(client, {
-  schema: "mcp-tool-call-v1",
   docHash: enc.docHash,
   cid: enc.cid,
   issuerId: "mcp-gateway", // 記録した主体（このラッパー）
@@ -168,7 +167,7 @@ await documents.register(client, {
 
 `commitDeep` の戻り値には `scheme` が入っていないので、`commitments` を組むときに `"poseidon"` を足します。`revocation` は必須フィールドです。ツール呼び出しの記録を失効させる運用がないなら、上のようにゼロ値を入れておきます。
 
-`schema` は文字列で、この API は登録済みかどうかを検査しません。本番では `schemas.register` でスキーマを登録し、その ID を使ってください。
+`schema` は省略可能です。渡さなければ、サーバーは登録済みの `passthrough-v1` スキーマ（入力をそのまま正規化する）で保存します。単純な監査記録ならこれで十分です。型付きの正規化が必要なときだけ `schemas.register` でスキーマを登録し、その ID を渡してください。
 
 ### 5. ツールハンドラに差し込む
 
@@ -212,7 +211,7 @@ curl https://workers.lemma.workers.dev/v1/documents/0x071d…
 ```json
 {
   "docHash": "0x071d…",
-  "schemaId": "mcp-tool-call-v1",
+  "schemaId": "passthrough-v1",
   "issuerId": "mcp-gateway",
   "subjectId": "agent:ops-bot",
   "commitmentRoot": "0x1646…",

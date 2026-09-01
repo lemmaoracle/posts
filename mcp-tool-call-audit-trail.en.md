@@ -150,7 +150,6 @@ Lose `randomness` and the root can never be recomputed, which costs you the trai
 
 ```ts
 await documents.register(client, {
-  schema: "mcp-tool-call-v1",
   docHash: enc.docHash,
   cid: enc.cid,
   issuerId: "mcp-gateway", // who recorded it (this wrapper)
@@ -168,7 +167,7 @@ await documents.register(client, {
 
 `commitDeep` does not return a `scheme`, so add `"poseidon"` when assembling `commitments`. `revocation` is required; if you have no notion of revoking a tool-call record, a zero value is the honest answer.
 
-`schema` is a string and this endpoint does not check that it is registered. In production, register a schema with `schemas.register` and use its ID.
+`schema` is optional. Omit it and the server stores the document under the registered `passthrough-v1` schema — the input normalized to itself, which is what you want for a plain audit record. Pass a schema ID only when the document needs typed normalization; then register that schema with `schemas.register` first and use its ID.
 
 ### 5. Wire it into the tool handler
 
@@ -212,7 +211,7 @@ curl https://workers.lemma.workers.dev/v1/documents/0x071d…
 ```json
 {
   "docHash": "0x071d…",
-  "schemaId": "mcp-tool-call-v1",
+  "schemaId": "passthrough-v1",
   "issuerId": "mcp-gateway",
   "subjectId": "agent:ops-bot",
   "commitmentRoot": "0x1646…",
