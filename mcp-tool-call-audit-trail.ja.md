@@ -14,13 +14,13 @@ tags:
   - verifiable-ai
 relatedLinks:
   - label: "Lemma Dashboard — 5分クイックスタート"
-    href: "/ja/blog/dashboard-quickstart/"
+    href: "https://lemma.frame00.com/ja/blog/dashboard-quickstart/"
   - label: "@lemmaoracle/sdk (npm)"
     href: "https://www.npmjs.com/package/@lemmaoracle/sdk"
   - label: "@lemmaoracle/mcp (npm)"
     href: "https://www.npmjs.com/package/@lemmaoracle/mcp"
   - label: "用語集"
-    href: "/ja/glossary/"
+    href: "https://lemma.frame00.com/ja/glossary/"
 ---
 
 MCPツール呼び出しを1件ずつコミットメント付きで登録し、第三者があとから API キーなしで照合できる状態を作ります。載せている出力は手元で実行した結果です。ハンドラに差し込む「5.」だけは、お使いの MCP サーバー実装に合わせて書き換える前提の骨組みです。

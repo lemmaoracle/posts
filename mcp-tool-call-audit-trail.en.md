@@ -14,13 +14,13 @@ tags:
   - verifiable-ai
 relatedLinks:
   - label: "Lemma Dashboard — a five-minute quick start"
-    href: "/blog/dashboard-quickstart/"
+    href: "https://lemma.frame00.com/blog/dashboard-quickstart/"
   - label: "@lemmaoracle/sdk (npm)"
     href: "https://www.npmjs.com/package/@lemmaoracle/sdk"
   - label: "@lemmaoracle/mcp (npm)"
     href: "https://www.npmjs.com/package/@lemmaoracle/mcp"
   - label: "Glossary"
-    href: "/glossary/"
+    href: "https://lemma.frame00.com/glossary/"
 ---
 
 Register every MCP tool call with a commitment, and put a third party in a position to check that record later without holding an API key. Every output below came from an actual run. The one exception is step 5, the handler wiring, which is a skeleton you adapt to your own MCP server.
