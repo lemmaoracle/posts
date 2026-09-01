@@ -1,6 +1,6 @@
 ---
 slug: "mcp-tool-call-audit-trail"
-date: "2026.08.26"
+date: "2026.08.31"
 category: "Technical"
 audience: technical
 section: "Essays"
