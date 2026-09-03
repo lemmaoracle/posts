@@ -29,7 +29,7 @@ A J-Alert warning travels from the national government to a municipality's recei
 
 The work was done by Yudai Kirishiki of the cybersecurity firm Unknown Technologies, who obtained a receiver put on the second-hand market and analysed it: the satellite-delivered data carries no digital signature, and nothing else that would guarantee its origin. Transmit data in the same format from a height — using a drone, for instance — and the receiving side cannot tell it from a genuine warning.
 
-This looks to us less like a fault in one system than like a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question comes up.
+This is less a fault in one system than a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question comes up.
 
 ## The receiving end is managed in detail; the sending end cannot be checked
 
@@ -55,7 +55,7 @@ Why is there no authentication? The research team's explanation runs as follows.
 
 It is a design that put arrival first and left the question of genuineness further back.
 
-Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward at every revision for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down again. Article 15 of the operating rules requires that improvements to J-Alert be studied in a planned manner and shared with registered receiving organisations. A framework for continued improvement is written into the institution. What remains is how far that framework reaches toward checking whether what arrived is genuine.
+Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward at every revision for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down once more. Article 15 of the operating rules requires that improvements to J-Alert be studied in a planned manner and shared with registered receiving organisations. A framework for continued improvement is written into the institution. What remains is how far that framework reaches toward checking whether what arrived is genuine.
 
 ## The design new infrastructure gets to choose
 
@@ -75,7 +75,7 @@ The middle layer — reception — belongs to the radio stack, and it is exactly
 
 We wrote the bottom layer in working code in [an audit trail for MCP tool calls](https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/).
 
-National infrastructure has spent decades making delivery certain. Making it structurally checkable that what arrived is genuine is the next thing — and for what gets built next, that design is available to choose.
+For what gets built next, that design is available to choose. National infrastructure has spent decades making delivery certain; the time has come to make it structurally certain that what arrived is genuine.
 
 ## Resources
 
