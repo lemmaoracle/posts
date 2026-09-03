@@ -7,7 +7,7 @@ industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
 title: "What the J-Alert reporting reveals: no proof of origin"
-abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees where it came from. Receivers are registered and tightly managed; the mechanism for verifying the authenticity of the sender sits outside the public record. That asymmetry is what a lack of resistance to impersonation looks like in national infrastructure."
+abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees where it came from. Receivers are registered and tightly managed; the mechanism for verifying the authenticity of the sender sits outside the public record. That asymmetry is what a lack of resistance to impersonation looks like in national infrastructure — and this piece goes on to how you add the missing layer: sign and register at the moment of issue, so any third party can collate later without the original."
 tags:
   - j-alert
   - origin-verification
@@ -19,23 +19,25 @@ relatedLinks:
     href: "https://lemma.frame00.com/authenticity/"
   - label: "The last layer left to cyber defense in the age of AI"
     href: "https://lemma.frame00.com/blog/detection-is-not-proof/"
-  - label: "Lemma API — provenance, authentication, authorization, inference, attributes"
-    href: "https://lemma.frame00.com/pillars/"
-  - label: "Glossary"
-    href: "https://lemma.frame00.com/glossary/"
+  - label: "Keeping an audit trail of MCP tool calls that can be verified later"
+    href: "https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/"
+  - label: "@lemmaoracle/sdk (npm)"
+    href: "https://www.npmjs.com/package/@lemmaoracle/sdk"
 ---
 
 **TL;DR**
 
-On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. On the receiving side, everything is tightly managed: where a receiver may be installed, its control number, its registration. How the authenticity of the sender is established sits outside the public record.
-
-That asymmetry is not a defect peculiar to J-Alert. It is the result of public warning systems as a class prioritising availability and deferring authenticity. 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warning notifications. Build the layer that lets a receiver cryptographically verify the sender into the next generation of alerting infrastructure from the start — that is the design question this reporting raises.
+- **What was reported**: On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. On the receiving side, everything is tightly managed: where a receiver may be installed, its control number, its registration. How the authenticity of the sender is established sits outside the public record.
+- **The underlying problem**: This is not a defect peculiar to J-Alert. It is the result of public warning systems as a class prioritising availability and deferring authenticity. 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warning notifications.
+- **The design principle for what gets built next**: Build in, from the start, the layer that lets a receiver cryptographically verify the sender. Sign and register at the moment of issue, and both verification at reception and later collation by a third party without the original stand on the same single record.
 
 "Did the information that arrived really come from the sender it claims?" When the receiving side cannot establish that, is a warning still functioning as a warning?
 
 On 30 August 2026, Kyodo News published [a report](https://www.tokyo-np.co.jp/article/512267): the data transmitted via satellite in the J-Alert nationwide instant warning system has no encryption and no function guaranteeing its origin. Officials at the Ministry of Internal Affairs and Communications acknowledged as much.
 
 What the report exposes is not simply a technical vulnerability. It is a structure in which the idea of proving where information came from was absent from the design of national infrastructure from the very beginning.
+
+And that structure is not confined to J-Alert. Telemetry from industrial equipment and sensors, exchanges between AI agents, the traffic that moves between financial institutions — systems running without the receiving side being able to establish "did this really come from that counterparty?" are all around us. Wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question arrives. What follows about the authenticity of the sender maps directly onto whatever system you are designing.
 
 ## The one function J-Alert never had
 
@@ -94,6 +96,86 @@ A digital signature lets the receiving side verify mathematically that data came
 One way to implement it: the sender signs the data with its private key, and the receiver verifies with the public key. The contents stay in the clear, and they carry a mark only the sender can issue. The receiver accepts the data only after verifying that mark. With that in place, forged data transmitted from a drone carries no signature, and the receiver can refuse it.
 
 Signed warnings have been studied at 3GPP for more than a decade, and the schemes exist. The problem is that Japanese operations did not choose that layer.
+
+### Add the layer without touching the delivery path
+
+The hardest constraint on adding authenticity to a system like this is that delivery cannot stop. A change that costs availability will not survive contact with operations. So the layer you add sits outside the existing path. Splitting it by role makes the design legible.
+
+| Layer | When | What it does |
+|---|---|---|
+| Issue | The moment the warning goes out | Normalise the warning, sign it with the issuer's key, register the signature and the commitment |
+| Reception | The moment the signal arrives | Verify the signature against the pre-distributed public key; refuse anything that fails |
+| Collation | Afterwards, any number of times | Recompute the values from the warning text in hand and match them against what was registered at issue |
+
+The middle layer — reception — belongs to the radio stack, and it is exactly where 3GPP has schemes ready. Solve key distribution and the standard mechanisms suffice. It is not a layer we substitute for.
+
+What we can fill in is the top and the bottom: fix "who issued what, and when" as a single record at the moment of issue, and keep it in a state where anyone can collate it later without obtaining the original. Even when a receiver could not reject a forgery over the air, a third party can establish immediately afterwards whether that issue was genuine.
+
+### Sign and register at the moment of issue
+
+Registration is one round trip over the existing terrestrial line; the satellite delivery flow is untouched. A warning is not information to be kept secret, so no encryption is involved — the hash is taken from the normalised text.
+
+```ts
+import { create, canonicalize, commitDeep, documents } from "@lemmaoracle/sdk";
+import crypto from "node:crypto";
+
+const client = create({
+  apiBase: "https://workers.lemma.workers.dev",
+  apiKey: process.env.LEMMA_API_KEY,
+});
+
+// One issued warning, normalised exactly as it goes into the satellite frame
+const alert = {
+  kind: "ballistic-missile",
+  areas: ["01", "02"],
+  issuedAt: "2026-09-02T07:31:04Z",
+  body: "Missile launch. Missile launch.",
+};
+
+const canonical = canonicalize(alert); // deterministic, down to key order
+const randomness = crypto.randomBytes(31).toString("hex");
+const c = commitDeep(alert, { randomness });
+
+await documents.register(client, {
+  docHash: sha3(canonical), // hash of the text
+  cid: cidOf(canonical), // CIDv1 of the same text
+  issuerId: "fdma:j-alert", // who issued it
+  subjectId: "area:01",
+  commitments: {
+    scheme: "poseidon",
+    root: c.root,
+    leaves: c.leaves,
+    randomness: c.randomness,
+  },
+  revocation: { scheme: "none", root: "0x" + "0".repeat(64) },
+  signature: {
+    format: "opaque",
+    payload: signWithIssuerKey(canonical),
+    issuerId: "fdma:j-alert",
+  },
+});
+```
+
+`sha3`, `cidOf` and `signWithIssuerKey` are your own functions. `signature` is the issuer signature, made with the same key that signs the satellite frame. `commitDeep` builds a commitment with a leaf per field, which leaves room to later disclose "the time of issue only" or "the target areas only" and have that checked. Generate the blinding factor (`randomness`) on your side and keep it — without it the same values cannot be recomputed. The canonical reference for function names and payload shapes is the [`@lemmaoracle/sdk` README](https://www.npmjs.com/package/@lemmaoracle/sdk).
+
+### Collate afterwards, with no key
+
+Reads need no authentication. Nobody has to hand an API key to the party doing the checking.
+
+```bash
+curl https://workers.lemma.workers.dev/v1/documents/0x071d…
+```
+
+If the `commitmentRoot` that comes back matches the root recomputed from the warning text in hand, that text has not changed since it was issued. `issuerId` and `signature` say who issued it.
+
+```ts
+const recomputed = commitDeep(alertInHand, { randomness: storedRandomness });
+const intact = recomputed.root === res.commitmentRoot;
+```
+
+The judgement ends there. No query to the state, no request for the original. A municipality, a newsroom, a resident — the same steps reach the same conclusion.
+
+To be straight about it: this layer does not stop a forged warning arriving over the air. Signature verification in the receiver does that. What this layer carries is the ability to point, afterwards, at what the genuine issue actually was — and to make sure the signature and the record needed for that are reliably created at the moment of issue. A commitment does not vouch for the correctness of a record. What it proves is only that nothing has changed since registration.
 
 When you design a new system, build in from the start the layer that lets the receiving side cryptographically verify that the organisation which sent the data is the organisation it claims to be. This is technically feasible, and the existing standardisation work already holds a body of study on it.
 
