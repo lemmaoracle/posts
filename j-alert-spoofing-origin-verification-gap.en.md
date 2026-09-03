@@ -31,7 +31,7 @@ The work was done by Yudai Kirishiki of the cybersecurity firm Unknown Technolog
 
 On the receiving side, where a receiver may be installed and how registration is applied for are settled in detail by the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). What is nowhere provided is anything that would let the receiving side establish whether an arriving warning is genuine.
 
-This is less a fault in one system than a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question comes up.
+This is less a fault in one system than a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, you run into the same underlying problem: can the data that just arrived be trusted as genuine?
 
 ## Spoofing satellite data — a blind spot since 2007
 
