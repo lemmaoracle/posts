@@ -22,10 +22,6 @@ relatedLinks:
     href: "https://lemma.frame00.com/blog/metawater-mizudako-resident-record-proof/"
 ---
 
-**TL;DR**
-
-After AI is introduced into equipment anomaly detection, false alarms often follow. If you cannot tell whether the cause sits in the input data or in the AI's judgment, there is little left to do beyond dulling the threshold or switching the automatic detection off. Keep the AI's decision and the data it referenced as a single record whose alteration would show, and both false-alarm triage and incident reporting can proceed by showing the path itself.
-
 Dull the threshold, or switch off automatic detection for that line. Being pushed into that choice when false alarms keep coming is not caused by a shortage of records. The process historian, the maintenance management system, the daily logs — the records are all there. What is missing is **the connection: what the AI was looking at when it issued that judgment**.
 
 ## When a false alarm appears, do you suspect the sensor or the AI?

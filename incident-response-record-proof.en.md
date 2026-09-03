@@ -23,13 +23,6 @@ relatedLinks:
   - label: "Proof for long-term contract records and quotes"
     href: "https://lemma.frame00.com/solutions/use-cases/long-term-contract-record/"
 ---
-
-**TL;DR**
-
-Hotels, restaurants, retailers and shopping centers all keep a record of when and how they handled a food-poisoning complaint or an injury. What no reader of that record can establish is whether it was edited afterwards. Even when the staff who handled it did everything right, being unable to show that the record has not been altered weakens the account you can give in a dispute or to a regulator.
-
-Fix the contents at the moment they are saved and head office no longer has to pull the original — the record itself, customer data and response details included — from the site. It can check the record in hand against the value registered at the time, on the spot. What that confirms is one thing only: that the response followed proper procedure and authority. The contents stay closed.
-
 ## Can you say the record has not been rewritten since?
 
 Say a restaurant receives a complaint that suggests food poisoning. The site reports to the public health office, issues a refund and puts preventive measures in place, all by the book. The response is written up and saved.
