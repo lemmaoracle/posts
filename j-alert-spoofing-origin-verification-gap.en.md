@@ -7,7 +7,7 @@ industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
 title: "What the J-Alert reporting reveals: no proof of origin"
-abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees where it came from. Receivers are registered and tightly managed; the mechanism for verifying the authenticity of the sender sits outside the public record. That asymmetry is what a lack of resistance to impersonation looks like in national infrastructure — and this piece goes on to how you add the missing layer: sign and register at the moment of issue, so any third party can collate later without the original."
+abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees where it came from. On the receiving side the operating rules spell out installation sites and registration procedure article by article; what secures the authenticity of the sender is delegated to an internal document the rules do not contain. That asymmetry is what a lack of resistance to impersonation looks like in national infrastructure — and this piece goes on to how you add the missing layer: sign and register at the moment of issue, so any third party can collate later without the original."
 tags:
   - j-alert
   - origin-verification
@@ -27,7 +27,7 @@ relatedLinks:
 
 **TL;DR**
 
-- **What was reported**: On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. On the receiving side, everything is tightly managed: where a receiver may be installed, its control number, its registration. How the authenticity of the sender is established sits outside the public record.
+- **What was reported**: On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. On the receiving side, the operating rules settle it article by article: where a receiver may be installed, how registration is applied for and amended. How the authenticity of the sender is secured is left to an internal document the rules do not contain.
 - **The underlying problem**: This is not a defect peculiar to J-Alert. It is the result of public warning systems as a class prioritising availability and deferring authenticity. 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warning notifications.
 - **The design principle for what gets built next**: Build in, from the start, the layer that lets a receiver cryptographically verify the sender. Sign and register at the moment of issue, and both verification at reception and later collation by a third party without the original stand on the same single record.
 
@@ -41,21 +41,21 @@ And that structure is not confined to J-Alert. Telemetry from industrial equipme
 
 ## The one function J-Alert never had
 
-[J-Alert](https://www.fdma.go.jp/about/organization/post-18.html) delivers information that leaves no time to react — ballistic missile launches, earthquake early warnings — from the national government to municipalities in an instant. The Fire and Disaster Management Agency transmits over both satellite and terrestrial lines; receivers at each municipality pick up the signal and automatically trigger local disaster radio and other channels. Delivery is confirmed four times a year in nationwide tests, and each receiver is registered per municipality by control number and MAC address.
+[J-Alert](https://www.fdma.go.jp/about/organization/post-18.html) delivers information that leaves no time to react — ballistic missile launches, earthquake early warnings — from the national government to municipalities in an instant. The Fire and Disaster Management Agency transmits over both satellite and terrestrial lines; receivers at each municipality pick up the signal and automatically trigger local disaster radio and other channels. The [nationwide transmission test](https://www.fdma.go.jp/about/organization/post-17.html) has been run four times a year as a rule since fiscal 2018.
 
-Yutaka Kiriashiki of the cybersecurity firm Unknown Technologies obtained a receiver that a local government had owned and later put on the second-hand market, and analysed it. The analysis confirmed that J-Alert's satellite-delivered data carries no digital signature or other mechanism guaranteeing its origin.
+Yudai Kirishiki of the cybersecurity firm Unknown Technologies obtained a receiver that a local government had owned and later put on the second-hand market, and analysed it. The analysis confirmed that J-Alert's satellite-delivered data carries no digital signature or other mechanism guaranteeing its origin.
 
 In other words, the receiver accepts data without establishing whose data it is. Transmit data in the same format to a receiving antenna from a height — using a drone, for instance — and the receiving side has no way to tell a forgery from the real thing.
 
 ## There is still no way to tell a fake disaster warning from a real one
 
-Management of the receiving end is strict. Receivers may only be installed in designated offices or fire headquarters, and reports of decommissioning or suspension must carry the organisation name, control number, MAC address and reason. The rules even distinguish between the two: "decommissioning" deletes the registration entirely and makes reinstallation impossible, while "suspension" keeps the registration but removes the unit from monitoring.
+The receiving end is settled in the text of the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). Receivers may only be installed in an office, a branch office or a fire headquarters (Article 3). To begin receiving, an organisation files a completed form to apply for registration, and must report promptly whenever the filed details change (Article 5). Conduct that interferes with operations can have the registration revoked (Article 6).
 
 And the sending end?
 
-Article 12 of the operating rules requires the Fire and Disaster Management Agency and the receiving organisations to "ensure the necessary level of security", but the substance of that requirement is to be set separately by the head of the agency's Civil Protection Operations Office, and it is not published. The agency's answer — that it cannot disclose details for security reasons — is consistent with how the rules are built.
+On security the rules say one thing, in Article 12: the agency and registered receiving organisations shall take appropriate measures, in hardware and software alike, to ensure the necessary level of security, as prescribed by the head of the agency's Civil Protection Operations Office. What counts as ensuring it is set separately by that office, and the substance is not in the rules. The agency's answer — that it cannot disclose details for security reasons — is consistent with how the rules are built.
 
-The management of the receiving end can be read out of public documents in concrete terms. How the authenticity of the sender is established cannot. That asymmetry is where this reporting sits.
+The procedure for the receiving end is written down, article by article. For the authenticity of the sender there is no article that can be read at the same resolution. That asymmetry is where this reporting sits.
 
 ## Spoofing satellite data — a blind spot since 2007
 
@@ -79,11 +79,11 @@ It is a design that prioritised availability and paid for it with authenticity.
 
 This is not a judgement to be condemned. Within the technical constraints and operational limits of the day, it put saving lives first. The problem is that the judgement has been carried forward at every revision for nineteen years, and remains unchanged now that the technical options have widened enormously.
 
-The operating rules include a provision requiring that improvements to J-Alert be studied in a planned manner and that the resulting information be shared with receiving organisations. A framework for continued improvement is written into the institution. The question is how far that framework extends to verifying authenticity.
+Article 15 of the operating rules requires that improvements to J-Alert be studied in a planned manner and that the resulting information be shared with registered receiving organisations. A framework for continued improvement is written into the institution. The question is how far that framework extends to verifying authenticity.
 
 ## "It arrived" can be proven. "Who sent it" cannot
 
-J-Alert has two transmission paths: satellite and terrestrial line. The operating rules define both and require receivers to be connected to a terrestrial line. Whether current receivers cross-check the two to judge authenticity cannot be established from public documents, but the fact that multiple paths exist is material for anyone thinking about countermeasures.
+J-Alert has two transmission paths: satellite and terrestrial line. Article 4 of the operating rules has information sent over both, and Article 18 requires receivers to be connected to a terrestrial line. Whether current receivers cross-check the two to judge authenticity cannot be established from public documents, but the fact that multiple paths exist is material for anyone thinking about countermeasures.
 
 Nor, at the time of the reporting, is there a clear route for getting a finding like this to the right place. The public-private framework under the Act on Enhancement of Cyber Response Capabilities, enacted in May 2025, begins operating on 1 October 2026 — but where does a finding go when it concerns an undisclosed area of specification in warning infrastructure the state itself operates? The debate over how vulnerability information should be handled is still running.
 
@@ -184,7 +184,8 @@ National infrastructure has spent decades making delivery certain. Making it str
 ## Resources
 
 - Exclusive: J-Alert "false warnings possible", experts say no origin guarantee (30 August 2026, Kyodo News) — [Tokyo Shimbun Digital](https://www.tokyo-np.co.jp/article/512267)
-- J-Alert: receivers are registered and managed; verification of the sender sits outside the public record — [Innovatopia](https://innovatopia.jp/cyber-security/cyber-security-news/117374/)
+- J-Alert operating rules (enacted December 2010) — [Fire and Disaster Management Agency](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf)
+- Nationwide transmission test — [Fire and Disaster Management Agency](https://www.fdma.go.jp/about/organization/post-17.html)
 - Overview of the J-Alert nationwide instant warning system — [Fire and Disaster Management Agency](https://www.fdma.go.jp/about/organization/post-18.html)
 - 3GPP TR 33.969 Study on security aspects of Public Warning System (PWS) — [ARIB-published Release 13](http://www.arib.or.jp/english/html/overview/doc/STD-T63V12_00/5_Appendix/Rel13/33/33969-d00.pdf)
 - This is Your President Speaking: Spoofing Alerts in 4G LTE Networks (MobiSys '19) — [ACM Digital Library](https://dl.acm.org/doi/10.1145/3307334.3326082)
