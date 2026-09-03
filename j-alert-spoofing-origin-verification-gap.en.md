@@ -49,7 +49,7 @@ Why is there no authentication? The research team's explanation runs as follows.
 
 It is a design that put arrival first and left the question of genuineness further back.
 
-Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward at every revision for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down once more.
+Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down once more.
 
 ## The design new infrastructure gets to choose
 
