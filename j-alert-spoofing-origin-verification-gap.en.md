@@ -71,7 +71,17 @@ This is not a proposal to retrofit the existing J-Alert system. But the gap this
 
 A digital signature lets the receiving side verify mathematically that data came from a given sender and has not been altered. Where encryption conceals contents, a signature carries authenticity. For information meant to be read as widely as a warning, authenticity is the part that matters. The sender signs with its private key and the receiver verifies with the public key; the contents stay in the clear and carry a mark only the sender can issue. Forged data transmitted from a drone carries no signature, and the receiver can refuse it.
 
-If you are adding this layer to a system whose delivery cannot stop, the practical place for it is outside the existing path. Fix "who issued what, and when" as a single record at the moment of issue, and keep it in a state where it can be collated later without the original. Verification at reception and collation by a third party afterwards can then rest on the same single record. We wrote that second half in working code in [an audit trail for MCP tool calls](https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/).
+If you are adding this layer to a system whose delivery cannot stop, the practical place for it is outside the existing path. Splitting it by role shows where each piece goes.
+
+| Layer | When | What it does |
+|---|---|---|
+| Issue | The moment the warning goes out | Normalise the warning, sign it with the issuer's key, fix the record |
+| Reception | The moment the signal arrives | Verify the signature against the pre-distributed public key; refuse anything that fails |
+| Collation | Afterwards, any number of times | Recompute the values from the warning text in hand and match them against the record made at issue |
+
+The middle layer — reception — belongs to the radio stack, and it is exactly where 3GPP has schemes ready. Solve key distribution and the standard mechanisms suffice. The top and the bottom are needed separately: fix "who issued what, and when" as a single record at the moment of issue, and keep that record in a state where anyone can collate it without obtaining the original. Whether you can establish, immediately after a receiver failed to reject a forgery over the air, what the genuine issue actually was is decided here.
+
+We wrote the bottom layer in working code in [an audit trail for MCP tool calls](https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/).
 
 National infrastructure has spent decades making delivery certain. Making it structurally checkable that what arrived is genuine is the next thing — and for what gets built next, that design is available to choose.
 
