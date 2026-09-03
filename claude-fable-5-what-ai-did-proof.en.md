@@ -19,8 +19,6 @@ tags:
   - pre-execution-attestation
 ---
 
-**TL;DR**
-
 On June 9, 2026, Anthropic released a new AI model, Claude Fable 5. It is the most capable model the company has made generally available — strongest on long, complex work, and able to operate autonomously, without a human in the loop, for the longest stretch yet. Given that power, Anthropic shipped it with a safeguard: when a prompt touches high-misuse areas such as cyberattacks or biological and chemical questions, the model is kept from returning a dangerous answer.
 
 Here is a line worth drawing. **Stopping a dangerous output and being able to prove, afterward, what the AI actually did are two different things.** The more capable AI becomes, the more work enterprises hand to AI agents. Did the agent they delegated to stay inside the authority it was granted — and can they show that in an audit or a regulatory review? This article is about that proof.
