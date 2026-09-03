@@ -29,15 +29,9 @@ A J-Alert warning travels from the national government to a municipality's recei
 
 The work was done by Yudai Kirishiki of the cybersecurity firm Unknown Technologies, who obtained a receiver put on the second-hand market and analysed it: the satellite-delivered data carries no digital signature, and nothing else that would guarantee its origin. Transmit data in the same format from a height — using a drone, for instance — and the receiving side cannot tell it from a genuine warning.
 
+On the receiving side, where a receiver may be installed and how registration is applied for are settled in detail by the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). What is nowhere provided is anything that would let the receiving side establish whether an arriving warning is genuine.
+
 This is less a fault in one system than a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question comes up.
-
-## The receiving end is managed in detail; the sending end cannot be checked
-
-The receiving end is settled in the text of the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). Receivers may only be installed in an office, a branch office or a fire headquarters (Article 3); to begin receiving, an organisation files a form to apply for registration and must report promptly whenever the filed details change (Article 5).
-
-And the sending end? On security the rules have just one provision, Article 12: appropriate measures shall be taken to ensure the necessary level of security, as prescribed by the head of the agency's Civil Protection Operations Office. What counts as ensuring it is set separately by that office, and the substance is not in the rules. The agency's answer — that it cannot disclose details for security reasons — is consistent with how the rules are built.
-
-The receiving end is settled in this much detail. Nothing, meanwhile, is provided that would let the receiving side establish whether an arriving warning is genuine. That asymmetry is where this reporting sits.
 
 ## Spoofing satellite data — a blind spot since 2007
 
@@ -55,7 +49,7 @@ Why is there no authentication? The research team's explanation runs as follows.
 
 It is a design that put arrival first and left the question of genuineness further back.
 
-Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward at every revision for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down once more. Article 15 of the operating rules requires that improvements to J-Alert be studied in a planned manner and shared with registered receiving organisations. A framework for continued improvement is written into the institution. What remains is how far that framework reaches toward checking whether what arrived is genuine.
+Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward at every revision for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down once more.
 
 ## The design new infrastructure gets to choose
 
