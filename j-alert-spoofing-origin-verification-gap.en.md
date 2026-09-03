@@ -7,7 +7,7 @@ industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
 title: "What the J-Alert reporting reveals: no proof of origin"
-abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees where it came from. On the receiving side the operating rules spell out installation sites and registration procedure article by article; what secures the authenticity of the sender is delegated to an internal document the rules do not contain. That asymmetry is what a lack of resistance to impersonation looks like in national infrastructure."
+abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. The receiving end is settled article by article in the operating rules; for the authenticity of the sender there is no article that can be read at the same resolution."
 tags:
   - j-alert
   - origin-verification
@@ -27,7 +27,7 @@ relatedLinks:
 
 **TL;DR**
 
-On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. On the receiving side, the operating rules settle it article by article — where a receiver may be installed, how registration is applied for and amended — while how the authenticity of the sender is secured is left to an internal document the rules do not contain. This is not a defect peculiar to J-Alert. It is the result of public warning systems as a class prioritising availability and deferring authenticity, and 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warning notifications. Build in, from the start, the layer that lets a receiver cryptographically verify the sender: that is the question this reporting leaves for the infrastructure still to be built.
+That the authenticity of the sender is nowhere in the text is not a circumstance peculiar to J-Alert. It is the result of public warning systems as a class prioritising availability and deferring authenticity, and 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warning notifications. Build in, from the start, the layer that lets a receiver cryptographically verify the sender: that is the question this reporting leaves for the infrastructure still to be built.
 
 "Did the information that arrived really come from the sender it claims?" When the receiving side cannot establish that, is a warning still functioning as a warning?
 
