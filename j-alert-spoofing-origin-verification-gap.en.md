@@ -27,25 +27,21 @@ relatedLinks:
 
 **TL;DR**
 
-That the authenticity of the sender is nowhere in the text is not a circumstance peculiar to J-Alert. It is the result of public warning systems as a class prioritising availability and deferring authenticity, and 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warning notifications. Build in, from the start, the layer that lets a receiver cryptographically verify the sender: that is the question this reporting leaves for the infrastructure still to be built.
+That the authenticity of the sender is nowhere in the text is not peculiar to J-Alert. It is the result of public warning systems prioritising availability and deferring authenticity, and 3GPP's technical report has named the US and Japan, for more than a decade, as regions unlikely to broadcast signed warnings. Build in, from the start, the layer that lets a receiver cryptographically verify the sender: that is the question this reporting leaves for the infrastructure still to be built.
 
 "Did the information that arrived really come from the sender it claims?" When the receiving side cannot establish that, is a warning still functioning as a warning?
 
-On 30 August 2026, Kyodo News published [a report](https://www.tokyo-np.co.jp/article/512267): the data transmitted via satellite in the J-Alert nationwide instant warning system has no encryption and no function guaranteeing its origin. Officials at the Ministry of Internal Affairs and Communications acknowledged as much.
+On 30 August 2026, Kyodo News published [a report](https://www.tokyo-np.co.jp/article/512267): the data transmitted via satellite in the J-Alert nationwide instant warning system has no encryption and no function guaranteeing its origin. Officials at the Ministry of Internal Affairs and Communications acknowledged as much. The finding comes from Yudai Kirishiki of the cybersecurity firm Unknown Technologies, who obtained a receiver put on the second-hand market and analysed it. Transmit data in the same format to a receiving antenna from a height — using a drone, for instance — and the receiving side has no way to tell a forgery from the real thing.
 
-Yudai Kirishiki of the cybersecurity firm Unknown Technologies obtained a receiver that a local government had owned and later put on the second-hand market, analysed it, and confirmed that the satellite-delivered data carries no digital signature or other mechanism guaranteeing its origin. Transmit data in the same format to a receiving antenna from a height — using a drone, for instance — and the receiving side has no way to tell a forgery from the real thing.
-
-What the report exposes is not simply a technical vulnerability. It is a structure in which the idea of proving where information came from was absent from the design of national infrastructure from the very beginning. And that structure is not confined to J-Alert. Telemetry from industrial equipment and sensors, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question arrives.
+What that exposes is not a technical fault but a structure: the idea of proving where information came from was absent from the design from the very beginning. And it is not confined to J-Alert. Telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question arrives.
 
 ## The receiving end is in the text; the sending end is in an internal document
 
-The receiving end is settled in the text of the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). Receivers may only be installed in an office, a branch office or a fire headquarters (Article 3). To begin receiving, an organisation files a completed form to apply for registration, and must report promptly whenever the filed details change (Article 5). Conduct that interferes with operations can have the registration revoked (Article 6).
+The receiving end is settled in the text of the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). Receivers may only be installed in an office, a branch office or a fire headquarters (Article 3); to begin receiving, an organisation files a form to apply for registration and must report promptly whenever the filed details change (Article 5).
 
-And the sending end?
+And the sending end? On security the rules say one thing, in Article 12: appropriate measures shall be taken to ensure the necessary level of security, as prescribed by the head of the agency's Civil Protection Operations Office. What counts as ensuring it is set separately by that office, and the substance is not in the rules. The agency's answer — that it cannot disclose details for security reasons — is consistent with how the rules are built.
 
-On security the rules say one thing, in Article 12: the agency and registered receiving organisations shall take appropriate measures, in hardware and software alike, to ensure the necessary level of security, as prescribed by the head of the agency's Civil Protection Operations Office. What counts as ensuring it is set separately by that office, and the substance is not in the rules. The agency's answer — that it cannot disclose details for security reasons — is consistent with how the rules are built.
-
-The procedure for the receiving end is written down, article by article. For the authenticity of the sender there is no article that can be read at the same resolution. That asymmetry is where this reporting sits.
+The procedure for the receiving end is in the text; the authenticity of the sender is not. That asymmetry is where this reporting sits.
 
 ## Spoofing satellite data — a blind spot since 2007
 
