@@ -7,7 +7,7 @@ industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
 title: "What the J-Alert reporting reveals: no proof of origin"
-abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. The receiving end is managed in concrete detail by the operating rules, while nothing is provided that would let a receiver establish that the sender is genuine. It is the result of public warning systems prioritising availability and deferring authenticity."
+abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. The receiving end is managed in concrete detail by the operating rules, while nothing is provided that would let the receiving side establish whether an arriving warning is genuine. Less a fault in one system than a question common to the design of public infrastructure."
 tags:
   - j-alert
   - origin-verification
@@ -25,11 +25,11 @@ relatedLinks:
     href: "https://www.npmjs.com/package/@lemmaoracle/sdk"
 ---
 
-"Did the information that arrived really come from the sender it claims?" When the receiving side cannot establish that, is a warning still functioning as a warning?
+A J-Alert warning travels from the national government to a municipality's receiver by satellite. That receiver does not establish whether the data really came from the government. On 30 August 2026, Kyodo News [reported](https://www.tokyo-np.co.jp/article/512267) as much, and officials at the Ministry of Internal Affairs and Communications acknowledged it.
 
-On 30 August 2026, Kyodo News published [a report](https://www.tokyo-np.co.jp/article/512267): the data transmitted via satellite in the J-Alert nationwide instant warning system has no encryption and no function guaranteeing its origin. Officials at the Ministry of Internal Affairs and Communications acknowledged as much. The finding comes from Yudai Kirishiki of the cybersecurity firm Unknown Technologies, who obtained a receiver put on the second-hand market and analysed it. Transmit data in the same format to a receiving antenna from a height — using a drone, for instance — and the receiving side has no way to tell a forgery from the real thing.
+The work was done by Yudai Kirishiki of the cybersecurity firm Unknown Technologies, who obtained a receiver put on the second-hand market and analysed it: the satellite-delivered data carries no digital signature, and nothing else that would guarantee its origin. Transmit data in the same format from a height — using a drone, for instance — and the receiving side cannot tell it from a genuine warning.
 
-What that exposes is not a technical fault but a structure: the idea of proving where information came from was absent from the design from the very beginning. And it is not confined to J-Alert. Telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question arrives.
+Less a fault in one system, this looks to us like a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, the same question comes up.
 
 ## The receiving end is managed in detail; the sender cannot be checked at all
 
@@ -47,15 +47,15 @@ J-Alert entered service on 9 February 2007 with a limited set of local governmen
 
 In the United States, a research team at the University of Colorado Boulder [demonstrated emergency alert spoofing](https://dl.acm.org/doi/10.1145/3307334.3326082) in 2019. Using a commercially available software-defined radio costing under $1,000 and open-source software, they showed that a one-watt transmitter could deliver false alerts to devices within roughly a one-kilometre radius. In 2026, an [open-source implementation for 5G standalone](https://arxiv.org/abs/2604.24404) followed, together with a proposed defence based on cross-checking against neighbouring cells.
 
-Research into the attack is advancing. The standards documents keep studying signature schemes. What Japanese operations lack is the layer that would turn that study into something real.
+Research into the attack is advancing. The standards documents keep studying signature schemes. The layer that would bring that study down into Japanese operations has yet to be provided.
 
 ## The heart of the problem is a design choice, not a technical limit
 
 Why is there no authentication? The research team's explanation runs as follows. To reach devices that have not yet attached to a network, and devices roaming on an unfamiliar operator, a design that demands no authentication was chosen. On top of that, because most alerts originate from local governments, centralised key management is hard to sustain.
 
-It is a design that prioritised availability and paid for it with authenticity.
+It is a design that put arrival first and left the question of genuineness further back.
 
-This is not a judgement to be condemned. Within the technical constraints and operational limits of the day, it put saving lives first. The problem is that the judgement has been carried forward at every revision for nineteen years, and remains unchanged now that the technical options have widened enormously. Article 15 of the operating rules requires that improvements to J-Alert be studied in a planned manner and shared with registered receiving organisations. A framework for continued improvement is written into the institution. The question is how far that framework extends to verifying authenticity.
+Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward at every revision for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down again. Article 15 of the operating rules requires that improvements to J-Alert be studied in a planned manner and shared with registered receiving organisations. A framework for continued improvement is written into the institution. What remains is how far that framework reaches toward checking whether what arrived is genuine.
 
 ## The design new infrastructure gets to choose
 
