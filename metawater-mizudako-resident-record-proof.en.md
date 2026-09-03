@@ -23,10 +23,6 @@ relatedLinks:
     href: "https://lemma.frame00.com/blog/stablecoin-payment-reconciliation/"
 ---
 
-**TL;DR**
-
-Lemma has been integrated into MizuDAkO, which supports community building around resident-led maintenance of water and sewerage infrastructure. Records created in the field can now prove their authenticity without revealing personal data, becoming dependable data that AI can rely on as evidence. The design runs comfortably under demanding conditions, including legacy devices and limited connectivity.
-
 | Summary        |                                                                                  |
 | -------------- | -------------------------------------------------------------------------------- |
 | Customer       | Metawater Co., Ltd.                                                              |

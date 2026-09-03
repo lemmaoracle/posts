@@ -17,9 +17,7 @@ tags:
   - pre-execution-attestation
 ---
 
-**TL;DR**
-
-In ten days, Japan's AI cyber defense response cascaded from cabinet directive to direct implementation requests aimed at critical infrastructure operators and local governments. Every measure asked for — vulnerability assessments, patch rollouts, budget and headcount — sits squarely on the detection side. What current operating models still do not treat as a distinct layer is the *provenance layer*: a cryptographic record that proves, before a transaction settles, who delegated what authority, to whom, and how far. Lemma builds that layer across multiple domains, starting with payments (Trust402) and authentication.
+Lemma builds that layer across multiple domains, starting with payments (Trust402) and authentication.
 
 **Detection ≠ Proof**
 
