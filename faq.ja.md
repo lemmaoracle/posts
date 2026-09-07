@@ -196,14 +196,14 @@ ZKサーキットと再現可能なジェネレーターを登録することで
 
 **開発ドキュメントはどこで確認できますか？**
 
-- [すべてを暗号化し、何も露出しない](/ja/blog/encrypt-everything-expose-nothing)
-- [ゼロ知識で事実を証明する](/ja/blog/prove-facts-with-zero-knowledge)
-- [AI に必要なものだけを開示する](/ja/blog/disclose-only-what-ai-needs)
-- [検証済み属性をクエリする](/ja/blog/query-verified-attributes)
-- [ドメインをスキーマとして定義する](/ja/blog/define-your-domain-as-a-schema)
-- [消えることのない来歴](/ja/blog/provenance-that-never-disappears)
-- [検証可能なAI：信頼の出所を暗号で示す新しいRAG設計](/ja/blog/verifiable-ai)
-- [Lemma 仕様](/ja/blog/lemma-oracle-specs)
+- [すべてを暗号化し、何も露出しない](/ja/blog/encrypt-everything-expose-nothing/)
+- [ゼロ知識で事実を証明する](/ja/blog/prove-facts-with-zero-knowledge/)
+- [AI に必要なものだけを開示する](/ja/blog/disclose-only-what-ai-needs/)
+- [検証済み属性をクエリする](/ja/blog/query-verified-attributes/)
+- [ドメインをスキーマとして定義する](/ja/blog/define-your-domain-as-a-schema/)
+- [消えることのない来歴](/ja/blog/provenance-that-never-disappears/)
+- [検証可能なAI：信頼の出所を暗号で示す新しいRAG設計](/ja/blog/verifiable-ai-cryptographic-rag-design/)
+- [Lemma 仕様](/ja/blog/lemma-oracle-specs/)
 
 ---
 
