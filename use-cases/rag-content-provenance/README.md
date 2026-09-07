@@ -1,5 +1,7 @@
 ---
 title: "RAG Content Provenance"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "Anchor each RAG document to verifiable provenance at ingest — docHash, CID, and issuer signature — so the authenticity of every AI citation becomes cryptographically traceable."
 thesis: "Indexed ≠ trustworthy"
 pillar: verifiable-origin

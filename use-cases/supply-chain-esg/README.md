@@ -1,5 +1,7 @@
 ---
 title: "Supply Chain ESG Compliance"
+published: 2026-05-07
+updated: 2026-08-07
 abstract: "Prove CBAM, EUDR, and DPP compliance through a cryptographic chain of supplier attestations, so you can verify regulatory conformance while protecting trade secrets such as purchase prices and contract terms."
 thesis: "Declared ≠ proven"
 pillar: regulatory-attribute-proof

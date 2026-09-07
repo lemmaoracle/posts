@@ -1,5 +1,7 @@
 ---
 title: "KYC/AML Selective Disclosure"
+published: 2026-05-07
+updated: 2026-08-07
 abstract: "Satisfy KYC/AML requirements with per-attribute ZK proofs instead of sharing customer data, so you can meet compliance and data-minimization obligations at the same time."
 thesis: "Declared ≠ verified"
 pillar: regulatory-attribute-proof

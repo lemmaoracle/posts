@@ -1,5 +1,7 @@
 ---
 title: "Supply Chain Component Provenance"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "Chain per-lot component provenance, issuer-signed at every supplier tier, into a ZK proof that the assembler can verify across the whole multi-tier chain."
 thesis: "Recorded ≠ untampered"
 pillar: verifiable-origin

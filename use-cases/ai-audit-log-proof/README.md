@@ -1,5 +1,7 @@
 ---
 title: "AI Audit Log Proof"
+published: 2026-05-07
+updated: 2026-08-07
 abstract: "Lemma seals each AI decision's attribution with a ZK proof at the moment it is made, so the original rationale stays recoverable and accountable even after the model is updated."
 thesis: "Audited ≠ explainable"
 pillar: verifiable-ai

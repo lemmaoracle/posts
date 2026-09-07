@@ -1,5 +1,7 @@
 ---
 title: "x402 上のエージェント取引"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "x402 のミリ秒決済の前段で、売り手の属性を ZK 証明として検証します。買い手は平文の主張に依存することなく、安全に取引できます。"
 thesis: "決済される ≠ 検証されている"
 pillar: verifiable-origin

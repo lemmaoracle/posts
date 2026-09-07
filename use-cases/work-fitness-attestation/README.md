@@ -1,5 +1,7 @@
 ---
 title: "Work-Fitness Attestation"
+published: 2026-06-03
+updated: 2026-08-07
 abstract: "Prove that staff meet the required health checks, training, and qualifications without exposing personal health data, so assignment and audit can verify without seeing the contents — applicable not only to food and retail but to special training and medicals in manufacturing and critical infrastructure."
 thesis: "Show fitness, not the health record."
 pillar: regulatory-attribute-proof

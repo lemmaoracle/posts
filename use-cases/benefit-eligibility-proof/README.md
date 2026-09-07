@@ -1,5 +1,7 @@
 ---
 title: "Benefit & Subsidy Eligibility Proof"
+published: 2026-06-02
+updated: 2026-08-07
 abstract: "Residents and businesses prove only \"meets the eligibility criteria\" — without disclosing income tier or attributes. The granting body and auditors verify conformance while holding no unnecessary personal data."
 thesis: "Declared ≠ verifiable"
 pillar: regulatory-attribute-proof

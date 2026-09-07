@@ -1,5 +1,7 @@
 ---
 title: "Need-to-Know Field Signals"
+published: 2026-06-03
+updated: 2026-08-07
 abstract: "High-risk-customer handling, credit flags, two-person-rule triggers — circulate only the fact that a case applies, never the reason or basis. The underlying data stays with the back office (authorized staff); the front line acts on the mark, and the basis for issuing it can be proven after the fact for audit. Keep your existing customer management and blacklist sharing — add only a proof layer."
 thesis: "The mark travels. The reason doesn't."
 pillar: regulatory-attribute-proof
