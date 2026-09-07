@@ -197,7 +197,7 @@ What stopped the attacks in this simulation was pre-execution authority proof. E
 
 ### Resources
 
-- Blog index: https://lemma.frame00.com/blog
+- Blog index: https://lemma.frame00.com/blog/
 - Pillar 03 — Agent Authority Proof: https://lemma.frame00.com/pillars/#authority
 - Pillar 02 — Verifiable AI: https://lemma.frame00.com/pillars/#inference
 - Use Case — AI Audit Log Proof: https://lemma.frame00.com/solutions/use-cases/ai-audit-log-proof/
