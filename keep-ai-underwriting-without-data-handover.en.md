@@ -96,7 +96,7 @@ For lenders, financial-infrastructure integrators, or compliance leads exploring
 ## Resources
 
 - Demo: [demo-lemma.frame00.com](https://demo-lemma.frame00.com/) (Finance / Loan approval)
-- Whitepaper: [Prove What Your AI Decided On.](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions)
-- Related: [AI agents in financial operations: the case for the judgment-trail layer](https://lemma.frame00.com/blog/verifiable-ai-financial-agents-2026)
-- Related: [Verifiable AI KYC/AML Without Data Sharing: Lemma's Practical Approach](https://lemma.frame00.com/blog/lemma-verifiable-ai-kycaml-without-data-sharing)
-- Related: ["Explainable Management" Powered by Cryptographic Proofs](https://lemma.frame00.com/blog/ai-explainability-management-crypto-proof)
+- Whitepaper: [Prove What Your AI Decided On.](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/)
+- Related: [AI agents in financial operations: the case for the judgment-trail layer](https://lemma.frame00.com/blog/verifiable-ai-financial-agents-2026/)
+- Related: [Verifiable AI KYC/AML Without Data Sharing: Lemma's Practical Approach](https://lemma.frame00.com/blog/lemma-verifiable-ai-kycaml-without-data-sharing/)
+- Related: ["Explainable Management" Powered by Cryptographic Proofs](https://lemma.frame00.com/blog/ai-explainability-management-crypto-proof/)

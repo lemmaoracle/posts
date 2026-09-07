@@ -22,10 +22,10 @@ relatedLinks:
 
 ## 予告した設計が動きます
 
-前回の[ホワイトペーパー公開記事](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions)で、ADVANCED シナリオの一つとして「エージェントが証明を持ちながら自律的に決済するシナリオ」を予告しました。本日、その設計が動作するリファレンス実装としてリリースされました。
+前回の[ホワイトペーパー公開記事](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions/)で、ADVANCED シナリオの一つとして「エージェントが証明を持ちながら自律的に決済するシナリオ」を予告しました。本日、その設計が動作するリファレンス実装としてリリースされました。
 
 リポジトリ: [github.com/lemmaoracle/example-x402](https://github.com/lemmaoracle/example-x402)  
-サービスページ: [Trust402 — ZK-Verified Agent Payments](https://lemma.frame00.com/trust402)
+サービスページ: [Trust402 — ZK-Verified Agent Payments](https://lemma.frame00.com/ja/trust402/)
 
 Base Sepolia 上で稼働中です。この信頼レイヤーは **Trust402** というサービス名で提供しています。
 
@@ -207,8 +207,8 @@ Trust402 のエージェント側信頼レイヤー — DID バインディン�
 
 - リポジトリ: [lemmaoracle/example-x402](https://github.com/lemmaoracle/example-x402)
 - MCP サーバー（α デモ、ローカルインストール型）: [lemma/packages/mcp](https://github.com/lemmaoracle/lemma/tree/main/packages/mcp)
-- サービスページ: [Trust402](https://lemma.frame00.com/trust402)
-- ホワイトペーパー公開記事: [AIの判断根拠を証明する設計書](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions)
+- サービスページ: [Trust402](https://lemma.frame00.com/ja/trust402/)
+- ホワイトペーパー公開記事: [AIの判断根拠を証明する設計書](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions/)
 - 開発者ウェイトリスト: [tally.so/r/kd0bZR](https://tally.so/r/kd0bZR)
 
 ---

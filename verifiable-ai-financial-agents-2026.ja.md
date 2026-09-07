@@ -140,7 +140,7 @@ Anthropic の業務 AI ランタイム、Microsoft 365 の組み込みインタ�
 
 ### Resources
 
-- Trust402 デモ — [lemma.frame00.com/trust402](https://lemma.frame00.com/trust402)
+- Trust402 デモ — [lemma.frame00.com/ja/trust402](https://lemma.frame00.com/ja/trust402/)
 - example-origin リファレンス — [github.com/lemmaoracle/example-origin](https://github.com/lemmaoracle/example-origin)
-- ブリッジエクスプロイト分析（4/30）— [verifiable-origin-bridge-exploits-2026](https://lemma.frame00.com/blog/verifiable-origin-bridge-exploits-2026/)
-- Whitepaper v1 — [whitepaper-v1-prove-ai-decisions](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/)
+- ブリッジエクスプロイト分析（4/30）— [verifiable-origin-bridge-exploits-2026](https://lemma.frame00.com/ja/blog/verifiable-origin-bridge-exploits-2026/)
+- Whitepaper v1 — [whitepaper-v1-prove-ai-decisions](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions/)

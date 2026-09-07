@@ -61,7 +61,7 @@ AP2 が「意図をどう作り、どう共有するか」を定めるとすれ�
 
 > Models change. Proofs remain. — モデルは入れ替わります。証明は残ります。
 
-だからこそ、検証の層はモデルから独立していなければならない ―― これが Lemma の出発点です。Lemma の[4 つの柱](https://lemma.frame00.com/ja/pillars)のうち、ここで効くのは [Pillar 01・来歴証明](https://lemma.frame00.com/ja/pillars/#provenance) と [Pillar 03・エージェント権限証明](https://lemma.frame00.com/ja/pillars/#authority) です。
+だからこそ、検証の層はモデルから独立していなければならない ―― これが Lemma の出発点です。Lemma の[4 つの柱](https://lemma.frame00.com/ja/pillars/)のうち、ここで効くのは [Pillar 01・来歴証明](https://lemma.frame00.com/ja/pillars/#provenance) と [Pillar 03・エージェント権限証明](https://lemma.frame00.com/ja/pillars/#authority) です。
 
 ## Lemma の強み（3点）
 
@@ -85,7 +85,7 @@ AIエージェントに任せられる範囲は、そのエージェントを「
 - **自治体・公共**：個人データを見ずに、必要な属性だけを検証して手続きを進める。給付・窓口・徴収などを、生の個人情報を保持せずに回せます。
 - **AIエージェント運用（業種横断）**：連携先エージェントの権限・ポリシー・来歴を、接続時に一度ではなくタスクごとに検証。「渡しっぱなしの権限」を避けられます。
 
-業種・タスク横断の全ユースケースは[こちら](https://lemma.frame00.com/ja/solutions/use-cases)。
+業種・タスク横断の全ユースケースは[こちら](https://lemma.frame00.com/ja/solutions/use-cases/)。
 
 ## 開発者は数行から試せる
 
@@ -93,7 +93,7 @@ AIエージェントに任せられる範囲は、そのエージェントを「
 
 - **[Seal](https://lemma.frame00.com/ja/seal/)**：鍵ではなく証明を送る ZK サインイン SDK。アプリや AIエージェントのスタックに数行で組み込めます。
 - **[Trust402](https://lemma.frame00.com/ja/trust402/)**：鍵を持たずに AI を動かすキーレス認可。タスク単位の権限委譲を、x402 / MCP と組み合わせて使えます。
-- まずは [Dashboard](https://dashboard.lemma.workers.dev) と[仕様書](https://lemma.frame00.com/ja/guides)から。
+- まずは [Dashboard](https://dashboard.lemma.workers.dev) と[仕様書](https://lemma.frame00.com/ja/guides/)から。
 
 ---
 
@@ -143,8 +143,8 @@ x402 builder、MCP 開発者、AIエージェントを運用するチーム、�
 ## 関連リンク
 
 - [エージェント間の暗号的信頼チェーン：A2A連携が変えるAPI経済](https://lemma.frame00.com/ja/blog/agent-cryptographic-trust-chain-a2a-api-economy/)
-- [x402 のためのトラストレイヤー](https://lemma.frame00.com/ja/blog/x402-trust-layer-for-autonomous-agent-payments)
-- [検証可能なAI：信頼の出所を暗号で示す新しいRAG設計](https://lemma.frame00.com/ja/blog/verifiable-ai-cryptographic-rag-design)
-- [Lemma の4つの柱](https://lemma.frame00.com/ja/pillars) ／ [Critical Brief（実事案の構造分析）](https://lemma.frame00.com/ja/critical/briefs)
+- [x402 のためのトラストレイヤー](https://lemma.frame00.com/ja/blog/x402-trust-layer-for-autonomous-agent-payments/)
+- [検証可能なAI：信頼の出所を暗号で示す新しいRAG設計](https://lemma.frame00.com/ja/blog/verifiable-ai-cryptographic-rag-design/)
+- [Lemma の4つの柱](https://lemma.frame00.com/ja/pillars/) ／ [Critical Brief（実事案の構造分析）](https://lemma.frame00.com/ja/critical/briefs/)
 
 ― The Lemma team
