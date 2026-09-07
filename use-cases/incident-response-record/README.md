@@ -1,5 +1,7 @@
 ---
 title: "Tamper-Proof Incident & Complaint Records"
+published: 2026-06-03
+updated: 2026-06-29
 abstract: "For complaints and incidents such as food safety or injury, prove later \"when and how it was handled\" without exposing customer data or details — the records are tamper-proof and independently verifiable."
 thesis: "Prove the response, not the customer's data."
 pillar: verifiable-origin

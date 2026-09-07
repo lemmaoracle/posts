@@ -1,5 +1,7 @@
 ---
 title: "RAG Source Attestation"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "Bind each AI citation to a ZK proof of the exact document version (docHash) it claims to reference, so citation integrity holds cryptographically even after the index is rebuilt."
 thesis: "Cited ≠ verified"
 pillar: verifiable-ai

@@ -1,5 +1,7 @@
 ---
 title: "AI 監査ログ証明"
+published: 2026-05-07
+updated: 2026-08-07
 abstract: "AI の判断の帰属を、判断した時点で ZK 証明として固定します。モデルを更新した後でも当時の根拠まで遡って説明でき、説明責任を確実に果たせます。"
 thesis: "監査される ≠ 説明できる"
 pillar: verifiable-ai

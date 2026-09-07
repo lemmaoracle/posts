@@ -1,5 +1,7 @@
 ---
 title: "エージェント間の取引を、権限チェーンで証明する。"
+published: 2026-06-06
+updated: 2026-06-29
 abstract: "自律 AI エージェント同士が取引する Agent2Agent (A2A) 環境で、各エージェントの権限委任を chain として記録します。最終的な取引が正当な委任の連鎖に基づくものかを、Lemma で検証できます。"
 thesis: "取引が成立した ≠ 委任が連鎖して正当だった"
 pillar: agent-authority-proof

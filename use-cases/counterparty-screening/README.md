@@ -1,5 +1,7 @@
 ---
 title: "Counterparty Screening — Pass the Result, Not the Reasons"
+published: 2026-06-02
+updated: 2026-08-07
 abstract: "Share counterparty credit and sanctions decisions as ZK proofs of the result alone — never the reasons, scores, or query history. This structurally removes both the leakage risk of sharing the basis and the waste of every firm re-screening the same party."
 thesis: "The result travels. The contents don't."
 pillar: regulatory-attribute-proof

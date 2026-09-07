@@ -1,5 +1,7 @@
 ---
 title: "Prove EU AI Act compliance without sharing originals."
+published: 2026-06-06
+updated: 2026-06-29
 abstract: "Complying with the EU AI Act means proving operational accountability for a \"high-risk AI system.\" Lemma lets you prove compliance with each provision — risk assessment performed, human oversight, transparency disclosure — as attributes, so you can demonstrate it without disclosing the original data."
 thesis: "Having audit logs ≠ being able to prove compliance"
 pillar: verifiable-ai

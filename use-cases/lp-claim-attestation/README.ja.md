@@ -1,5 +1,7 @@
 ---
 title: "LP クレーム属性証明"
+published: 2026-06-04
+updated: 2026-08-07
 abstract: "DeFi の流動性提供者属性（KYC 結果・地域・リスク許容）を、原本データを開示せずに ZK 証明として発行します。プロトコルは必要な属性述語だけを検証し、原本の本人確認記録を保持しないまま規制要件を満たせます。"
 thesis: "プールに入る ≠ 検証されている"
 pillar: regulatory-attribute-proof

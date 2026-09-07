@@ -1,5 +1,7 @@
 ---
 title: "Multi-Agent Workflows"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "Bind every step of a multi-agent delegation chain as a ZK proof, so the final output carries a verifiable trace all the way back to the original principal."
 thesis: "Delegated ≠ traceable"
 pillar: agent-authority-proof

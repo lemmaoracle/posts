@@ -1,5 +1,7 @@
 ---
 title: "DeFi Bridge Verification"
+published: 2026-05-06
+updated: 2026-06-29
 abstract: "Independently verify a cross-chain message's origin before the receiving side commits state — a second cryptographic layer that runs alongside the DVN, so even a fully-signed message can be checked for semantic correctness before execution."
 thesis: "Cryptographically valid ≠ semantically right"
 pillar: verifiable-origin

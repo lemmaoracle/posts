@@ -1,5 +1,7 @@
 ---
 title: "X402 Commerce"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "Verify seller attributes as ZK proofs before x402 settlement runs, so buyer agents can transact safely without relying on plaintext claims."
 thesis: "Paid ≠ verified"
 pillar: verifiable-origin

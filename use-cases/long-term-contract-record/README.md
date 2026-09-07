@@ -1,5 +1,7 @@
 ---
 title: "Long-Term Contract Records, Provable Years Later"
+published: 2026-06-02
+updated: 2026-08-07
 abstract: "On 15–20 year contracts, prove cryptographically that a record legitimately existed and was legitimately amended at the time — without revealing its contents — even when amounts, specs, or inspection records are disputed years later."
 thesis: "Having a record ≠ being able to prove it"
 pillar: verifiable-origin

@@ -1,5 +1,7 @@
 ---
 title: "Store-Network License, Hygiene & Insurance Compliance"
+published: 2026-06-03
+updated: 2026-08-07
 abstract: "Verify that each store in a chain or franchise validly holds the required licenses, food-hygiene, and insurance without receiving the originals, and because revocation stays trackable, you can confirm not just what was submitted but that it is valid now."
 thesis: "Show conformance, not the originals."
 pillar: regulatory-attribute-proof
