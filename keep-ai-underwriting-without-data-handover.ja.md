@@ -100,7 +100,7 @@ For lenders, financial-infrastructure integrators, or compliance leads exploring
 ## Resources
 
 - Demo: [demo-lemma.frame00.com](https://demo-lemma.frame00.com/) （Finance / Loan approval）
-- Whitepaper: [AI の判断根拠を証明する設計書](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions)
-- 関連記事: [金融 AI が業務の中核に入った 2026 — 判断証跡という残された層](https://lemma.frame00.com/ja/blog/verifiable-ai-financial-agents-2026)
-- 関連記事: [データを出さずに証明する KYC/AML](https://lemma.frame00.com/ja/blog/lemma-verifiable-ai-kycaml-without-data-sharing)
-- 関連記事: [暗号証明で支える説明可能経営](https://lemma.frame00.com/ja/blog/ai-explainability-management-crypto-proof)
+- Whitepaper: [AI の判断根拠を証明する設計書](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions/)
+- 関連記事: [金融 AI が業務の中核に入った 2026 — 判断証跡という残された層](https://lemma.frame00.com/ja/blog/verifiable-ai-financial-agents-2026/)
+- 関連記事: [データを出さずに証明する KYC/AML](https://lemma.frame00.com/ja/blog/lemma-verifiable-ai-kycaml-without-data-sharing/)
+- 関連記事: [暗号証明で支える説明可能経営](https://lemma.frame00.com/ja/blog/ai-explainability-management-crypto-proof/)

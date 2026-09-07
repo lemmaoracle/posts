@@ -133,4 +133,4 @@ Lemma Verifiable AI presents a new approach to attribute marketing in data non-d
 
 See it in action on the Dashboard. The Explorer tier is free, no registration required.
 
-[Try the Dashboard →](https://lemma.frame00.com/services)
+[Try the Dashboard →](https://dashboard.lemma.workers.dev)

@@ -92,9 +92,9 @@ Index: [Lemma Critical Brief](https://lemma.frame00.com/critical/briefs/)
 
 The four layers touched on here (provenance proof, verifiable AI, agent authority proof, regulatory attribute proof) are each written up — how they work, and where in your operations they apply — on their own pages.
 
-- Start from the whole picture: [**Trust Infrastructure — the four pillars**](https://lemma.frame00.com/pillars)
+- Start from the whole picture: [**Trust Infrastructure — the four pillars**](https://lemma.frame00.com/pillars/)
 - The center of this article, the "under whose authority it acted" layer: [**Agent Authority Proof**](https://lemma.frame00.com/pillars/#authority)
-- See it mapped to your own operations: [**Use cases**](https://lemma.frame00.com/solutions/use-cases)
+- See it mapped to your own operations: [**Use cases**](https://lemma.frame00.com/solutions/use-cases/)
 
 If you are already weighing a concrete application in your operations, a 30-minute Discovery Call can map it to your specific workflows. You do not need to disclose any sensitive data (personal or confidential).
 

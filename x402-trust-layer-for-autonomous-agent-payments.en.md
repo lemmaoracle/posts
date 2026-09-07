@@ -22,10 +22,10 @@ relatedLinks:
 
 ## The design is live
 
-In the [whitepaper announcement](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions) we previewed an ADVANCED scenario: agents that carry proofs and settle payments in a single flow. Today that scenario ships as a working reference implementation.
+In the [whitepaper announcement](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/) we previewed an ADVANCED scenario: agents that carry proofs and settle payments in a single flow. Today that scenario ships as a working reference implementation.
 
 Repository: [github.com/lemmaoracle/example-x402](https://github.com/lemmaoracle/example-x402)  
-Service: [Trust402 — ZK-Verified Agent Payments](https://lemma.frame00.com/trust402)
+Service: [Trust402 — ZK-Verified Agent Payments](https://lemma.frame00.com/trust402/)
 
 Live on Base Sepolia. We offer this trust layer as a service under the name **Trust402**.
 
@@ -207,8 +207,8 @@ The demo runs without credentials — try it first. For teams evaluating product
 
 - Repository: [lemmaoracle/example-x402](https://github.com/lemmaoracle/example-x402)
 - MCP server (α demo, locally installable): [lemma/packages/mcp](https://github.com/lemmaoracle/lemma/tree/main/packages/mcp)
-- Service page: [Trust402](https://lemma.frame00.com/trust402)
-- Whitepaper announcement: [Prove What Your AI Decided On](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions)
+- Service page: [Trust402](https://lemma.frame00.com/trust402/)
+- Whitepaper announcement: [Prove What Your AI Decided On](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/)
 - Developer waitlist: [tally.so/r/kd0bZR](https://tally.so/r/kd0bZR)
 
 ---

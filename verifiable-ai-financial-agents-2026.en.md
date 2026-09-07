@@ -135,7 +135,7 @@ For financial CISOs, compliance leaders, regulatory affairs, and agent-payment p
 
 ## Resources
 
-- Trust402 demo — [lemma.frame00.com/trust402](https://lemma.frame00.com/trust402)
+- Trust402 demo — [lemma.frame00.com/trust402](https://lemma.frame00.com/trust402/)
 - example-origin reference — [github.com/lemmaoracle/example-origin](https://github.com/lemmaoracle/example-origin)
 - Bridge exploit analysis (4/30) — [verifiable-origin-bridge-exploits-2026](https://lemma.frame00.com/blog/verifiable-origin-bridge-exploits-2026/)
 - Whitepaper v1 — [whitepaper-v1-prove-ai-decisions](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/)

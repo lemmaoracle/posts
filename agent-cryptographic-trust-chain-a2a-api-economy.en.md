@@ -139,4 +139,4 @@ The next article will describe how this trust infrastructure deploys across enti
 
 Experience the cryptographic trust chain firsthand. The Explorer tier is free, no registration required.
 
-[Try the Dashboard →](https://lemma.frame00.com/services)
+[Try the Dashboard →](https://dashboard.lemma.workers.dev)
