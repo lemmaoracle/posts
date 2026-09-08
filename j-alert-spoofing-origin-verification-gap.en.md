@@ -59,10 +59,10 @@ A digital signature lets the receiving side verify mathematically that data came
 
 If you are adding this layer to a system whose delivery cannot stop, the practical place for it is outside the existing path. Splitting it by role shows where each piece goes.
 
-| Layer | When | What it does |
-|---|---|---|
-| Issue | The moment the warning goes out | Normalise the warning, sign it with the issuer's key, fix the record |
-| Reception | The moment the signal arrives | Verify the signature against the pre-distributed public key; refuse anything that fails |
+| Layer     | When                            | What it does                                                                                       |
+| --------- | ------------------------------- | -------------------------------------------------------------------------------------------------- |
+| Issue     | The moment the warning goes out | Normalise the warning, sign it with the issuer's key, fix the record                               |
+| Reception | The moment the signal arrives   | Verify the signature against the pre-distributed public key; refuse anything that fails            |
 | Collation | Afterwards, any number of times | Recompute the values from the warning text in hand and match them against the record made at issue |
 
 The middle layer — reception — belongs to the radio stack, and it is exactly where 3GPP has schemes ready. Solve key distribution and the standard mechanisms suffice. The top and the bottom are needed separately: fix "who issued what, and when" as a single record at the moment of issue, and keep that record in a state where anyone can collate it without obtaining the original. This is what decides whether, immediately after a receiver has failed to reject a forgery over the air, you can establish what the genuine issue actually was.
@@ -80,4 +80,4 @@ For what gets built next, that design is available to choose. National infrastru
 - This is Your President Speaking: Spoofing Alerts in 4G LTE Networks (MobiSys '19) — [ACM Digital Library](https://dl.acm.org/doi/10.1145/3307334.3326082)
 - From Spoofing to Trust: Emergency Alerts Spoofing Testbed and Cross-Cell Verification (2026) — [arXiv](https://arxiv.org/abs/2604.24404)
 
-*Facts are as of 2026-09-02. Amendments to the J-Alert operating rules and developments in 3GPP standardisation may change.*
+_Facts are as of 2026-09-02. Amendments to the J-Alert operating rules and developments in 3GPP standardisation may change._
