@@ -23,6 +23,8 @@ relatedLinks:
     href: "https://lemma.frame00.com/glossary/"
   - label: "What the J-Alert reporting reveals: no proof of origin"
     href: "https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/"
+  - label: "The last layer left in AI-era cyber defense"
+    href: "https://lemma.frame00.com/blog/detection-is-not-proof/"
 ---
 
 Register every MCP tool call with a commitment, and put a third party in a position to check that record later without holding an API key. Every output below came from an actual run. The one exception is step 5, the handler wiring, which is a skeleton you adapt to your own MCP server.

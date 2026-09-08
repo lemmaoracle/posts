@@ -23,6 +23,8 @@ relatedLinks:
     href: "https://lemma.frame00.com/ja/glossary/"
   - label: "Jアラート報道が示す、「発信元証明」の不在"
     href: "https://lemma.frame00.com/ja/blog/j-alert-spoofing-origin-verification-gap/"
+  - label: "AI 時代のサイバー防衛に残された、最後の層"
+    href: "https://lemma.frame00.com/ja/blog/detection-is-not-proof/"
 ---
 
 MCPツール呼び出しを1件ずつコミットメント付きで登録し、第三者があとから API キーなしで照合できる状態を作ります。載せている出力は手元で実行した結果です。ハンドラに差し込む「5.」だけは、お使いの MCP サーバー実装に合わせて書き換える前提の骨組みです。
