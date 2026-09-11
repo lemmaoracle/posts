@@ -7,11 +7,7 @@ industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
 title: "Who did this information come from? — J-Alert and proof of origin for AI"
-abstract: >-
-  Kyodo News reported that the data J-Alert sends over satellite carries no function that guarantees its origin.
-  The same question matters when a company hands external information to an AI and lets it carry out work: who did this come from?
-  Confirm the origin, confirm nothing was altered, and keep records of the decision and the execution that can be verified later.
-  Confirming the origin, however, does not make the content — or the AI's judgement — correct.
+abstract: "Kyodo News reported that the data J-Alert sends over satellite carries no function that guarantees its origin. The same question matters when a company hands external information to an AI and lets it carry out work: who did this come from? Confirm the origin, confirm nothing was altered, and keep records of the decision and the execution that can be verified later. Confirming the origin, however, does not make the content — or the AI's judgement — correct."
 tags:
   - j-alert
   - origin-verification
@@ -21,9 +17,9 @@ tags:
 relatedLinks:
   - label: "What authenticity means — verifying data, content and AI through provenance"
     href: "https://lemma.frame00.com/authenticity/"
-  - label: "The last layer left to cyber defense in the age of AI"
+  - label: "The last layer left in AI-era cyber defense"
     href: "https://lemma.frame00.com/blog/detection-is-not-proof/"
-  - label: "Keeping an audit trail of MCP tool calls that can be verified later"
+  - label: "An audit trail for MCP tool calls that anyone can check afterwards"
     href: "https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/"
   - label: "@lemmaoracle/sdk (npm)"
     href: "https://www.npmjs.com/package/@lemmaoracle/sdk"
