@@ -21,6 +21,10 @@ relatedLinks:
     href: "https://www.npmjs.com/package/@lemmaoracle/mcp"
   - label: "Glossary"
     href: "https://lemma.frame00.com/glossary/"
+  - label: "Who did this information come from? — J-Alert and proof of origin for AI"
+    href: "https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/"
+  - label: "The last layer left in AI-era cyber defense"
+    href: "https://lemma.frame00.com/blog/detection-is-not-proof/"
 ---
 
 Register every MCP tool call with a commitment, and put a third party in a position to check that record later without holding an API key. Every output below came from an actual run. The one exception is step 5, the handler wiring, which is a skeleton you adapt to your own MCP server.
@@ -43,7 +47,7 @@ OAuth and RBAC both act before a call happens. Who may call, which tools are vis
 
 After the call finishes, the place you go to establish who called which tool, when, and with what arguments is usually a log file on the host running the MCP server. And what CVE-2026-76404 demonstrated is that arbitrary commands can run on that host. A log file on a host where arbitrary commands ran is not evidence about that incident. Append, delete, rewrite — all available at the same privilege level. Shipping logs elsewhere does not fix it either: the destination cannot tell whether a line was altered before it was shipped.
 
-Access control and trail integrity are two separate problems needing two separate fixes. The first is "don't let it happen." The second is "when it does happen, leave a record that any party can independently reach the same conclusion about." This article is about the second.
+Access control and trail integrity are two separate problems needing two separate fixes. The first is "don't let it happen." The second is "when it does happen, leave a record that any party can independently reach the same conclusion about." This article is about the second. The check that runs before an action and the record that survives it are likewise separate — a split we work through for public alerting in [J-Alert and proof of origin for AI](https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/).
 
 ## The design — one tool call, one document
 

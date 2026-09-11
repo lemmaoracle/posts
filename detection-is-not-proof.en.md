@@ -15,6 +15,11 @@ tags:
   - audit-trail
   - agent-security
   - pre-execution-attestation
+relatedLinks:
+  - label: "Who did this information come from? — J-Alert and proof of origin for AI"
+    href: "https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/"
+  - label: "An audit trail for MCP tool calls that anyone can check afterwards"
+    href: "https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/"
 ---
 
 Lemma builds that layer across multiple domains, starting with payments (Trust402) and authentication.
@@ -37,7 +42,7 @@ The bridge from detection to legal proof has not yet emerged as a distinct layer
 
 Three problems stack. First, Mythos-grade AI attacks leave no attribution residue. Second, a detection tool's confidence score is not evidence admissible in regulatory filings, administrative proceedings, or court. "99.7% probability of anomaly" does not establish that an unauthorized authority was exercised. Third, in an agent-mediated world, the delegation graph itself — who authorized what, to whom, to what limit — becomes the audit target, and logs alone cannot reconstruct it.
 
-Across domains, the structural commonality is the same. MetLife Japan disclosed on May 1, 2026, that employees stationed across 36 bank-channel agencies had exfiltrated 2,476 internal files over four and a half years, undetected. SolarWinds-class supply-chain compromises went unnoticed for years. Municipal contractor-side leaks involving resident records and medical vendor intrusions follow the same pattern. The list runs across sectors and converges on one form: incidents that stayed hidden left no usable post-hoc trail.
+Across domains, the structural commonality is the same. MetLife Japan disclosed on May 1, 2026, that employees stationed across 36 bank-channel agencies had exfiltrated 2,476 internal files over four and a half years, undetected. SolarWinds-class supply-chain compromises went unnoticed for years. Municipal contractor-side leaks involving resident records and medical vendor intrusions follow the same pattern. The list runs across sectors and converges on one form: incidents that stayed hidden left no usable post-hoc trail. Public alerting shows the same structure: J-Alert's satellite-delivered data carries no origin verification, and the receiving side has no way to establish whether an arriving warning is genuine Kyodo News reported it in August 2026; we took the gap apart in [J-Alert and proof of origin for AI](https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/).
 
 The same structural gap is being named on the participant side of Project Glasswing. Cloudflare CSO Grant Bourzikas — Cloudflare is a participant — writes plainly on the company's blog that "patching faster is not enough," acknowledging that the more you compress regression testing, the more new bugs you introduce. That speeding up the detection-to-repair axis alone will not narrow the structural gap is the view of a security chief at one of the industry's largest players, too.
 
@@ -55,7 +60,7 @@ Strengthening detection further does not close the structural gap.
 
 The same question is being posed from the Cloudflare side. On the company's blog, Bourzikas lays out three principles that change the shape of the patch pipeline itself — (1) block the path to a bug before it reaches the application, (2) design the application so a flaw in one part of the code cannot give an attacker access to other parts, (3) roll a fix out to every place the code runs at the same moment, rather than waiting on individual teams to deploy. The point is a shift away from speeding up the detection-to-repair axis and toward making an attack hard even when the bug exists.
 
-Lemma's "move guardrails inside the system" approach sits on that axis. *Make an attack hard even when the bug exists* — the principle Bourzikas pursues through architecture and operations, Lemma implements in cryptographic proof. Generate the record of who, to whom, what authority, to what limit, *before* the transaction settles — not post-hoc forensic recovery, but pre-execution attestation. A provenance layer that satisfies both verifiability (any third party can re-check) and pre-emptiveness (the record exists before the trade clears) guarantees, from inside the system in code and mathematics, a state where an attack does not succeed even if a bug exists.
+Lemma's "move guardrails inside the system" approach sits on that axis. _Make an attack hard even when the bug exists_ — the principle Bourzikas pursues through architecture and operations, Lemma implements in cryptographic proof. Generate the record of who, to whom, what authority, to what limit, _before_ the transaction settles — not post-hoc forensic recovery, but pre-execution attestation. A provenance layer that satisfies both verifiability (any third party can re-check) and pre-emptiveness (the record exists before the trade clears) guarantees, from inside the system in code and mathematics, a state where an attack does not succeed even if a bug exists.
 
 Lemma builds this inside-the-system guardrail across multiple domains, rolling it out in sequence. The axes currently public are payments and authentication.
 
@@ -67,11 +72,11 @@ Models change. Proofs remain.
 
 ## Where to start
 
-| Step | What | URL |
-|---|---|---|
-| 1. See the demo | Trust402 (payments guardrail) and provenance proofs in action | https://demo-lemma.frame00.com/ |
-| 2. Build with us | Trust402 API beta / waitlist | https://tally.so/r/kd0bZR |
-| 3. Talk to us | Whitepaper / enterprise PoC consultation | https://tally.so/r/xX0VYv |
+| Step             | What                                                          | URL                             |
+| ---------------- | ------------------------------------------------------------- | ------------------------------- |
+| 1. See the demo  | Trust402 (payments guardrail) and provenance proofs in action | https://demo-lemma.frame00.com/ |
+| 2. Build with us | Trust402 API beta / waitlist                                  | https://tally.so/r/kd0bZR       |
+| 3. Talk to us    | Whitepaper / enterprise PoC consultation                      | https://tally.so/r/xX0VYv       |
 
 For critical infrastructure CISOs, financial regulators, cyber policy operators, AI agent platforms, and x402 / MCP builders — the entry point is here, not as a detection-layer complement, but as the guardrail that sits inside the system.
 
