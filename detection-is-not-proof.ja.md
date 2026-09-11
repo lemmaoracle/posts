@@ -16,7 +16,7 @@ tags:
   - agent-security
   - pre-execution-attestation
 relatedLinks:
-  - label: "その情報は、誰から届いたのか — Jアラート報道から考えるAI導入の確認事項"
+  - label: "その情報は、誰から届いたのか — Jアラート報道から考えるAIの発信元証明"
     href: "https://lemma.frame00.com/ja/blog/j-alert-spoofing-origin-verification-gap/"
   - label: "MCPツール呼び出しの監査証跡を、あとから検証できる形で残す"
     href: "https://lemma.frame00.com/ja/blog/mcp-tool-call-audit-trail/"

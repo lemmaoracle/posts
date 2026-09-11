@@ -6,7 +6,7 @@ audience: business
 industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
-title: "その情報は、誰から届いたのか — Jアラート報道から考えるAI導入の確認事項"
+title: "その情報は、誰から届いたのか — Jアラート報道から考えるAIの発信元証明"
 abstract: >-
   Jアラートの衛星経由データについて、発信元を保証する仕組みがないと共同通信が報じました。
   企業がAIに外部の情報を渡して業務を任せる際にも、「誰から届いた情報か」の確認が重要です。

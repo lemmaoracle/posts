@@ -6,7 +6,7 @@ audience: business
 industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
-title: "Who did this information come from? — What the J-Alert reporting asks of your AI rollout"
+title: "Who did this information come from? — Proof of origin for AI, seen through the J-Alert reporting"
 abstract: >-
   Kyodo News reported that the data J-Alert sends over satellite carries no function that guarantees its origin.
   The same question matters when a company hands external information to an AI and lets it carry out work: who did this come from?
