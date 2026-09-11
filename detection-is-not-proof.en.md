@@ -16,7 +16,7 @@ tags:
   - agent-security
   - pre-execution-attestation
 relatedLinks:
-  - label: "Who did this information come from? — Proof of origin for AI, seen through the J-Alert reporting"
+  - label: "Who did this information come from? — J-Alert and proof of origin for AI"
     href: "https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/"
   - label: "An audit trail for MCP tool calls that anyone can check afterwards"
     href: "https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/"

@@ -21,7 +21,7 @@ relatedLinks:
     href: "https://www.npmjs.com/package/@lemmaoracle/mcp"
   - label: "Glossary"
     href: "https://lemma.frame00.com/glossary/"
-  - label: "Who did this information come from? — Proof of origin for AI, seen through the J-Alert reporting"
+  - label: "Who did this information come from? — J-Alert and proof of origin for AI"
     href: "https://lemma.frame00.com/blog/j-alert-spoofing-origin-verification-gap/"
   - label: "The last layer left in AI-era cyber defense"
     href: "https://lemma.frame00.com/blog/detection-is-not-proof/"
