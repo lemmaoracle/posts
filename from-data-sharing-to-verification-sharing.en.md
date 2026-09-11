@@ -112,6 +112,6 @@ From the era where "whoever possesses data holds power" to an era where "whoever
 
 See verification sharing in action. The Explorer tier is free, no registration required.
 
-[Try the Dashboard →](https://lemma.frame00.com/services)
+[Try the Dashboard →](https://dashboard.lemma.workers.dev)
 
 ---

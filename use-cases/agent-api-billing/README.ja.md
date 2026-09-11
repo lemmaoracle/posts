@@ -1,5 +1,7 @@
 ---
 title: "API 課金を、AI エージェントに任せる。"
+published: 2026-06-06
+updated: 2026-06-29
 abstract: "AI エージェントに外部 API（SaaS・決済・データ取得）を呼ばせたいが、API キーを渡すリスクは避けたい——そんなときは、Lemma で「課金上限」「許可 API」「期限」を範囲とする権限委任を発行します。x402 で範囲内なら自律実行し、範囲外は実行前に止まるため、API キーを渡さずに安全に運用できます。"
 thesis: "API キーを渡す ≠ 範囲を渡す"
 pillar: agent-authority-proof

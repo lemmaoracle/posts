@@ -18,8 +18,6 @@ tags:
   - compliance
 ---
 
-**TL;DR**
-
 In loan underwriting today, identity documents, income statements, AML hits, and credit-bureau records all flow as raw data from the applicant to the bank, and onward into AI credit-scoring and document-analysis engines. Masking is an operation that hides values, but since the AI has to reconstruct the original to decide, the AI ends up seeing the content anyway.
 
 Lemma is the trust foundation for the AI era — a way to make a loan underwriting decision without handing the applicant's personal data to AI. Inside the applicant's browser, only "the conditions are met" is proven as fact, and what reaches the AI is not raw data but a set of verifiable facts. You can keep running the underwriting you do today, without holding the data.
@@ -98,7 +96,7 @@ For lenders, financial-infrastructure integrators, or compliance leads exploring
 ## Resources
 
 - Demo: [demo-lemma.frame00.com](https://demo-lemma.frame00.com/) (Finance / Loan approval)
-- Whitepaper: [Prove What Your AI Decided On.](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions)
-- Related: [AI agents in financial operations: the case for the judgment-trail layer](https://lemma.frame00.com/blog/verifiable-ai-financial-agents-2026)
-- Related: [Verifiable AI KYC/AML Without Data Sharing: Lemma's Practical Approach](https://lemma.frame00.com/blog/lemma-verifiable-ai-kycaml-without-data-sharing)
-- Related: ["Explainable Management" Powered by Cryptographic Proofs](https://lemma.frame00.com/blog/ai-explainability-management-crypto-proof)
+- Whitepaper: [Prove What Your AI Decided On.](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/)
+- Related: [AI agents in financial operations: the case for the judgment-trail layer](https://lemma.frame00.com/blog/verifiable-ai-financial-agents-2026/)
+- Related: [Verifiable AI KYC/AML Without Data Sharing: Lemma's Practical Approach](https://lemma.frame00.com/blog/lemma-verifiable-ai-kycaml-without-data-sharing/)
+- Related: ["Explainable Management" Powered by Cryptographic Proofs](https://lemma.frame00.com/blog/ai-explainability-management-crypto-proof/)

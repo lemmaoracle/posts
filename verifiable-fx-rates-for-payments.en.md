@@ -24,10 +24,6 @@ relatedLinks:
     href: "https://lemma.frame00.com/verify/"
 ---
 
-**TL;DR**
-
-The Lemma proof-backed forex feed is now available. It delivers a composite rate, cross-checked across multiple public FX APIs, together with proof of its origin, its point in time, and its freshness. No key, no account — and verification is free. This post takes cross-currency payments as one worked example and shows concretely how a proof-backed rate changes the work. The same pattern applies whatever your industry or reference data.
-
 _This post describes the Lemma proof-backed forex feed as of August 2026._
 
 ---

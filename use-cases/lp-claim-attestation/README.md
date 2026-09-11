@@ -1,5 +1,7 @@
 ---
 title: "LP Claim Attestation"
+published: 2026-06-04
+updated: 2026-08-07
 abstract: "Issue DeFi liquidity-provider attributes — KYC outcome, region, risk tolerance — as ZK attestations without exposing the raw data, so the protocol verifies only the attribute predicates it needs and meets regulatory requirements without ever holding the source identity record."
 thesis: "Pooled ≠ verified"
 pillar: regulatory-attribute-proof

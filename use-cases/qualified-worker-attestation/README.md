@@ -1,5 +1,7 @@
 ---
 title: "Proof of Qualified Assignment & Safety Training"
+published: 2026-06-02
+updated: 2026-08-07
 abstract: "Prove that qualified, safety-trained personnel performed a task without exposing their record. Primes and auditors can verify only that the worker is qualified, and the records cannot be tampered with afterward."
 thesis: "Assigned ≠ qualified"
 pillar: regulatory-attribute-proof

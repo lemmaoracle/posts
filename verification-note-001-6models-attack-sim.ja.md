@@ -15,8 +15,6 @@ tags:
   - mythos
 ---
 
-**TL;DR**
-
 6つのフロンティアモデル×5種の攻撃シナリオを模したデモンストレーション環境 `example-cyber-attack` を構築し、公開しました。2026年6月のAnthropic Fable 5公開とGoogleのAI検出エージェント群発表への対比として、このデモンストレーションは次の構造を示しています。
 
 - Opus 4.8が5つの攻撃シナリオすべてを自律的に突破。GPT-5.5とDeepSeek v4 Proが4/5、Qwen3.7 Maxが3/5、Kimi-K2.6が2/5を突破（いずれも2026年6月時点で一般利用可能なモデル）。
@@ -199,7 +197,7 @@ CloudflareのCSO、Grant BourzikasはProject Glasswingの議論を受け、同�
 
 ### Resources
 
-- ブログ一覧: https://lemma.frame00.com/ja/blog
+- ブログ一覧: https://lemma.frame00.com/ja/blog/
 - Pillar 03 エージェント権限証明: https://lemma.frame00.com/ja/pillars/#authority
 - Pillar 02 検証可能AI: https://lemma.frame00.com/ja/pillars/#inference
 - ユースケース AI監査ログ証明: https://lemma.frame00.com/ja/solutions/use-cases/ai-audit-log-proof/

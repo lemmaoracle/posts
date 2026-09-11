@@ -24,11 +24,7 @@ relatedLinks:
     href: "https://lemma.frame00.com/blog/metawater-mizudako-resident-record-proof/"
 ---
 
-**TL;DR**
-
 Payments in yen-denominated stablecoins have started moving in real operations — subcontractor fees, transfers to overseas subsidiaries. The transfer itself already completes in minutes. What the on-chain record holds is how much moved, and no more: **which invoice, and which line item on it** does not travel with the transfer. For a business that books hundreds or thousands of payments a month, walking the on-chain events still will not tell you which transaction is off when the totals do not agree. Because that breakdown has to reach the other side by a separate route, the next thing that can get shorter is the month-end close. The time the team spends is not the matching work itself so much as the wait for the counterparty to write back.
-
-Lemma's reconciliation confirms a match without either side disclosing its data. The on-chain settlement record, the payer's ledger and the payee's ledger — it checks that all three point at the same payment without showing the contents, so matched items clear on the spot and the only ones left in front of a person are the ones that differ.
 
 ## At month-end, the longest part is the waiting
 

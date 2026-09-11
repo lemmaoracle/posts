@@ -196,12 +196,13 @@ We recommend starting with these three areas:
 
 **Where can I find the technical documentation?**
 
-- [Encrypt Everything, Expose Nothing](/blog/encrypt-everything-expose-nothing)
-- [Prove Facts with Zero Knowledge](/blog/prove-facts-with-zero-knowledge)
-- [Disclose Only What AI Needs](/disclose-only-what-ai-needs)
-- [Query Verified Attributes](/query-verified-attributes)
-- [Define Your Domain as a Schema](/define-your-domain-as-a-schema)
-- [Provenance That Never Disappears](/blog/provenance-that-never-disappears)
+- [Encrypt Everything, Expose Nothing](/blog/encrypt-everything-expose-nothing/)
+- [Prove Facts with Zero Knowledge](/blog/prove-facts-with-zero-knowledge/)
+- [Disclose Only What AI Needs](/blog/disclose-only-what-ai-needs/)
+- [Query Verified Attributes](/blog/query-verified-attributes/)
+- [Define Your Domain as a Schema](/blog/define-your-domain-as-a-schema/)
+- [Provenance That Never Disappears](/blog/provenance-that-never-disappears/)
+- [Verifiable AI: A New RAG Design that Demonstrates Trust Origins with Cryptography](/blog/verifiable-ai-cryptographic-rag-design/)
 - [Lemma Specs (Specification)](/blog/lemma-oracle-specs/)
 
 ---

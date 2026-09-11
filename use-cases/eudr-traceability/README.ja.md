@@ -1,5 +1,7 @@
 ---
 title: "EUDR トレーサビリティ"
+published: 2026-06-04
+updated: 2026-06-29
 abstract: "EUDR が要求する原産地・伐採時期・許可属性を、サプライヤ間で原本を共有せずに ZK アテステーションとして連鎖的に検証します。多階層のサプライチェーンでも、生産者の機密を守りながらデューデリ要件を満たせます。"
 thesis: "追跡される ≠ 証明できる"
 pillar: regulatory-attribute-proof

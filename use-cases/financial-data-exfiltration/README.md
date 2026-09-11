@@ -1,5 +1,7 @@
 ---
 title: "Financial Data Exfiltration Defense"
+published: 2026-05-06
+updated: 2026-08-07
 abstract: "Make cross-organization data access logs tamper-proof with ZK proofs, so you can independently verify who accessed what and when — and answer audit requests with confidence."
 thesis: "Access logs exist ≠ untampered"
 pillar: regulatory-attribute-proof

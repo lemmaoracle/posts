@@ -18,8 +18,6 @@ tags:
   - compliance
 ---
 
-**TL;DR**
-
 融資審査の現場では、本人確認・収入・反社・信用情報がすべて生データのまま、申請者から銀行へ、そして AI クレジットスコアリングや書類解析エンジンへと流れています。マスキングは値を隠す操作ですが、AI 側で復元してから審査に使う以上、結局は AI が中身を見ています。
 
 Lemma は、AI に個人情報を渡さずに融資審査を成立させる、AI 時代の信頼基盤です。申請者のブラウザの中で「条件を満たすこと」だけが事実として証明され、AI に渡るのは生データではなく、検証可能な事実だけ。今やっている融資審査を、データを抱え込まずに続けられます。
@@ -102,7 +100,7 @@ For lenders, financial-infrastructure integrators, or compliance leads exploring
 ## Resources
 
 - Demo: [demo-lemma.frame00.com](https://demo-lemma.frame00.com/) （Finance / Loan approval）
-- Whitepaper: [AI の判断根拠を証明する設計書](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions)
-- 関連記事: [金融 AI が業務の中核に入った 2026 — 判断証跡という残された層](https://lemma.frame00.com/ja/blog/verifiable-ai-financial-agents-2026)
-- 関連記事: [データを出さずに証明する KYC/AML](https://lemma.frame00.com/ja/blog/lemma-verifiable-ai-kycaml-without-data-sharing)
-- 関連記事: [暗号証明で支える説明可能経営](https://lemma.frame00.com/ja/blog/ai-explainability-management-crypto-proof)
+- Whitepaper: [AI の判断根拠を証明する設計書](https://lemma.frame00.com/ja/blog/whitepaper-v1-prove-ai-decisions/)
+- 関連記事: [金融 AI が業務の中核に入った 2026 — 判断証跡という残された層](https://lemma.frame00.com/ja/blog/verifiable-ai-financial-agents-2026/)
+- 関連記事: [データを出さずに証明する KYC/AML](https://lemma.frame00.com/ja/blog/lemma-verifiable-ai-kycaml-without-data-sharing/)
+- 関連記事: [暗号証明で支える説明可能経営](https://lemma.frame00.com/ja/blog/ai-explainability-management-crypto-proof/)

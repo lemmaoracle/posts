@@ -18,8 +18,6 @@ tags:
   - pre-execution-attestation
 ---
 
-**TL;DR**
-
 Akamai's SOTI 2026 (Financial Services edition) puts numbers on the moment attacks on finance moved from automation to autonomous agents. **Asia-Pacific (APAC) is now the top Layer 7 DDoS target, up +40% year-over-year** — attacks are converging on the region where digital adoption and real-time payments have grown fastest. Banks absorb 83% of API-endpoint attacks; only 27% of defenders know which APIs return sensitive data. As mimicry approaches the indistinguishable, detection scores grow weaker as material for proving "an unauthorised exercise of authority occurred." Detection and mitigation are more necessary than ever — and beyond them, in finance where AI agents enter as counterparties, a layer remains that cryptographically attests, before the transaction, who acted under whose authority and whether they cleared KYC and sanctions screening.
 
 What follows traces five points along the report's structure and notes where Lemma draws its line.

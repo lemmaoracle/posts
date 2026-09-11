@@ -1,5 +1,7 @@
 ---
 title: "Age & Sale-Eligibility Verification"
+published: 2026-06-03
+updated: 2026-08-07
 abstract: "For age-restricted sales of alcohol, tobacco, or pharmaceuticals, prove only that a customer meets the age and eligibility to sell — without disclosing their birth date or ID document — at the point of sale or online, so you can meet age-verification obligations without retaining unnecessary personal data."
 thesis: "Confirm the age, not the birth date."
 pillar: regulatory-attribute-proof

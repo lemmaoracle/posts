@@ -19,8 +19,6 @@ tags:
   - agent-authority
 ---
 
-**TL;DR**
-
 Standards that let an AI agent prove "what it was authorized to do" as a tamper-resistant credential are coming together fast in the payments space. With AP2 and Mastercard's Verifiable Intent, the authenticity of intent is now an industry assumption. Add one more layer on top, and AI-agent payments become far easier to put into real-world use. That layer independently verifies "what an agent's output — produced on the basis of authentic intent — is actually grounded in." It is **AI provenance proof**. This essay maps out the layers now in place and the verifiable-AI layer that sits on top of them.
 
 > Pays ≠ trustworthy. — Being able to pay (authorization) and being trustworthy (grounding) are different layers.
@@ -63,7 +61,7 @@ The authenticity of intent (the consent layer) and the verifiability of groundin
 
 > Models change. Proofs remain. — Models get swapped out. Proofs remain.
 
-That is precisely why the verification layer must be independent of the model — this is Lemma's starting point. Among Lemma's [four pillars](https://lemma.frame00.com/pillars), the ones that matter here are [Pillar 01 · Verifiable Origin](https://lemma.frame00.com/pillars/#provenance) and [Pillar 03 · Agent Authority Proof](https://lemma.frame00.com/pillars/#authority).
+That is precisely why the verification layer must be independent of the model — this is Lemma's starting point. Among Lemma's [four pillars](https://lemma.frame00.com/pillars/), the ones that matter here are [Pillar 01 · Verifiable Origin](https://lemma.frame00.com/pillars/#provenance) and [Pillar 03 · Agent Authority Proof](https://lemma.frame00.com/pillars/#authority).
 
 ## Lemma's strengths (three points)
 
@@ -87,7 +85,7 @@ Provenance verification fits right on top of work you already do.
 - **Government / Public sector**: Advance procedures by verifying only the necessary attributes, without seeing personal data. You can run benefits, counter services, collections, and the like without retaining raw personal information.
 - **AI-agent operations (cross-industry)**: Verify a connected agent's authority, policy, and provenance not just once at connection time but per task. You avoid "authority granted and then forgotten."
 
-See all use cases across industries and tasks [here](https://lemma.frame00.com/solutions/use-cases).
+See all use cases across industries and tasks [here](https://lemma.frame00.com/solutions/use-cases/).
 
 ## Developers can try it in a few lines
 
@@ -95,7 +93,7 @@ Verifiable AI can be started without replacing your foundation.
 
 - **[Seal](https://lemma.frame00.com/seal/)**: A ZK sign-in SDK that sends a proof rather than a key. It embeds into an app or AI-agent stack in a few lines.
 - **[Trust402](https://lemma.frame00.com/trust402/)**: Keyless authorization that runs AI without holding a key. You can use per-task delegation of authority in combination with x402 / MCP.
-- Start with the [Dashboard](https://dashboard.lemma.workers.dev) and the [specifications](https://lemma.frame00.com/guides).
+- Start with the [Dashboard](https://dashboard.lemma.workers.dev) and the [specifications](https://lemma.frame00.com/guides/).
 
 ---
 
@@ -145,8 +143,8 @@ For x402 builders, MCP developers, teams operating AI agents, and enterprises bu
 ## Related links
 
 - [Cryptographic chains of trust between agents: how A2A interoperability transforms the API economy](https://lemma.frame00.com/blog/agent-cryptographic-trust-chain-a2a-api-economy/)
-- [A trust layer for x402](https://lemma.frame00.com/blog/x402-trust-layer-for-autonomous-agent-payments)
-- [Verifiable AI: a new RAG design that proves the source of trust with cryptography](https://lemma.frame00.com/blog/verifiable-ai-cryptographic-rag-design)
-- [Lemma's four pillars](https://lemma.frame00.com/pillars) / [Critical Brief (structural analysis of real cases)](https://lemma.frame00.com/critical/briefs)
+- [A trust layer for x402](https://lemma.frame00.com/blog/x402-trust-layer-for-autonomous-agent-payments/)
+- [Verifiable AI: a new RAG design that proves the source of trust with cryptography](https://lemma.frame00.com/blog/verifiable-ai-cryptographic-rag-design/)
+- [Lemma's four pillars](https://lemma.frame00.com/pillars/) / [Critical Brief (structural analysis of real cases)](https://lemma.frame00.com/critical/briefs/)
 
 — The Lemma team

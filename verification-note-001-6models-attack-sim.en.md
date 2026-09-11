@@ -15,8 +15,6 @@ tags:
   - mythos
 ---
 
-**TL;DR**
-
 Lemma built and released `example-cyber-attack`, a demonstration environment simulating six frontier models against five attack scenarios. Set against the backdrop of Anthropic's Fable 5 release and Google's AI detection agents in June 2026, this demonstration reveals the following structure.
 
 - Opus 4.8 autonomously breached all five attack scenarios. GPT-5.5 and DeepSeek v4 Pro breached 4/5, Qwen3.7 Max breached 3/5, and Kimi-K2.6 breached 2/5 (all generally available models as of June 2026).
@@ -199,7 +197,7 @@ What stopped the attacks in this simulation was pre-execution authority proof. E
 
 ### Resources
 
-- Blog index: https://lemma.frame00.com/blog
+- Blog index: https://lemma.frame00.com/blog/
 - Pillar 03 — Agent Authority Proof: https://lemma.frame00.com/pillars/#authority
 - Pillar 02 — Verifiable AI: https://lemma.frame00.com/pillars/#inference
 - Use Case — AI Audit Log Proof: https://lemma.frame00.com/solutions/use-cases/ai-audit-log-proof/

@@ -20,8 +20,6 @@ tags:
   - compliance
 ---
 
-**TL;DR**
-
 The agent-payment stack on x402 now has signature verification and spending governance in place. What remains is the customer-understanding layer — proving who is paying whom, without sending the underlying data. The **PPSI NPRM** (Notice of Proposed Rulemaking for Permitted Payment Stablecoin Issuers) that FinCEN and OFAC jointly published on 2026-04-08 brings this layer directly into scope for stablecoin issuers. Lemma's ZK attribute proof layer sits complementarily on top of x402 + AWS Bedrock AgentCore Payments, filling Layer 3 and making PPSI compliance, A2A agent payments, and regulatory audit trails implementable on a single foundation.
 
 The rule is written for the issuer. The implementation lives with the delegation targets — the parties downstream who actually handle the attributes.

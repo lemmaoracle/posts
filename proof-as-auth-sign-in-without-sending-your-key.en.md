@@ -16,13 +16,6 @@ tags:
   - provenance
 cover: "assets/cover-technical.png"
 ---
-
-**TL;DR**
-
-Every conventional auth flow has one inescapable step: at some point, the secret crosses the wire. Seal proof authentication breaks that assumption. The key never leaves the browser — what the server receives is a zero-knowledge proof of key possession, unforgeable and nonce-bound. The key's hash never crosses the wire either.
-
----
-
 ## Authentication without ever receiving the key
 
 We've all been taught that authentication works by sending something the server recognizes: a password, a token, a cookie. The server checks what it received against what it stored — that instinct is reasonable.

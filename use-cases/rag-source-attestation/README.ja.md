@@ -1,5 +1,7 @@
 ---
 title: "RAGソース認証"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "AI 回答の引用ごとに、参照先文書バージョンの docHash を ZK 証明として紐付けます。インデックスを再構築した後も、引用の整合性を暗号的に保てます。"
 thesis: "引用される ≠ 検証されている"
 pillar: verifiable-ai

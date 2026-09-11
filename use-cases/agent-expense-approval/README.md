@@ -1,5 +1,7 @@
 ---
 title: "Delegate expense approval to AI agents."
+published: 2026-06-06
+updated: 2026-06-29
 abstract: "You want to automate expense approvals, but you can't hand an AI unlimited authority. With Lemma, \"limit ¥100k,\" \"budget category,\" and \"team scope\" become a scoped delegation verified at runtime, so the agent approves autonomously inside that scope and escalates to a human outside it."
 thesis: "Authorized ≠ scope-proven"
 pillar: agent-authority-proof

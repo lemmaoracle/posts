@@ -1,5 +1,7 @@
 ---
 title: "Detect prompt injection without exposing content."
+published: 2026-06-06
+updated: 2026-06-29
 abstract: "Detect prompt injection, where invisible Unicode and hidden commands make what the human saw diverge from what the AI reads, by having Lemma hash the normalized input and verify at runtime the visible_eq between the intended and received input — catching tampering without disclosing the content."
 thesis: "What the AI read ≠ what the human saw"
 pillar: verifiable-ai

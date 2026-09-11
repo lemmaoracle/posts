@@ -1,5 +1,7 @@
 ---
 title: "RAG コンテンツ来歴"
+published: 2026-05-07
+updated: 2026-06-29
 abstract: "RAG への取り込み時に、文書の来歴を docHash と発行者署名として固定します。これにより、AI が引用した内容の真正性を暗号的に追跡できます。"
 thesis: "インデックス化される ≠ 信頼できる"
 pillar: verifiable-origin

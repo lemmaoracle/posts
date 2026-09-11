@@ -20,8 +20,6 @@ tags:
 
 *Why agentic AI in finance pulled both attackers and defenders to the same starting line, and what changes when judgments leave a verifiable trail.*
 
-**TL;DR**
-
 On April 24, 2026, Japan's FSA Minister convened the BoJ Governor, the three megabanks, the Japanese Bankers Association, and the JPX in emergency session. The trigger: Anthropic's "Mythos" attack model — purpose-capable of targeting financial institutions — which had prompted the US Treasury and Federal Reserve to summon major bank CEOs the prior week, and Anthropic itself to launch **Project Glasswing**, restricting Mythos access to vetted US/EU financial institutions. Japan moved on April 24.
 
 In parallel, financial-institution AI operations are reaching production. Anthropic's **ten financial-services agent templates** — pitchbook generation, KYC screening, credit memo drafting, earnings review, month-end close — run on Claude Cowork / Claude Code / Claude Managed Agents, embedded in Microsoft 365, composed with Moody's and other data providers. Both attack and defense sides are acquiring agentic "decide and act" capability at the same speed.
@@ -137,7 +135,7 @@ For financial CISOs, compliance leaders, regulatory affairs, and agent-payment p
 
 ## Resources
 
-- Trust402 demo — [lemma.frame00.com/trust402](https://lemma.frame00.com/trust402)
+- Trust402 demo — [lemma.frame00.com/trust402](https://lemma.frame00.com/trust402/)
 - example-origin reference — [github.com/lemmaoracle/example-origin](https://github.com/lemmaoracle/example-origin)
 - Bridge exploit analysis (4/30) — [verifiable-origin-bridge-exploits-2026](https://lemma.frame00.com/blog/verifiable-origin-bridge-exploits-2026/)
 - Whitepaper v1 — [whitepaper-v1-prove-ai-decisions](https://lemma.frame00.com/blog/whitepaper-v1-prove-ai-decisions/)

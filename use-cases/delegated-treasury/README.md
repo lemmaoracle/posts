@@ -1,5 +1,7 @@
 ---
 title: "Delegated Treasury"
+published: 2026-05-07
+updated: 2026-08-07
 abstract: "Issue agent spend authority as an on-chain spend-control attestation rather than a soft prompt, so spending limits are verifiable on the other side and you can safely delegate payments to the agent."
 thesis: "Authorized ≠ attested"
 pillar: agent-authority-proof

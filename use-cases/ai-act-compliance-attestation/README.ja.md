@@ -1,5 +1,7 @@
 ---
 title: "EU AI Act 適合を、原本を出さず証明する。"
+published: 2026-06-06
+updated: 2026-06-29
 abstract: "EU AI Act 対応では「high-risk AI システム」の運用責任を証明する必要があります。Lemma を使えば、「リスク評価の実施」「人間による監督」「透明性の開示」など各条項への適合を、原本データを開示せず属性として証明できます。"
 thesis: "監査ログがある ≠ 適合が証明できる"
 pillar: verifiable-ai
