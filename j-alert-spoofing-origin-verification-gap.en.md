@@ -6,8 +6,12 @@ audience: business
 industries: [public-sector]
 coverPhoto: /assets/covers/j-alert-spoofing-origin-verification-gap.jpg
 section: "Essays"
-title: "What the J-Alert reporting reveals: no proof of origin"
-abstract: "On 30 August 2026, Kyodo News reported that the data J-Alert transmits over satellite carries neither encryption nor any function that guarantees its origin. The receiving end is managed in concrete detail by the operating rules, while nothing is provided that would let the receiving side establish whether an arriving warning is genuine. Less a fault in one system than a question common to the design of public infrastructure."
+title: "Who did this information come from? — What the J-Alert reporting asks of your AI rollout"
+abstract: >-
+  Kyodo News reported that the data J-Alert sends over satellite carries no function that guarantees its origin.
+  The same question matters when a company hands external information to an AI and lets it carry out work: who did this come from?
+  Confirm the origin, confirm nothing was altered, and keep records of the decision and the execution that can be verified later.
+  Confirming the origin, however, does not make the content — or the AI's judgement — correct.
 tags:
   - j-alert
   - origin-verification
@@ -25,59 +29,91 @@ relatedLinks:
     href: "https://www.npmjs.com/package/@lemmaoracle/sdk"
 ---
 
-A J-Alert warning travels from the national government to a municipality's receiver by satellite. That receiver does not establish whether the data really came from the government. On 30 August 2026, Kyodo News [reported](https://www.tokyo-np.co.jp/article/512267) as much, and officials at the Ministry of Internal Affairs and Communications acknowledged it.
+## Before the AI acts, can you confirm where the information came from?
 
-The work was done by Yudai Kirishiki of the cybersecurity firm Unknown Technologies, who obtained a receiver put on the second-hand market and analysed it: the satellite-delivered data carries no digital signature, and nothing else that would guarantee its origin. Transmit data in the same format from a height — using a drone, for instance — and the receiving side cannot tell it from a genuine warning.
+Picture a notice from a supplier — "please change our bank account details" — that an AI reads and applies to your payment run.
 
-On the receiving side, where a receiver may be installed and how registration is applied for are settled in detail by the [operating rules](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf). What is nowhere provided is anything that would let the receiving side establish whether an arriving warning is genuine.
+Even if the AI understands the text correctly, whether that notice really came from the supplier is a separate thing to confirm. And whether that sender has the authority to change bank details is another.
 
-This is less a fault in one system than a question common to the design of public infrastructure. The idea of proving who sent something was not among the assumptions the design started from. The same holds for telemetry from industrial equipment, exchanges between AI agents, the traffic that moves between financial institutions: wherever the truth of the data drives a decision and sender and receiver sit in different organisations, you run into the same underlying problem: can the data that just arrived be trusted as genuine?
+This matters once you go beyond letting an AI read outside information and start letting it carry out the work: placing orders, making payments, updating customer records. Plausible-looking information fed straight into execution can lead to the wrong action.
 
-## Spoofing satellite data — a blind spot since 2007
+The J-Alert reporting deals with the same question from the receiving side: how do you establish who something came from? Public warning systems and corporate AI differ in purpose and in mechanism, but they share this — information that arrives becomes the basis for acting.
 
-J-Alert entered service in 2007 in a limited number of local governments. Attacks on satellite communications were outside the assumptions of the time. Technical standardisation, however, has carried the problem forward unresolved for a long time.
+It arrived ≠ its origin was confirmed
 
-3GPP has produced successive technical reports studying the security of Public Warning Systems (PWS). The latest of them, the Release 19 version (published in October 2025), carries a further accumulation of work on protecting warning notifications with digital signatures, yet it states plainly that the requirements for PWS Security are optional. One sentence in the same report goes further: "As PWS Security is an optional feature and several regions (US, Japan) have made clear that broadcast of signed Warning Notifications are unlikely, PWS Security may be deployed locally but not globally." The same sentence appears in the Release 12 version published in September 2014, and can be read in the [Release 13 version](http://www.arib.or.jp/english/html/overview/doc/STD-T63V12_00/5_Appendix/Rel13/33/33969-d00.pdf) published by ARIB, Japan's own standardisation body.
+## What the J-Alert reporting pointed out
 
-In the United States, a research team at the University of Colorado Boulder [demonstrated emergency alert spoofing](https://dl.acm.org/doi/10.1145/3307334.3326082) in 2019. Building a rogue base station from a commercially available software-defined radio ($500 to $1,300) and open-source software, they showed that a single unit at 0.1 watts delivers false alerts with a 90% success rate within a 23.4-metre radius outdoors and a 55.2-metre radius indoors; four units at one watt reach 49,300 of the 50,000 seats in a stadium. In 2026, an [open-source implementation for 5G](https://arxiv.org/abs/2604.24404) followed, together with a proposed defence based on cross-checking against neighbouring cells.
+On 30 August 2026, Kyodo News [reported](https://www.tokyo-np.co.jp/article/512267) that the data J-Alert transmits over satellite carries no function guaranteeing its origin, leaving open the possibility of sending a false warning.
 
-Research into the attack is advancing. The standards documents keep studying signature schemes. The layer that would bring that study down into Japanese operations has yet to be provided.
+According to the report, Yudai Kirishiki of the cybersecurity firm Unknown Technologies analysed a second-hand receiver and found no mechanism — a digital signature, for instance — for confirming where the data came from.
 
-## The heart of the problem is a design choice, not a technical limit
+The distinction worth drawing here is between "the information arrives" and "the information can be confirmed as having come from the legitimate sender." Being able to receive does not mean being able to establish the origin of what you received.
 
-Why is there no authentication? The research team's explanation runs as follows. To reach devices that have not yet attached to a network, and devices roaming on an unfamiliar operator, a design that demands no authentication was chosen. On top of that, because most alerts originate from local governments, centralised key management is hard to sustain.
+Emergency alerts on mobile networks have their own precedent: a [4G LTE spoofing study](https://dl.acm.org/doi/10.1145/3307334.3326082) published in 2019. That work targets cellular networks; it did not test J-Alert's satellite path. Keeping cases on different mechanisms distinct — rather than treating one as a demonstration against the other — matters.
 
-It is a design that put arrival first and left the question of genuineness further back.
+Brought back to an enterprise AI rollout, the question is plain. When information arrives from outside, on what basis does the system confirm who sent it?
 
-Within the technical constraints and operational limits of the day, it was a judgement that put saving lives first. It has been carried forward for nineteen years. Now that the technical options have widened so far, whether the same assumptions still hold is a question worth setting down once more.
+## Separate "who sent it" from "is the content correct"
 
-## The design new infrastructure gets to choose
+One technique for confirming origin is the digital signature. The sender signs the data; the receiver checks it with a verification key already established as belonging to that sender. That establishes two things: it was signed with the corresponding signing key, and the content has not changed since.
 
-This is not a proposal to retrofit the existing J-Alert system. But the gap this reporting exposes — the absence of any mechanism for proving origin — is a design question common to every information delivery system still to be built.
+Encryption keeps content from being read by third parties. Signatures are for confirming origin and detecting changes to content. Some workflows need both.
 
-A digital signature lets the receiving side verify mathematically that data came from a given sender and has not been altered. Where encryption conceals contents, a signature carries authenticity. For information meant to be read as widely as a warning, authenticity is the part that matters. The sender signs with its private key and the receiver verifies with the public key; the contents stay in the clear and carry a mark only the sender can issue. Forged data transmitted from a drone carries no signature, and the receiver can refuse it.
+The reach of a signature is limited, though. If the supplier themselves sends the wrong account number, the information carries a valid signature and is still wrong. And if a signing key is stolen, verifying the signature alone will not distinguish the result from an action by the legitimate staff member.
 
-If you are adding this layer to a system whose delivery cannot stop, the practical place for it is outside the existing path. Splitting it by role shows where each piece goes.
+Confirming the origin ≠ guaranteeing the content is correct
 
-| Layer     | When                            | What it does                                                                                       |
-| --------- | ------------------------------- | -------------------------------------------------------------------------------------------------- |
-| Issue     | The moment the warning goes out | Normalise the warning, sign it with the issuer's key, fix the record                               |
-| Reception | The moment the signal arrives   | Verify the signature against the pre-distributed public key; refuse anything that fails            |
-| Collation | Afterwards, any number of times | Recompute the values from the warning text in hand and match them against the record made at issue |
+When you hand work to an AI, designing these checks as separate things helps business owners and developers hold the same picture.
 
-The middle layer — reception — belongs to the radio stack, and it is exactly where 3GPP has schemes ready. Solve key distribution and the standard mechanisms suffice. The top and the bottom are needed separately: fix "who issued what, and when" as a single record at the moment of issue, and keep that record in a state where anyone can collate it without obtaining the original. This is what decides whether, immediately after a receiver has failed to reject a forgery over the air, you can establish what the genuine issue actually was.
+| What to confirm                     | In the bank-details example                             | What it takes                                           |
+| ----------------------------------- | ------------------------------------------------------- | ------------------------------------------------------- |
+| Who it came from                    | Is this a notice from a registered supplier?            | A signature or authentication bound to the sender       |
+| Whether it changed in transit       | Was the account number altered after signing?           | Verification of tampering, via signatures or similar    |
+| Whether they may instruct it        | Is this person allowed to request the change?           | A check against authority and approval rules            |
+| Whether the content may be acted on | Is the new account right, and the effective date sound? | A business-side check, with human approval where needed |
 
-We wrote the bottom layer in working code in [an audit trail for MCP tool calls](https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/).
+Beyond adopting signatures, you also have operational decisions: how a counterparty is bound to a key, how a leaked key is revoked, how a replayed old notice is spotted.
 
-For what gets built next, that design is available to choose. National infrastructure has spent decades making delivery certain; the time has come to make it structurally certain that what arrived is genuine.
+## Connect the check before execution to the record after it
+
+There is a second thing worth thinking through: the explanation you owe once the processing is done.
+
+Asked "why were the bank details changed to this account?", can you trace the notice you received, the result of the checks, the approval, and what the AI executed?
+
+Logs are the starting point. Add a way to separately confirm that the stored log has not changed since it was registered, and the records you use for investigation and explanation become verifiable.
+
+For instance: record the content as received along with the result of the checks, then bind the approval and execution records to the same transaction number. If each of those records can also be shown to be unchanged after the fact, everyone involved can work from the same record.
+
+Being able to verify records afterwards, however, will not necessarily stop a fraudulent action before it executes. The check before execution and the verification after it each have their own role.
+
+## The work at Lemma: records that can be verified later
+
+Lemma's [audit trail for MCP tool calls](https://lemma.frame00.com/blog/mcp-tool-call-audit-trail/) publishes a worked implementation: register the record of an AI calling an external tool, then match against it later. MCP is the connection standard through which AI uses external tools and data.
+
+In that example, a matching value computed cryptographically from the content of the record is registered. Later, the same computation is run on the record in hand and compared with the registered value. Technically, this uses a commitment built on Poseidon over BN254 — a value that lets content be matched after the fact. The method and the code are set out at the link.
+
+What that match confirms is whether the record presented agrees with the content at the time of registration. It does not automatically vouch for information that was already wrong before registration, nor for the identity of the actor named in the record. Signatures or authentication to confirm the origin are still needed separately, and matching depends on retaining the original record and whatever the recomputation requires.
+
+Updating your models does not remove the need to explain past processing. What information came in, what checks it passed, what was executed. Keeping that record in a verifiable form is the ground on which AI stays usable in the business over time.
+
+Models change. Proofs remain.
+
+## What's next — five things to confirm in your next AI rollout
+
+Start by picking one workflow that takes in outside information and executes something, then work through this order.
+
+- Map the entry points. Email, external services, supplier systems — lay out where the information the AI uses for its decisions comes from.
+- Decide how origin is confirmed. On what basis you establish the counterparty, and who updates that when staff or keys change.
+- Decide the scope of execution. Separate the authority to send information from the authority to execute and approve work, and set approval conditions by amount and by type of processing.
+- Decide what happens when you cannot confirm. Hold the processing, route it to a person — matched to the business impact.
+- Keep records, and try matching them. Bind what was received, the result of the checks, the approval and the outcome, then confirm you can detect later changes to those records.
+
+For companies operating AI agents, developers building on MCP or x402, and teams automating work that crosses organisations: which workflows should carry origin confirmation and verifiable records? Our [PoC consultation](https://tally.so/r/xX0VYv) is a place to work that out from a concrete workflow.
+
+Built for decisions that matter.
 
 ## Resources
 
-- Exclusive: J-Alert "false warnings possible", experts say no origin guarantee (30 August 2026, Kyodo News) — [Tokyo Shimbun Digital](https://www.tokyo-np.co.jp/article/512267)
-- J-Alert operating rules — [Fire and Disaster Management Agency](https://www.fdma.go.jp/mission/protection/item/protection001_05_J-ALERT_gyomu_kitei_280322.pdf)
+- "J-Alert: false warnings possible" — expert finds no guarantee of origin (30 August 2026, Kyodo News) — [Tokyo Shimbun Digital](https://www.tokyo-np.co.jp/article/512267)
 - Overview of the J-Alert nationwide instant warning system — [Fire and Disaster Management Agency](https://www.fdma.go.jp/about/organization/post-18.html)
-- 3GPP TR 33.969 Study on security aspects of Public Warning System (PWS) — [ARIB-published Release 13](http://www.arib.or.jp/english/html/overview/doc/STD-T63V12_00/5_Appendix/Rel13/33/33969-d00.pdf)
 - This is Your President Speaking: Spoofing Alerts in 4G LTE Networks (MobiSys '19) — [ACM Digital Library](https://dl.acm.org/doi/10.1145/3307334.3326082)
-- From Spoofing to Trust: Emergency Alerts Spoofing Testbed and Cross-Cell Verification (2026) — [arXiv](https://arxiv.org/abs/2604.24404)
-
-_Facts are as of 2026-09-02. Amendments to the J-Alert operating rules and developments in 3GPP standardisation may change._

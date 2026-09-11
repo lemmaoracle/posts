@@ -21,7 +21,7 @@ relatedLinks:
     href: "https://www.npmjs.com/package/@lemmaoracle/mcp"
   - label: "用語集"
     href: "https://lemma.frame00.com/ja/glossary/"
-  - label: "Jアラート報道が示す、「発信元証明」の不在"
+  - label: "その情報は、誰から届いたのか — Jアラート報道から考えるAI導入の確認事項"
     href: "https://lemma.frame00.com/ja/blog/j-alert-spoofing-origin-verification-gap/"
   - label: "AI 時代のサイバー防衛に残された、最後の層"
     href: "https://lemma.frame00.com/ja/blog/detection-is-not-proof/"
